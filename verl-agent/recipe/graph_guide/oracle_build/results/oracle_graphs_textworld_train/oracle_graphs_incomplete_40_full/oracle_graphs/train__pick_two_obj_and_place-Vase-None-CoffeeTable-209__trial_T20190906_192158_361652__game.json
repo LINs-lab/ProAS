@@ -1,0 +1,379 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "sidetable 2"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[sidetable 2]",
+      "admissible_before": [
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at sidetable 2. On the sidetable 2, you see a vase 4.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a coffeetable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 2, a sidetable 1, and a sofa 1.\n\nYour task is to: put two vase in coffeetable.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[sidetable 2]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[sidetable 2]"
+      ],
+      "walkthrough_action": "go to sidetable 2",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "vase 4"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[vase 4]",
+      "admissible_before": [
+        "examine sidetable 2",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take vase 4 from sidetable 2"
+      ],
+      "done": false,
+      "dst": "O2",
+      "edge_id": "expert_e1",
+      "from_signature": [
+        "at:OBJECT_SOURCE[sidetable 2]"
+      ],
+      "observation_after": "You pick up the vase 4 from the sidetable 2.",
+      "observation_before": "You arrive at sidetable 2. On the sidetable 2, you see a vase 4.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_OBJ[vase 4]",
+      "src": "O1",
+      "to_signature": [
+        "at:OBJECT_SOURCE[sidetable 2]",
+        "holding:TARGET_OBJ[vase 4]"
+      ],
+      "walkthrough_action": "take vase 4 from sidetable 2",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "dresser 1"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[dresser 1]",
+      "admissible_before": [
+        "examine coffeetable 1",
+        "go to armchair 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take laptop 1 from coffeetable 1",
+        "take laptop 2 from coffeetable 1",
+        "take pen 2 from coffeetable 1",
+        "take remotecontrol 2 from coffeetable 1",
+        "take vase 4 from coffeetable 1",
+        "take watch 3 from coffeetable 1"
+      ],
+      "done": false,
+      "dst": "O5",
+      "edge_id": "expert_e2",
+      "from_signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "placed:1@TARGET_PARENT[coffeetable 1]"
+      ],
+      "observation_after": "You arrive at dresser 1. On the dresser 1, you see a keychain 3, a pen 1, a remotecontrol 1, a statue 2, a vase 3, a vase 2, a vase 1, a watch 2, and a watch 1.",
+      "observation_before": "You move the vase 4 to the coffeetable 1.",
+      "oracle_step_idx": 2,
+      "role_text": "OBJECT_SOURCE[dresser 1]",
+      "src": "O4",
+      "to_signature": [
+        "at:OBJECT_SOURCE[dresser 1]",
+        "placed:1@TARGET_PARENT[coffeetable 1]"
+      ],
+      "walkthrough_action": "go to dresser 1",
+      "won": false
+    }
+  ],
+  "gamefile": "train/pick_two_obj_and_place-Vase-None-CoffeeTable-209/trial_T20190906_192158_361652/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[coffeetable 1]",
+    "placed:2@TARGET_PARENT[coffeetable 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a coffeetable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 2, a sidetable 1, and a sofa 1.\n\nYour task is to: put two vase in coffeetable.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine sidetable 2",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take vase 4 from sidetable 2"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[sidetable 2]",
+      "node_id": "O1",
+      "observation": "You arrive at sidetable 2. On the sidetable 2, you see a vase 4.",
+      "signature": [
+        "at:OBJECT_SOURCE[sidetable 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine sidetable 2",
+        "examine vase 4",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move vase 4 to sidetable 2"
+      ],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[sidetable 2] | holding:TARGET_OBJ[vase 4]",
+      "node_id": "O2",
+      "observation": "You pick up the vase 4 from the sidetable 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[sidetable 2]",
+        "holding:TARGET_OBJ[vase 4]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine coffeetable 1",
+        "go to armchair 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take laptop 1 from coffeetable 1",
+        "take laptop 2 from coffeetable 1",
+        "take pen 2 from coffeetable 1",
+        "take remotecontrol 2 from coffeetable 1",
+        "take vase 4 from coffeetable 1",
+        "take watch 3 from coffeetable 1"
+      ],
+      "depth": 3,
+      "label": "at:GOAL_RECEP[coffeetable 1] | placed:1@TARGET_PARENT[coffeetable 1]",
+      "node_id": "O4",
+      "observation": "You move the vase 4 to the coffeetable 1.",
+      "signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "placed:1@TARGET_PARENT[coffeetable 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine dresser 1",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take keychain 3 from dresser 1",
+        "take pen 1 from dresser 1",
+        "take remotecontrol 1 from dresser 1",
+        "take statue 2 from dresser 1",
+        "take vase 1 from dresser 1",
+        "take vase 2 from dresser 1",
+        "take vase 3 from dresser 1",
+        "take watch 1 from dresser 1",
+        "take watch 2 from dresser 1"
+      ],
+      "depth": 4,
+      "label": "at:OBJECT_SOURCE[dresser 1] | placed:1@TARGET_PARENT[coffeetable 1]",
+      "node_id": "O5",
+      "observation": "You arrive at dresser 1. On the dresser 1, you see a keychain 3, a pen 1, a remotecontrol 1, a statue 2, a vase 3, a vase 2, a vase 1, a watch 2, and a watch 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[dresser 1]",
+        "placed:1@TARGET_PARENT[coffeetable 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine coffeetable 1",
+        "go to armchair 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take laptop 1 from coffeetable 1",
+        "take laptop 2 from coffeetable 1",
+        "take pen 2 from coffeetable 1",
+        "take remotecontrol 2 from coffeetable 1",
+        "take vase 3 from coffeetable 1",
+        "take vase 4 from coffeetable 1",
+        "take watch 3 from coffeetable 1"
+      ],
+      "depth": 5,
+      "label": "at:GOAL_RECEP[coffeetable 1] | placed:2@TARGET_PARENT[coffeetable 1] | success",
+      "node_id": "O8",
+      "observation": "You move the vase 3 to the coffeetable 1.",
+      "signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "placed:2@TARGET_PARENT[coffeetable 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O3",
+      "O6",
+      "O7"
+    ],
+    "dropped_units": 3,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 8,
+    "original_nodes": 9,
+    "remaining_edges": 3,
+    "remaining_nodes": 6,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Vase",
+    "parent_target": "CoffeeTable",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_two_obj_and_place-Vase-None-CoffeeTable-209__trial_T20190906_192158_361652__game",
+  "task_type": "pick_two_obj_and_place",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 8,
+    "num_walkthrough_actions": 8,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_two_obj_and_place-Vase-None-CoffeeTable-209/trial_T20190906_192158_361652",
+  "walkthrough": [
+    "go to sidetable 2",
+    "take vase 4 from sidetable 2",
+    "go to coffeetable 1",
+    "move vase 4 to coffeetable 1",
+    "go to dresser 1",
+    "take vase 3 from dresser 1",
+    "go to coffeetable 1",
+    "move vase 3 to coffeetable 1"
+  ]
+}

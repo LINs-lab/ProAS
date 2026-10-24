@@ -1,0 +1,189 @@
+{
+  "edges": [
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "book 2",
+        "bed 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[book 2]|TARGET_PARENT[bed 1]",
+      "admissible_before": [
+        "examine bed 1",
+        "examine book 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "move book 2 to bed 1"
+      ],
+      "done": true,
+      "dst": "O4",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "at:GOAL_RECEP[bed 1]",
+        "holding:TARGET_OBJ[book 2]"
+      ],
+      "observation_after": "You move the book 2 to the bed 1.",
+      "observation_before": "You arrive at bed 1. On the bed 1, you see a laptop 1, a pillow 2, a pillow 1, and a teddybear 1.",
+      "oracle_step_idx": 0,
+      "role_text": "TARGET_OBJ[book 2] -> TARGET_PARENT[bed 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:GOAL_RECEP[bed 1]",
+        "placed:1@TARGET_PARENT[bed 1]",
+        "success"
+      ],
+      "walkthrough_action": "move book 2 to bed 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_and_place_simple-Book-None-Bed-306/trial_T20190907_125231_175582/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[bed 1]",
+    "placed:1@TARGET_PARENT[bed 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a laundryhamper 1, a shelf 1, and a sidetable 1.\n\nYour task is to: put some book on bed.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine bed 1",
+        "examine book 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "move book 2 to bed 1"
+      ],
+      "depth": 1,
+      "label": "at:GOAL_RECEP[bed 1] | holding:TARGET_OBJ[book 2]",
+      "node_id": "O3",
+      "observation": "You arrive at bed 1. On the bed 1, you see a laptop 1, a pillow 2, a pillow 1, and a teddybear 1.",
+      "signature": [
+        "at:GOAL_RECEP[bed 1]",
+        "holding:TARGET_OBJ[book 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "take book 2 from bed 1",
+        "take laptop 1 from bed 1",
+        "take pillow 1 from bed 1",
+        "take pillow 2 from bed 1",
+        "take teddybear 1 from bed 1"
+      ],
+      "depth": 2,
+      "label": "at:GOAL_RECEP[bed 1] | placed:1@TARGET_PARENT[bed 1] | success",
+      "node_id": "O4",
+      "observation": "You move the book 2 to the bed 1.",
+      "signature": [
+        "at:GOAL_RECEP[bed 1]",
+        "placed:1@TARGET_PARENT[bed 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O1",
+      "O2"
+    ],
+    "dropped_units": 2,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 4,
+    "original_nodes": 5,
+    "remaining_edges": 1,
+    "remaining_nodes": 3,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Book",
+    "parent_target": "Bed",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_and_place_simple-Book-None-Bed-306__trial_T20190907_125231_175582__game",
+  "task_type": "pick_and_place_simple",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 4,
+    "num_walkthrough_actions": 4,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_and_place_simple-Book-None-Bed-306/trial_T20190907_125231_175582",
+  "walkthrough": [
+    "go to sidetable 1",
+    "take book 2 from sidetable 1",
+    "go to bed 1",
+    "move book 2 to bed 1"
+  ]
+}

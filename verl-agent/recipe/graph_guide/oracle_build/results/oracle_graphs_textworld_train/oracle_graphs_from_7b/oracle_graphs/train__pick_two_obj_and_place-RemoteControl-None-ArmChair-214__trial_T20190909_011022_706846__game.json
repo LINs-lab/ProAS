@@ -1,0 +1,785 @@
+{
+  "distillation_input": "official_outputs/7B/alfworld/GRPO_7B_infer/validation_data/0.jsonl",
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::LOC[coffeetable 1]",
+      "admissible_before": [
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to sofa 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "success_bc332cfb_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at coffeetable 1. On the coffeetable 1, you see a houseplant 1, a statue 1, a vase 3, a vase 2, a vase 1, and a wateringcan 1.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a coffeetable 1, a garbagecan 1, a shelf 2, a shelf 1, a sidetable 1, a sofa 2, and a sofa 1.\n\nYour task is to: find two remotecontrol and put them in armchair.",
+      "oracle_step_idx": 0,
+      "path_source": "success_trajectory",
+      "role_text": "LOC[coffeetable 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:LOC[coffeetable 1]"
+      ],
+      "walkthrough_action": "go to coffeetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::LOC[shelf 1]",
+      "admissible_before": [
+        "examine coffeetable 1",
+        "go to armchair 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to sofa 2",
+        "help",
+        "inventory",
+        "look",
+        "take statue 1 from coffeetable 1",
+        "take vase 1 from coffeetable 1",
+        "take vase 2 from coffeetable 1",
+        "take vase 3 from coffeetable 1",
+        "take wateringcan 1 from coffeetable 1"
+      ],
+      "done": false,
+      "dst": "O2",
+      "edge_id": "success_bc332cfb_e1",
+      "from_signature": [
+        "at:LOC[coffeetable 1]"
+      ],
+      "observation_after": "You arrive at shelf 1. On the shelf 1, you see a plate 1, a statue 3, and a statue 2.",
+      "observation_before": "You arrive at coffeetable 1. On the coffeetable 1, you see a houseplant 1, a statue 1, a vase 3, a vase 2, a vase 1, and a wateringcan 1.",
+      "oracle_step_idx": 1,
+      "path_source": "success_trajectory",
+      "role_text": "LOC[shelf 1]",
+      "src": "O1",
+      "to_signature": [
+        "at:LOC[shelf 1]"
+      ],
+      "walkthrough_action": "go to shelf 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::GOAL_RECEP[armchair 1]",
+      "admissible_before": [
+        "examine shelf 1",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to garbagecan 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to sofa 2",
+        "help",
+        "inventory",
+        "look",
+        "take plate 1 from shelf 1",
+        "take statue 2 from shelf 1",
+        "take statue 3 from shelf 1"
+      ],
+      "done": false,
+      "dst": "O3",
+      "edge_id": "success_bc332cfb_e2",
+      "from_signature": [
+        "at:LOC[shelf 1]"
+      ],
+      "observation_after": "You arrive at armchair 1. On the armchair 1, you see a box 1, a creditcard 2, a creditcard 1, and a keychain 1.",
+      "observation_before": "You arrive at shelf 1. On the shelf 1, you see a plate 1, a statue 3, and a statue 2.",
+      "oracle_step_idx": 2,
+      "path_source": "success_trajectory",
+      "role_text": "GOAL_RECEP[armchair 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:GOAL_RECEP[armchair 1]"
+      ],
+      "walkthrough_action": "go to armchair 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::LOC[coffeetable 1]",
+      "admissible_before": [
+        "examine armchair 1",
+        "go to coffeetable 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to sofa 2",
+        "help",
+        "inventory",
+        "look",
+        "take box 1 from armchair 1",
+        "take creditcard 1 from armchair 1",
+        "take creditcard 2 from armchair 1",
+        "take keychain 1 from armchair 1"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "success_bc332cfb_e3",
+      "from_signature": [
+        "at:GOAL_RECEP[armchair 1]"
+      ],
+      "observation_after": "You arrive at coffeetable 1. On the coffeetable 1, you see a houseplant 1, a statue 1, a vase 3, a vase 2, a vase 1, and a wateringcan 1.",
+      "observation_before": "You arrive at armchair 1. On the armchair 1, you see a box 1, a creditcard 2, a creditcard 1, and a keychain 1.",
+      "oracle_step_idx": 3,
+      "path_source": "success_trajectory",
+      "role_text": "LOC[coffeetable 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:LOC[coffeetable 1]"
+      ],
+      "walkthrough_action": "go to coffeetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::LOC[shelf 2]",
+      "admissible_before": [
+        "examine coffeetable 1",
+        "go to armchair 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to sofa 2",
+        "help",
+        "inventory",
+        "look",
+        "take statue 1 from coffeetable 1",
+        "take vase 1 from coffeetable 1",
+        "take vase 2 from coffeetable 1",
+        "take vase 3 from coffeetable 1",
+        "take wateringcan 1 from coffeetable 1"
+      ],
+      "done": false,
+      "dst": "O4",
+      "edge_id": "success_bc332cfb_e4",
+      "from_signature": [
+        "at:LOC[coffeetable 1]"
+      ],
+      "observation_after": "You arrive at shelf 2. On the shelf 2, you see a newspaper 2, and a newspaper 1.",
+      "observation_before": "You arrive at coffeetable 1. On the coffeetable 1, you see a houseplant 1, a statue 1, a vase 3, a vase 2, a vase 1, and a wateringcan 1.",
+      "oracle_step_idx": 4,
+      "path_source": "success_trajectory",
+      "role_text": "LOC[shelf 2]",
+      "src": "O1",
+      "to_signature": [
+        "at:LOC[shelf 2]"
+      ],
+      "walkthrough_action": "go to shelf 2",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::OBJECT_SOURCE[sidetable 1]",
+      "admissible_before": [
+        "examine shelf 2",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to sofa 2",
+        "help",
+        "inventory",
+        "look",
+        "take newspaper 1 from shelf 2",
+        "take newspaper 2 from shelf 2"
+      ],
+      "done": false,
+      "dst": "O5",
+      "edge_id": "success_bc332cfb_e5",
+      "from_signature": [
+        "at:LOC[shelf 2]"
+      ],
+      "observation_after": "You arrive at sidetable 1. On the sidetable 1, you see a keychain 3, a remotecontrol 2, and a remotecontrol 1.",
+      "observation_before": "You arrive at shelf 2. On the shelf 2, you see a newspaper 2, and a newspaper 1.",
+      "oracle_step_idx": 5,
+      "path_source": "success_trajectory",
+      "role_text": "OBJECT_SOURCE[sidetable 1]",
+      "src": "O4",
+      "to_signature": [
+        "at:OBJECT_SOURCE[sidetable 1]"
+      ],
+      "walkthrough_action": "go to sidetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PickupObject::TARGET_OBJ[remotecontrol 1]|LITERAL::sidetable[sidetable 1]",
+      "admissible_before": [
+        "examine sidetable 1",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sofa 1",
+        "go to sofa 2",
+        "help",
+        "inventory",
+        "look",
+        "take keychain 3 from sidetable 1",
+        "take remotecontrol 1 from sidetable 1",
+        "take remotecontrol 2 from sidetable 1"
+      ],
+      "done": false,
+      "dst": "O6",
+      "edge_id": "success_bc332cfb_e6",
+      "from_signature": [
+        "at:OBJECT_SOURCE[sidetable 1]"
+      ],
+      "observation_after": "You pick up the remotecontrol 1 from the sidetable 1.",
+      "observation_before": "You arrive at sidetable 1. On the sidetable 1, you see a keychain 3, a remotecontrol 2, and a remotecontrol 1.",
+      "oracle_step_idx": 6,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[remotecontrol 1] -> LITERAL::sidetable[sidetable 1]",
+      "src": "O5",
+      "to_signature": [
+        "at:OBJECT_SOURCE[sidetable 1]",
+        "holding:TARGET_OBJ[remotecontrol 1]"
+      ],
+      "walkthrough_action": "take remotecontrol 1 from sidetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::GOAL_RECEP[armchair 1]",
+      "admissible_before": [
+        "examine remotecontrol 1",
+        "examine sidetable 1",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sofa 1",
+        "go to sofa 2",
+        "help",
+        "inventory",
+        "look",
+        "move remotecontrol 1 to sidetable 1"
+      ],
+      "done": false,
+      "dst": "O7",
+      "edge_id": "success_bc332cfb_e7",
+      "from_signature": [
+        "at:OBJECT_SOURCE[sidetable 1]",
+        "holding:TARGET_OBJ[remotecontrol 1]"
+      ],
+      "observation_after": "You arrive at armchair 1. On the armchair 1, you see a box 1, a creditcard 2, a creditcard 1, and a keychain 1.",
+      "observation_before": "You pick up the remotecontrol 1 from the sidetable 1.",
+      "oracle_step_idx": 7,
+      "path_source": "success_trajectory",
+      "role_text": "GOAL_RECEP[armchair 1]",
+      "src": "O6",
+      "to_signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "holding:TARGET_OBJ[remotecontrol 1]"
+      ],
+      "walkthrough_action": "go to armchair 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PutObject::TARGET_OBJ[remotecontrol 1]|TARGET_PARENT[armchair 1]",
+      "admissible_before": [
+        "examine armchair 1",
+        "examine remotecontrol 1",
+        "go to coffeetable 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to sofa 2",
+        "help",
+        "inventory",
+        "look",
+        "move remotecontrol 1 to armchair 1"
+      ],
+      "done": false,
+      "dst": "O8",
+      "edge_id": "success_bc332cfb_e8",
+      "from_signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "holding:TARGET_OBJ[remotecontrol 1]"
+      ],
+      "observation_after": "You move the remotecontrol 1 to the armchair 1.",
+      "observation_before": "You arrive at armchair 1. On the armchair 1, you see a box 1, a creditcard 2, a creditcard 1, and a keychain 1.",
+      "oracle_step_idx": 8,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[remotecontrol 1] -> TARGET_PARENT[armchair 1]",
+      "src": "O7",
+      "to_signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "placed:1@TARGET_PARENT[armchair 1]"
+      ],
+      "walkthrough_action": "move remotecontrol 1 to armchair 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::OBJECT_SOURCE[sidetable 1]",
+      "admissible_before": [
+        "examine armchair 1",
+        "go to coffeetable 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to sofa 2",
+        "help",
+        "inventory",
+        "look",
+        "take box 1 from armchair 1",
+        "take creditcard 1 from armchair 1",
+        "take creditcard 2 from armchair 1",
+        "take keychain 1 from armchair 1",
+        "take remotecontrol 1 from armchair 1"
+      ],
+      "done": false,
+      "dst": "O9",
+      "edge_id": "success_bc332cfb_e9",
+      "from_signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "placed:1@TARGET_PARENT[armchair 1]"
+      ],
+      "observation_after": "You arrive at sidetable 1. On the sidetable 1, you see a keychain 3, and a remotecontrol 2.",
+      "observation_before": "You move the remotecontrol 1 to the armchair 1.",
+      "oracle_step_idx": 9,
+      "path_source": "success_trajectory",
+      "role_text": "OBJECT_SOURCE[sidetable 1]",
+      "src": "O8",
+      "to_signature": [
+        "at:OBJECT_SOURCE[sidetable 1]",
+        "placed:1@TARGET_PARENT[armchair 1]"
+      ],
+      "walkthrough_action": "go to sidetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PickupObject::TARGET_OBJ[remotecontrol 2]|LITERAL::sidetable[sidetable 1]",
+      "admissible_before": [
+        "examine sidetable 1",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sofa 1",
+        "go to sofa 2",
+        "help",
+        "inventory",
+        "look",
+        "take keychain 3 from sidetable 1",
+        "take remotecontrol 2 from sidetable 1"
+      ],
+      "done": false,
+      "dst": "O10",
+      "edge_id": "success_bc332cfb_e10",
+      "from_signature": [
+        "at:OBJECT_SOURCE[sidetable 1]",
+        "placed:1@TARGET_PARENT[armchair 1]"
+      ],
+      "observation_after": "You pick up the remotecontrol 2 from the sidetable 1.",
+      "observation_before": "You arrive at sidetable 1. On the sidetable 1, you see a keychain 3, and a remotecontrol 2.",
+      "oracle_step_idx": 10,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[remotecontrol 2] -> LITERAL::sidetable[sidetable 1]",
+      "src": "O9",
+      "to_signature": [
+        "at:OBJECT_SOURCE[sidetable 1]",
+        "holding:TARGET_OBJ[remotecontrol 2]",
+        "placed:1@none"
+      ],
+      "walkthrough_action": "take remotecontrol 2 from sidetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::GOAL_RECEP[armchair 1]",
+      "admissible_before": [
+        "examine remotecontrol 2",
+        "examine sidetable 1",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sofa 1",
+        "go to sofa 2",
+        "help",
+        "inventory",
+        "look",
+        "move remotecontrol 2 to sidetable 1"
+      ],
+      "done": false,
+      "dst": "O11",
+      "edge_id": "success_bc332cfb_e11",
+      "from_signature": [
+        "at:OBJECT_SOURCE[sidetable 1]",
+        "holding:TARGET_OBJ[remotecontrol 2]",
+        "placed:1@none"
+      ],
+      "observation_after": "You arrive at armchair 1. On the armchair 1, you see a box 1, a creditcard 2, a creditcard 1, a keychain 1, and a remotecontrol 1.",
+      "observation_before": "You pick up the remotecontrol 2 from the sidetable 1.",
+      "oracle_step_idx": 11,
+      "path_source": "success_trajectory",
+      "role_text": "GOAL_RECEP[armchair 1]",
+      "src": "O10",
+      "to_signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "holding:TARGET_OBJ[remotecontrol 2]",
+        "placed:1@none"
+      ],
+      "walkthrough_action": "go to armchair 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PutObject::TARGET_OBJ[remotecontrol 2]|TARGET_PARENT[armchair 1]",
+      "admissible_before": [
+        "examine armchair 1",
+        "examine remotecontrol 2",
+        "go to coffeetable 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to sofa 2",
+        "help",
+        "inventory",
+        "look",
+        "move remotecontrol 2 to armchair 1"
+      ],
+      "done": true,
+      "dst": "O12",
+      "edge_id": "success_bc332cfb_e12",
+      "from_signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "holding:TARGET_OBJ[remotecontrol 2]",
+        "placed:1@none"
+      ],
+      "observation_after": "You move the remotecontrol 2 to the armchair 1.",
+      "observation_before": "You arrive at armchair 1. On the armchair 1, you see a box 1, a creditcard 2, a creditcard 1, a keychain 1, and a remotecontrol 1.",
+      "oracle_step_idx": 12,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[remotecontrol 2] -> TARGET_PARENT[armchair 1]",
+      "src": "O11",
+      "to_signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "placed:2@TARGET_PARENT[armchair 1]",
+        "success"
+      ],
+      "walkthrough_action": "move remotecontrol 2 to armchair 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_two_obj_and_place-RemoteControl-None-ArmChair-214/trial_T20190909_011022_706846/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[armchair 1]",
+    "placed:2@TARGET_PARENT[armchair 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to sofa 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a coffeetable 1, a garbagecan 1, a shelf 2, a shelf 1, a sidetable 1, a sofa 2, and a sofa 1.\n\nYour task is to: find two remotecontrol and put them in armchair.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 1,
+      "label": "at:LOC[coffeetable 1]",
+      "node_id": "O1",
+      "observation": "You arrive at coffeetable 1. On the coffeetable 1, you see a houseplant 1, a statue 1, a vase 3, a vase 2, a vase 1, and a wateringcan 1.",
+      "signature": [
+        "at:LOC[coffeetable 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 2,
+      "label": "at:LOC[shelf 1]",
+      "node_id": "O2",
+      "observation": "You arrive at shelf 1. On the shelf 1, you see a plate 1, a statue 3, and a statue 2.",
+      "signature": [
+        "at:LOC[shelf 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 3,
+      "label": "at:GOAL_RECEP[armchair 1]",
+      "node_id": "O3",
+      "observation": "You arrive at armchair 1. On the armchair 1, you see a box 1, a creditcard 2, a creditcard 1, and a keychain 1.",
+      "signature": [
+        "at:GOAL_RECEP[armchair 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 4,
+      "label": "at:LOC[shelf 2]",
+      "node_id": "O4",
+      "observation": "You arrive at shelf 2. On the shelf 2, you see a newspaper 2, and a newspaper 1.",
+      "signature": [
+        "at:LOC[shelf 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 5,
+      "label": "at:OBJECT_SOURCE[sidetable 1]",
+      "node_id": "O5",
+      "observation": "You arrive at sidetable 1. On the sidetable 1, you see a keychain 3, a remotecontrol 2, and a remotecontrol 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[sidetable 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 6,
+      "label": "at:OBJECT_SOURCE[sidetable 1] | holding:TARGET_OBJ[remotecontrol 1]",
+      "node_id": "O6",
+      "observation": "You pick up the remotecontrol 1 from the sidetable 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[sidetable 1]",
+        "holding:TARGET_OBJ[remotecontrol 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 7,
+      "label": "at:GOAL_RECEP[armchair 1] | holding:TARGET_OBJ[remotecontrol 1]",
+      "node_id": "O7",
+      "observation": "You arrive at armchair 1. On the armchair 1, you see a box 1, a creditcard 2, a creditcard 1, and a keychain 1.",
+      "signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "holding:TARGET_OBJ[remotecontrol 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 8,
+      "label": "at:GOAL_RECEP[armchair 1] | placed:1@TARGET_PARENT[armchair 1]",
+      "node_id": "O8",
+      "observation": "You move the remotecontrol 1 to the armchair 1.",
+      "signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "placed:1@TARGET_PARENT[armchair 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 9,
+      "label": "at:OBJECT_SOURCE[sidetable 1] | placed:1@TARGET_PARENT[armchair 1]",
+      "node_id": "O9",
+      "observation": "You arrive at sidetable 1. On the sidetable 1, you see a keychain 3, and a remotecontrol 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[sidetable 1]",
+        "placed:1@TARGET_PARENT[armchair 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 10,
+      "label": "at:OBJECT_SOURCE[sidetable 1] | holding:TARGET_OBJ[remotecontrol 2] | placed:1@none",
+      "node_id": "O10",
+      "observation": "You pick up the remotecontrol 2 from the sidetable 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[sidetable 1]",
+        "holding:TARGET_OBJ[remotecontrol 2]",
+        "placed:1@none"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 11,
+      "label": "at:GOAL_RECEP[armchair 1] | holding:TARGET_OBJ[remotecontrol 2] | placed:1@none",
+      "node_id": "O11",
+      "observation": "You arrive at armchair 1. On the armchair 1, you see a box 1, a creditcard 2, a creditcard 1, a keychain 1, and a remotecontrol 1.",
+      "signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "holding:TARGET_OBJ[remotecontrol 2]",
+        "placed:1@none"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 12,
+      "label": "at:GOAL_RECEP[armchair 1] | placed:2@TARGET_PARENT[armchair 1] | success",
+      "node_id": "O12",
+      "observation": "You move the remotecontrol 2 to the armchair 1.",
+      "signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "placed:2@TARGET_PARENT[armchair 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_type": "alfworld_teacher_distilled",
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "RemoteControl",
+    "parent_target": "ArmChair",
+    "toggle_target": ""
+  },
+  "reference_paths": [
+    {
+      "edge_ids": [
+        "success_bc332cfb_e0",
+        "success_bc332cfb_e1",
+        "success_bc332cfb_e2",
+        "success_bc332cfb_e3",
+        "success_bc332cfb_e4",
+        "success_bc332cfb_e5",
+        "success_bc332cfb_e6",
+        "success_bc332cfb_e7",
+        "success_bc332cfb_e8",
+        "success_bc332cfb_e9",
+        "success_bc332cfb_e10",
+        "success_bc332cfb_e11",
+        "success_bc332cfb_e12"
+      ],
+      "node_ids": [
+        "O0",
+        "O1",
+        "O2",
+        "O3",
+        "O1",
+        "O4",
+        "O5",
+        "O6",
+        "O7",
+        "O8",
+        "O9",
+        "O10",
+        "O11",
+        "O12"
+      ],
+      "path_id": "success_bc332cfb",
+      "source": "success_trajectory",
+      "traj_uid": "bc332cfb-94fb-4140-a824-797dff560d50",
+      "walkthrough": [
+        "go to coffeetable 1",
+        "go to shelf 1",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "take remotecontrol 1 from sidetable 1",
+        "go to armchair 1",
+        "move remotecontrol 1 to armchair 1",
+        "go to sidetable 1",
+        "take remotecontrol 2 from sidetable 1",
+        "go to armchair 1",
+        "move remotecontrol 2 to armchair 1"
+      ]
+    }
+  ],
+  "signature_mode": "entity",
+  "source": "teacher_7b_grpo_success_raw",
+  "state_source": "teacher_7b_grpo_success_raw",
+  "task_key": "train__pick_two_obj_and_place-RemoteControl-None-ArmChair-214__trial_T20190909_011022_706846__game",
+  "task_type": "pick_two_obj_and_place",
+  "teacher_model": "official_outputs/7B/alfworld/grpo_alfworld/grpo_alfworld/global_step_140/actor",
+  "teacher_traj_uid": "bc332cfb-94fb-4140-a824-797dff560d50",
+  "trial_dir": "train/pick_two_obj_and_place-RemoteControl-None-ArmChair-214/trial_T20190909_011022_706846",
+  "walkthrough": [
+    "go to coffeetable 1",
+    "go to shelf 1",
+    "go to armchair 1",
+    "go to coffeetable 1",
+    "go to shelf 2",
+    "go to sidetable 1",
+    "take remotecontrol 1 from sidetable 1",
+    "go to armchair 1",
+    "move remotecontrol 1 to armchair 1",
+    "go to sidetable 1",
+    "take remotecontrol 2 from sidetable 1",
+    "go to armchair 1",
+    "move remotecontrol 2 to armchair 1"
+  ]
+}

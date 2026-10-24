@@ -1,0 +1,335 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "dresser 1"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[dresser 1]",
+      "admissible_before": [
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to shelf 9",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at dresser 1. On the dresser 1, you see a cellphone 3, a cellphone 2, a cellphone 1, a creditcard 2, a desklamp 1, a keychain 3, a keychain 2, a pen 2, a pen 1, a pencil 1, and a statue 1.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a shelf 9, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.\n\nYour task is to: put some pen on shelf.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[dresser 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[dresser 1]"
+      ],
+      "walkthrough_action": "go to dresser 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "pen 2"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[pen 2]",
+      "admissible_before": [
+        "examine dresser 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to shelf 9",
+        "help",
+        "inventory",
+        "look",
+        "take cellphone 1 from dresser 1",
+        "take cellphone 2 from dresser 1",
+        "take cellphone 3 from dresser 1",
+        "take creditcard 2 from dresser 1",
+        "take keychain 2 from dresser 1",
+        "take keychain 3 from dresser 1",
+        "take pen 1 from dresser 1",
+        "take pen 2 from dresser 1",
+        "take pencil 1 from dresser 1",
+        "take statue 1 from dresser 1",
+        "use desklamp 1"
+      ],
+      "done": false,
+      "dst": "O2",
+      "edge_id": "expert_e1",
+      "from_signature": [
+        "at:OBJECT_SOURCE[dresser 1]"
+      ],
+      "observation_after": "You pick up the pen 2 from the dresser 1.",
+      "observation_before": "You arrive at dresser 1. On the dresser 1, you see a cellphone 3, a cellphone 2, a cellphone 1, a creditcard 2, a desklamp 1, a keychain 3, a keychain 2, a pen 2, a pen 1, a pencil 1, and a statue 1.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_OBJ[pen 2]",
+      "src": "O1",
+      "to_signature": [
+        "at:OBJECT_SOURCE[dresser 1]",
+        "holding:TARGET_OBJ[pen 2]"
+      ],
+      "walkthrough_action": "take pen 2 from dresser 1",
+      "won": false
+    }
+  ],
+  "gamefile": "train/pick_and_place_simple-Pen-None-Shelf-319/trial_T20190907_203155_907620/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[shelf 9]",
+    "placed:1@TARGET_PARENT[shelf 9]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to shelf 9",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a shelf 9, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.\n\nYour task is to: put some pen on shelf.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine dresser 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to shelf 9",
+        "help",
+        "inventory",
+        "look",
+        "take cellphone 1 from dresser 1",
+        "take cellphone 2 from dresser 1",
+        "take cellphone 3 from dresser 1",
+        "take creditcard 2 from dresser 1",
+        "take keychain 2 from dresser 1",
+        "take keychain 3 from dresser 1",
+        "take pen 1 from dresser 1",
+        "take pen 2 from dresser 1",
+        "take pencil 1 from dresser 1",
+        "take statue 1 from dresser 1",
+        "use desklamp 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[dresser 1]",
+      "node_id": "O1",
+      "observation": "You arrive at dresser 1. On the dresser 1, you see a cellphone 3, a cellphone 2, a cellphone 1, a creditcard 2, a desklamp 1, a keychain 3, a keychain 2, a pen 2, a pen 1, a pencil 1, and a statue 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[dresser 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine dresser 1",
+        "examine pen 2",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to shelf 9",
+        "help",
+        "inventory",
+        "look",
+        "move pen 2 to dresser 1",
+        "use desklamp 1"
+      ],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[dresser 1] | holding:TARGET_OBJ[pen 2]",
+      "node_id": "O2",
+      "observation": "You pick up the pen 2 from the dresser 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[dresser 1]",
+        "holding:TARGET_OBJ[pen 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine shelf 9",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "help",
+        "inventory",
+        "look",
+        "take pen 2 from shelf 9"
+      ],
+      "depth": 3,
+      "label": "at:GOAL_RECEP[shelf 9] | placed:1@TARGET_PARENT[shelf 9] | success",
+      "node_id": "O4",
+      "observation": "You move the pen 2 to the shelf 9.",
+      "signature": [
+        "at:GOAL_RECEP[shelf 9]",
+        "placed:1@TARGET_PARENT[shelf 9]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O3"
+    ],
+    "dropped_units": 1,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 4,
+    "original_nodes": 5,
+    "remaining_edges": 2,
+    "remaining_nodes": 4,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Pen",
+    "parent_target": "Shelf",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_and_place_simple-Pen-None-Shelf-319__trial_T20190907_203155_907620__game",
+  "task_type": "pick_and_place_simple",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 4,
+    "num_walkthrough_actions": 4,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_and_place_simple-Pen-None-Shelf-319/trial_T20190907_203155_907620",
+  "walkthrough": [
+    "go to dresser 1",
+    "take pen 2 from dresser 1",
+    "go to shelf 9",
+    "move pen 2 to shelf 9"
+  ]
+}

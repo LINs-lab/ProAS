@@ -1,0 +1,175 @@
+{
+  "edges": [],
+  "gamefile": "train/pick_cool_then_place_in_recep-Pot-None-StoveBurner-4/trial_T20190906_190656_137258/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[stoveburner 4]",
+    "object:cool[TARGET_OBJ]",
+    "placed:1@TARGET_PARENT[stoveburner 4]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to countertop 3",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a diningtable 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\n\nYour task is to: cool some pot and put it in stoveburner.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine pot 1",
+        "examine stoveburner 3",
+        "examine stoveburner 4",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to countertop 3",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "move pot 1 to stoveburner 3",
+        "move pot 1 to stoveburner 4"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[stoveburner 4] | holding:TARGET_OBJ[pot 1]",
+      "node_id": "O2",
+      "observation": "You pick up the pot 1 from the stoveburner 4.",
+      "signature": [
+        "at:OBJECT_SOURCE[stoveburner 4]",
+        "holding:TARGET_OBJ[pot 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine stoveburner 3",
+        "examine stoveburner 4",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to countertop 3",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "take pot 1 from stoveburner 4"
+      ],
+      "depth": 2,
+      "label": "at:GOAL_RECEP[stoveburner 4] | object:cool[TARGET_OBJ] | placed:1@TARGET_PARENT[stoveburner 4] | success",
+      "node_id": "O6",
+      "observation": "You move the pot 1 to the stoveburner 4.",
+      "signature": [
+        "at:GOAL_RECEP[stoveburner 4]",
+        "object:cool[TARGET_OBJ]",
+        "placed:1@TARGET_PARENT[stoveburner 4]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O1",
+      "O3",
+      "O4",
+      "O5"
+    ],
+    "dropped_units": 4,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 6,
+    "original_nodes": 7,
+    "remaining_edges": 0,
+    "remaining_nodes": 3,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Pot",
+    "parent_target": "StoveBurner",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_cool_then_place_in_recep-Pot-None-StoveBurner-4__trial_T20190906_190656_137258__game",
+  "task_type": "pick_cool_then_place_in_recep",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 6,
+    "num_walkthrough_actions": 6,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_cool_then_place_in_recep-Pot-None-StoveBurner-4/trial_T20190906_190656_137258",
+  "walkthrough": [
+    "go to stoveburner 4",
+    "take pot 1 from stoveburner 4",
+    "go to fridge 1",
+    "cool pot 1 with fridge 1",
+    "go to stoveburner 4",
+    "move pot 1 to stoveburner 4"
+  ]
+}

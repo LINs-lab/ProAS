@@ -1,0 +1,750 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "sofa 1"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[sofa 1]",
+      "admissible_before": [
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to ottoman 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at sofa 1. On the sofa 1, you see a creditcard 1, a pillow 2, and a pillow 1.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a diningtable 1, a drawer 1, a garbagecan 1, a ottoman 1, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, a shelf 1, a sidetable 1, a sofa 1, and a tvstand 1.\n\nYour task is to: put two pillow in ottoman.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[sofa 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[sofa 1]"
+      ],
+      "walkthrough_action": "go to sofa 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "pillow 2"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[pillow 2]",
+      "admissible_before": [
+        "examine sofa 1",
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to ottoman 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sidetable 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take creditcard 1 from sofa 1",
+        "take pillow 1 from sofa 1",
+        "take pillow 2 from sofa 1"
+      ],
+      "done": false,
+      "dst": "O2",
+      "from_signature": [
+        "at:OBJECT_SOURCE[sofa 1]"
+      ],
+      "observation_after": "You pick up the pillow 2 from the sofa 1.",
+      "observation_before": "You arrive at sofa 1. On the sofa 1, you see a creditcard 1, a pillow 2, and a pillow 1.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_OBJ[pillow 2]",
+      "src": "O1",
+      "to_signature": [
+        "at:OBJECT_SOURCE[sofa 1]",
+        "holding:TARGET_OBJ[pillow 2]"
+      ],
+      "walkthrough_action": "take pillow 2 from sofa 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "ottoman 1"
+      ],
+      "abstract_roles": [
+        "GOAL_RECEP"
+      ],
+      "action_key": "GotoLocation::GOAL_RECEP[ottoman 1]",
+      "admissible_before": [
+        "examine pillow 2",
+        "examine sofa 1",
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to ottoman 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sidetable 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "move pillow 2 to sofa 1"
+      ],
+      "done": false,
+      "dst": "O3",
+      "from_signature": [
+        "at:OBJECT_SOURCE[sofa 1]",
+        "holding:TARGET_OBJ[pillow 2]"
+      ],
+      "observation_after": "You arrive at ottoman 1. On the ottoman 1, you see nothing.",
+      "observation_before": "You pick up the pillow 2 from the sofa 1.",
+      "oracle_step_idx": 2,
+      "role_text": "GOAL_RECEP[ottoman 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:GOAL_RECEP[ottoman 1]",
+        "holding:TARGET_OBJ[pillow 2]"
+      ],
+      "walkthrough_action": "go to ottoman 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "pillow 2",
+        "ottoman 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[pillow 2]|TARGET_PARENT[ottoman 1]",
+      "admissible_before": [
+        "examine ottoman 1",
+        "examine pillow 2",
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "move pillow 2 to ottoman 1"
+      ],
+      "done": false,
+      "dst": "O4",
+      "from_signature": [
+        "at:GOAL_RECEP[ottoman 1]",
+        "holding:TARGET_OBJ[pillow 2]"
+      ],
+      "observation_after": "You move the pillow 2 to the ottoman 1.",
+      "observation_before": "You arrive at ottoman 1. On the ottoman 1, you see nothing.",
+      "oracle_step_idx": 3,
+      "role_text": "TARGET_OBJ[pillow 2] -> TARGET_PARENT[ottoman 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:GOAL_RECEP[ottoman 1]",
+        "placed:1@TARGET_PARENT[ottoman 1]"
+      ],
+      "walkthrough_action": "move pillow 2 to ottoman 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "sofa 1"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[sofa 1]",
+      "admissible_before": [
+        "examine ottoman 1",
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take pillow 2 from ottoman 1"
+      ],
+      "done": false,
+      "dst": "O5",
+      "from_signature": [
+        "at:GOAL_RECEP[ottoman 1]",
+        "placed:1@TARGET_PARENT[ottoman 1]"
+      ],
+      "observation_after": "You arrive at sofa 1. On the sofa 1, you see a creditcard 1, and a pillow 1.",
+      "observation_before": "You move the pillow 2 to the ottoman 1.",
+      "oracle_step_idx": 4,
+      "role_text": "OBJECT_SOURCE[sofa 1]",
+      "src": "O4",
+      "to_signature": [
+        "at:OBJECT_SOURCE[sofa 1]",
+        "placed:1@TARGET_PARENT[ottoman 1]"
+      ],
+      "walkthrough_action": "go to sofa 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "pillow 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[pillow 1]",
+      "admissible_before": [
+        "examine sofa 1",
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to ottoman 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sidetable 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take creditcard 1 from sofa 1",
+        "take pillow 1 from sofa 1"
+      ],
+      "done": false,
+      "dst": "O6",
+      "from_signature": [
+        "at:OBJECT_SOURCE[sofa 1]",
+        "placed:1@TARGET_PARENT[ottoman 1]"
+      ],
+      "observation_after": "You pick up the pillow 1 from the sofa 1.",
+      "observation_before": "You arrive at sofa 1. On the sofa 1, you see a creditcard 1, and a pillow 1.",
+      "oracle_step_idx": 5,
+      "role_text": "TARGET_OBJ[pillow 1]",
+      "src": "O5",
+      "to_signature": [
+        "at:OBJECT_SOURCE[sofa 1]",
+        "holding:TARGET_OBJ[pillow 1]",
+        "placed:1@none"
+      ],
+      "walkthrough_action": "take pillow 1 from sofa 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "ottoman 1"
+      ],
+      "abstract_roles": [
+        "GOAL_RECEP"
+      ],
+      "action_key": "GotoLocation::GOAL_RECEP[ottoman 1]",
+      "admissible_before": [
+        "examine pillow 1",
+        "examine sofa 1",
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to ottoman 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sidetable 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "move pillow 1 to sofa 1"
+      ],
+      "done": false,
+      "dst": "O7",
+      "from_signature": [
+        "at:OBJECT_SOURCE[sofa 1]",
+        "holding:TARGET_OBJ[pillow 1]",
+        "placed:1@none"
+      ],
+      "observation_after": "You arrive at ottoman 1. On the ottoman 1, you see a pillow 2.",
+      "observation_before": "You pick up the pillow 1 from the sofa 1.",
+      "oracle_step_idx": 6,
+      "role_text": "GOAL_RECEP[ottoman 1]",
+      "src": "O6",
+      "to_signature": [
+        "at:GOAL_RECEP[ottoman 1]",
+        "holding:TARGET_OBJ[pillow 1]",
+        "placed:1@none"
+      ],
+      "walkthrough_action": "go to ottoman 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "pillow 1",
+        "ottoman 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[pillow 1]|TARGET_PARENT[ottoman 1]",
+      "admissible_before": [
+        "examine ottoman 1",
+        "examine pillow 1",
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "move pillow 1 to ottoman 1"
+      ],
+      "done": true,
+      "dst": "O8",
+      "from_signature": [
+        "at:GOAL_RECEP[ottoman 1]",
+        "holding:TARGET_OBJ[pillow 1]",
+        "placed:1@none"
+      ],
+      "observation_after": "You move the pillow 1 to the ottoman 1.",
+      "observation_before": "You arrive at ottoman 1. On the ottoman 1, you see a pillow 2.",
+      "oracle_step_idx": 7,
+      "role_text": "TARGET_OBJ[pillow 1] -> TARGET_PARENT[ottoman 1]",
+      "src": "O7",
+      "to_signature": [
+        "at:GOAL_RECEP[ottoman 1]",
+        "placed:2@TARGET_PARENT[ottoman 1]",
+        "success"
+      ],
+      "walkthrough_action": "move pillow 1 to ottoman 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_two_obj_and_place-Pillow-None-Ottoman-208/trial_T20190908_091502_530886/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[ottoman 1]",
+    "placed:2@TARGET_PARENT[ottoman 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to ottoman 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a diningtable 1, a drawer 1, a garbagecan 1, a ottoman 1, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, a shelf 1, a sidetable 1, a sofa 1, and a tvstand 1.\n\nYour task is to: put two pillow in ottoman.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine sofa 1",
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to ottoman 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sidetable 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take creditcard 1 from sofa 1",
+        "take pillow 1 from sofa 1",
+        "take pillow 2 from sofa 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[sofa 1]",
+      "node_id": "O1",
+      "observation": "You arrive at sofa 1. On the sofa 1, you see a creditcard 1, a pillow 2, and a pillow 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[sofa 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine pillow 2",
+        "examine sofa 1",
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to ottoman 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sidetable 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "move pillow 2 to sofa 1"
+      ],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[sofa 1] | holding:TARGET_OBJ[pillow 2]",
+      "node_id": "O2",
+      "observation": "You pick up the pillow 2 from the sofa 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[sofa 1]",
+        "holding:TARGET_OBJ[pillow 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine ottoman 1",
+        "examine pillow 2",
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "move pillow 2 to ottoman 1"
+      ],
+      "depth": 3,
+      "label": "at:GOAL_RECEP[ottoman 1] | holding:TARGET_OBJ[pillow 2]",
+      "node_id": "O3",
+      "observation": "You arrive at ottoman 1. On the ottoman 1, you see nothing.",
+      "signature": [
+        "at:GOAL_RECEP[ottoman 1]",
+        "holding:TARGET_OBJ[pillow 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine ottoman 1",
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take pillow 2 from ottoman 1"
+      ],
+      "depth": 4,
+      "label": "at:GOAL_RECEP[ottoman 1] | placed:1@TARGET_PARENT[ottoman 1]",
+      "node_id": "O4",
+      "observation": "You move the pillow 2 to the ottoman 1.",
+      "signature": [
+        "at:GOAL_RECEP[ottoman 1]",
+        "placed:1@TARGET_PARENT[ottoman 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine sofa 1",
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to ottoman 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sidetable 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take creditcard 1 from sofa 1",
+        "take pillow 1 from sofa 1"
+      ],
+      "depth": 5,
+      "label": "at:OBJECT_SOURCE[sofa 1] | placed:1@TARGET_PARENT[ottoman 1]",
+      "node_id": "O5",
+      "observation": "You arrive at sofa 1. On the sofa 1, you see a creditcard 1, and a pillow 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[sofa 1]",
+        "placed:1@TARGET_PARENT[ottoman 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine pillow 1",
+        "examine sofa 1",
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to ottoman 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sidetable 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "move pillow 1 to sofa 1"
+      ],
+      "depth": 6,
+      "label": "at:OBJECT_SOURCE[sofa 1] | holding:TARGET_OBJ[pillow 1] | placed:1@none",
+      "node_id": "O6",
+      "observation": "You pick up the pillow 1 from the sofa 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[sofa 1]",
+        "holding:TARGET_OBJ[pillow 1]",
+        "placed:1@none"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine ottoman 1",
+        "examine pillow 1",
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "move pillow 1 to ottoman 1"
+      ],
+      "depth": 7,
+      "label": "at:GOAL_RECEP[ottoman 1] | holding:TARGET_OBJ[pillow 1] | placed:1@none",
+      "node_id": "O7",
+      "observation": "You arrive at ottoman 1. On the ottoman 1, you see a pillow 2.",
+      "signature": [
+        "at:GOAL_RECEP[ottoman 1]",
+        "holding:TARGET_OBJ[pillow 1]",
+        "placed:1@none"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine ottoman 1",
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take pillow 1 from ottoman 1",
+        "take pillow 2 from ottoman 1"
+      ],
+      "depth": 8,
+      "label": "at:GOAL_RECEP[ottoman 1] | placed:2@TARGET_PARENT[ottoman 1] | success",
+      "node_id": "O8",
+      "observation": "You move the pillow 1 to the ottoman 1.",
+      "signature": [
+        "at:GOAL_RECEP[ottoman 1]",
+        "placed:2@TARGET_PARENT[ottoman 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Pillow",
+    "parent_target": "Ottoman",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_two_obj_and_place-Pillow-None-Ottoman-208__trial_T20190908_091502_530886__game",
+  "task_type": "pick_two_obj_and_place",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 8,
+    "num_walkthrough_actions": 8,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_two_obj_and_place-Pillow-None-Ottoman-208/trial_T20190908_091502_530886",
+  "walkthrough": [
+    "go to sofa 1",
+    "take pillow 2 from sofa 1",
+    "go to ottoman 1",
+    "move pillow 2 to ottoman 1",
+    "go to sofa 1",
+    "take pillow 1 from sofa 1",
+    "go to ottoman 1",
+    "move pillow 1 to ottoman 1"
+  ]
+}

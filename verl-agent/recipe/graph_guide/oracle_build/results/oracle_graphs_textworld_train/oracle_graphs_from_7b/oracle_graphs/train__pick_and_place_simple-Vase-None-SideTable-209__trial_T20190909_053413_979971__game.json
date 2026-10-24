@@ -1,0 +1,310 @@
+{
+  "distillation_input": "official_outputs/7B/alfworld/GRPO_7B_infer/validation_data/0.jsonl",
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::OBJECT_SOURCE[coffeetable 1]",
+      "admissible_before": [
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "success_49ecfe5f_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at coffeetable 1. On the coffeetable 1, you see a book 1, a keychain 3, a laptop 1, a pen 2, a remotecontrol 1, a vase 4, a vase 3, a watch 2, and a watch 1.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a coffeetable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 2, a sidetable 1, and a sofa 1.\n\nYour task is to: put a vase in sidetable.",
+      "oracle_step_idx": 0,
+      "path_source": "success_trajectory",
+      "role_text": "OBJECT_SOURCE[coffeetable 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[coffeetable 1]"
+      ],
+      "walkthrough_action": "go to coffeetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PickupObject::TARGET_OBJ[vase 3]|LITERAL::coffeetable[coffeetable 1]",
+      "admissible_before": [
+        "examine coffeetable 1",
+        "go to armchair 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take book 1 from coffeetable 1",
+        "take keychain 3 from coffeetable 1",
+        "take laptop 1 from coffeetable 1",
+        "take pen 2 from coffeetable 1",
+        "take remotecontrol 1 from coffeetable 1",
+        "take vase 3 from coffeetable 1",
+        "take vase 4 from coffeetable 1",
+        "take watch 1 from coffeetable 1",
+        "take watch 2 from coffeetable 1"
+      ],
+      "done": false,
+      "dst": "O2",
+      "edge_id": "success_49ecfe5f_e1",
+      "from_signature": [
+        "at:OBJECT_SOURCE[coffeetable 1]"
+      ],
+      "observation_after": "You pick up the vase 3 from the coffeetable 1.",
+      "observation_before": "You arrive at coffeetable 1. On the coffeetable 1, you see a book 1, a keychain 3, a laptop 1, a pen 2, a remotecontrol 1, a vase 4, a vase 3, a watch 2, and a watch 1.",
+      "oracle_step_idx": 1,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[vase 3] -> LITERAL::coffeetable[coffeetable 1]",
+      "src": "O1",
+      "to_signature": [
+        "at:OBJECT_SOURCE[coffeetable 1]",
+        "holding:TARGET_OBJ[vase 3]"
+      ],
+      "walkthrough_action": "take vase 3 from coffeetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::GOAL_RECEP[sidetable 1]",
+      "admissible_before": [
+        "examine coffeetable 1",
+        "examine vase 3",
+        "go to armchair 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move vase 3 to coffeetable 1"
+      ],
+      "done": false,
+      "dst": "O3",
+      "edge_id": "success_49ecfe5f_e2",
+      "from_signature": [
+        "at:OBJECT_SOURCE[coffeetable 1]",
+        "holding:TARGET_OBJ[vase 3]"
+      ],
+      "observation_after": "You arrive at sidetable 1. On the sidetable 1, you see a houseplant 1.",
+      "observation_before": "You pick up the vase 3 from the coffeetable 1.",
+      "oracle_step_idx": 2,
+      "path_source": "success_trajectory",
+      "role_text": "GOAL_RECEP[sidetable 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:GOAL_RECEP[sidetable 1]",
+        "holding:TARGET_OBJ[vase 3]"
+      ],
+      "walkthrough_action": "go to sidetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PutObject::TARGET_OBJ[vase 3]|TARGET_PARENT[sidetable 1]",
+      "admissible_before": [
+        "examine sidetable 1",
+        "examine vase 3",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move vase 3 to sidetable 1"
+      ],
+      "done": true,
+      "dst": "O4",
+      "edge_id": "success_49ecfe5f_e3",
+      "from_signature": [
+        "at:GOAL_RECEP[sidetable 1]",
+        "holding:TARGET_OBJ[vase 3]"
+      ],
+      "observation_after": "You move the vase 3 to the sidetable 1.",
+      "observation_before": "You arrive at sidetable 1. On the sidetable 1, you see a houseplant 1.",
+      "oracle_step_idx": 3,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[vase 3] -> TARGET_PARENT[sidetable 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:GOAL_RECEP[sidetable 1]",
+        "placed:1@TARGET_PARENT[sidetable 1]",
+        "success"
+      ],
+      "walkthrough_action": "move vase 3 to sidetable 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_and_place_simple-Vase-None-SideTable-209/trial_T20190909_053413_979971/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[sidetable 1]",
+    "placed:1@TARGET_PARENT[sidetable 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a coffeetable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 2, a sidetable 1, and a sofa 1.\n\nYour task is to: put a vase in sidetable.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[coffeetable 1]",
+      "node_id": "O1",
+      "observation": "You arrive at coffeetable 1. On the coffeetable 1, you see a book 1, a keychain 3, a laptop 1, a pen 2, a remotecontrol 1, a vase 4, a vase 3, a watch 2, and a watch 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[coffeetable 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[coffeetable 1] | holding:TARGET_OBJ[vase 3]",
+      "node_id": "O2",
+      "observation": "You pick up the vase 3 from the coffeetable 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[coffeetable 1]",
+        "holding:TARGET_OBJ[vase 3]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 3,
+      "label": "at:GOAL_RECEP[sidetable 1] | holding:TARGET_OBJ[vase 3]",
+      "node_id": "O3",
+      "observation": "You arrive at sidetable 1. On the sidetable 1, you see a houseplant 1.",
+      "signature": [
+        "at:GOAL_RECEP[sidetable 1]",
+        "holding:TARGET_OBJ[vase 3]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 4,
+      "label": "at:GOAL_RECEP[sidetable 1] | placed:1@TARGET_PARENT[sidetable 1] | success",
+      "node_id": "O4",
+      "observation": "You move the vase 3 to the sidetable 1.",
+      "signature": [
+        "at:GOAL_RECEP[sidetable 1]",
+        "placed:1@TARGET_PARENT[sidetable 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_type": "alfworld_teacher_distilled",
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Vase",
+    "parent_target": "SideTable",
+    "toggle_target": ""
+  },
+  "reference_paths": [
+    {
+      "edge_ids": [
+        "success_49ecfe5f_e0",
+        "success_49ecfe5f_e1",
+        "success_49ecfe5f_e2",
+        "success_49ecfe5f_e3"
+      ],
+      "node_ids": [
+        "O0",
+        "O1",
+        "O2",
+        "O3",
+        "O4"
+      ],
+      "path_id": "success_49ecfe5f",
+      "source": "success_trajectory",
+      "traj_uid": "49ecfe5f-38dd-4283-a797-548fdbc3fb92",
+      "walkthrough": [
+        "go to coffeetable 1",
+        "take vase 3 from coffeetable 1",
+        "go to sidetable 1",
+        "move vase 3 to sidetable 1"
+      ]
+    }
+  ],
+  "signature_mode": "entity",
+  "source": "teacher_7b_grpo_success_raw",
+  "state_source": "teacher_7b_grpo_success_raw",
+  "task_key": "train__pick_and_place_simple-Vase-None-SideTable-209__trial_T20190909_053413_979971__game",
+  "task_type": "pick_and_place_simple",
+  "teacher_model": "official_outputs/7B/alfworld/grpo_alfworld/grpo_alfworld/global_step_140/actor",
+  "teacher_traj_uid": "49ecfe5f-38dd-4283-a797-548fdbc3fb92",
+  "trial_dir": "train/pick_and_place_simple-Vase-None-SideTable-209/trial_T20190909_053413_979971",
+  "walkthrough": [
+    "go to coffeetable 1",
+    "take vase 3 from coffeetable 1",
+    "go to sidetable 1",
+    "move vase 3 to sidetable 1"
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "bed 1"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[bed 1]",
+      "admissible_before": [
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at bed 1. On the bed 1, you see a book 1, a laptop 1, and a pillow 1.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a laundryhamper 1, and a shelf 1.\n\nYour task is to: examine the book with the desklamp.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[bed 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[bed 1]"
+      ],
+      "walkthrough_action": "go to bed 1",
+      "won": false
+    }
+  ],
+  "gamefile": "train/look_at_obj_in_light-Book-None-DeskLamp-305/trial_T20190908_215726_055077/game.tw-pddl",
+  "goal_signature": [
+    "at:TOGGLE_SOURCE[dresser 1]",
+    "holding:TARGET_OBJ[book 1]",
+    "toggle:on[desklamp 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a laundryhamper 1, and a shelf 1.\n\nYour task is to: examine the book with the desklamp.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "help",
+        "inventory",
+        "look",
+        "take book 1 from bed 1",
+        "take laptop 1 from bed 1",
+        "take pillow 1 from bed 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[bed 1]",
+      "node_id": "O1",
+      "observation": "You arrive at bed 1. On the bed 1, you see a book 1, a laptop 1, and a pillow 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[bed 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine book 1",
+        "examine dresser 1",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "help",
+        "inventory",
+        "look",
+        "move book 1 to dresser 1",
+        "use desklamp 1"
+      ],
+      "depth": 2,
+      "label": "at:TOGGLE_SOURCE[dresser 1] | holding:TARGET_OBJ[book 1] | toggle:on[desklamp 1] | success",
+      "node_id": "O4",
+      "observation": "You turn on the desklamp 1.",
+      "signature": [
+        "at:TOGGLE_SOURCE[dresser 1]",
+        "holding:TARGET_OBJ[book 1]",
+        "toggle:on[desklamp 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O2",
+      "O3"
+    ],
+    "dropped_units": 2,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 4,
+    "original_nodes": 5,
+    "remaining_edges": 1,
+    "remaining_nodes": 3,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Book",
+    "parent_target": "",
+    "toggle_target": "DeskLamp"
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__look_at_obj_in_light-Book-None-DeskLamp-305__trial_T20190908_215726_055077__game",
+  "task_type": "look_at_obj_in_light",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 4,
+    "num_walkthrough_actions": 4,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/look_at_obj_in_light-Book-None-DeskLamp-305/trial_T20190908_215726_055077",
+  "walkthrough": [
+    "go to bed 1",
+    "take book 1 from bed 1",
+    "go to dresser 1",
+    "use desklamp 1"
+  ]
+}

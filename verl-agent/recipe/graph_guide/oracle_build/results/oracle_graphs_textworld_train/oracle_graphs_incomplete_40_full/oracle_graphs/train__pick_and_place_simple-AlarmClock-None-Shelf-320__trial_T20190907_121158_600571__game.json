@@ -1,0 +1,364 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "desk 1"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[desk 1]",
+      "admissible_before": [
+        "go to bed 1",
+        "go to desk 1",
+        "go to desk 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at desk 1. On the desk 1, you see a alarmclock 1, a book 1, a creditcard 3, a creditcard 2, a creditcard 1, a keychain 1, and a laptop 1.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 2, a desk 1, a garbagecan 1, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.\n\nYour task is to: put some alarmclock on shelf.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[desk 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[desk 1]"
+      ],
+      "walkthrough_action": "go to desk 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "alarmclock 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[alarmclock 1]",
+      "admissible_before": [
+        "examine desk 1",
+        "go to bed 1",
+        "go to desk 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look",
+        "take alarmclock 1 from desk 1",
+        "take book 1 from desk 1",
+        "take creditcard 1 from desk 1",
+        "take creditcard 2 from desk 1",
+        "take creditcard 3 from desk 1",
+        "take keychain 1 from desk 1",
+        "take laptop 1 from desk 1"
+      ],
+      "done": false,
+      "dst": "O2",
+      "edge_id": "expert_e1",
+      "from_signature": [
+        "at:OBJECT_SOURCE[desk 1]"
+      ],
+      "observation_after": "You pick up the alarmclock 1 from the desk 1.",
+      "observation_before": "You arrive at desk 1. On the desk 1, you see a alarmclock 1, a book 1, a creditcard 3, a creditcard 2, a creditcard 1, a keychain 1, and a laptop 1.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_OBJ[alarmclock 1]",
+      "src": "O1",
+      "to_signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "holding:TARGET_OBJ[alarmclock 1]"
+      ],
+      "walkthrough_action": "take alarmclock 1 from desk 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "shelf 1"
+      ],
+      "abstract_roles": [
+        "GOAL_RECEP"
+      ],
+      "action_key": "GotoLocation::GOAL_RECEP[shelf 1]",
+      "admissible_before": [
+        "examine alarmclock 1",
+        "examine desk 1",
+        "go to bed 1",
+        "go to desk 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look",
+        "move alarmclock 1 to desk 1"
+      ],
+      "done": false,
+      "dst": "O3",
+      "edge_id": "expert_e2",
+      "from_signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "holding:TARGET_OBJ[alarmclock 1]"
+      ],
+      "observation_after": "You arrive at shelf 1. On the shelf 1, you see nothing.",
+      "observation_before": "You pick up the alarmclock 1 from the desk 1.",
+      "oracle_step_idx": 2,
+      "role_text": "GOAL_RECEP[shelf 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:GOAL_RECEP[shelf 1]",
+        "holding:TARGET_OBJ[alarmclock 1]"
+      ],
+      "walkthrough_action": "go to shelf 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "alarmclock 1",
+        "shelf 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[alarmclock 1]|TARGET_PARENT[shelf 1]",
+      "admissible_before": [
+        "examine alarmclock 1",
+        "examine shelf 1",
+        "go to bed 1",
+        "go to desk 1",
+        "go to desk 2",
+        "go to garbagecan 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look",
+        "move alarmclock 1 to shelf 1"
+      ],
+      "done": true,
+      "dst": "O4",
+      "edge_id": "expert_e3",
+      "from_signature": [
+        "at:GOAL_RECEP[shelf 1]",
+        "holding:TARGET_OBJ[alarmclock 1]"
+      ],
+      "observation_after": "You move the alarmclock 1 to the shelf 1.",
+      "observation_before": "You arrive at shelf 1. On the shelf 1, you see nothing.",
+      "oracle_step_idx": 3,
+      "role_text": "TARGET_OBJ[alarmclock 1] -> TARGET_PARENT[shelf 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:GOAL_RECEP[shelf 1]",
+        "placed:1@TARGET_PARENT[shelf 1]",
+        "success"
+      ],
+      "walkthrough_action": "move alarmclock 1 to shelf 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_and_place_simple-AlarmClock-None-Shelf-320/trial_T20190907_121158_600571/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[shelf 1]",
+    "placed:1@TARGET_PARENT[shelf 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bed 1",
+        "go to desk 1",
+        "go to desk 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 2, a desk 1, a garbagecan 1, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.\n\nYour task is to: put some alarmclock on shelf.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine desk 1",
+        "go to bed 1",
+        "go to desk 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look",
+        "take alarmclock 1 from desk 1",
+        "take book 1 from desk 1",
+        "take creditcard 1 from desk 1",
+        "take creditcard 2 from desk 1",
+        "take creditcard 3 from desk 1",
+        "take keychain 1 from desk 1",
+        "take laptop 1 from desk 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[desk 1]",
+      "node_id": "O1",
+      "observation": "You arrive at desk 1. On the desk 1, you see a alarmclock 1, a book 1, a creditcard 3, a creditcard 2, a creditcard 1, a keychain 1, and a laptop 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[desk 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine alarmclock 1",
+        "examine desk 1",
+        "go to bed 1",
+        "go to desk 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look",
+        "move alarmclock 1 to desk 1"
+      ],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[desk 1] | holding:TARGET_OBJ[alarmclock 1]",
+      "node_id": "O2",
+      "observation": "You pick up the alarmclock 1 from the desk 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "holding:TARGET_OBJ[alarmclock 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine alarmclock 1",
+        "examine shelf 1",
+        "go to bed 1",
+        "go to desk 1",
+        "go to desk 2",
+        "go to garbagecan 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look",
+        "move alarmclock 1 to shelf 1"
+      ],
+      "depth": 3,
+      "label": "at:GOAL_RECEP[shelf 1] | holding:TARGET_OBJ[alarmclock 1]",
+      "node_id": "O3",
+      "observation": "You arrive at shelf 1. On the shelf 1, you see nothing.",
+      "signature": [
+        "at:GOAL_RECEP[shelf 1]",
+        "holding:TARGET_OBJ[alarmclock 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine shelf 1",
+        "go to bed 1",
+        "go to desk 1",
+        "go to desk 2",
+        "go to garbagecan 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look",
+        "take alarmclock 1 from shelf 1"
+      ],
+      "depth": 4,
+      "label": "at:GOAL_RECEP[shelf 1] | placed:1@TARGET_PARENT[shelf 1] | success",
+      "node_id": "O4",
+      "observation": "You move the alarmclock 1 to the shelf 1.",
+      "signature": [
+        "at:GOAL_RECEP[shelf 1]",
+        "placed:1@TARGET_PARENT[shelf 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [],
+    "dropped_units": 0,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 4,
+    "original_nodes": 5,
+    "remaining_edges": 4,
+    "remaining_nodes": 5,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "AlarmClock",
+    "parent_target": "Shelf",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_and_place_simple-AlarmClock-None-Shelf-320__trial_T20190907_121158_600571__game",
+  "task_type": "pick_and_place_simple",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 4,
+    "num_walkthrough_actions": 4,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_and_place_simple-AlarmClock-None-Shelf-320/trial_T20190907_121158_600571",
+  "walkthrough": [
+    "go to desk 1",
+    "take alarmclock 1 from desk 1",
+    "go to shelf 1",
+    "move alarmclock 1 to shelf 1"
+  ]
+}

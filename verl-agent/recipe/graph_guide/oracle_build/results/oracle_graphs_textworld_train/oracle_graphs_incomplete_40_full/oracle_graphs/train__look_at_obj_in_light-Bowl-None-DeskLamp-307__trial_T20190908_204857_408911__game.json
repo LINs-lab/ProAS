@@ -1,0 +1,258 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "sidetable 1"
+      ],
+      "abstract_roles": [
+        "TOGGLE_SOURCE"
+      ],
+      "action_key": "GotoLocation::TOGGLE_SOURCE[sidetable 1]",
+      "admissible_before": [
+        "examine bowl 2",
+        "examine desk 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "move bowl 2 to desk 1"
+      ],
+      "done": false,
+      "dst": "O3",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "holding:TARGET_OBJ[bowl 2]"
+      ],
+      "observation_after": "You arrive at sidetable 1. On the sidetable 1, you see a book 1, a cd 2, a creditcard 3, a desklamp 1, a keychain 1, a pen 2, a pen 1, and a remotecontrol 1.",
+      "observation_before": "You pick up the bowl 2 from the desk 1.",
+      "oracle_step_idx": 0,
+      "role_text": "TOGGLE_SOURCE[sidetable 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:TOGGLE_SOURCE[sidetable 1]",
+        "holding:TARGET_OBJ[bowl 2]"
+      ],
+      "walkthrough_action": "go to sidetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "ToggleObject",
+      "abstract_entities": [
+        "desklamp 1"
+      ],
+      "abstract_roles": [
+        "TARGET_TOGGLE"
+      ],
+      "action_key": "ToggleObject::TARGET_TOGGLE[desklamp 1]",
+      "admissible_before": [
+        "examine bowl 2",
+        "examine sidetable 1",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "help",
+        "inventory",
+        "look",
+        "move bowl 2 to sidetable 1",
+        "use desklamp 1"
+      ],
+      "done": true,
+      "dst": "O4",
+      "edge_id": "expert_e1",
+      "from_signature": [
+        "at:TOGGLE_SOURCE[sidetable 1]",
+        "holding:TARGET_OBJ[bowl 2]"
+      ],
+      "observation_after": "You turn on the desklamp 1.",
+      "observation_before": "You arrive at sidetable 1. On the sidetable 1, you see a book 1, a cd 2, a creditcard 3, a desklamp 1, a keychain 1, a pen 2, a pen 1, and a remotecontrol 1.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_TOGGLE[desklamp 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:TOGGLE_SOURCE[sidetable 1]",
+        "holding:TARGET_OBJ[bowl 2]",
+        "toggle:on[desklamp 1]",
+        "success"
+      ],
+      "walkthrough_action": "use desklamp 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/look_at_obj_in_light-Bowl-None-DeskLamp-307/trial_T20190908_204857_408911/game.tw-pddl",
+  "goal_signature": [
+    "at:TOGGLE_SOURCE[sidetable 1]",
+    "holding:TARGET_OBJ[bowl 2]",
+    "toggle:on[desklamp 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a laundryhamper 1, a shelf 2, a shelf 1, and a sidetable 1.\n\nYour task is to: look at bowl under the desklamp.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine bowl 2",
+        "examine desk 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "move bowl 2 to desk 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[desk 1] | holding:TARGET_OBJ[bowl 2]",
+      "node_id": "O2",
+      "observation": "You pick up the bowl 2 from the desk 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "holding:TARGET_OBJ[bowl 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine bowl 2",
+        "examine sidetable 1",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "help",
+        "inventory",
+        "look",
+        "move bowl 2 to sidetable 1",
+        "use desklamp 1"
+      ],
+      "depth": 2,
+      "label": "at:TOGGLE_SOURCE[sidetable 1] | holding:TARGET_OBJ[bowl 2]",
+      "node_id": "O3",
+      "observation": "You arrive at sidetable 1. On the sidetable 1, you see a book 1, a cd 2, a creditcard 3, a desklamp 1, a keychain 1, a pen 2, a pen 1, and a remotecontrol 1.",
+      "signature": [
+        "at:TOGGLE_SOURCE[sidetable 1]",
+        "holding:TARGET_OBJ[bowl 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine bowl 2",
+        "examine sidetable 1",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "help",
+        "inventory",
+        "look",
+        "move bowl 2 to sidetable 1",
+        "use desklamp 1"
+      ],
+      "depth": 3,
+      "label": "at:TOGGLE_SOURCE[sidetable 1] | holding:TARGET_OBJ[bowl 2] | toggle:on[desklamp 1] | success",
+      "node_id": "O4",
+      "observation": "You turn on the desklamp 1.",
+      "signature": [
+        "at:TOGGLE_SOURCE[sidetable 1]",
+        "holding:TARGET_OBJ[bowl 2]",
+        "toggle:on[desklamp 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O1"
+    ],
+    "dropped_units": 1,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 4,
+    "original_nodes": 5,
+    "remaining_edges": 2,
+    "remaining_nodes": 4,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Bowl",
+    "parent_target": "",
+    "toggle_target": "DeskLamp"
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__look_at_obj_in_light-Bowl-None-DeskLamp-307__trial_T20190908_204857_408911__game",
+  "task_type": "look_at_obj_in_light",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 4,
+    "num_walkthrough_actions": 4,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/look_at_obj_in_light-Bowl-None-DeskLamp-307/trial_T20190908_204857_408911",
+  "walkthrough": [
+    "go to desk 1",
+    "take bowl 2 from desk 1",
+    "go to sidetable 1",
+    "use desklamp 1"
+  ]
+}

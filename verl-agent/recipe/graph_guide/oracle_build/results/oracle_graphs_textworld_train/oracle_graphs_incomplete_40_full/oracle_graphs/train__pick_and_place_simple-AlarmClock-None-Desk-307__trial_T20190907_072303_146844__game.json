@@ -1,0 +1,139 @@
+{
+  "edges": [],
+  "gamefile": "train/pick_and_place_simple-AlarmClock-None-Desk-307/trial_T20190907_072303_146844/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[desk 1]",
+    "placed:1@TARGET_PARENT[desk 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a laundryhamper 1, a shelf 2, a shelf 1, and a sidetable 1.\n\nYour task is to: put a alarmclock in desk.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine alarmclock 2",
+        "examine sidetable 1",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "help",
+        "inventory",
+        "look",
+        "move alarmclock 2 to sidetable 1",
+        "use desklamp 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[sidetable 1] | holding:TARGET_OBJ[alarmclock 2]",
+      "node_id": "O2",
+      "observation": "You pick up the alarmclock 2 from the sidetable 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[sidetable 1]",
+        "holding:TARGET_OBJ[alarmclock 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine desk 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "take alarmclock 2 from desk 1",
+        "take book 2 from desk 1",
+        "take bowl 1 from desk 1",
+        "take cd 3 from desk 1",
+        "take pencil 1 from desk 1",
+        "take pencil 2 from desk 1",
+        "take remotecontrol 1 from desk 1"
+      ],
+      "depth": 2,
+      "label": "at:GOAL_RECEP[desk 1] | placed:1@TARGET_PARENT[desk 1] | success",
+      "node_id": "O4",
+      "observation": "You move the alarmclock 2 to the desk 1.",
+      "signature": [
+        "at:GOAL_RECEP[desk 1]",
+        "placed:1@TARGET_PARENT[desk 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O1",
+      "O3"
+    ],
+    "dropped_units": 2,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 4,
+    "original_nodes": 5,
+    "remaining_edges": 0,
+    "remaining_nodes": 3,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "AlarmClock",
+    "parent_target": "Desk",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_and_place_simple-AlarmClock-None-Desk-307__trial_T20190907_072303_146844__game",
+  "task_type": "pick_and_place_simple",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 4,
+    "num_walkthrough_actions": 4,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_and_place_simple-AlarmClock-None-Desk-307/trial_T20190907_072303_146844",
+  "walkthrough": [
+    "go to sidetable 1",
+    "take alarmclock 2 from sidetable 1",
+    "go to desk 1",
+    "move alarmclock 2 to desk 1"
+  ]
+}

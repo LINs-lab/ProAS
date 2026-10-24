@@ -1,0 +1,191 @@
+{
+  "edges": [
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "cd 1",
+        "shelf 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[cd 1]|TARGET_PARENT[shelf 1]",
+      "admissible_before": [
+        "examine cabinet 3",
+        "examine cd 1",
+        "examine shelf 1",
+        "go to bed 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 4",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "move cd 1 to shelf 1",
+        "open cabinet 3"
+      ],
+      "done": true,
+      "dst": "O5",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "at:GOAL_RECEP[cabinet 3]",
+        "holding:TARGET_OBJ[cd 1]"
+      ],
+      "observation_after": "You move the cd 1 to the shelf 1.",
+      "observation_before": "You arrive at cabinet 3. The cabinet 3 is closed.",
+      "oracle_step_idx": 0,
+      "role_text": "TARGET_OBJ[cd 1] -> TARGET_PARENT[shelf 1]",
+      "src": "O4",
+      "to_signature": [
+        "at:GOAL_RECEP[cabinet 3]",
+        "placed:1@TARGET_PARENT[shelf 1]",
+        "success"
+      ],
+      "walkthrough_action": "move cd 1 to shelf 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_and_place_simple-CD-None-Shelf-310/trial_T20190908_125951_058277/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[cabinet 3]",
+    "placed:1@TARGET_PARENT[shelf 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bed 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a desk 1, a drawer 2, a drawer 1, a garbagecan 1, a shelf 1, and a sidetable 1.\n\nYour task is to: put some cd on shelf.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine cabinet 3",
+        "examine cd 1",
+        "examine shelf 1",
+        "go to bed 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 4",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "move cd 1 to shelf 1",
+        "open cabinet 3"
+      ],
+      "depth": 1,
+      "label": "at:GOAL_RECEP[cabinet 3] | holding:TARGET_OBJ[cd 1]",
+      "node_id": "O4",
+      "observation": "You arrive at cabinet 3. The cabinet 3 is closed.",
+      "signature": [
+        "at:GOAL_RECEP[cabinet 3]",
+        "holding:TARGET_OBJ[cd 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine cabinet 3",
+        "examine shelf 1",
+        "go to bed 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 4",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "open cabinet 3",
+        "take cd 1 from shelf 1",
+        "take creditcard 2 from shelf 1"
+      ],
+      "depth": 2,
+      "label": "at:GOAL_RECEP[cabinet 3] | placed:1@TARGET_PARENT[shelf 1] | success",
+      "node_id": "O5",
+      "observation": "You move the cd 1 to the shelf 1.",
+      "signature": [
+        "at:GOAL_RECEP[cabinet 3]",
+        "placed:1@TARGET_PARENT[shelf 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O1",
+      "O2",
+      "O3"
+    ],
+    "dropped_units": 3,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 5,
+    "original_nodes": 6,
+    "remaining_edges": 1,
+    "remaining_nodes": 3,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "CD",
+    "parent_target": "Shelf",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_and_place_simple-CD-None-Shelf-310__trial_T20190908_125951_058277__game",
+  "task_type": "pick_and_place_simple",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 5,
+    "num_walkthrough_actions": 5,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_and_place_simple-CD-None-Shelf-310/trial_T20190908_125951_058277",
+  "walkthrough": [
+    "go to cabinet 2",
+    "open cabinet 1",
+    "take cd 1 from cabinet 1",
+    "go to cabinet 3",
+    "move cd 1 to shelf 1"
+  ]
+}

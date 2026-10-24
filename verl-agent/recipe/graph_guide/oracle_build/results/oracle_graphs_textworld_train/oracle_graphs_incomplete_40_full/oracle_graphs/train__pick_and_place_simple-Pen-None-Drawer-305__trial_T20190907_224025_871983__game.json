@@ -1,0 +1,189 @@
+{
+  "edges": [
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "pen 4",
+        "drawer 5"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[pen 4]|TARGET_PARENT[drawer 5]",
+      "admissible_before": [
+        "examine drawer 4",
+        "examine drawer 5",
+        "examine pen 4",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "help",
+        "inventory",
+        "look",
+        "move pen 4 to drawer 4",
+        "move pen 4 to drawer 5"
+      ],
+      "done": true,
+      "dst": "O4",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "at:GOAL_RECEP[drawer 5]",
+        "holding:TARGET_OBJ[pen 4]"
+      ],
+      "observation_after": "You move the pen 4 to the drawer 5.",
+      "observation_before": "You arrive at drawer 5. On the drawer 5, you see nothing.",
+      "oracle_step_idx": 0,
+      "role_text": "TARGET_OBJ[pen 4] -> TARGET_PARENT[drawer 5]",
+      "src": "O3",
+      "to_signature": [
+        "at:GOAL_RECEP[drawer 5]",
+        "placed:1@TARGET_PARENT[drawer 5]",
+        "success"
+      ],
+      "walkthrough_action": "move pen 4 to drawer 5",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_and_place_simple-Pen-None-Drawer-305/trial_T20190907_224025_871983/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[drawer 5]",
+    "placed:1@TARGET_PARENT[drawer 5]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a laundryhamper 1, and a shelf 1.\n\nYour task is to: put some pen on drawer.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine drawer 4",
+        "examine drawer 5",
+        "examine pen 4",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "help",
+        "inventory",
+        "look",
+        "move pen 4 to drawer 4",
+        "move pen 4 to drawer 5"
+      ],
+      "depth": 1,
+      "label": "at:GOAL_RECEP[drawer 5] | holding:TARGET_OBJ[pen 4]",
+      "node_id": "O3",
+      "observation": "You arrive at drawer 5. On the drawer 5, you see nothing.",
+      "signature": [
+        "at:GOAL_RECEP[drawer 5]",
+        "holding:TARGET_OBJ[pen 4]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine drawer 4",
+        "examine drawer 5",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "help",
+        "inventory",
+        "look",
+        "take creditcard 1 from drawer 4",
+        "take pen 4 from drawer 5",
+        "take pencil 3 from drawer 4"
+      ],
+      "depth": 2,
+      "label": "at:GOAL_RECEP[drawer 5] | placed:1@TARGET_PARENT[drawer 5] | success",
+      "node_id": "O4",
+      "observation": "You move the pen 4 to the drawer 5.",
+      "signature": [
+        "at:GOAL_RECEP[drawer 5]",
+        "placed:1@TARGET_PARENT[drawer 5]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O1",
+      "O2"
+    ],
+    "dropped_units": 2,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 4,
+    "original_nodes": 5,
+    "remaining_edges": 1,
+    "remaining_nodes": 3,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Pen",
+    "parent_target": "Drawer",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_and_place_simple-Pen-None-Drawer-305__trial_T20190907_224025_871983__game",
+  "task_type": "pick_and_place_simple",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 4,
+    "num_walkthrough_actions": 4,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_and_place_simple-Pen-None-Drawer-305/trial_T20190907_224025_871983",
+  "walkthrough": [
+    "go to dresser 1",
+    "take pen 4 from dresser 1",
+    "go to drawer 5",
+    "move pen 4 to drawer 5"
+  ]
+}

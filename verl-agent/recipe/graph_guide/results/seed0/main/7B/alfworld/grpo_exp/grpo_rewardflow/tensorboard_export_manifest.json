@@ -1,0 +1,64 @@
+{
+  "requested_run": "alfworld/rewardflow_alfworld_T50_gamma_0_9",
+  "actual_run": "alfworld/rewardflow_alfworld_T50_gamma_0_9",
+  "tensorboard_url": "http://localhost:6014",
+  "exported_at_unix": 1779417082.5439577,
+  "output_dir": "/mnt/public/dingbowen/project_sft_rl_agenetic_training/verl-agent/recipe/graph_guide/results/main/7B/alfworld/grpo_exp/grpo_rewardflow",
+  "metrics": [
+    {
+      "requested_tag": "val/look_at_obj_in_light_success_rate",
+      "actual_tag": "val/look_at_obj_in_light_success_rate",
+      "points": 32,
+      "csv": "val_look_at_obj_in_light_success_rate.csv"
+    },
+    {
+      "requested_tag": "val/pick_and_place_success_rate",
+      "actual_tag": "val/pick_and_place_success_rate",
+      "points": 32,
+      "csv": "val_pick_and_place_success_rate.csv"
+    },
+    {
+      "requested_tag": "val/pick_clean_then_place_in_recep_success_rate",
+      "actual_tag": "val/pick_clean_then_place_in_recep_success_rate",
+      "points": 32,
+      "csv": "val_pick_clean_then_place_in_recep_success_rate.csv"
+    },
+    {
+      "requested_tag": "val/pick_cool_then_place_in_recep_success_rate",
+      "actual_tag": "val/pick_cool_then_place_in_recep_success_rate",
+      "points": 32,
+      "csv": "val_pick_cool_then_place_in_recep_success_rate.csv"
+    },
+    {
+      "requested_tag": "val/pick_heat_then_place_in_recep_success_rate",
+      "actual_tag": "val/pick_heat_then_place_in_recep_success_rate",
+      "points": 32,
+      "csv": "val_pick_heat_then_place_in_recep_success_rate.csv"
+    },
+    {
+      "requested_tag": "val/pick_two_obj_and_place_success_rate",
+      "actual_tag": "val/pick_two_obj_and_place_success_rate",
+      "points": 32,
+      "csv": "val_pick_two_obj_and_place_success_rate.csv"
+    },
+    {
+      "requested_tag": "val/success_rate",
+      "actual_tag": "val/success_rate",
+      "points": 32,
+      "csv": "val_success_rate.csv"
+    },
+    {
+      "requested_tag": "val/text/test_score",
+      "actual_tag": "val/text/test_score",
+      "points": 32,
+      "csv": "val_text_test_score.csv"
+    },
+    {
+      "requested_tag": "actor/entropy_loss",
+      "actual_tag": "actor/entropy_loss",
+      "points": 157,
+      "csv": "actor_entropy_loss.csv"
+    }
+  ],
+  "missing_tags": []
+}

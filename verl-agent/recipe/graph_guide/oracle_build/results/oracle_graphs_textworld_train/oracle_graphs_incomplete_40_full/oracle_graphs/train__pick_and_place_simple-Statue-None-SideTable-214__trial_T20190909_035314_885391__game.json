@@ -1,0 +1,165 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "shelf 2"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[shelf 2]",
+      "admissible_before": [
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to sofa 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at shelf 2. On the shelf 2, you see a statue 3.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a coffeetable 1, a garbagecan 1, a shelf 2, a shelf 1, a sidetable 1, a sofa 2, and a sofa 1.\n\nYour task is to: put a statue in sidetable.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[shelf 2]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[shelf 2]"
+      ],
+      "walkthrough_action": "go to shelf 2",
+      "won": false
+    }
+  ],
+  "gamefile": "train/pick_and_place_simple-Statue-None-SideTable-214/trial_T20190909_035314_885391/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[sidetable 1]",
+    "placed:1@TARGET_PARENT[sidetable 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to sofa 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a coffeetable 1, a garbagecan 1, a shelf 2, a shelf 1, a sidetable 1, a sofa 2, and a sofa 1.\n\nYour task is to: put a statue in sidetable.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine shelf 2",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to sofa 2",
+        "help",
+        "inventory",
+        "look",
+        "take statue 3 from shelf 2"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[shelf 2]",
+      "node_id": "O1",
+      "observation": "You arrive at shelf 2. On the shelf 2, you see a statue 3.",
+      "signature": [
+        "at:OBJECT_SOURCE[shelf 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine sidetable 1",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sofa 1",
+        "go to sofa 2",
+        "help",
+        "inventory",
+        "look",
+        "take keychain 3 from sidetable 1",
+        "take statue 3 from sidetable 1"
+      ],
+      "depth": 2,
+      "label": "at:GOAL_RECEP[sidetable 1] | placed:1@TARGET_PARENT[sidetable 1] | success",
+      "node_id": "O4",
+      "observation": "You move the statue 3 to the sidetable 1.",
+      "signature": [
+        "at:GOAL_RECEP[sidetable 1]",
+        "placed:1@TARGET_PARENT[sidetable 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O2",
+      "O3"
+    ],
+    "dropped_units": 2,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 4,
+    "original_nodes": 5,
+    "remaining_edges": 1,
+    "remaining_nodes": 3,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Statue",
+    "parent_target": "SideTable",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_and_place_simple-Statue-None-SideTable-214__trial_T20190909_035314_885391__game",
+  "task_type": "pick_and_place_simple",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 4,
+    "num_walkthrough_actions": 4,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_and_place_simple-Statue-None-SideTable-214/trial_T20190909_035314_885391",
+  "walkthrough": [
+    "go to shelf 2",
+    "take statue 3 from shelf 2",
+    "go to sidetable 1",
+    "move statue 3 to sidetable 1"
+  ]
+}

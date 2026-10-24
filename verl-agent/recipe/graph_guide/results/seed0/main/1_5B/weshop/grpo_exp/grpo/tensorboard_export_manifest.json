@@ -1,0 +1,34 @@
+{
+  "requested_run": "weshop/grpo_webshop",
+  "actual_run": "weshop/grpo_webshop",
+  "tensorboard_url": "http://localhost:6016",
+  "exported_at_unix": 1779331758.860229,
+  "output_dir": "/mnt/public/dingbowen/project_sft_rl_agenetic_training/verl-agent/recipe/graph_guide/results/main/1_5B/weshop/grpo_exp/grpo",
+  "metrics": [
+    {
+      "requested_tag": "val/success_rate",
+      "actual_tag": "val/success_rate",
+      "points": 103,
+      "csv": "val_success_rate.csv"
+    },
+    {
+      "requested_tag": "val/text/test_score",
+      "actual_tag": "val/text/test_score",
+      "points": 103,
+      "csv": "val_text_test_score.csv"
+    },
+    {
+      "requested_tag": "val/webshop_task_score",
+      "actual_tag": "val/webshop_task_score (not success_rate)",
+      "points": 103,
+      "csv": "val_webshop_task_score.csv"
+    },
+    {
+      "requested_tag": "actor/entropy_loss",
+      "actual_tag": "actor/entropy_loss",
+      "points": 514,
+      "csv": "actor_entropy_loss.csv"
+    }
+  ],
+  "missing_tags": []
+}

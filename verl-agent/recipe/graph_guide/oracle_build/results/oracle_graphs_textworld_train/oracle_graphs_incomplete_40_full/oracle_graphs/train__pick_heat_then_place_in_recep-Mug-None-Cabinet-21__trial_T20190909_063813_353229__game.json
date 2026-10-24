@@ -1,0 +1,307 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "cabinet"
+      ],
+      "abstract_roles": [
+        "TARGET_PARENT"
+      ],
+      "action_key": "GotoLocation::TARGET_PARENT[cabinet]",
+      "admissible_before": [
+        "examine microwave 1",
+        "examine mug 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to diningtable 3",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "heat mug 2 with microwave 1",
+        "help",
+        "inventory",
+        "look",
+        "open microwave 1"
+      ],
+      "done": false,
+      "dst": "O5",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "at:HEAT_STATION[microwave 1]",
+        "holding:TARGET_OBJ[mug 2]",
+        "object:hot[TARGET_OBJ]"
+      ],
+      "observation_after": "You arrive at cabinet 2. The cabinet 2 is closed.",
+      "observation_before": "You heat the mug 2 using the microwave 1.",
+      "oracle_step_idx": 0,
+      "role_text": "TARGET_PARENT[cabinet]",
+      "src": "O4",
+      "to_signature": [
+        "at:TARGET_PARENT[cabinet]",
+        "holding:TARGET_OBJ[mug 2]",
+        "object:hot[TARGET_OBJ]"
+      ],
+      "walkthrough_action": "go to cabinet 2",
+      "won": false
+    }
+  ],
+  "gamefile": "train/pick_heat_then_place_in_recep-Mug-None-Cabinet-21/trial_T20190909_063813_353229/game.tw-pddl",
+  "goal_signature": [
+    "at:TARGET_PARENT[cabinet]",
+    "object:hot[TARGET_OBJ]",
+    "placed:1@TARGET_PARENT[cabinet 2]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to diningtable 3",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 3, a diningtable 2, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\n\nYour task is to: put a hot mug in cabinet.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine coffeemachine 1",
+        "examine mug 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to diningtable 3",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "move mug 2 to coffeemachine 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[coffeemachine 1] | holding:TARGET_OBJ[mug 2]",
+      "node_id": "O2",
+      "observation": "You pick up the mug 2 from the coffeemachine 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[coffeemachine 1]",
+        "holding:TARGET_OBJ[mug 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine microwave 1",
+        "examine mug 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to diningtable 3",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "heat mug 2 with microwave 1",
+        "help",
+        "inventory",
+        "look",
+        "open microwave 1"
+      ],
+      "depth": 2,
+      "label": "at:HEAT_STATION[microwave 1] | holding:TARGET_OBJ[mug 2] | object:hot[TARGET_OBJ]",
+      "node_id": "O4",
+      "observation": "You heat the mug 2 using the microwave 1.",
+      "signature": [
+        "at:HEAT_STATION[microwave 1]",
+        "holding:TARGET_OBJ[mug 2]",
+        "object:hot[TARGET_OBJ]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine cabinet 2",
+        "examine mug 2",
+        "go to cabinet 1",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to diningtable 3",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "open cabinet 2"
+      ],
+      "depth": 3,
+      "label": "at:TARGET_PARENT[cabinet] | holding:TARGET_OBJ[mug 2] | object:hot[TARGET_OBJ]",
+      "node_id": "O5",
+      "observation": "You arrive at cabinet 2. The cabinet 2 is closed.",
+      "signature": [
+        "at:TARGET_PARENT[cabinet]",
+        "holding:TARGET_OBJ[mug 2]",
+        "object:hot[TARGET_OBJ]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "close cabinet 2",
+        "examine cabinet 2",
+        "go to cabinet 1",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to diningtable 3",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "take mug 2 from cabinet 2"
+      ],
+      "depth": 4,
+      "label": "at:TARGET_PARENT[cabinet] | object:hot[TARGET_OBJ] | placed:1@TARGET_PARENT[cabinet 2] | success",
+      "node_id": "O7",
+      "observation": "You move the mug 2 to the cabinet 2.",
+      "signature": [
+        "at:TARGET_PARENT[cabinet]",
+        "object:hot[TARGET_OBJ]",
+        "placed:1@TARGET_PARENT[cabinet 2]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O1",
+      "O3",
+      "O6"
+    ],
+    "dropped_units": 3,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 7,
+    "original_nodes": 8,
+    "remaining_edges": 1,
+    "remaining_nodes": 5,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Mug",
+    "parent_target": "Cabinet",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_heat_then_place_in_recep-Mug-None-Cabinet-21__trial_T20190909_063813_353229__game",
+  "task_type": "pick_heat_then_place_in_recep",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 7,
+    "num_walkthrough_actions": 7,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_heat_then_place_in_recep-Mug-None-Cabinet-21/trial_T20190909_063813_353229",
+  "walkthrough": [
+    "go to coffeemachine 1",
+    "take mug 2 from coffeemachine 1",
+    "go to microwave 1",
+    "heat mug 2 with microwave 1",
+    "go to cabinet 2",
+    "open cabinet 2",
+    "move mug 2 to cabinet 2"
+  ]
+}

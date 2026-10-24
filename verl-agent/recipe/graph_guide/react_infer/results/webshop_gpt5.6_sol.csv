@@ -1,0 +1,2 @@
+Method,Model,Env,Val Seed,Val Size,Score.,Succ.,TaskScore
+React API,gpt-5.6-sol,WebShop,1000,128,27.6,21.9,0.276

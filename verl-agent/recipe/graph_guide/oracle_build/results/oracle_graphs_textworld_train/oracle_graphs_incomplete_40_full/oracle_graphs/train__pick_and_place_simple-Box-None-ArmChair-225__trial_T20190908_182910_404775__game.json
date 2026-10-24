@@ -1,0 +1,144 @@
+{
+  "edges": [],
+  "gamefile": "train/pick_and_place_simple-Box-None-ArmChair-225/trial_T20190908_182910_404775/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[armchair 1]",
+    "placed:1@TARGET_PARENT[armchair 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to sofa 2",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a coffeetable 1, a drawer 1, a garbagecan 1, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, a shelf 1, a sidetable 1, a sofa 2, a sofa 1, and a tvstand 1.\n\nYour task is to: put a box in armchair.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine box 1",
+        "examine sofa 2",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "move box 1 to sofa 2"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[sofa 2] | holding:TARGET_OBJ[box 1]",
+      "node_id": "O2",
+      "observation": "You pick up the box 1 from the sofa 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[sofa 2]",
+        "holding:TARGET_OBJ[box 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to sofa 2",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take box 1 from armchair 1"
+      ],
+      "depth": 2,
+      "label": "at:GOAL_RECEP[armchair 1] | placed:1@TARGET_PARENT[armchair 1] | success",
+      "node_id": "O4",
+      "observation": "You move the box 1 to the armchair 1.",
+      "signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "placed:1@TARGET_PARENT[armchair 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O1",
+      "O3"
+    ],
+    "dropped_units": 2,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 4,
+    "original_nodes": 5,
+    "remaining_edges": 0,
+    "remaining_nodes": 3,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Box",
+    "parent_target": "ArmChair",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_and_place_simple-Box-None-ArmChair-225__trial_T20190908_182910_404775__game",
+  "task_type": "pick_and_place_simple",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 4,
+    "num_walkthrough_actions": 4,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_and_place_simple-Box-None-ArmChair-225/trial_T20190908_182910_404775",
+  "walkthrough": [
+    "go to sofa 2",
+    "take box 1 from sofa 2",
+    "go to armchair 1",
+    "move box 1 to armchair 1"
+  ]
+}

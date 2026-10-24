@@ -1,0 +1,302 @@
+{
+  "distillation_input": "official_outputs/7B/alfworld/GRPO_7B_infer/validation_data/0.jsonl",
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::OBJECT_SOURCE[drawer 1]",
+      "admissible_before": [
+        "go to bathtubbasin 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "success_682cb232_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at drawer 1. On the drawer 1, you see a candle 1, a soapbottle 1, and a toiletpaper 2.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bathtubbasin 1, a drawer 2, a drawer 1, a garbagecan 1, a handtowelholder 1, a sidetable 1, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.\n\nYour task is to: put a candle in toilet.",
+      "oracle_step_idx": 0,
+      "path_source": "success_trajectory",
+      "role_text": "OBJECT_SOURCE[drawer 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[drawer 1]"
+      ],
+      "walkthrough_action": "go to drawer 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PickupObject::TARGET_OBJ[candle 1]|LITERAL::drawer[drawer 1]",
+      "admissible_before": [
+        "examine drawer 1",
+        "examine drawer 2",
+        "go to bathtubbasin 1",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "take candle 1 from drawer 1",
+        "take candle 2 from drawer 2",
+        "take soapbottle 1 from drawer 1",
+        "take toiletpaper 1 from drawer 2",
+        "take toiletpaper 2 from drawer 1"
+      ],
+      "done": false,
+      "dst": "O2",
+      "edge_id": "success_682cb232_e1",
+      "from_signature": [
+        "at:OBJECT_SOURCE[drawer 1]"
+      ],
+      "observation_after": "You pick up the candle 1 from the drawer 1.",
+      "observation_before": "You arrive at drawer 1. On the drawer 1, you see a candle 1, a soapbottle 1, and a toiletpaper 2.",
+      "oracle_step_idx": 1,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[candle 1] -> LITERAL::drawer[drawer 1]",
+      "src": "O1",
+      "to_signature": [
+        "at:OBJECT_SOURCE[drawer 1]",
+        "holding:TARGET_OBJ[candle 1]"
+      ],
+      "walkthrough_action": "take candle 1 from drawer 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::GOAL_RECEP[toilet 1]",
+      "admissible_before": [
+        "examine candle 1",
+        "examine drawer 1",
+        "examine drawer 2",
+        "go to bathtubbasin 1",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move candle 1 to drawer 1",
+        "move candle 1 to drawer 2"
+      ],
+      "done": false,
+      "dst": "O3",
+      "edge_id": "success_682cb232_e2",
+      "from_signature": [
+        "at:OBJECT_SOURCE[drawer 1]",
+        "holding:TARGET_OBJ[candle 1]"
+      ],
+      "observation_after": "You arrive at toilet 1. On the toilet 1, you see a soapbottle 2, a spraybottle 2, and a tissuebox 1.",
+      "observation_before": "You pick up the candle 1 from the drawer 1.",
+      "oracle_step_idx": 2,
+      "path_source": "success_trajectory",
+      "role_text": "GOAL_RECEP[toilet 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:GOAL_RECEP[toilet 1]",
+        "holding:TARGET_OBJ[candle 1]"
+      ],
+      "walkthrough_action": "go to toilet 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PutObject::TARGET_OBJ[candle 1]|TARGET_PARENT[toilet 1]",
+      "admissible_before": [
+        "examine candle 1",
+        "examine toilet 1",
+        "go to bathtubbasin 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move candle 1 to toilet 1"
+      ],
+      "done": true,
+      "dst": "O4",
+      "edge_id": "success_682cb232_e3",
+      "from_signature": [
+        "at:GOAL_RECEP[toilet 1]",
+        "holding:TARGET_OBJ[candle 1]"
+      ],
+      "observation_after": "You move the candle 1 to the toilet 1.",
+      "observation_before": "You arrive at toilet 1. On the toilet 1, you see a soapbottle 2, a spraybottle 2, and a tissuebox 1.",
+      "oracle_step_idx": 3,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[candle 1] -> TARGET_PARENT[toilet 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:GOAL_RECEP[toilet 1]",
+        "placed:1@TARGET_PARENT[toilet 1]",
+        "success"
+      ],
+      "walkthrough_action": "move candle 1 to toilet 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_and_place_simple-Candle-None-Toilet-419/trial_T20190907_194421_014813/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[toilet 1]",
+    "placed:1@TARGET_PARENT[toilet 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bathtubbasin 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bathtubbasin 1, a drawer 2, a drawer 1, a garbagecan 1, a handtowelholder 1, a sidetable 1, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.\n\nYour task is to: put a candle in toilet.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[drawer 1]",
+      "node_id": "O1",
+      "observation": "You arrive at drawer 1. On the drawer 1, you see a candle 1, a soapbottle 1, and a toiletpaper 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[drawer 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[drawer 1] | holding:TARGET_OBJ[candle 1]",
+      "node_id": "O2",
+      "observation": "You pick up the candle 1 from the drawer 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[drawer 1]",
+        "holding:TARGET_OBJ[candle 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 3,
+      "label": "at:GOAL_RECEP[toilet 1] | holding:TARGET_OBJ[candle 1]",
+      "node_id": "O3",
+      "observation": "You arrive at toilet 1. On the toilet 1, you see a soapbottle 2, a spraybottle 2, and a tissuebox 1.",
+      "signature": [
+        "at:GOAL_RECEP[toilet 1]",
+        "holding:TARGET_OBJ[candle 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 4,
+      "label": "at:GOAL_RECEP[toilet 1] | placed:1@TARGET_PARENT[toilet 1] | success",
+      "node_id": "O4",
+      "observation": "You move the candle 1 to the toilet 1.",
+      "signature": [
+        "at:GOAL_RECEP[toilet 1]",
+        "placed:1@TARGET_PARENT[toilet 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_type": "alfworld_teacher_distilled",
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Candle",
+    "parent_target": "Toilet",
+    "toggle_target": ""
+  },
+  "reference_paths": [
+    {
+      "edge_ids": [
+        "success_682cb232_e0",
+        "success_682cb232_e1",
+        "success_682cb232_e2",
+        "success_682cb232_e3"
+      ],
+      "node_ids": [
+        "O0",
+        "O1",
+        "O2",
+        "O3",
+        "O4"
+      ],
+      "path_id": "success_682cb232",
+      "source": "success_trajectory",
+      "traj_uid": "682cb232-a955-4705-bc79-e6ce8098a8ff",
+      "walkthrough": [
+        "go to drawer 1",
+        "take candle 1 from drawer 1",
+        "go to toilet 1",
+        "move candle 1 to toilet 1"
+      ]
+    }
+  ],
+  "signature_mode": "entity",
+  "source": "teacher_7b_grpo_success_raw",
+  "state_source": "teacher_7b_grpo_success_raw",
+  "task_key": "train__pick_and_place_simple-Candle-None-Toilet-419__trial_T20190907_194421_014813__game",
+  "task_type": "pick_and_place_simple",
+  "teacher_model": "official_outputs/7B/alfworld/grpo_alfworld/grpo_alfworld/global_step_140/actor",
+  "teacher_traj_uid": "682cb232-a955-4705-bc79-e6ce8098a8ff",
+  "trial_dir": "train/pick_and_place_simple-Candle-None-Toilet-419/trial_T20190907_194421_014813",
+  "walkthrough": [
+    "go to drawer 1",
+    "take candle 1 from drawer 1",
+    "go to toilet 1",
+    "move candle 1 to toilet 1"
+  ]
+}

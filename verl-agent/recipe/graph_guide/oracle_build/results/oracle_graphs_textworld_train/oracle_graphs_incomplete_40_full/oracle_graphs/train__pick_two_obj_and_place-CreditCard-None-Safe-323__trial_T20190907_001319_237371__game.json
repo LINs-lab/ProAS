@@ -1,0 +1,459 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "desk 1"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[desk 1]",
+      "admissible_before": [
+        "go to bed 1",
+        "go to bed 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to safe 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at desk 1. On the desk 1, you see a alarmclock 1, a bowl 2, a bowl 1, a cellphone 1, a creditcard 2, a creditcard 1, and a desklamp 1.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 2, a bed 1, a desk 1, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a safe 1, a sidetable 2, and a sidetable 1.\n\nYour task is to: find two creditcard and put them in safe.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[desk 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[desk 1]"
+      ],
+      "walkthrough_action": "go to desk 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "desk 1"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[desk 1]",
+      "admissible_before": [
+        "close safe 1",
+        "examine safe 1",
+        "go to bed 1",
+        "go to bed 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look",
+        "take cd 1 from safe 1",
+        "take creditcard 2 from safe 1",
+        "take keychain 1 from safe 1"
+      ],
+      "done": false,
+      "dst": "O6",
+      "edge_id": "expert_e1",
+      "from_signature": [
+        "at:TARGET_PARENT[safe]",
+        "placed:1@TARGET_PARENT[safe 1]"
+      ],
+      "observation_after": "You arrive at desk 1. On the desk 1, you see a alarmclock 1, a bowl 2, a bowl 1, a cellphone 1, a creditcard 1, and a desklamp 1.",
+      "observation_before": "You move the creditcard 2 to the safe 1.",
+      "oracle_step_idx": 1,
+      "role_text": "OBJECT_SOURCE[desk 1]",
+      "src": "O5",
+      "to_signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "placed:1@TARGET_PARENT[safe 1]"
+      ],
+      "walkthrough_action": "go to desk 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "creditcard 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[creditcard 1]",
+      "admissible_before": [
+        "examine desk 1",
+        "go to bed 1",
+        "go to bed 2",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to safe 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look",
+        "take alarmclock 1 from desk 1",
+        "take bowl 1 from desk 1",
+        "take bowl 2 from desk 1",
+        "take cellphone 1 from desk 1",
+        "take creditcard 1 from desk 1",
+        "use desklamp 1"
+      ],
+      "done": false,
+      "dst": "O7",
+      "edge_id": "expert_e2",
+      "from_signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "placed:1@TARGET_PARENT[safe 1]"
+      ],
+      "observation_after": "You pick up the creditcard 1 from the desk 1.",
+      "observation_before": "You arrive at desk 1. On the desk 1, you see a alarmclock 1, a bowl 2, a bowl 1, a cellphone 1, a creditcard 1, and a desklamp 1.",
+      "oracle_step_idx": 2,
+      "role_text": "TARGET_OBJ[creditcard 1]",
+      "src": "O6",
+      "to_signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "holding:TARGET_OBJ[creditcard 1]",
+        "placed:1@none"
+      ],
+      "walkthrough_action": "take creditcard 1 from desk 1",
+      "won": false
+    }
+  ],
+  "gamefile": "train/pick_two_obj_and_place-CreditCard-None-Safe-323/trial_T20190907_001319_237371/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[safe 1]",
+    "placed:2@TARGET_PARENT[safe 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bed 1",
+        "go to bed 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to safe 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 2, a bed 1, a desk 1, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a safe 1, a sidetable 2, and a sidetable 1.\n\nYour task is to: find two creditcard and put them in safe.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine desk 1",
+        "go to bed 1",
+        "go to bed 2",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to safe 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look",
+        "take alarmclock 1 from desk 1",
+        "take bowl 1 from desk 1",
+        "take bowl 2 from desk 1",
+        "take cellphone 1 from desk 1",
+        "take creditcard 1 from desk 1",
+        "take creditcard 2 from desk 1",
+        "use desklamp 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[desk 1]",
+      "node_id": "O1",
+      "observation": "You arrive at desk 1. On the desk 1, you see a alarmclock 1, a bowl 2, a bowl 1, a cellphone 1, a creditcard 2, a creditcard 1, and a desklamp 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[desk 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "close safe 1",
+        "examine safe 1",
+        "go to bed 1",
+        "go to bed 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look",
+        "take cd 1 from safe 1",
+        "take creditcard 2 from safe 1",
+        "take keychain 1 from safe 1"
+      ],
+      "depth": 2,
+      "label": "at:TARGET_PARENT[safe] | placed:1@TARGET_PARENT[safe 1]",
+      "node_id": "O5",
+      "observation": "You move the creditcard 2 to the safe 1.",
+      "signature": [
+        "at:TARGET_PARENT[safe]",
+        "placed:1@TARGET_PARENT[safe 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine desk 1",
+        "go to bed 1",
+        "go to bed 2",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to safe 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look",
+        "take alarmclock 1 from desk 1",
+        "take bowl 1 from desk 1",
+        "take bowl 2 from desk 1",
+        "take cellphone 1 from desk 1",
+        "take creditcard 1 from desk 1",
+        "use desklamp 1"
+      ],
+      "depth": 3,
+      "label": "at:OBJECT_SOURCE[desk 1] | placed:1@TARGET_PARENT[safe 1]",
+      "node_id": "O6",
+      "observation": "You arrive at desk 1. On the desk 1, you see a alarmclock 1, a bowl 2, a bowl 1, a cellphone 1, a creditcard 1, and a desklamp 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "placed:1@TARGET_PARENT[safe 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine creditcard 1",
+        "examine desk 1",
+        "go to bed 1",
+        "go to bed 2",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to safe 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look",
+        "move creditcard 1 to desk 1",
+        "use desklamp 1"
+      ],
+      "depth": 4,
+      "label": "at:OBJECT_SOURCE[desk 1] | holding:TARGET_OBJ[creditcard 1] | placed:1@none",
+      "node_id": "O7",
+      "observation": "You pick up the creditcard 1 from the desk 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "holding:TARGET_OBJ[creditcard 1]",
+        "placed:1@none"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "close safe 1",
+        "examine safe 1",
+        "go to bed 1",
+        "go to bed 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look",
+        "take cd 1 from safe 1",
+        "take creditcard 1 from safe 1",
+        "take creditcard 2 from safe 1",
+        "take keychain 1 from safe 1"
+      ],
+      "depth": 5,
+      "label": "at:GOAL_RECEP[safe 1] | placed:2@TARGET_PARENT[safe 1] | success",
+      "node_id": "O9",
+      "observation": "You move the creditcard 1 to the safe 1.",
+      "signature": [
+        "at:GOAL_RECEP[safe 1]",
+        "placed:2@TARGET_PARENT[safe 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O2",
+      "O3",
+      "O4",
+      "O8"
+    ],
+    "dropped_units": 4,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 9,
+    "original_nodes": 10,
+    "remaining_edges": 3,
+    "remaining_nodes": 6,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "CreditCard",
+    "parent_target": "Safe",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_two_obj_and_place-CreditCard-None-Safe-323__trial_T20190907_001319_237371__game",
+  "task_type": "pick_two_obj_and_place",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 9,
+    "num_walkthrough_actions": 9,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_two_obj_and_place-CreditCard-None-Safe-323/trial_T20190907_001319_237371",
+  "walkthrough": [
+    "go to desk 1",
+    "take creditcard 2 from desk 1",
+    "go to safe 1",
+    "open safe 1",
+    "move creditcard 2 to safe 1",
+    "go to desk 1",
+    "take creditcard 1 from desk 1",
+    "go to safe 1",
+    "move creditcard 1 to safe 1"
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "edges": [],
+  "gamefile": "train/pick_and_place_simple-CellPhone-None-ArmChair-321/trial_T20190906_200553_752305/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[armchair 1]",
+    "placed:1@TARGET_PARENT[armchair 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to armchair 1",
+        "go to bed 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a bed 1, a diningtable 1, a drawer 2, a drawer 1, a garbagecan 1, a sidetable 2, and a sidetable 1.\n\nYour task is to: put a cellphone in armchair.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine cellphone 2",
+        "examine diningtable 1",
+        "go to armchair 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look",
+        "move cellphone 2 to diningtable 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[diningtable 1] | holding:TARGET_OBJ[cellphone 2]",
+      "node_id": "O2",
+      "observation": "You pick up the cellphone 2 from the diningtable 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[diningtable 1]",
+        "holding:TARGET_OBJ[cellphone 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine armchair 1",
+        "go to bed 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look",
+        "take cellphone 2 from armchair 1",
+        "take keychain 2 from armchair 1"
+      ],
+      "depth": 2,
+      "label": "at:GOAL_RECEP[armchair 1] | placed:1@TARGET_PARENT[armchair 1] | success",
+      "node_id": "O4",
+      "observation": "You move the cellphone 2 to the armchair 1.",
+      "signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "placed:1@TARGET_PARENT[armchair 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O1",
+      "O3"
+    ],
+    "dropped_units": 2,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 4,
+    "original_nodes": 5,
+    "remaining_edges": 0,
+    "remaining_nodes": 3,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "CellPhone",
+    "parent_target": "ArmChair",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_and_place_simple-CellPhone-None-ArmChair-321__trial_T20190906_200553_752305__game",
+  "task_type": "pick_and_place_simple",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 4,
+    "num_walkthrough_actions": 4,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_and_place_simple-CellPhone-None-ArmChair-321/trial_T20190906_200553_752305",
+  "walkthrough": [
+    "go to diningtable 1",
+    "take cellphone 2 from diningtable 1",
+    "go to armchair 1",
+    "move cellphone 2 to armchair 1"
+  ]
+}

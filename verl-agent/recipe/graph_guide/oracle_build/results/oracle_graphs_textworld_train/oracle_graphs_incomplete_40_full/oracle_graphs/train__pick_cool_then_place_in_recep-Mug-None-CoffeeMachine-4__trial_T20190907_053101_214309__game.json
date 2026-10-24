@@ -1,0 +1,239 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "diningtable 1"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[diningtable 1]",
+      "admissible_before": [
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to countertop 3",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at diningtable 1. On the diningtable 1, you see a butterknife 1, a fork 3, a fork 2, a fork 1, a knife 3, a ladle 1, a lettuce 2, a lettuce 1, a mug 2, a pan 2, a peppershaker 3, a plate 2, a saltshaker 3, a saltshaker 2, a soapbottle 3, a spatula 2, a spatula 1, and a tomato 2.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a diningtable 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\n\nYour task is to: put a cool mug in coffeemachine.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[diningtable 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[diningtable 1]"
+      ],
+      "walkthrough_action": "go to diningtable 1",
+      "won": false
+    }
+  ],
+  "gamefile": "train/pick_cool_then_place_in_recep-Mug-None-CoffeeMachine-4/trial_T20190907_053101_214309/game.tw-pddl",
+  "goal_signature": [
+    "at:COOL_STATION[fridge 1]",
+    "holding:TARGET_OBJ[mug 2]",
+    "object:cool[TARGET_OBJ]"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to countertop 3",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a diningtable 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\n\nYour task is to: put a cool mug in coffeemachine.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine diningtable 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to countertop 3",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "take butterknife 1 from diningtable 1",
+        "take fork 1 from diningtable 1",
+        "take fork 2 from diningtable 1",
+        "take fork 3 from diningtable 1",
+        "take knife 3 from diningtable 1",
+        "take ladle 1 from diningtable 1",
+        "take lettuce 1 from diningtable 1",
+        "take lettuce 2 from diningtable 1",
+        "take mug 2 from diningtable 1",
+        "take pan 2 from diningtable 1",
+        "take peppershaker 3 from diningtable 1",
+        "take plate 2 from diningtable 1",
+        "take saltshaker 2 from diningtable 1",
+        "take saltshaker 3 from diningtable 1",
+        "take soapbottle 3 from diningtable 1",
+        "take spatula 1 from diningtable 1",
+        "take spatula 2 from diningtable 1",
+        "take tomato 2 from diningtable 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[diningtable 1]",
+      "node_id": "O1",
+      "observation": "You arrive at diningtable 1. On the diningtable 1, you see a butterknife 1, a fork 3, a fork 2, a fork 1, a knife 3, a ladle 1, a lettuce 2, a lettuce 1, a mug 2, a pan 2, a peppershaker 3, a plate 2, a saltshaker 3, a saltshaker 2, a soapbottle 3, a spatula 2, a spatula 1, and a tomato 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[diningtable 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "cool mug 2 with fridge 1",
+        "examine fridge 1",
+        "examine mug 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to countertop 3",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "open fridge 1"
+      ],
+      "depth": 2,
+      "label": "at:COOL_STATION[fridge 1] | holding:TARGET_OBJ[mug 2] | object:cool[TARGET_OBJ]",
+      "node_id": "O4",
+      "observation": "You cool the mug 2 using the fridge 1.",
+      "signature": [
+        "at:COOL_STATION[fridge 1]",
+        "holding:TARGET_OBJ[mug 2]",
+        "object:cool[TARGET_OBJ]"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O2",
+      "O3"
+    ],
+    "dropped_units": 2,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 4,
+    "original_nodes": 5,
+    "remaining_edges": 1,
+    "remaining_nodes": 3,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Mug",
+    "parent_target": "CoffeeMachine",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_cool_then_place_in_recep-Mug-None-CoffeeMachine-4__trial_T20190907_053101_214309__game",
+  "task_type": "pick_cool_then_place_in_recep",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 4,
+    "num_walkthrough_actions": 4,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_cool_then_place_in_recep-Mug-None-CoffeeMachine-4/trial_T20190907_053101_214309",
+  "walkthrough": [
+    "go to diningtable 1",
+    "take mug 2 from diningtable 1",
+    "go to fridge 1",
+    "cool mug 2 with fridge 1"
+  ]
+}

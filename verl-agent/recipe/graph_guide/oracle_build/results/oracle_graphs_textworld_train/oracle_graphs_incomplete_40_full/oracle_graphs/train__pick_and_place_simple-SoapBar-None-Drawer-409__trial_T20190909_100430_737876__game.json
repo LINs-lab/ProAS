@@ -1,0 +1,368 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "countertop 1"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[countertop 1]",
+      "admissible_before": [
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "go to towelholder 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at countertop 1. On the countertop 1, you see a sink 1, a soapbar 1, a soapbottle 1, a spraybottle 3, and a spraybottle 2.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a countertop 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a handtowelholder 2, a handtowelholder 1, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, a towelholder 2, and a towelholder 1.\n\nYour task is to: put some soapbar on drawer.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[countertop 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[countertop 1]"
+      ],
+      "walkthrough_action": "go to countertop 1",
+      "won": false
+    },
+    {
+      "abstract_action": "OpenObject",
+      "abstract_entities": [
+        "drawer 2"
+      ],
+      "abstract_roles": [
+        "TARGET_PARENT"
+      ],
+      "action_key": "OpenObject::TARGET_PARENT[drawer 2]",
+      "admissible_before": [
+        "examine drawer 2",
+        "examine soapbar 1",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "go to towelholder 2",
+        "help",
+        "inventory",
+        "look",
+        "open drawer 2"
+      ],
+      "done": false,
+      "dst": "O4",
+      "edge_id": "expert_e1",
+      "from_signature": [
+        "at:TARGET_PARENT[drawer]",
+        "holding:TARGET_OBJ[soapbar 1]"
+      ],
+      "observation_after": "You open the drawer 2. The drawer 2 is open. In it, you see a candle 1.",
+      "observation_before": "You arrive at drawer 2. The drawer 2 is closed.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_PARENT[drawer 2]",
+      "src": "O3",
+      "to_signature": [
+        "at:TARGET_PARENT[drawer]",
+        "holding:TARGET_OBJ[soapbar 1]"
+      ],
+      "walkthrough_action": "open drawer 2",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "soapbar 1",
+        "drawer 2"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[soapbar 1]|TARGET_PARENT[drawer 2]",
+      "admissible_before": [
+        "close drawer 2",
+        "examine drawer 2",
+        "examine soapbar 1",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "go to towelholder 2",
+        "help",
+        "inventory",
+        "look",
+        "move soapbar 1 to drawer 2"
+      ],
+      "done": true,
+      "dst": "O5",
+      "edge_id": "expert_e2",
+      "from_signature": [
+        "at:TARGET_PARENT[drawer]",
+        "holding:TARGET_OBJ[soapbar 1]"
+      ],
+      "observation_after": "You move the soapbar 1 to the drawer 2.",
+      "observation_before": "You open the drawer 2. The drawer 2 is open. In it, you see a candle 1.",
+      "oracle_step_idx": 2,
+      "role_text": "TARGET_OBJ[soapbar 1] -> TARGET_PARENT[drawer 2]",
+      "src": "O4",
+      "to_signature": [
+        "at:TARGET_PARENT[drawer]",
+        "placed:1@TARGET_PARENT[drawer 2]",
+        "success"
+      ],
+      "walkthrough_action": "move soapbar 1 to drawer 2",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_and_place_simple-SoapBar-None-Drawer-409/trial_T20190909_100430_737876/game.tw-pddl",
+  "goal_signature": [
+    "at:TARGET_PARENT[drawer]",
+    "placed:1@TARGET_PARENT[drawer 2]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "go to towelholder 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a countertop 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a handtowelholder 2, a handtowelholder 1, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, a towelholder 2, and a towelholder 1.\n\nYour task is to: put some soapbar on drawer.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "go to towelholder 2",
+        "help",
+        "inventory",
+        "look",
+        "take soapbar 1 from countertop 1",
+        "take soapbottle 1 from countertop 1",
+        "take spraybottle 2 from countertop 1",
+        "take spraybottle 3 from countertop 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[countertop 1]",
+      "node_id": "O1",
+      "observation": "You arrive at countertop 1. On the countertop 1, you see a sink 1, a soapbar 1, a soapbottle 1, a spraybottle 3, and a spraybottle 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[countertop 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine drawer 2",
+        "examine soapbar 1",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "go to towelholder 2",
+        "help",
+        "inventory",
+        "look",
+        "open drawer 2"
+      ],
+      "depth": 2,
+      "label": "at:TARGET_PARENT[drawer] | holding:TARGET_OBJ[soapbar 1]",
+      "node_id": "O3",
+      "observation": "You arrive at drawer 2. The drawer 2 is closed.",
+      "signature": [
+        "at:TARGET_PARENT[drawer]",
+        "holding:TARGET_OBJ[soapbar 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "close drawer 2",
+        "examine drawer 2",
+        "examine soapbar 1",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "go to towelholder 2",
+        "help",
+        "inventory",
+        "look",
+        "move soapbar 1 to drawer 2"
+      ],
+      "depth": 3,
+      "label": "at:TARGET_PARENT[drawer] | holding:TARGET_OBJ[soapbar 1]",
+      "node_id": "O4",
+      "observation": "You open the drawer 2. The drawer 2 is open. In it, you see a candle 1.",
+      "signature": [
+        "at:TARGET_PARENT[drawer]",
+        "holding:TARGET_OBJ[soapbar 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "close drawer 2",
+        "examine drawer 2",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "go to towelholder 2",
+        "help",
+        "inventory",
+        "look",
+        "take candle 1 from drawer 2",
+        "take soapbar 1 from drawer 2"
+      ],
+      "depth": 4,
+      "label": "at:TARGET_PARENT[drawer] | placed:1@TARGET_PARENT[drawer 2] | success",
+      "node_id": "O5",
+      "observation": "You move the soapbar 1 to the drawer 2.",
+      "signature": [
+        "at:TARGET_PARENT[drawer]",
+        "placed:1@TARGET_PARENT[drawer 2]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O2"
+    ],
+    "dropped_units": 1,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 5,
+    "original_nodes": 6,
+    "remaining_edges": 3,
+    "remaining_nodes": 5,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "SoapBar",
+    "parent_target": "Drawer",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_and_place_simple-SoapBar-None-Drawer-409__trial_T20190909_100430_737876__game",
+  "task_type": "pick_and_place_simple",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 5,
+    "num_walkthrough_actions": 5,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_and_place_simple-SoapBar-None-Drawer-409/trial_T20190909_100430_737876",
+  "walkthrough": [
+    "go to countertop 1",
+    "take soapbar 1 from countertop 1",
+    "go to drawer 2",
+    "open drawer 2",
+    "move soapbar 1 to drawer 2"
+  ]
+}

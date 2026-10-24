@@ -1,0 +1,400 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "sidetable 1"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[sidetable 1]",
+      "admissible_before": [
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "go to sofa 2",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at sidetable 1. On the sidetable 1, you see a statue 1.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a coffeetable 1, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a sidetable 3, a sidetable 2, a sidetable 1, a sofa 2, a sofa 1, and a tvstand 1.\n\nYour task is to: put some statue on coffeetable.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[sidetable 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[sidetable 1]"
+      ],
+      "walkthrough_action": "go to sidetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "statue 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[statue 1]",
+      "admissible_before": [
+        "examine sidetable 1",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to garbagecan 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "go to sofa 2",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take statue 1 from sidetable 1"
+      ],
+      "done": false,
+      "dst": "O2",
+      "from_signature": [
+        "at:OBJECT_SOURCE[sidetable 1]"
+      ],
+      "observation_after": "You pick up the statue 1 from the sidetable 1.",
+      "observation_before": "You arrive at sidetable 1. On the sidetable 1, you see a statue 1.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_OBJ[statue 1]",
+      "src": "O1",
+      "to_signature": [
+        "at:OBJECT_SOURCE[sidetable 1]",
+        "holding:TARGET_OBJ[statue 1]"
+      ],
+      "walkthrough_action": "take statue 1 from sidetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "coffeetable 1"
+      ],
+      "abstract_roles": [
+        "GOAL_RECEP"
+      ],
+      "action_key": "GotoLocation::GOAL_RECEP[coffeetable 1]",
+      "admissible_before": [
+        "examine sidetable 1",
+        "examine statue 1",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to garbagecan 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "go to sofa 2",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "move statue 1 to sidetable 1"
+      ],
+      "done": false,
+      "dst": "O3",
+      "from_signature": [
+        "at:OBJECT_SOURCE[sidetable 1]",
+        "holding:TARGET_OBJ[statue 1]"
+      ],
+      "observation_after": "You arrive at coffeetable 1. On the coffeetable 1, you see a laptop 1.",
+      "observation_before": "You pick up the statue 1 from the sidetable 1.",
+      "oracle_step_idx": 2,
+      "role_text": "GOAL_RECEP[coffeetable 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "holding:TARGET_OBJ[statue 1]"
+      ],
+      "walkthrough_action": "go to coffeetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "statue 1",
+        "coffeetable 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[statue 1]|TARGET_PARENT[coffeetable 1]",
+      "admissible_before": [
+        "examine coffeetable 1",
+        "examine statue 1",
+        "go to armchair 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "go to sofa 2",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "move statue 1 to coffeetable 1"
+      ],
+      "done": true,
+      "dst": "O4",
+      "from_signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "holding:TARGET_OBJ[statue 1]"
+      ],
+      "observation_after": "You move the statue 1 to the coffeetable 1.",
+      "observation_before": "You arrive at coffeetable 1. On the coffeetable 1, you see a laptop 1.",
+      "oracle_step_idx": 3,
+      "role_text": "TARGET_OBJ[statue 1] -> TARGET_PARENT[coffeetable 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "placed:1@TARGET_PARENT[coffeetable 1]",
+        "success"
+      ],
+      "walkthrough_action": "move statue 1 to coffeetable 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_and_place_simple-Statue-None-CoffeeTable-222/trial_T20190907_131249_788749/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[coffeetable 1]",
+    "placed:1@TARGET_PARENT[coffeetable 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "go to sofa 2",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a coffeetable 1, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a sidetable 3, a sidetable 2, a sidetable 1, a sofa 2, a sofa 1, and a tvstand 1.\n\nYour task is to: put some statue on coffeetable.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine sidetable 1",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to garbagecan 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "go to sofa 2",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take statue 1 from sidetable 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[sidetable 1]",
+      "node_id": "O1",
+      "observation": "You arrive at sidetable 1. On the sidetable 1, you see a statue 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[sidetable 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine sidetable 1",
+        "examine statue 1",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to garbagecan 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "go to sofa 2",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "move statue 1 to sidetable 1"
+      ],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[sidetable 1] | holding:TARGET_OBJ[statue 1]",
+      "node_id": "O2",
+      "observation": "You pick up the statue 1 from the sidetable 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[sidetable 1]",
+        "holding:TARGET_OBJ[statue 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine coffeetable 1",
+        "examine statue 1",
+        "go to armchair 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "go to sofa 2",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "move statue 1 to coffeetable 1"
+      ],
+      "depth": 3,
+      "label": "at:GOAL_RECEP[coffeetable 1] | holding:TARGET_OBJ[statue 1]",
+      "node_id": "O3",
+      "observation": "You arrive at coffeetable 1. On the coffeetable 1, you see a laptop 1.",
+      "signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "holding:TARGET_OBJ[statue 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine coffeetable 1",
+        "go to armchair 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "go to sofa 2",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take laptop 1 from coffeetable 1",
+        "take statue 1 from coffeetable 1"
+      ],
+      "depth": 4,
+      "label": "at:GOAL_RECEP[coffeetable 1] | placed:1@TARGET_PARENT[coffeetable 1] | success",
+      "node_id": "O4",
+      "observation": "You move the statue 1 to the coffeetable 1.",
+      "signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "placed:1@TARGET_PARENT[coffeetable 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Statue",
+    "parent_target": "CoffeeTable",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_and_place_simple-Statue-None-CoffeeTable-222__trial_T20190907_131249_788749__game",
+  "task_type": "pick_and_place_simple",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 4,
+    "num_walkthrough_actions": 4,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_and_place_simple-Statue-None-CoffeeTable-222/trial_T20190907_131249_788749",
+  "walkthrough": [
+    "go to sidetable 1",
+    "take statue 1 from sidetable 1",
+    "go to coffeetable 1",
+    "move statue 1 to coffeetable 1"
+  ]
+}

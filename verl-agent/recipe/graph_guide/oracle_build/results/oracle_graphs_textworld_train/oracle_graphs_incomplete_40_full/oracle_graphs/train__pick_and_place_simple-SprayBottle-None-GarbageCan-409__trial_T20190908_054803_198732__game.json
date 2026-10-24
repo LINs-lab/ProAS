@@ -1,0 +1,147 @@
+{
+  "edges": [],
+  "gamefile": "train/pick_and_place_simple-SprayBottle-None-GarbageCan-409/trial_T20190908_054803_198732/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[garbagecan 1]",
+    "placed:1@TARGET_PARENT[garbagecan 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "go to towelholder 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a countertop 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a handtowelholder 2, a handtowelholder 1, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, a towelholder 2, and a towelholder 1.\n\nYour task is to: put a spraybottle in garbagecan.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine countertop 1",
+        "examine spraybottle 3",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "go to towelholder 2",
+        "help",
+        "inventory",
+        "look",
+        "move spraybottle 3 to countertop 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[countertop 1] | holding:TARGET_OBJ[spraybottle 3]",
+      "node_id": "O2",
+      "observation": "You pick up the spraybottle 3 from the countertop 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[countertop 1]",
+        "holding:TARGET_OBJ[spraybottle 3]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine garbagecan 1",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "go to towelholder 2",
+        "help",
+        "inventory",
+        "look",
+        "take spraybottle 3 from garbagecan 1"
+      ],
+      "depth": 2,
+      "label": "at:GOAL_RECEP[garbagecan 1] | placed:1@TARGET_PARENT[garbagecan 1] | success",
+      "node_id": "O4",
+      "observation": "You move the spraybottle 3 to the garbagecan 1.",
+      "signature": [
+        "at:GOAL_RECEP[garbagecan 1]",
+        "placed:1@TARGET_PARENT[garbagecan 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O1",
+      "O3"
+    ],
+    "dropped_units": 2,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 4,
+    "original_nodes": 5,
+    "remaining_edges": 0,
+    "remaining_nodes": 3,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "SprayBottle",
+    "parent_target": "GarbageCan",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_and_place_simple-SprayBottle-None-GarbageCan-409__trial_T20190908_054803_198732__game",
+  "task_type": "pick_and_place_simple",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 4,
+    "num_walkthrough_actions": 4,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_and_place_simple-SprayBottle-None-GarbageCan-409/trial_T20190908_054803_198732",
+  "walkthrough": [
+    "go to countertop 1",
+    "take spraybottle 3 from countertop 1",
+    "go to garbagecan 1",
+    "move spraybottle 3 to garbagecan 1"
+  ]
+}

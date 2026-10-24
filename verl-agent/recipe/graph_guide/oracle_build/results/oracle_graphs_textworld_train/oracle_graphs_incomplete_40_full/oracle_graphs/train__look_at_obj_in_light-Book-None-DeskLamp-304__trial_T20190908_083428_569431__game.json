@@ -1,0 +1,258 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "shelf 1"
+      ],
+      "abstract_roles": [
+        "TOGGLE_SOURCE"
+      ],
+      "action_key": "GotoLocation::TOGGLE_SOURCE[shelf 1]",
+      "admissible_before": [
+        "examine book 3",
+        "examine desk 1",
+        "examine drawer 1",
+        "examine drawer 2",
+        "examine drawer 3",
+        "go to bed 1",
+        "go to bed 2",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "help",
+        "inventory",
+        "look",
+        "move book 3 to desk 1",
+        "move book 3 to drawer 1",
+        "move book 3 to drawer 2",
+        "move book 3 to drawer 3"
+      ],
+      "done": false,
+      "dst": "O3",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "holding:TARGET_OBJ[book 3]"
+      ],
+      "observation_after": "You arrive at shelf 1. On the shelf 1, you see a alarmclock 2, a alarmclock 1, a cellphone 2, a creditcard 3, a creditcard 2, a desklamp 1, a keychain 1, a mug 1, and a pencil 1.",
+      "observation_before": "You pick up the book 3 from the desk 1.",
+      "oracle_step_idx": 0,
+      "role_text": "TOGGLE_SOURCE[shelf 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:TOGGLE_SOURCE[shelf 1]",
+        "holding:TARGET_OBJ[book 3]"
+      ],
+      "walkthrough_action": "go to shelf 1",
+      "won": false
+    },
+    {
+      "abstract_action": "ToggleObject",
+      "abstract_entities": [
+        "desklamp 1"
+      ],
+      "abstract_roles": [
+        "TARGET_TOGGLE"
+      ],
+      "action_key": "ToggleObject::TARGET_TOGGLE[desklamp 1]",
+      "admissible_before": [
+        "examine book 3",
+        "examine shelf 1",
+        "go to bed 1",
+        "go to bed 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "help",
+        "inventory",
+        "look",
+        "move book 3 to shelf 1",
+        "use desklamp 1"
+      ],
+      "done": true,
+      "dst": "O4",
+      "edge_id": "expert_e1",
+      "from_signature": [
+        "at:TOGGLE_SOURCE[shelf 1]",
+        "holding:TARGET_OBJ[book 3]"
+      ],
+      "observation_after": "You turn on the desklamp 1.",
+      "observation_before": "You arrive at shelf 1. On the shelf 1, you see a alarmclock 2, a alarmclock 1, a cellphone 2, a creditcard 3, a creditcard 2, a desklamp 1, a keychain 1, a mug 1, and a pencil 1.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_TOGGLE[desklamp 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:TOGGLE_SOURCE[shelf 1]",
+        "holding:TARGET_OBJ[book 3]",
+        "toggle:on[desklamp 1]",
+        "success"
+      ],
+      "walkthrough_action": "use desklamp 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/look_at_obj_in_light-Book-None-DeskLamp-304/trial_T20190908_083428_569431/game.tw-pddl",
+  "goal_signature": [
+    "at:TOGGLE_SOURCE[shelf 1]",
+    "holding:TARGET_OBJ[book 3]",
+    "toggle:on[desklamp 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bed 1",
+        "go to bed 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 2, a bed 1, a desk 1, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a laundryhamper 1, and a shelf 1.\n\nYour task is to: examine the book with the desklamp.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine book 3",
+        "examine desk 1",
+        "examine drawer 1",
+        "examine drawer 2",
+        "examine drawer 3",
+        "go to bed 1",
+        "go to bed 2",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "help",
+        "inventory",
+        "look",
+        "move book 3 to desk 1",
+        "move book 3 to drawer 1",
+        "move book 3 to drawer 2",
+        "move book 3 to drawer 3"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[desk 1] | holding:TARGET_OBJ[book 3]",
+      "node_id": "O2",
+      "observation": "You pick up the book 3 from the desk 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "holding:TARGET_OBJ[book 3]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine book 3",
+        "examine shelf 1",
+        "go to bed 1",
+        "go to bed 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "help",
+        "inventory",
+        "look",
+        "move book 3 to shelf 1",
+        "use desklamp 1"
+      ],
+      "depth": 2,
+      "label": "at:TOGGLE_SOURCE[shelf 1] | holding:TARGET_OBJ[book 3]",
+      "node_id": "O3",
+      "observation": "You arrive at shelf 1. On the shelf 1, you see a alarmclock 2, a alarmclock 1, a cellphone 2, a creditcard 3, a creditcard 2, a desklamp 1, a keychain 1, a mug 1, and a pencil 1.",
+      "signature": [
+        "at:TOGGLE_SOURCE[shelf 1]",
+        "holding:TARGET_OBJ[book 3]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine book 3",
+        "examine shelf 1",
+        "go to bed 1",
+        "go to bed 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "help",
+        "inventory",
+        "look",
+        "move book 3 to shelf 1",
+        "use desklamp 1"
+      ],
+      "depth": 3,
+      "label": "at:TOGGLE_SOURCE[shelf 1] | holding:TARGET_OBJ[book 3] | toggle:on[desklamp 1] | success",
+      "node_id": "O4",
+      "observation": "You turn on the desklamp 1.",
+      "signature": [
+        "at:TOGGLE_SOURCE[shelf 1]",
+        "holding:TARGET_OBJ[book 3]",
+        "toggle:on[desklamp 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O1"
+    ],
+    "dropped_units": 1,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 4,
+    "original_nodes": 5,
+    "remaining_edges": 2,
+    "remaining_nodes": 4,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Book",
+    "parent_target": "",
+    "toggle_target": "DeskLamp"
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__look_at_obj_in_light-Book-None-DeskLamp-304__trial_T20190908_083428_569431__game",
+  "task_type": "look_at_obj_in_light",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 4,
+    "num_walkthrough_actions": 4,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/look_at_obj_in_light-Book-None-DeskLamp-304/trial_T20190908_083428_569431",
+  "walkthrough": [
+    "go to desk 1",
+    "take book 3 from desk 1",
+    "go to shelf 1",
+    "use desklamp 1"
+  ]
+}

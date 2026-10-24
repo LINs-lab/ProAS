@@ -1,0 +1,34 @@
+{
+  "requested_run": "weshop/graph_guide_step_future_miss_no_dis_mask_no_oracle_evolve_weshop_seed1",
+  "actual_run": "weshop/graph_guide_step_future_miss_no_dis_mask_no_oracle_evolve_weshop_seed1",
+  "tensorboard_url": "http://localhost:6014",
+  "exported_at_unix": 1783994113.4882035,
+  "output_dir": "/mnt/public/dingbowen/project_sft_rl_agenetic_training/verl-agent/recipe/graph_guide/results/seed1/main/7B/weshop/grpo_exp/grpo_ASFD_no_evolve",
+  "metrics": [
+    {
+      "requested_tag": "val/success_rate",
+      "actual_tag": "val/success_rate",
+      "points": 31,
+      "csv": "val_success_rate.csv"
+    },
+    {
+      "requested_tag": "val/text/test_score",
+      "actual_tag": "val/text/test_score",
+      "points": 31,
+      "csv": "val_text_test_score.csv"
+    },
+    {
+      "requested_tag": "val/webshop_task_score",
+      "actual_tag": "val/webshop_task_score (not success_rate)",
+      "points": 31,
+      "csv": "val_webshop_task_score.csv"
+    },
+    {
+      "requested_tag": "actor/entropy_loss",
+      "actual_tag": "actor/entropy_loss",
+      "points": 150,
+      "csv": "actor_entropy_loss.csv"
+    }
+  ],
+  "missing_tags": []
+}

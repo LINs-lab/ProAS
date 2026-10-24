@@ -1,0 +1,342 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "sidetable 2"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[sidetable 2]",
+      "admissible_before": [
+        "go to armchair 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 12",
+        "go to drawer 13",
+        "go to drawer 14",
+        "go to drawer 15",
+        "go to drawer 16",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to dresser 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at sidetable 2. On the sidetable 2, you see a alarmclock 2, a pen 1, a pencil 1, and a vase 1.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a bed 1, a drawer 16, a drawer 15, a drawer 14, a drawer 13, a drawer 12, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 2, a dresser 1, a garbagecan 1, a shelf 2, a shelf 1, a sidetable 2, and a sidetable 1.\n\nYour task is to: put some pencil on dresser.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[sidetable 2]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[sidetable 2]"
+      ],
+      "walkthrough_action": "go to sidetable 2",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "pencil 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[pencil 1]",
+      "admissible_before": [
+        "examine sidetable 2",
+        "go to armchair 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 12",
+        "go to drawer 13",
+        "go to drawer 14",
+        "go to drawer 15",
+        "go to drawer 16",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to dresser 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "take alarmclock 2 from sidetable 2",
+        "take pen 1 from sidetable 2",
+        "take pencil 1 from sidetable 2",
+        "take vase 1 from sidetable 2"
+      ],
+      "done": false,
+      "dst": "O2",
+      "edge_id": "expert_e1",
+      "from_signature": [
+        "at:OBJECT_SOURCE[sidetable 2]"
+      ],
+      "observation_after": "You pick up the pencil 1 from the sidetable 2.",
+      "observation_before": "You arrive at sidetable 2. On the sidetable 2, you see a alarmclock 2, a pen 1, a pencil 1, and a vase 1.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_OBJ[pencil 1]",
+      "src": "O1",
+      "to_signature": [
+        "at:OBJECT_SOURCE[sidetable 2]",
+        "holding:TARGET_OBJ[pencil 1]"
+      ],
+      "walkthrough_action": "take pencil 1 from sidetable 2",
+      "won": false
+    }
+  ],
+  "gamefile": "train/pick_and_place_simple-Pencil-None-Dresser-330/trial_T20190909_071208_686774/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[dresser 2]",
+    "placed:1@TARGET_PARENT[dresser 2]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to armchair 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 12",
+        "go to drawer 13",
+        "go to drawer 14",
+        "go to drawer 15",
+        "go to drawer 16",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to dresser 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a bed 1, a drawer 16, a drawer 15, a drawer 14, a drawer 13, a drawer 12, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 2, a dresser 1, a garbagecan 1, a shelf 2, a shelf 1, a sidetable 2, and a sidetable 1.\n\nYour task is to: put some pencil on dresser.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine sidetable 2",
+        "go to armchair 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 12",
+        "go to drawer 13",
+        "go to drawer 14",
+        "go to drawer 15",
+        "go to drawer 16",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to dresser 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "take alarmclock 2 from sidetable 2",
+        "take pen 1 from sidetable 2",
+        "take pencil 1 from sidetable 2",
+        "take vase 1 from sidetable 2"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[sidetable 2]",
+      "node_id": "O1",
+      "observation": "You arrive at sidetable 2. On the sidetable 2, you see a alarmclock 2, a pen 1, a pencil 1, and a vase 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[sidetable 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine pencil 1",
+        "examine sidetable 2",
+        "go to armchair 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 12",
+        "go to drawer 13",
+        "go to drawer 14",
+        "go to drawer 15",
+        "go to drawer 16",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to dresser 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "move pencil 1 to sidetable 2"
+      ],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[sidetable 2] | holding:TARGET_OBJ[pencil 1]",
+      "node_id": "O2",
+      "observation": "You pick up the pencil 1 from the sidetable 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[sidetable 2]",
+        "holding:TARGET_OBJ[pencil 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine dresser 2",
+        "go to armchair 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 12",
+        "go to drawer 13",
+        "go to drawer 14",
+        "go to drawer 15",
+        "go to drawer 16",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look",
+        "take keychain 1 from dresser 2",
+        "take laptop 1 from dresser 2",
+        "take pen 3 from dresser 2",
+        "take pencil 1 from dresser 2",
+        "take statue 1 from dresser 2"
+      ],
+      "depth": 3,
+      "label": "at:GOAL_RECEP[dresser 2] | placed:1@TARGET_PARENT[dresser 2] | success",
+      "node_id": "O4",
+      "observation": "You move the pencil 1 to the dresser 2.",
+      "signature": [
+        "at:GOAL_RECEP[dresser 2]",
+        "placed:1@TARGET_PARENT[dresser 2]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O3"
+    ],
+    "dropped_units": 1,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 4,
+    "original_nodes": 5,
+    "remaining_edges": 2,
+    "remaining_nodes": 4,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Pencil",
+    "parent_target": "Dresser",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_and_place_simple-Pencil-None-Dresser-330__trial_T20190909_071208_686774__game",
+  "task_type": "pick_and_place_simple",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 4,
+    "num_walkthrough_actions": 4,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_and_place_simple-Pencil-None-Dresser-330/trial_T20190909_071208_686774",
+  "walkthrough": [
+    "go to sidetable 2",
+    "take pencil 1 from sidetable 2",
+    "go to dresser 2",
+    "move pencil 1 to dresser 2"
+  ]
+}

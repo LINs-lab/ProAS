@@ -1,0 +1,319 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "dresser 1"
+      ],
+      "abstract_roles": [
+        "TOGGLE_SOURCE"
+      ],
+      "action_key": "GotoLocation::TOGGLE_SOURCE[dresser 1]",
+      "admissible_before": [
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at dresser 1. On the dresser 1, you see a cd 3, a cd 2, a desklamp 1, a mug 2, a pen 4, a pen 3, and a pencil 1.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a laundryhamper 1, and a shelf 1.\n\nYour task is to: examine the pen with the desklamp.",
+      "oracle_step_idx": 0,
+      "role_text": "TOGGLE_SOURCE[dresser 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:TOGGLE_SOURCE[dresser 1]"
+      ],
+      "walkthrough_action": "go to dresser 1",
+      "won": false
+    },
+    {
+      "abstract_action": "ToggleObject",
+      "abstract_entities": [
+        "desklamp 1"
+      ],
+      "abstract_roles": [
+        "TARGET_TOGGLE"
+      ],
+      "action_key": "ToggleObject::TARGET_TOGGLE[desklamp 1]",
+      "admissible_before": [
+        "examine dresser 1",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "help",
+        "inventory",
+        "look",
+        "take cd 2 from dresser 1",
+        "take cd 3 from dresser 1",
+        "take mug 2 from dresser 1",
+        "take pen 3 from dresser 1",
+        "take pen 4 from dresser 1",
+        "take pencil 1 from dresser 1",
+        "use desklamp 1"
+      ],
+      "done": false,
+      "dst": "O2",
+      "edge_id": "expert_e1",
+      "from_signature": [
+        "at:TOGGLE_SOURCE[dresser 1]"
+      ],
+      "observation_after": "You turn on the desklamp 1.",
+      "observation_before": "You arrive at dresser 1. On the dresser 1, you see a cd 3, a cd 2, a desklamp 1, a mug 2, a pen 4, a pen 3, and a pencil 1.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_TOGGLE[desklamp 1]",
+      "src": "O1",
+      "to_signature": [
+        "at:TOGGLE_SOURCE[dresser 1]",
+        "toggle:on[desklamp 1]"
+      ],
+      "walkthrough_action": "use desklamp 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "pen 4"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[pen 4]",
+      "admissible_before": [
+        "examine dresser 1",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "help",
+        "inventory",
+        "look",
+        "take cd 2 from dresser 1",
+        "take cd 3 from dresser 1",
+        "take mug 2 from dresser 1",
+        "take pen 3 from dresser 1",
+        "take pen 4 from dresser 1",
+        "take pencil 1 from dresser 1",
+        "use desklamp 1"
+      ],
+      "done": true,
+      "dst": "O3",
+      "edge_id": "expert_e2",
+      "from_signature": [
+        "at:TOGGLE_SOURCE[dresser 1]",
+        "toggle:on[desklamp 1]"
+      ],
+      "observation_after": "You pick up the pen 4 from the dresser 1.",
+      "observation_before": "You turn on the desklamp 1.",
+      "oracle_step_idx": 2,
+      "role_text": "TARGET_OBJ[pen 4]",
+      "src": "O2",
+      "to_signature": [
+        "at:TOGGLE_SOURCE[dresser 1]",
+        "holding:TARGET_OBJ[pen 4]",
+        "toggle:on[desklamp 1]",
+        "success"
+      ],
+      "walkthrough_action": "take pen 4 from dresser 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/look_at_obj_in_light-Pen-None-DeskLamp-305/trial_T20190907_115838_075745/game.tw-pddl",
+  "goal_signature": [
+    "at:TOGGLE_SOURCE[dresser 1]",
+    "holding:TARGET_OBJ[pen 4]",
+    "toggle:on[desklamp 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a laundryhamper 1, and a shelf 1.\n\nYour task is to: examine the pen with the desklamp.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine dresser 1",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "help",
+        "inventory",
+        "look",
+        "take cd 2 from dresser 1",
+        "take cd 3 from dresser 1",
+        "take mug 2 from dresser 1",
+        "take pen 3 from dresser 1",
+        "take pen 4 from dresser 1",
+        "take pencil 1 from dresser 1",
+        "use desklamp 1"
+      ],
+      "depth": 1,
+      "label": "at:TOGGLE_SOURCE[dresser 1]",
+      "node_id": "O1",
+      "observation": "You arrive at dresser 1. On the dresser 1, you see a cd 3, a cd 2, a desklamp 1, a mug 2, a pen 4, a pen 3, and a pencil 1.",
+      "signature": [
+        "at:TOGGLE_SOURCE[dresser 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine dresser 1",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "help",
+        "inventory",
+        "look",
+        "take cd 2 from dresser 1",
+        "take cd 3 from dresser 1",
+        "take mug 2 from dresser 1",
+        "take pen 3 from dresser 1",
+        "take pen 4 from dresser 1",
+        "take pencil 1 from dresser 1",
+        "use desklamp 1"
+      ],
+      "depth": 2,
+      "label": "at:TOGGLE_SOURCE[dresser 1] | toggle:on[desklamp 1]",
+      "node_id": "O2",
+      "observation": "You turn on the desklamp 1.",
+      "signature": [
+        "at:TOGGLE_SOURCE[dresser 1]",
+        "toggle:on[desklamp 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine dresser 1",
+        "examine pen 4",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "help",
+        "inventory",
+        "look",
+        "move pen 4 to dresser 1",
+        "use desklamp 1"
+      ],
+      "depth": 3,
+      "label": "at:TOGGLE_SOURCE[dresser 1] | holding:TARGET_OBJ[pen 4] | toggle:on[desklamp 1] | success",
+      "node_id": "O3",
+      "observation": "You pick up the pen 4 from the dresser 1.",
+      "signature": [
+        "at:TOGGLE_SOURCE[dresser 1]",
+        "holding:TARGET_OBJ[pen 4]",
+        "toggle:on[desklamp 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [],
+    "dropped_units": 0,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 3,
+    "original_nodes": 4,
+    "remaining_edges": 3,
+    "remaining_nodes": 4,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Pen",
+    "parent_target": "",
+    "toggle_target": "DeskLamp"
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__look_at_obj_in_light-Pen-None-DeskLamp-305__trial_T20190907_115838_075745__game",
+  "task_type": "look_at_obj_in_light",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 3,
+    "num_walkthrough_actions": 3,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/look_at_obj_in_light-Pen-None-DeskLamp-305/trial_T20190907_115838_075745",
+  "walkthrough": [
+    "go to dresser 1",
+    "use desklamp 1",
+    "take pen 4 from dresser 1"
+  ]
+}

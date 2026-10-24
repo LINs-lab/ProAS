@@ -1,0 +1,302 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "toilet 1"
+      ],
+      "abstract_roles": [
+        "GOAL_RECEP"
+      ],
+      "action_key": "GotoLocation::GOAL_RECEP[toilet 1]",
+      "admissible_before": [
+        "examine countertop 2",
+        "examine spraybottle 3",
+        "go to bathtubbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to cabinet 5",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move spraybottle 3 to countertop 2"
+      ],
+      "done": false,
+      "dst": "O3",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "at:OBJECT_SOURCE[countertop 2]",
+        "holding:TARGET_OBJ[spraybottle 3]"
+      ],
+      "observation_after": "You arrive at toilet 1. On the toilet 1, you see a soapbottle 1.",
+      "observation_before": "You pick up the spraybottle 3 from the countertop 2.",
+      "oracle_step_idx": 0,
+      "role_text": "GOAL_RECEP[toilet 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:GOAL_RECEP[toilet 1]",
+        "holding:TARGET_OBJ[spraybottle 3]"
+      ],
+      "walkthrough_action": "go to toilet 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "spraybottle 3",
+        "toilet 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[spraybottle 3]|TARGET_PARENT[toilet 1]",
+      "admissible_before": [
+        "examine spraybottle 3",
+        "examine toilet 1",
+        "go to bathtubbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to cabinet 5",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sinkbasin 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move spraybottle 3 to toilet 1"
+      ],
+      "done": true,
+      "dst": "O4",
+      "edge_id": "expert_e1",
+      "from_signature": [
+        "at:GOAL_RECEP[toilet 1]",
+        "holding:TARGET_OBJ[spraybottle 3]"
+      ],
+      "observation_after": "You move the spraybottle 3 to the toilet 1.",
+      "observation_before": "You arrive at toilet 1. On the toilet 1, you see a soapbottle 1.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_OBJ[spraybottle 3] -> TARGET_PARENT[toilet 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:GOAL_RECEP[toilet 1]",
+        "placed:1@TARGET_PARENT[toilet 1]",
+        "success"
+      ],
+      "walkthrough_action": "move spraybottle 3 to toilet 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_and_place_simple-SprayBottle-None-Toilet-422/trial_T20190909_124904_818536/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[toilet 1]",
+    "placed:1@TARGET_PARENT[toilet 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bathtubbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to cabinet 5",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bathtubbasin 1, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a countertop 2, a countertop 1, a drawer 2, a drawer 1, a garbagecan 1, a handtowelholder 1, a shelf 2, a shelf 1, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.\n\nYour task is to: put a spraybottle in toilet.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine countertop 2",
+        "examine spraybottle 3",
+        "go to bathtubbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to cabinet 5",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move spraybottle 3 to countertop 2"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[countertop 2] | holding:TARGET_OBJ[spraybottle 3]",
+      "node_id": "O2",
+      "observation": "You pick up the spraybottle 3 from the countertop 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[countertop 2]",
+        "holding:TARGET_OBJ[spraybottle 3]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine spraybottle 3",
+        "examine toilet 1",
+        "go to bathtubbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to cabinet 5",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sinkbasin 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move spraybottle 3 to toilet 1"
+      ],
+      "depth": 2,
+      "label": "at:GOAL_RECEP[toilet 1] | holding:TARGET_OBJ[spraybottle 3]",
+      "node_id": "O3",
+      "observation": "You arrive at toilet 1. On the toilet 1, you see a soapbottle 1.",
+      "signature": [
+        "at:GOAL_RECEP[toilet 1]",
+        "holding:TARGET_OBJ[spraybottle 3]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine toilet 1",
+        "go to bathtubbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to cabinet 5",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sinkbasin 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "take soapbottle 1 from toilet 1",
+        "take spraybottle 3 from toilet 1"
+      ],
+      "depth": 3,
+      "label": "at:GOAL_RECEP[toilet 1] | placed:1@TARGET_PARENT[toilet 1] | success",
+      "node_id": "O4",
+      "observation": "You move the spraybottle 3 to the toilet 1.",
+      "signature": [
+        "at:GOAL_RECEP[toilet 1]",
+        "placed:1@TARGET_PARENT[toilet 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O1"
+    ],
+    "dropped_units": 1,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 4,
+    "original_nodes": 5,
+    "remaining_edges": 2,
+    "remaining_nodes": 4,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "SprayBottle",
+    "parent_target": "Toilet",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_and_place_simple-SprayBottle-None-Toilet-422__trial_T20190909_124904_818536__game",
+  "task_type": "pick_and_place_simple",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 4,
+    "num_walkthrough_actions": 4,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_and_place_simple-SprayBottle-None-Toilet-422/trial_T20190909_124904_818536",
+  "walkthrough": [
+    "go to countertop 2",
+    "take spraybottle 3 from countertop 2",
+    "go to toilet 1",
+    "move spraybottle 3 to toilet 1"
+  ]
+}

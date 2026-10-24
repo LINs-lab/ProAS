@@ -1,0 +1,32 @@
+{
+  "audits": {
+    "fixed_val_overlap": {
+      "fixed_val_case_count": 128,
+      "fixed_val_overlap_count": 0,
+      "train_case_count": 2400,
+      "train_unique_base_tasks": 2036,
+      "train_unique_exact_tasks": 2239
+    }
+  },
+  "environment": "webshop",
+  "horizon": 150,
+  "output_sha256": {
+    "schedule.jsonl": "7eb2a13278a56b4f811dc91516cccce24c1a932e7069400157736d61ecc43012"
+  },
+  "schema_version": 1,
+  "seed": 2,
+  "sources": {
+    "fixed_val_root": "recipe/graph_guide/data/fixed_val_set",
+    "source_algorithm": "grpo",
+    "source_rollout_dir": "official_outputs/weshop/grpo_webshop_seed2/rollout_data",
+    "webshop_attributes": "agent_system/environments/env_package/webshop/webshop/data/items_ins_v2_1000.json",
+    "webshop_attributes_sha256": "f88a36314a397b53b3d9c3fa5878e5f7b26d35019a51ec83fbedeca61a948f6f",
+    "webshop_catalog_seed_range": [
+      0,
+      15
+    ],
+    "webshop_items": "agent_system/environments/env_package/webshop/webshop/data/items_shuffle_1000.json",
+    "webshop_items_sha256": "30a4765c3a327af72d9a9a95a6b2486d516f0fa1d3ecd83681901ce82a21b269"
+  },
+  "train_batch_size": 16
+}

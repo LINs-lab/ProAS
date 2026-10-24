@@ -1,0 +1,440 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "sinkbasin 1"
+      ],
+      "abstract_roles": [
+        "CLEAN_STATION"
+      ],
+      "action_key": "GotoLocation::CLEAN_STATION[sinkbasin 1]",
+      "admissible_before": [
+        "examine bathtubbasin 1",
+        "examine soapbar 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to cabinet 5",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move soapbar 1 to bathtubbasin 1"
+      ],
+      "done": false,
+      "dst": "O3",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "at:OBJECT_SOURCE[bathtubbasin 1]",
+        "holding:TARGET_OBJ[soapbar 1]"
+      ],
+      "observation_after": "You arrive at sinkbasin 1. On the sinkbasin 1, you see nothing.",
+      "observation_before": "You pick up the soapbar 1 from the bathtubbasin 1.",
+      "oracle_step_idx": 0,
+      "role_text": "CLEAN_STATION[sinkbasin 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:CLEAN_STATION[sinkbasin 1]",
+        "holding:TARGET_OBJ[soapbar 1]"
+      ],
+      "walkthrough_action": "go to sinkbasin 1",
+      "won": false
+    },
+    {
+      "abstract_action": "CleanObject",
+      "abstract_entities": [
+        "soapbar 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "CleanObject::TARGET_OBJ[soapbar 1]",
+      "admissible_before": [
+        "clean soapbar 1 with sinkbasin 1",
+        "examine sinkbasin 1",
+        "examine soapbar 1",
+        "go to bathtubbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to cabinet 5",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move soapbar 1 to sinkbasin 1"
+      ],
+      "done": false,
+      "dst": "O4",
+      "edge_id": "expert_e1",
+      "from_signature": [
+        "at:CLEAN_STATION[sinkbasin 1]",
+        "holding:TARGET_OBJ[soapbar 1]"
+      ],
+      "observation_after": "You clean the soapbar 1 using the sinkbasin 1.",
+      "observation_before": "You arrive at sinkbasin 1. On the sinkbasin 1, you see nothing.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_OBJ[soapbar 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:CLEAN_STATION[sinkbasin 1]",
+        "holding:TARGET_OBJ[soapbar 1]",
+        "object:clean[TARGET_OBJ]"
+      ],
+      "walkthrough_action": "clean soapbar 1 with sinkbasin 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "cabinet"
+      ],
+      "abstract_roles": [
+        "TARGET_PARENT"
+      ],
+      "action_key": "GotoLocation::TARGET_PARENT[cabinet]",
+      "admissible_before": [
+        "clean soapbar 1 with sinkbasin 1",
+        "examine sinkbasin 1",
+        "examine soapbar 1",
+        "go to bathtubbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to cabinet 5",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move soapbar 1 to sinkbasin 1"
+      ],
+      "done": false,
+      "dst": "O5",
+      "edge_id": "expert_e2",
+      "from_signature": [
+        "at:CLEAN_STATION[sinkbasin 1]",
+        "holding:TARGET_OBJ[soapbar 1]",
+        "object:clean[TARGET_OBJ]"
+      ],
+      "observation_after": "You arrive at cabinet 4. The cabinet 4 is closed.",
+      "observation_before": "You clean the soapbar 1 using the sinkbasin 1.",
+      "oracle_step_idx": 2,
+      "role_text": "TARGET_PARENT[cabinet]",
+      "src": "O4",
+      "to_signature": [
+        "at:TARGET_PARENT[cabinet]",
+        "holding:TARGET_OBJ[soapbar 1]",
+        "object:clean[TARGET_OBJ]"
+      ],
+      "walkthrough_action": "go to cabinet 4",
+      "won": false
+    }
+  ],
+  "gamefile": "train/pick_clean_then_place_in_recep-SoapBar-None-Cabinet-422/trial_T20190909_170330_111958/game.tw-pddl",
+  "goal_signature": [
+    "at:TARGET_PARENT[cabinet]",
+    "object:clean[TARGET_OBJ]",
+    "placed:1@TARGET_PARENT[cabinet 4]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bathtubbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to cabinet 5",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bathtubbasin 1, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a countertop 2, a countertop 1, a drawer 2, a drawer 1, a garbagecan 1, a handtowelholder 1, a shelf 2, a shelf 1, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.\n\nYour task is to: put a clean soapbar in cabinet.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine bathtubbasin 1",
+        "examine soapbar 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to cabinet 5",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move soapbar 1 to bathtubbasin 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[bathtubbasin 1] | holding:TARGET_OBJ[soapbar 1]",
+      "node_id": "O2",
+      "observation": "You pick up the soapbar 1 from the bathtubbasin 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[bathtubbasin 1]",
+        "holding:TARGET_OBJ[soapbar 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "clean soapbar 1 with sinkbasin 1",
+        "examine sinkbasin 1",
+        "examine soapbar 1",
+        "go to bathtubbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to cabinet 5",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move soapbar 1 to sinkbasin 1"
+      ],
+      "depth": 2,
+      "label": "at:CLEAN_STATION[sinkbasin 1] | holding:TARGET_OBJ[soapbar 1]",
+      "node_id": "O3",
+      "observation": "You arrive at sinkbasin 1. On the sinkbasin 1, you see nothing.",
+      "signature": [
+        "at:CLEAN_STATION[sinkbasin 1]",
+        "holding:TARGET_OBJ[soapbar 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "clean soapbar 1 with sinkbasin 1",
+        "examine sinkbasin 1",
+        "examine soapbar 1",
+        "go to bathtubbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to cabinet 5",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move soapbar 1 to sinkbasin 1"
+      ],
+      "depth": 3,
+      "label": "at:CLEAN_STATION[sinkbasin 1] | holding:TARGET_OBJ[soapbar 1] | object:clean[TARGET_OBJ]",
+      "node_id": "O4",
+      "observation": "You clean the soapbar 1 using the sinkbasin 1.",
+      "signature": [
+        "at:CLEAN_STATION[sinkbasin 1]",
+        "holding:TARGET_OBJ[soapbar 1]",
+        "object:clean[TARGET_OBJ]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine cabinet 4",
+        "examine soapbar 1",
+        "go to bathtubbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 5",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "open cabinet 4"
+      ],
+      "depth": 4,
+      "label": "at:TARGET_PARENT[cabinet] | holding:TARGET_OBJ[soapbar 1] | object:clean[TARGET_OBJ]",
+      "node_id": "O5",
+      "observation": "You arrive at cabinet 4. The cabinet 4 is closed.",
+      "signature": [
+        "at:TARGET_PARENT[cabinet]",
+        "holding:TARGET_OBJ[soapbar 1]",
+        "object:clean[TARGET_OBJ]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "close cabinet 4",
+        "examine cabinet 4",
+        "go to bathtubbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 5",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "take cloth 2 from cabinet 4",
+        "take soapbar 1 from cabinet 4"
+      ],
+      "depth": 5,
+      "label": "at:TARGET_PARENT[cabinet] | object:clean[TARGET_OBJ] | placed:1@TARGET_PARENT[cabinet 4] | success",
+      "node_id": "O7",
+      "observation": "You move the soapbar 1 to the cabinet 4.",
+      "signature": [
+        "at:TARGET_PARENT[cabinet]",
+        "object:clean[TARGET_OBJ]",
+        "placed:1@TARGET_PARENT[cabinet 4]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O1",
+      "O6"
+    ],
+    "dropped_units": 2,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 7,
+    "original_nodes": 8,
+    "remaining_edges": 3,
+    "remaining_nodes": 6,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "SoapBar",
+    "parent_target": "Cabinet",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_clean_then_place_in_recep-SoapBar-None-Cabinet-422__trial_T20190909_170330_111958__game",
+  "task_type": "pick_clean_then_place_in_recep",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 7,
+    "num_walkthrough_actions": 7,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_clean_then_place_in_recep-SoapBar-None-Cabinet-422/trial_T20190909_170330_111958",
+  "walkthrough": [
+    "go to bathtubbasin 1",
+    "take soapbar 1 from bathtubbasin 1",
+    "go to sinkbasin 1",
+    "clean soapbar 1 with sinkbasin 1",
+    "go to cabinet 4",
+    "open cabinet 4",
+    "move soapbar 1 to cabinet 4"
+  ]
+}

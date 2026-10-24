@@ -1,0 +1,443 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "countertop 1"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[countertop 1]",
+      "admissible_before": [
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to countertop 1",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at countertop 1. On the countertop 1, you see a candle 1, a cloth 1, and a soapbottle 2.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a cabinet 3, a cabinet 2, a cabinet 1, a countertop 1, a garbagecan 1, a handtowelholder 2, a handtowelholder 1, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.\n\nYour task is to: put a candle in cabinet.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[countertop 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[countertop 1]"
+      ],
+      "walkthrough_action": "go to countertop 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "candle 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[candle 1]",
+      "admissible_before": [
+        "examine countertop 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "take candle 1 from countertop 1",
+        "take cloth 1 from countertop 1",
+        "take soapbottle 2 from countertop 1"
+      ],
+      "done": false,
+      "dst": "O2",
+      "from_signature": [
+        "at:OBJECT_SOURCE[countertop 1]"
+      ],
+      "observation_after": "You pick up the candle 1 from the countertop 1.",
+      "observation_before": "You arrive at countertop 1. On the countertop 1, you see a candle 1, a cloth 1, and a soapbottle 2.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_OBJ[candle 1]",
+      "src": "O1",
+      "to_signature": [
+        "at:OBJECT_SOURCE[countertop 1]",
+        "holding:TARGET_OBJ[candle 1]"
+      ],
+      "walkthrough_action": "take candle 1 from countertop 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "cabinet"
+      ],
+      "abstract_roles": [
+        "TARGET_PARENT"
+      ],
+      "action_key": "GotoLocation::TARGET_PARENT[cabinet]",
+      "admissible_before": [
+        "examine candle 1",
+        "examine countertop 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move candle 1 to countertop 1"
+      ],
+      "done": false,
+      "dst": "O3",
+      "from_signature": [
+        "at:OBJECT_SOURCE[countertop 1]",
+        "holding:TARGET_OBJ[candle 1]"
+      ],
+      "observation_after": "You arrive at cabinet 2. The cabinet 2 is closed.",
+      "observation_before": "You pick up the candle 1 from the countertop 1.",
+      "oracle_step_idx": 2,
+      "role_text": "TARGET_PARENT[cabinet]",
+      "src": "O2",
+      "to_signature": [
+        "at:TARGET_PARENT[cabinet]",
+        "holding:TARGET_OBJ[candle 1]"
+      ],
+      "walkthrough_action": "go to cabinet 2",
+      "won": false
+    },
+    {
+      "abstract_action": "OpenObject",
+      "abstract_entities": [
+        "cabinet 1"
+      ],
+      "abstract_roles": [
+        "TARGET_PARENT"
+      ],
+      "action_key": "OpenObject::TARGET_PARENT[cabinet 1]",
+      "admissible_before": [
+        "examine cabinet 1",
+        "examine cabinet 2",
+        "examine candle 1",
+        "go to cabinet 3",
+        "go to countertop 1",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "open cabinet 1",
+        "open cabinet 2"
+      ],
+      "done": false,
+      "dst": "O4",
+      "from_signature": [
+        "at:TARGET_PARENT[cabinet]",
+        "holding:TARGET_OBJ[candle 1]"
+      ],
+      "observation_after": "You open the cabinet 1. The cabinet 1 is open. In it, you see a soapbottle 1, and a spraybottle 1.",
+      "observation_before": "You arrive at cabinet 2. The cabinet 2 is closed.",
+      "oracle_step_idx": 3,
+      "role_text": "TARGET_PARENT[cabinet 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:TARGET_PARENT[cabinet]",
+        "holding:TARGET_OBJ[candle 1]"
+      ],
+      "walkthrough_action": "open cabinet 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "candle 1",
+        "cabinet 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[candle 1]|TARGET_PARENT[cabinet 1]",
+      "admissible_before": [
+        "close cabinet 1",
+        "examine cabinet 1",
+        "examine cabinet 2",
+        "examine candle 1",
+        "go to cabinet 3",
+        "go to countertop 1",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move candle 1 to cabinet 1",
+        "open cabinet 2"
+      ],
+      "done": true,
+      "dst": "O5",
+      "from_signature": [
+        "at:TARGET_PARENT[cabinet]",
+        "holding:TARGET_OBJ[candle 1]"
+      ],
+      "observation_after": "You move the candle 1 to the cabinet 1.",
+      "observation_before": "You open the cabinet 1. The cabinet 1 is open. In it, you see a soapbottle 1, and a spraybottle 1.",
+      "oracle_step_idx": 4,
+      "role_text": "TARGET_OBJ[candle 1] -> TARGET_PARENT[cabinet 1]",
+      "src": "O4",
+      "to_signature": [
+        "at:TARGET_PARENT[cabinet]",
+        "placed:1@TARGET_PARENT[cabinet 1]",
+        "success"
+      ],
+      "walkthrough_action": "move candle 1 to cabinet 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_and_place_simple-Candle-None-Cabinet-418/trial_T20190907_190403_681011/game.tw-pddl",
+  "goal_signature": [
+    "at:TARGET_PARENT[cabinet]",
+    "placed:1@TARGET_PARENT[cabinet 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to countertop 1",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a cabinet 3, a cabinet 2, a cabinet 1, a countertop 1, a garbagecan 1, a handtowelholder 2, a handtowelholder 1, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.\n\nYour task is to: put a candle in cabinet.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine countertop 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "take candle 1 from countertop 1",
+        "take cloth 1 from countertop 1",
+        "take soapbottle 2 from countertop 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[countertop 1]",
+      "node_id": "O1",
+      "observation": "You arrive at countertop 1. On the countertop 1, you see a candle 1, a cloth 1, and a soapbottle 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[countertop 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine candle 1",
+        "examine countertop 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move candle 1 to countertop 1"
+      ],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[countertop 1] | holding:TARGET_OBJ[candle 1]",
+      "node_id": "O2",
+      "observation": "You pick up the candle 1 from the countertop 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[countertop 1]",
+        "holding:TARGET_OBJ[candle 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine cabinet 1",
+        "examine cabinet 2",
+        "examine candle 1",
+        "go to cabinet 3",
+        "go to countertop 1",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "open cabinet 1",
+        "open cabinet 2"
+      ],
+      "depth": 3,
+      "label": "at:TARGET_PARENT[cabinet] | holding:TARGET_OBJ[candle 1]",
+      "node_id": "O3",
+      "observation": "You arrive at cabinet 2. The cabinet 2 is closed.",
+      "signature": [
+        "at:TARGET_PARENT[cabinet]",
+        "holding:TARGET_OBJ[candle 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "close cabinet 1",
+        "examine cabinet 1",
+        "examine cabinet 2",
+        "examine candle 1",
+        "go to cabinet 3",
+        "go to countertop 1",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move candle 1 to cabinet 1",
+        "open cabinet 2"
+      ],
+      "depth": 4,
+      "label": "at:TARGET_PARENT[cabinet] | holding:TARGET_OBJ[candle 1]",
+      "node_id": "O4",
+      "observation": "You open the cabinet 1. The cabinet 1 is open. In it, you see a soapbottle 1, and a spraybottle 1.",
+      "signature": [
+        "at:TARGET_PARENT[cabinet]",
+        "holding:TARGET_OBJ[candle 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "close cabinet 1",
+        "examine cabinet 1",
+        "examine cabinet 2",
+        "go to cabinet 3",
+        "go to countertop 1",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "open cabinet 2",
+        "take candle 1 from cabinet 1",
+        "take soapbottle 1 from cabinet 1",
+        "take spraybottle 1 from cabinet 1"
+      ],
+      "depth": 5,
+      "label": "at:TARGET_PARENT[cabinet] | placed:1@TARGET_PARENT[cabinet 1] | success",
+      "node_id": "O5",
+      "observation": "You move the candle 1 to the cabinet 1.",
+      "signature": [
+        "at:TARGET_PARENT[cabinet]",
+        "placed:1@TARGET_PARENT[cabinet 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Candle",
+    "parent_target": "Cabinet",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_and_place_simple-Candle-None-Cabinet-418__trial_T20190907_190403_681011__game",
+  "task_type": "pick_and_place_simple",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 5,
+    "num_walkthrough_actions": 5,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_and_place_simple-Candle-None-Cabinet-418/trial_T20190907_190403_681011",
+  "walkthrough": [
+    "go to countertop 1",
+    "take candle 1 from countertop 1",
+    "go to cabinet 2",
+    "open cabinet 1",
+    "move candle 1 to cabinet 1"
+  ]
+}

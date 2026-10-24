@@ -1,0 +1,369 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "sidetable 1"
+      ],
+      "abstract_roles": [
+        "GOAL_RECEP"
+      ],
+      "action_key": "GotoLocation::GOAL_RECEP[sidetable 1]",
+      "admissible_before": [
+        "clean egg 3 with sinkbasin 1",
+        "examine egg 3",
+        "examine sinkbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to diningtable 3",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sidetable 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "move egg 3 to sinkbasin 1"
+      ],
+      "done": false,
+      "dst": "O5",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "at:CLEAN_STATION[sinkbasin 1]",
+        "holding:TARGET_OBJ[egg 3]",
+        "object:clean[TARGET_OBJ]"
+      ],
+      "observation_after": "You arrive at sidetable 1. On the sidetable 1, you see a apple 1, a cup 2, a knife 1, a potato 1, and a saltshaker 3.",
+      "observation_before": "You clean the egg 3 using the sinkbasin 1.",
+      "oracle_step_idx": 0,
+      "role_text": "GOAL_RECEP[sidetable 1]",
+      "src": "O4",
+      "to_signature": [
+        "at:GOAL_RECEP[sidetable 1]",
+        "holding:TARGET_OBJ[egg 3]",
+        "object:clean[TARGET_OBJ]"
+      ],
+      "walkthrough_action": "go to sidetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "egg 3",
+        "sidetable 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[egg 3]|TARGET_PARENT[sidetable 1]",
+      "admissible_before": [
+        "examine egg 3",
+        "examine sidetable 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to diningtable 3",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "move egg 3 to sidetable 1"
+      ],
+      "done": true,
+      "dst": "O6",
+      "edge_id": "expert_e1",
+      "from_signature": [
+        "at:GOAL_RECEP[sidetable 1]",
+        "holding:TARGET_OBJ[egg 3]",
+        "object:clean[TARGET_OBJ]"
+      ],
+      "observation_after": "You move the egg 3 to the sidetable 1.",
+      "observation_before": "You arrive at sidetable 1. On the sidetable 1, you see a apple 1, a cup 2, a knife 1, a potato 1, and a saltshaker 3.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_OBJ[egg 3] -> TARGET_PARENT[sidetable 1]",
+      "src": "O5",
+      "to_signature": [
+        "at:GOAL_RECEP[sidetable 1]",
+        "object:clean[TARGET_OBJ]",
+        "placed:1@TARGET_PARENT[sidetable 1]",
+        "success"
+      ],
+      "walkthrough_action": "move egg 3 to sidetable 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_clean_then_place_in_recep-Egg-None-SideTable-21/trial_T20190908_033911_286565/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[sidetable 1]",
+    "object:clean[TARGET_OBJ]",
+    "placed:1@TARGET_PARENT[sidetable 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to diningtable 3",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 3, a diningtable 2, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\n\nYour task is to: put a clean egg in sidetable.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine countertop 1",
+        "examine egg 3",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to diningtable 3",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "move egg 3 to countertop 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[countertop 1] | holding:TARGET_OBJ[egg 3]",
+      "node_id": "O2",
+      "observation": "You pick up the egg 3 from the countertop 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[countertop 1]",
+        "holding:TARGET_OBJ[egg 3]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "clean egg 3 with sinkbasin 1",
+        "examine egg 3",
+        "examine sinkbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to diningtable 3",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sidetable 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "move egg 3 to sinkbasin 1"
+      ],
+      "depth": 2,
+      "label": "at:CLEAN_STATION[sinkbasin 1] | holding:TARGET_OBJ[egg 3] | object:clean[TARGET_OBJ]",
+      "node_id": "O4",
+      "observation": "You clean the egg 3 using the sinkbasin 1.",
+      "signature": [
+        "at:CLEAN_STATION[sinkbasin 1]",
+        "holding:TARGET_OBJ[egg 3]",
+        "object:clean[TARGET_OBJ]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine egg 3",
+        "examine sidetable 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to diningtable 3",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "move egg 3 to sidetable 1"
+      ],
+      "depth": 3,
+      "label": "at:GOAL_RECEP[sidetable 1] | holding:TARGET_OBJ[egg 3] | object:clean[TARGET_OBJ]",
+      "node_id": "O5",
+      "observation": "You arrive at sidetable 1. On the sidetable 1, you see a apple 1, a cup 2, a knife 1, a potato 1, and a saltshaker 3.",
+      "signature": [
+        "at:GOAL_RECEP[sidetable 1]",
+        "holding:TARGET_OBJ[egg 3]",
+        "object:clean[TARGET_OBJ]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine sidetable 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to diningtable 3",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "take apple 1 from sidetable 1",
+        "take cup 2 from sidetable 1",
+        "take egg 3 from sidetable 1",
+        "take knife 1 from sidetable 1",
+        "take potato 1 from sidetable 1",
+        "take saltshaker 3 from sidetable 1"
+      ],
+      "depth": 4,
+      "label": "at:GOAL_RECEP[sidetable 1] | object:clean[TARGET_OBJ] | placed:1@TARGET_PARENT[sidetable 1] | success",
+      "node_id": "O6",
+      "observation": "You move the egg 3 to the sidetable 1.",
+      "signature": [
+        "at:GOAL_RECEP[sidetable 1]",
+        "object:clean[TARGET_OBJ]",
+        "placed:1@TARGET_PARENT[sidetable 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O1",
+      "O3"
+    ],
+    "dropped_units": 2,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 6,
+    "original_nodes": 7,
+    "remaining_edges": 2,
+    "remaining_nodes": 5,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Egg",
+    "parent_target": "SideTable",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_clean_then_place_in_recep-Egg-None-SideTable-21__trial_T20190908_033911_286565__game",
+  "task_type": "pick_clean_then_place_in_recep",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 6,
+    "num_walkthrough_actions": 6,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_clean_then_place_in_recep-Egg-None-SideTable-21/trial_T20190908_033911_286565",
+  "walkthrough": [
+    "go to countertop 1",
+    "take egg 3 from countertop 1",
+    "go to sinkbasin 1",
+    "clean egg 3 with sinkbasin 1",
+    "go to sidetable 1",
+    "move egg 3 to sidetable 1"
+  ]
+}

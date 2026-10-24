@@ -1,0 +1,24 @@
+{
+  "audits": {
+    "fixed_val_overlap": {
+      "fixed_val_case_count": 128,
+      "fixed_val_overlap_count": 0,
+      "train_case_count": 2400,
+      "train_unique_gamefiles": 1777,
+      "train_unique_task_instances": 1777
+    }
+  },
+  "environment": "alfworld",
+  "horizon": 150,
+  "output_sha256": {
+    "schedule.jsonl": "873a4eb0a45ffa9db0b0f1874d532e5b207490919d0985efc1df323aa6ebe84a"
+  },
+  "schema_version": 1,
+  "seed": 0,
+  "sources": {
+    "fixed_val_root": "recipe/graph_guide/data/fixed_val_set",
+    "source_algorithm": "grpo",
+    "source_rollout_dir": "official_outputs/grpo_alfworld/rollout_data"
+  },
+  "train_batch_size": 16
+}

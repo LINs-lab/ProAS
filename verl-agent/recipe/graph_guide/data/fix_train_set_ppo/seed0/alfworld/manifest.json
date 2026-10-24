@@ -1,0 +1,26 @@
+{
+  "audits": {
+    "fixed_val_overlap": {
+      "fixed_val_case_count": 128,
+      "fixed_val_overlap_count": 0,
+      "train_case_count": 19200,
+      "train_unique_gamefiles": 3543
+    },
+    "sampler": {
+      "eligible_game_count": 3553,
+      "worker_seed_rule": "seed + slot"
+    }
+  },
+  "environment": "alfworld",
+  "horizon": 150,
+  "output_sha256": {
+    "schedule.jsonl": "66a2cc84ff3dca2b44167436eae9e3e7bf1312386c25a107d78125b427b679b9"
+  },
+  "schema_version": 1,
+  "seed": 0,
+  "sources": {
+    "alfworld_data_root": "$ALFWORLD_DATA/json_2.1.1",
+    "sampler": "TextworldBatchGymEnv seeded shuffled_cycle per worker"
+  },
+  "train_batch_size": 128
+}

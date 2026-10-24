@@ -1,0 +1,493 @@
+{
+  "distillation_input": "official_outputs/7B/alfworld/GRPO_7B_infer/validation_data/0.jsonl",
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::GOAL_RECEP[coffeetable 1]",
+      "admissible_before": [
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to coffeetable 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "success_504d4253_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at coffeetable 1. On the coffeetable 1, you see a houseplant 1, a remotecontrol 2, a statue 1, and a watch 3.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a coffeetable 2, a coffeetable 1, a garbagecan 1, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, a shelf 1, a sofa 1, and a tvstand 1.\n\nYour task is to: put a vase in coffeetable.",
+      "oracle_step_idx": 0,
+      "path_source": "success_trajectory",
+      "role_text": "GOAL_RECEP[coffeetable 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:GOAL_RECEP[coffeetable 1]"
+      ],
+      "walkthrough_action": "go to coffeetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::GOAL_RECEP[coffeetable 1]",
+      "admissible_before": [
+        "examine coffeetable 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take remotecontrol 2 from coffeetable 1",
+        "take statue 1 from coffeetable 1",
+        "take watch 3 from coffeetable 1"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "success_504d4253_e1",
+      "from_signature": [
+        "at:GOAL_RECEP[coffeetable 1]"
+      ],
+      "observation_after": "You arrive at coffeetable 2. On the coffeetable 2, you see a box 2, a laptop 1, and a remotecontrol 3.",
+      "observation_before": "You arrive at coffeetable 1. On the coffeetable 1, you see a houseplant 1, a remotecontrol 2, a statue 1, and a watch 3.",
+      "oracle_step_idx": 1,
+      "path_source": "success_trajectory",
+      "role_text": "GOAL_RECEP[coffeetable 1]",
+      "src": "O1",
+      "to_signature": [
+        "at:GOAL_RECEP[coffeetable 1]"
+      ],
+      "walkthrough_action": "go to coffeetable 2",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::LOC[shelf 1]",
+      "admissible_before": [
+        "examine coffeetable 2",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take box 2 from coffeetable 2",
+        "take laptop 1 from coffeetable 2",
+        "take remotecontrol 3 from coffeetable 2"
+      ],
+      "done": false,
+      "dst": "O2",
+      "edge_id": "success_504d4253_e2",
+      "from_signature": [
+        "at:GOAL_RECEP[coffeetable 1]"
+      ],
+      "observation_after": "You arrive at shelf 1. On the shelf 1, you see a creditcard 1.",
+      "observation_before": "You arrive at coffeetable 2. On the coffeetable 2, you see a box 2, a laptop 1, and a remotecontrol 3.",
+      "oracle_step_idx": 2,
+      "path_source": "success_trajectory",
+      "role_text": "LOC[shelf 1]",
+      "src": "O1",
+      "to_signature": [
+        "at:LOC[shelf 1]"
+      ],
+      "walkthrough_action": "go to shelf 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::OBJECT_SOURCE[shelf 2]",
+      "admissible_before": [
+        "examine shelf 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to coffeetable 2",
+        "go to garbagecan 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take creditcard 1 from shelf 1"
+      ],
+      "done": false,
+      "dst": "O3",
+      "edge_id": "success_504d4253_e3",
+      "from_signature": [
+        "at:LOC[shelf 1]"
+      ],
+      "observation_after": "You arrive at shelf 2. On the shelf 2, you see a watch 1.",
+      "observation_before": "You arrive at shelf 1. On the shelf 1, you see a creditcard 1.",
+      "oracle_step_idx": 3,
+      "path_source": "success_trajectory",
+      "role_text": "OBJECT_SOURCE[shelf 2]",
+      "src": "O2",
+      "to_signature": [
+        "at:OBJECT_SOURCE[shelf 2]"
+      ],
+      "walkthrough_action": "go to shelf 2",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PickupObject::TARGET_OBJ[vase 1]|LITERAL::tvstand[tvstand 1]",
+      "admissible_before": [
+        "examine shelf 2",
+        "examine tvstand 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to coffeetable 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take vase 1 from tvstand 1",
+        "take watch 1 from shelf 2",
+        "take watch 2 from tvstand 1"
+      ],
+      "done": false,
+      "dst": "O4",
+      "edge_id": "success_504d4253_e4",
+      "from_signature": [
+        "at:OBJECT_SOURCE[shelf 2]"
+      ],
+      "observation_after": "You pick up the vase 1 from the tvstand 1.",
+      "observation_before": "You arrive at shelf 2. On the shelf 2, you see a watch 1.",
+      "oracle_step_idx": 4,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[vase 1] -> LITERAL::tvstand[tvstand 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:OBJECT_SOURCE[shelf 2]",
+        "holding:TARGET_OBJ[vase 1]"
+      ],
+      "walkthrough_action": "take vase 1 from tvstand 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::GOAL_RECEP[coffeetable 1]",
+      "admissible_before": [
+        "examine shelf 2",
+        "examine tvstand 1",
+        "examine vase 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to coffeetable 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move vase 1 to shelf 2"
+      ],
+      "done": false,
+      "dst": "O5",
+      "edge_id": "success_504d4253_e5",
+      "from_signature": [
+        "at:OBJECT_SOURCE[shelf 2]",
+        "holding:TARGET_OBJ[vase 1]"
+      ],
+      "observation_after": "You arrive at coffeetable 1. On the coffeetable 1, you see a houseplant 1, a remotecontrol 2, a statue 1, and a watch 3.",
+      "observation_before": "You pick up the vase 1 from the tvstand 1.",
+      "oracle_step_idx": 5,
+      "path_source": "success_trajectory",
+      "role_text": "GOAL_RECEP[coffeetable 1]",
+      "src": "O4",
+      "to_signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "holding:TARGET_OBJ[vase 1]"
+      ],
+      "walkthrough_action": "go to coffeetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PutObject::TARGET_OBJ[vase 1]|TARGET_PARENT[coffeetable 1]",
+      "admissible_before": [
+        "examine coffeetable 1",
+        "examine vase 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "move vase 1 to coffeetable 1"
+      ],
+      "done": true,
+      "dst": "O6",
+      "edge_id": "success_504d4253_e6",
+      "from_signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "holding:TARGET_OBJ[vase 1]"
+      ],
+      "observation_after": "You move the vase 1 to the coffeetable 1.",
+      "observation_before": "You arrive at coffeetable 1. On the coffeetable 1, you see a houseplant 1, a remotecontrol 2, a statue 1, and a watch 3.",
+      "oracle_step_idx": 6,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[vase 1] -> TARGET_PARENT[coffeetable 1]",
+      "src": "O5",
+      "to_signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "placed:1@TARGET_PARENT[coffeetable 1]",
+        "success"
+      ],
+      "walkthrough_action": "move vase 1 to coffeetable 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_and_place_simple-Vase-None-CoffeeTable-207/trial_T20190909_091234_276889/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[coffeetable 1]",
+    "placed:1@TARGET_PARENT[coffeetable 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to coffeetable 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a coffeetable 2, a coffeetable 1, a garbagecan 1, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, a shelf 1, a sofa 1, and a tvstand 1.\n\nYour task is to: put a vase in coffeetable.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 1,
+      "label": "at:GOAL_RECEP[coffeetable 1]",
+      "node_id": "O1",
+      "observation": "You arrive at coffeetable 1. On the coffeetable 1, you see a houseplant 1, a remotecontrol 2, a statue 1, and a watch 3.",
+      "signature": [
+        "at:GOAL_RECEP[coffeetable 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 2,
+      "label": "at:LOC[shelf 1]",
+      "node_id": "O2",
+      "observation": "You arrive at shelf 1. On the shelf 1, you see a creditcard 1.",
+      "signature": [
+        "at:LOC[shelf 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 3,
+      "label": "at:OBJECT_SOURCE[shelf 2]",
+      "node_id": "O3",
+      "observation": "You arrive at shelf 2. On the shelf 2, you see a watch 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[shelf 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 4,
+      "label": "at:OBJECT_SOURCE[shelf 2] | holding:TARGET_OBJ[vase 1]",
+      "node_id": "O4",
+      "observation": "You pick up the vase 1 from the tvstand 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[shelf 2]",
+        "holding:TARGET_OBJ[vase 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 5,
+      "label": "at:GOAL_RECEP[coffeetable 1] | holding:TARGET_OBJ[vase 1]",
+      "node_id": "O5",
+      "observation": "You arrive at coffeetable 1. On the coffeetable 1, you see a houseplant 1, a remotecontrol 2, a statue 1, and a watch 3.",
+      "signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "holding:TARGET_OBJ[vase 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 6,
+      "label": "at:GOAL_RECEP[coffeetable 1] | placed:1@TARGET_PARENT[coffeetable 1] | success",
+      "node_id": "O6",
+      "observation": "You move the vase 1 to the coffeetable 1.",
+      "signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "placed:1@TARGET_PARENT[coffeetable 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_type": "alfworld_teacher_distilled",
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Vase",
+    "parent_target": "CoffeeTable",
+    "toggle_target": ""
+  },
+  "reference_paths": [
+    {
+      "edge_ids": [
+        "success_504d4253_e0",
+        "success_504d4253_e1",
+        "success_504d4253_e2",
+        "success_504d4253_e3",
+        "success_504d4253_e4",
+        "success_504d4253_e5",
+        "success_504d4253_e6"
+      ],
+      "node_ids": [
+        "O0",
+        "O1",
+        "O2",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "path_id": "success_504d4253",
+      "source": "success_trajectory",
+      "traj_uid": "504d4253-098b-4d5c-bed1-538b01d16040",
+      "walkthrough": [
+        "go to coffeetable 1",
+        "go to coffeetable 2",
+        "go to shelf 1",
+        "go to shelf 2",
+        "take vase 1 from tvstand 1",
+        "go to coffeetable 1",
+        "move vase 1 to coffeetable 1"
+      ]
+    }
+  ],
+  "signature_mode": "entity",
+  "source": "teacher_7b_grpo_success_raw",
+  "state_source": "teacher_7b_grpo_success_raw",
+  "task_key": "train__pick_and_place_simple-Vase-None-CoffeeTable-207__trial_T20190909_091234_276889__game",
+  "task_type": "pick_and_place_simple",
+  "teacher_model": "official_outputs/7B/alfworld/grpo_alfworld/grpo_alfworld/global_step_140/actor",
+  "teacher_traj_uid": "504d4253-098b-4d5c-bed1-538b01d16040",
+  "trial_dir": "train/pick_and_place_simple-Vase-None-CoffeeTable-207/trial_T20190909_091234_276889",
+  "walkthrough": [
+    "go to coffeetable 1",
+    "go to coffeetable 2",
+    "go to shelf 1",
+    "go to shelf 2",
+    "take vase 1 from tvstand 1",
+    "go to coffeetable 1",
+    "move vase 1 to coffeetable 1"
+  ]
+}

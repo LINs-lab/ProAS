@@ -1,0 +1,2 @@
+Method,Model,Env,Val Seed,Val Size,Pick,Pick N,Look,Look N,Clean,Clean N,Heat,Heat N,Cool,Cool N,Pick2,Pick2 N,ALL,TestScore
+React API,gpt-5.6-sol,ALFWorld,1000,128,90.9,33,83.3,12,68.0,25,83.3,12,79.2,24,68.2,22,78.9,7.891

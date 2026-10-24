@@ -1,0 +1,733 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "sidetable 1"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[sidetable 1]",
+      "admissible_before": [
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at sidetable 1. On the sidetable 1, you see a creditcard 1, and a statue 2.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeetable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 1, and a sofa 1.\n\nYour task is to: find two creditcard and put them in armchair.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[sidetable 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[sidetable 1]"
+      ],
+      "walkthrough_action": "go to sidetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "creditcard 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[creditcard 1]",
+      "admissible_before": [
+        "examine sidetable 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take creditcard 1 from sidetable 1",
+        "take statue 2 from sidetable 1"
+      ],
+      "done": false,
+      "dst": "O2",
+      "from_signature": [
+        "at:OBJECT_SOURCE[sidetable 1]"
+      ],
+      "observation_after": "You pick up the creditcard 1 from the sidetable 1.",
+      "observation_before": "You arrive at sidetable 1. On the sidetable 1, you see a creditcard 1, and a statue 2.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_OBJ[creditcard 1]",
+      "src": "O1",
+      "to_signature": [
+        "at:OBJECT_SOURCE[sidetable 1]",
+        "holding:TARGET_OBJ[creditcard 1]"
+      ],
+      "walkthrough_action": "take creditcard 1 from sidetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "armchair 1"
+      ],
+      "abstract_roles": [
+        "GOAL_RECEP"
+      ],
+      "action_key": "GotoLocation::GOAL_RECEP[armchair 1]",
+      "admissible_before": [
+        "examine creditcard 1",
+        "examine sidetable 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move creditcard 1 to sidetable 1"
+      ],
+      "done": false,
+      "dst": "O3",
+      "from_signature": [
+        "at:OBJECT_SOURCE[sidetable 1]",
+        "holding:TARGET_OBJ[creditcard 1]"
+      ],
+      "observation_after": "You arrive at armchair 1. On the armchair 1, you see nothing.",
+      "observation_before": "You pick up the creditcard 1 from the sidetable 1.",
+      "oracle_step_idx": 2,
+      "role_text": "GOAL_RECEP[armchair 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "holding:TARGET_OBJ[creditcard 1]"
+      ],
+      "walkthrough_action": "go to armchair 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "creditcard 1",
+        "armchair 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[creditcard 1]|TARGET_PARENT[armchair 1]",
+      "admissible_before": [
+        "examine armchair 1",
+        "examine creditcard 1",
+        "go to armchair 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move creditcard 1 to armchair 1"
+      ],
+      "done": false,
+      "dst": "O4",
+      "from_signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "holding:TARGET_OBJ[creditcard 1]"
+      ],
+      "observation_after": "You move the creditcard 1 to the armchair 1.",
+      "observation_before": "You arrive at armchair 1. On the armchair 1, you see nothing.",
+      "oracle_step_idx": 3,
+      "role_text": "TARGET_OBJ[creditcard 1] -> TARGET_PARENT[armchair 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "placed:1@TARGET_PARENT[armchair 1]"
+      ],
+      "walkthrough_action": "move creditcard 1 to armchair 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "coffeetable 1"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[coffeetable 1]",
+      "admissible_before": [
+        "examine armchair 1",
+        "go to armchair 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take creditcard 1 from armchair 1"
+      ],
+      "done": false,
+      "dst": "O5",
+      "from_signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "placed:1@TARGET_PARENT[armchair 1]"
+      ],
+      "observation_after": "You arrive at coffeetable 1. On the coffeetable 1, you see a creditcard 2, a remotecontrol 2, and a statue 1.",
+      "observation_before": "You move the creditcard 1 to the armchair 1.",
+      "oracle_step_idx": 4,
+      "role_text": "OBJECT_SOURCE[coffeetable 1]",
+      "src": "O4",
+      "to_signature": [
+        "at:OBJECT_SOURCE[coffeetable 1]",
+        "placed:1@TARGET_PARENT[armchair 1]"
+      ],
+      "walkthrough_action": "go to coffeetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "creditcard 2"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[creditcard 2]",
+      "admissible_before": [
+        "examine coffeetable 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take creditcard 2 from coffeetable 1",
+        "take remotecontrol 2 from coffeetable 1",
+        "take statue 1 from coffeetable 1"
+      ],
+      "done": false,
+      "dst": "O6",
+      "from_signature": [
+        "at:OBJECT_SOURCE[coffeetable 1]",
+        "placed:1@TARGET_PARENT[armchair 1]"
+      ],
+      "observation_after": "You pick up the creditcard 2 from the coffeetable 1.",
+      "observation_before": "You arrive at coffeetable 1. On the coffeetable 1, you see a creditcard 2, a remotecontrol 2, and a statue 1.",
+      "oracle_step_idx": 5,
+      "role_text": "TARGET_OBJ[creditcard 2]",
+      "src": "O5",
+      "to_signature": [
+        "at:OBJECT_SOURCE[coffeetable 1]",
+        "holding:TARGET_OBJ[creditcard 2]",
+        "placed:1@none"
+      ],
+      "walkthrough_action": "take creditcard 2 from coffeetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "armchair 1"
+      ],
+      "abstract_roles": [
+        "GOAL_RECEP"
+      ],
+      "action_key": "GotoLocation::GOAL_RECEP[armchair 1]",
+      "admissible_before": [
+        "examine coffeetable 1",
+        "examine creditcard 2",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move creditcard 2 to coffeetable 1"
+      ],
+      "done": false,
+      "dst": "O7",
+      "from_signature": [
+        "at:OBJECT_SOURCE[coffeetable 1]",
+        "holding:TARGET_OBJ[creditcard 2]",
+        "placed:1@none"
+      ],
+      "observation_after": "You arrive at armchair 1. On the armchair 1, you see a creditcard 1.",
+      "observation_before": "You pick up the creditcard 2 from the coffeetable 1.",
+      "oracle_step_idx": 6,
+      "role_text": "GOAL_RECEP[armchair 1]",
+      "src": "O6",
+      "to_signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "holding:TARGET_OBJ[creditcard 2]",
+        "placed:1@none"
+      ],
+      "walkthrough_action": "go to armchair 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "creditcard 2",
+        "armchair 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[creditcard 2]|TARGET_PARENT[armchair 1]",
+      "admissible_before": [
+        "examine armchair 1",
+        "examine creditcard 2",
+        "go to armchair 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move creditcard 2 to armchair 1"
+      ],
+      "done": true,
+      "dst": "O8",
+      "from_signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "holding:TARGET_OBJ[creditcard 2]",
+        "placed:1@none"
+      ],
+      "observation_after": "You move the creditcard 2 to the armchair 1.",
+      "observation_before": "You arrive at armchair 1. On the armchair 1, you see a creditcard 1.",
+      "oracle_step_idx": 7,
+      "role_text": "TARGET_OBJ[creditcard 2] -> TARGET_PARENT[armchair 1]",
+      "src": "O7",
+      "to_signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "placed:2@TARGET_PARENT[armchair 1]",
+        "success"
+      ],
+      "walkthrough_action": "move creditcard 2 to armchair 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_two_obj_and_place-CreditCard-None-ArmChair-217/trial_T20190909_114045_918354/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[armchair 1]",
+    "placed:2@TARGET_PARENT[armchair 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeetable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 1, and a sofa 1.\n\nYour task is to: find two creditcard and put them in armchair.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine sidetable 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take creditcard 1 from sidetable 1",
+        "take statue 2 from sidetable 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[sidetable 1]",
+      "node_id": "O1",
+      "observation": "You arrive at sidetable 1. On the sidetable 1, you see a creditcard 1, and a statue 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[sidetable 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine creditcard 1",
+        "examine sidetable 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move creditcard 1 to sidetable 1"
+      ],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[sidetable 1] | holding:TARGET_OBJ[creditcard 1]",
+      "node_id": "O2",
+      "observation": "You pick up the creditcard 1 from the sidetable 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[sidetable 1]",
+        "holding:TARGET_OBJ[creditcard 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine armchair 1",
+        "examine creditcard 1",
+        "go to armchair 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move creditcard 1 to armchair 1"
+      ],
+      "depth": 3,
+      "label": "at:GOAL_RECEP[armchair 1] | holding:TARGET_OBJ[creditcard 1]",
+      "node_id": "O3",
+      "observation": "You arrive at armchair 1. On the armchair 1, you see nothing.",
+      "signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "holding:TARGET_OBJ[creditcard 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine armchair 1",
+        "go to armchair 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take creditcard 1 from armchair 1"
+      ],
+      "depth": 4,
+      "label": "at:GOAL_RECEP[armchair 1] | placed:1@TARGET_PARENT[armchair 1]",
+      "node_id": "O4",
+      "observation": "You move the creditcard 1 to the armchair 1.",
+      "signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "placed:1@TARGET_PARENT[armchair 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine coffeetable 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take creditcard 2 from coffeetable 1",
+        "take remotecontrol 2 from coffeetable 1",
+        "take statue 1 from coffeetable 1"
+      ],
+      "depth": 5,
+      "label": "at:OBJECT_SOURCE[coffeetable 1] | placed:1@TARGET_PARENT[armchair 1]",
+      "node_id": "O5",
+      "observation": "You arrive at coffeetable 1. On the coffeetable 1, you see a creditcard 2, a remotecontrol 2, and a statue 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[coffeetable 1]",
+        "placed:1@TARGET_PARENT[armchair 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine coffeetable 1",
+        "examine creditcard 2",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move creditcard 2 to coffeetable 1"
+      ],
+      "depth": 6,
+      "label": "at:OBJECT_SOURCE[coffeetable 1] | holding:TARGET_OBJ[creditcard 2] | placed:1@none",
+      "node_id": "O6",
+      "observation": "You pick up the creditcard 2 from the coffeetable 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[coffeetable 1]",
+        "holding:TARGET_OBJ[creditcard 2]",
+        "placed:1@none"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine armchair 1",
+        "examine creditcard 2",
+        "go to armchair 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move creditcard 2 to armchair 1"
+      ],
+      "depth": 7,
+      "label": "at:GOAL_RECEP[armchair 1] | holding:TARGET_OBJ[creditcard 2] | placed:1@none",
+      "node_id": "O7",
+      "observation": "You arrive at armchair 1. On the armchair 1, you see a creditcard 1.",
+      "signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "holding:TARGET_OBJ[creditcard 2]",
+        "placed:1@none"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine armchair 1",
+        "go to armchair 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take creditcard 1 from armchair 1",
+        "take creditcard 2 from armchair 1"
+      ],
+      "depth": 8,
+      "label": "at:GOAL_RECEP[armchair 1] | placed:2@TARGET_PARENT[armchair 1] | success",
+      "node_id": "O8",
+      "observation": "You move the creditcard 2 to the armchair 1.",
+      "signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "placed:2@TARGET_PARENT[armchair 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "CreditCard",
+    "parent_target": "ArmChair",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_two_obj_and_place-CreditCard-None-ArmChair-217__trial_T20190909_114045_918354__game",
+  "task_type": "pick_two_obj_and_place",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 8,
+    "num_walkthrough_actions": 8,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_two_obj_and_place-CreditCard-None-ArmChair-217/trial_T20190909_114045_918354",
+  "walkthrough": [
+    "go to sidetable 1",
+    "take creditcard 1 from sidetable 1",
+    "go to armchair 1",
+    "move creditcard 1 to armchair 1",
+    "go to coffeetable 1",
+    "take creditcard 2 from coffeetable 1",
+    "go to armchair 1",
+    "move creditcard 2 to armchair 1"
+  ]
+}

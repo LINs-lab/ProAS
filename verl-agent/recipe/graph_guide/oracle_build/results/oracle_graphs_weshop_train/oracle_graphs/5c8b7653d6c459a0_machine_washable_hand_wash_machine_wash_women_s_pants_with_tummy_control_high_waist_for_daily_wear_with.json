@@ -1,0 +1,377 @@
+{
+  "constraint_checks": [
+    {
+      "completion": "target product metadata/title/category should support the non-option request terms",
+      "constraint_id": "C0",
+      "depends_on": [
+        "G2"
+      ],
+      "gates": "G3",
+      "kind": "attribute_or_category",
+      "name": "attribute_constraint_satisfied",
+      "requested_terms": [
+        "machine washable",
+        "hand wash",
+        "machine wash women's pants",
+        "tummy control",
+        "high waist",
+        "daily wear"
+      ],
+      "spit_units": 0,
+      "status": "satisfied_for_at_least_one_target",
+      "target_results": [
+        {
+          "asin": "B085S5P7WB",
+          "matched_terms": [
+            "machine washable",
+            "hand wash",
+            "machine wash women's pants",
+            "tummy control",
+            "high waist",
+            "daily wear"
+          ],
+          "missing_terms": [],
+          "satisfied": true
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "action_kind": "ordered_dependency",
+      "dst": "G1",
+      "edge_id": "ordered_e0",
+      "from_signature": [
+        "stage:target_visible",
+        "target_asin:B085S5P7WB",
+        "required_option:size=x-large"
+      ],
+      "from_signature_hash": "fe62ea5eb6a1ffff",
+      "oracle_step_idx": 0,
+      "src": "G0",
+      "to_signature": [
+        "stage:target_product_opened",
+        "target_asin:B085S5P7WB",
+        "required_option:size=x-large"
+      ],
+      "to_signature_hash": "3a795c60fcdaaced",
+      "walkthrough_action": "target must be visible before opening the product"
+    },
+    {
+      "action_kind": "ordered_dependency",
+      "dst": "G2",
+      "edge_id": "ordered_e1",
+      "from_signature": [
+        "stage:target_product_opened",
+        "target_asin:B085S5P7WB",
+        "required_option:size=x-large"
+      ],
+      "from_signature_hash": "3a795c60fcdaaced",
+      "oracle_step_idx": 1,
+      "src": "G1",
+      "to_signature": [
+        "stage:required_options_configured",
+        "target_asin:B085S5P7WB",
+        "required_option:size=x-large"
+      ],
+      "to_signature_hash": "aa7db87ee84bce1a",
+      "walkthrough_action": "target product page must be open before option coverage counts"
+    },
+    {
+      "action_kind": "constraint_dependency",
+      "dst": "C0",
+      "edge_id": "ordered_e2",
+      "from_signature": [
+        "stage:required_options_configured",
+        "target_asin:B085S5P7WB",
+        "required_option:size=x-large"
+      ],
+      "from_signature_hash": "aa7db87ee84bce1a",
+      "oracle_step_idx": 2,
+      "src": "G2",
+      "to_signature": [
+        "stage:attribute_constraint_satisfied",
+        "target_asin:B085S5P7WB",
+        "required_option:size=x-large"
+      ],
+      "to_signature_hash": "3f1263c1bc29632b",
+      "walkthrough_action": "attribute_constraint_satisfied gates target purchase validity"
+    },
+    {
+      "action_kind": "ordered_dependency",
+      "dst": "G3",
+      "edge_id": "ordered_e3",
+      "from_signature": [
+        "stage:attribute_constraint_satisfied",
+        "target_asin:B085S5P7WB",
+        "required_option:size=x-large"
+      ],
+      "from_signature_hash": "3f1263c1bc29632b",
+      "oracle_step_idx": 3,
+      "src": "C0",
+      "to_signature": [
+        "stage:target_purchased",
+        "target_asin:B085S5P7WB",
+        "required_option:size=x-large"
+      ],
+      "to_signature_hash": "239ac717b43a6915",
+      "walkthrough_action": "validated target/options can be purchased"
+    },
+    {
+      "action_kind": "unordered_substep_membership",
+      "dst": "G2_U0",
+      "edge_id": "unordered_G2_U0",
+      "from_signature": [
+        "stage:required_options_configured",
+        "target_asin:B085S5P7WB",
+        "required_option:size=x-large"
+      ],
+      "from_signature_hash": "aa7db87ee84bce1a",
+      "oracle_step_idx": 4,
+      "src": "G2",
+      "to_signature": [
+        "stage:option:size",
+        "target_asin:B085S5P7WB",
+        "required_option:size=x-large"
+      ],
+      "to_signature_hash": "d688ce10987f4811",
+      "walkthrough_action": "option substeps under G2 are order-insensitive"
+    }
+  ],
+  "goal_signature": [
+    "stage:target_purchased",
+    "target_asin:B085S5P7WB",
+    "required_option:size=x-large"
+  ],
+  "human_records": {
+    "B085S5P7WB": []
+  },
+  "nodes": [
+    {
+      "depth": 0,
+      "label": "target_visible",
+      "node_id": "G0",
+      "node_type": "ordered_subgoal",
+      "signature": [
+        "stage:target_visible",
+        "target_asin:B085S5P7WB",
+        "required_option:size=x-large"
+      ],
+      "signature_hash": "fe62ea5eb6a1ffff",
+      "stage": "target_visible"
+    },
+    {
+      "depth": 1,
+      "label": "target_product_opened",
+      "node_id": "G1",
+      "node_type": "ordered_subgoal",
+      "signature": [
+        "stage:target_product_opened",
+        "target_asin:B085S5P7WB",
+        "required_option:size=x-large"
+      ],
+      "signature_hash": "3a795c60fcdaaced",
+      "stage": "target_product_opened"
+    },
+    {
+      "depth": 2,
+      "label": "required_options_configured",
+      "node_id": "G2",
+      "node_type": "ordered_subgoal",
+      "signature": [
+        "stage:required_options_configured",
+        "target_asin:B085S5P7WB",
+        "required_option:size=x-large"
+      ],
+      "signature_hash": "aa7db87ee84bce1a",
+      "stage": "required_options_configured"
+    },
+    {
+      "depth": 3,
+      "label": "target_purchased",
+      "node_id": "G3",
+      "node_type": "ordered_subgoal",
+      "signature": [
+        "stage:target_purchased",
+        "target_asin:B085S5P7WB",
+        "required_option:size=x-large"
+      ],
+      "signature_hash": "239ac717b43a6915",
+      "stage": "target_purchased"
+    },
+    {
+      "depth": 2,
+      "label": "size = x-large",
+      "node_id": "G2_U0",
+      "node_type": "unordered_substep",
+      "parent_subgoal": "G2",
+      "signature": [
+        "stage:option:size",
+        "target_asin:B085S5P7WB",
+        "required_option:size=x-large"
+      ],
+      "signature_hash": "d688ce10987f4811",
+      "stage": "option:size"
+    },
+    {
+      "depth": 3,
+      "label": "C0",
+      "node_id": "C0",
+      "node_type": "case_constraint",
+      "signature": [
+        "stage:attribute_constraint_satisfied",
+        "target_asin:B085S5P7WB",
+        "required_option:size=x-large"
+      ],
+      "signature_hash": "3f1263c1bc29632b",
+      "stage": "attribute_constraint_satisfied",
+      "status": "satisfied_for_at_least_one_target"
+    }
+  ],
+  "oracle_type": "webshop_hierarchical_target_level",
+  "ordered_subgoals": [
+    {
+      "completion": "target asin appears in search results or current page",
+      "depends_on": [],
+      "name": "target_visible",
+      "order_index": 0,
+      "ordered": true,
+      "spit_units": 1,
+      "subgoal_id": "G0",
+      "unordered_substeps": [
+        {
+          "completion": "any target asin appears in observation text",
+          "kind": "target_coverage",
+          "label": "target asin observed",
+          "substep_id": "target_asin_seen"
+        }
+      ]
+    },
+    {
+      "completion": "current page is one of the target asins",
+      "depends_on": [
+        "G0"
+      ],
+      "name": "target_product_opened",
+      "order_index": 1,
+      "ordered": true,
+      "spit_units": 1,
+      "subgoal_id": "G1",
+      "unordered_substeps": [
+        {
+          "completion": "click[target asin] or current_asin is target",
+          "kind": "navigation",
+          "label": "click target asin",
+          "substep_id": "open_target_asin"
+        }
+      ]
+    },
+    {
+      "completion": "all required option substeps are covered, order-insensitive",
+      "depends_on": [
+        "G1"
+      ],
+      "name": "required_options_configured",
+      "order_index": 2,
+      "ordered": true,
+      "spit_units": 1,
+      "subgoal_id": "G2",
+      "unordered_substeps": [
+        {
+          "completion": "selected option value appears in current selected-options set",
+          "kind": "required_option",
+          "label": "size = x-large",
+          "option_key": "size",
+          "option_value": "x-large",
+          "order": "unordered_within_subgoal",
+          "substep_id": "option:size"
+        }
+      ]
+    },
+    {
+      "completion": "click[buy now] purchases a target asin with required options covered",
+      "depends_on": [
+        "C0"
+      ],
+      "name": "target_purchased",
+      "order_index": 3,
+      "ordered": true,
+      "spit_units": 1,
+      "subgoal_id": "G3",
+      "unordered_substeps": [
+        {
+          "completion": "purchased asin is target and purchased options cover all required options",
+          "kind": "terminal_action",
+          "label": "buy target",
+          "substep_id": "buy_target"
+        }
+      ]
+    }
+  ],
+  "price_upper": null,
+  "products": {
+    "B085S5P7WB": {
+      "asin": "B085S5P7WB",
+      "attributes": [
+        "yoga pants",
+        "pants women",
+        "machine washable",
+        "tummy control",
+        "high waist",
+        "daily wear",
+        "hand wash",
+        "machine wash"
+      ],
+      "category": "fashion",
+      "name": "Women High Waist Tummy Control Fitness Yoga Pants Mesh Patchwork Leggings Sexy Lace Stitching Tights",
+      "price": 0.01,
+      "product_category": "",
+      "query": "Women's Pants"
+    }
+  },
+  "required_option_values": [
+    "x-large"
+  ],
+  "required_options": {
+    "size": "x-large"
+  },
+  "source_traj_uids": [
+    "synthetic:B085S5P7WB:3"
+  ],
+  "spit_rubric": {
+    "formula": "SPIT = completed_ordered_units_plus_completed_unordered_option_bits / total_units",
+    "total_units": 4,
+    "type": "hierarchical_ordered_subgoals_with_unordered_option_bits",
+    "units": [
+      {
+        "ordered": true,
+        "unit": "target_visible",
+        "weight": 1
+      },
+      {
+        "ordered": true,
+        "unit": "target_product_opened",
+        "weight": 1
+      },
+      {
+        "internal_order": "unordered",
+        "ordered": true,
+        "substeps": [
+          "option:size"
+        ],
+        "unit": "required_options_configured",
+        "weight": 1
+      },
+      {
+        "ordered": true,
+        "unit": "target_purchased",
+        "weight": 1
+      }
+    ]
+  },
+  "target_asins": [
+    "B085S5P7WB"
+  ],
+  "task_desc": "Find me machine washable, hand wash, machine wash women's pants with tummy control, high waist for daily wear with size: x-large",
+  "task_key": "5c8b7653d6c459a0"
+}

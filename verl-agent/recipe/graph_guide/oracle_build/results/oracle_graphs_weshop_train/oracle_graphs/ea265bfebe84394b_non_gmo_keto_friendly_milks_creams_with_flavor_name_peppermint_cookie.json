@@ -1,0 +1,363 @@
+{
+  "constraint_checks": [
+    {
+      "completion": "target product metadata/title/category should support the non-option request terms",
+      "constraint_id": "C0",
+      "depends_on": [
+        "G2"
+      ],
+      "gates": "G3",
+      "kind": "attribute_or_category",
+      "name": "attribute_constraint_satisfied",
+      "requested_terms": [
+        "non gmo",
+        "keto friendly milks & creams"
+      ],
+      "spit_units": 0,
+      "status": "satisfied_for_at_least_one_target",
+      "target_results": [
+        {
+          "asin": "B07F1JDWJP",
+          "matched_terms": [
+            "non gmo",
+            "keto friendly milks & creams"
+          ],
+          "missing_terms": [],
+          "satisfied": true
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "action_kind": "ordered_dependency",
+      "dst": "G1",
+      "edge_id": "ordered_e0",
+      "from_signature": [
+        "stage:target_visible",
+        "target_asin:B07F1JDWJP",
+        "required_option:flavor name=peppermint cookie"
+      ],
+      "from_signature_hash": "64849ec1e4cd4bef",
+      "oracle_step_idx": 0,
+      "src": "G0",
+      "to_signature": [
+        "stage:target_product_opened",
+        "target_asin:B07F1JDWJP",
+        "required_option:flavor name=peppermint cookie"
+      ],
+      "to_signature_hash": "d0b44ae0de38d029",
+      "walkthrough_action": "target must be visible before opening the product"
+    },
+    {
+      "action_kind": "ordered_dependency",
+      "dst": "G2",
+      "edge_id": "ordered_e1",
+      "from_signature": [
+        "stage:target_product_opened",
+        "target_asin:B07F1JDWJP",
+        "required_option:flavor name=peppermint cookie"
+      ],
+      "from_signature_hash": "d0b44ae0de38d029",
+      "oracle_step_idx": 1,
+      "src": "G1",
+      "to_signature": [
+        "stage:required_options_configured",
+        "target_asin:B07F1JDWJP",
+        "required_option:flavor name=peppermint cookie"
+      ],
+      "to_signature_hash": "c3b52cdf5bb127b6",
+      "walkthrough_action": "target product page must be open before option coverage counts"
+    },
+    {
+      "action_kind": "constraint_dependency",
+      "dst": "C0",
+      "edge_id": "ordered_e2",
+      "from_signature": [
+        "stage:required_options_configured",
+        "target_asin:B07F1JDWJP",
+        "required_option:flavor name=peppermint cookie"
+      ],
+      "from_signature_hash": "c3b52cdf5bb127b6",
+      "oracle_step_idx": 2,
+      "src": "G2",
+      "to_signature": [
+        "stage:attribute_constraint_satisfied",
+        "target_asin:B07F1JDWJP",
+        "required_option:flavor name=peppermint cookie"
+      ],
+      "to_signature_hash": "4f208e0c6f8b67a8",
+      "walkthrough_action": "attribute_constraint_satisfied gates target purchase validity"
+    },
+    {
+      "action_kind": "ordered_dependency",
+      "dst": "G3",
+      "edge_id": "ordered_e3",
+      "from_signature": [
+        "stage:attribute_constraint_satisfied",
+        "target_asin:B07F1JDWJP",
+        "required_option:flavor name=peppermint cookie"
+      ],
+      "from_signature_hash": "4f208e0c6f8b67a8",
+      "oracle_step_idx": 3,
+      "src": "C0",
+      "to_signature": [
+        "stage:target_purchased",
+        "target_asin:B07F1JDWJP",
+        "required_option:flavor name=peppermint cookie"
+      ],
+      "to_signature_hash": "03e89374c36986f6",
+      "walkthrough_action": "validated target/options can be purchased"
+    },
+    {
+      "action_kind": "unordered_substep_membership",
+      "dst": "G2_U0",
+      "edge_id": "unordered_G2_U0",
+      "from_signature": [
+        "stage:required_options_configured",
+        "target_asin:B07F1JDWJP",
+        "required_option:flavor name=peppermint cookie"
+      ],
+      "from_signature_hash": "c3b52cdf5bb127b6",
+      "oracle_step_idx": 4,
+      "src": "G2",
+      "to_signature": [
+        "stage:option:flavor name",
+        "target_asin:B07F1JDWJP",
+        "required_option:flavor name=peppermint cookie"
+      ],
+      "to_signature_hash": "e37ad4501685a65a",
+      "walkthrough_action": "option substeps under G2 are order-insensitive"
+    }
+  ],
+  "goal_signature": [
+    "stage:target_purchased",
+    "target_asin:B07F1JDWJP",
+    "required_option:flavor name=peppermint cookie"
+  ],
+  "human_records": {
+    "B07F1JDWJP": []
+  },
+  "nodes": [
+    {
+      "depth": 0,
+      "label": "target_visible",
+      "node_id": "G0",
+      "node_type": "ordered_subgoal",
+      "signature": [
+        "stage:target_visible",
+        "target_asin:B07F1JDWJP",
+        "required_option:flavor name=peppermint cookie"
+      ],
+      "signature_hash": "64849ec1e4cd4bef",
+      "stage": "target_visible"
+    },
+    {
+      "depth": 1,
+      "label": "target_product_opened",
+      "node_id": "G1",
+      "node_type": "ordered_subgoal",
+      "signature": [
+        "stage:target_product_opened",
+        "target_asin:B07F1JDWJP",
+        "required_option:flavor name=peppermint cookie"
+      ],
+      "signature_hash": "d0b44ae0de38d029",
+      "stage": "target_product_opened"
+    },
+    {
+      "depth": 2,
+      "label": "required_options_configured",
+      "node_id": "G2",
+      "node_type": "ordered_subgoal",
+      "signature": [
+        "stage:required_options_configured",
+        "target_asin:B07F1JDWJP",
+        "required_option:flavor name=peppermint cookie"
+      ],
+      "signature_hash": "c3b52cdf5bb127b6",
+      "stage": "required_options_configured"
+    },
+    {
+      "depth": 3,
+      "label": "target_purchased",
+      "node_id": "G3",
+      "node_type": "ordered_subgoal",
+      "signature": [
+        "stage:target_purchased",
+        "target_asin:B07F1JDWJP",
+        "required_option:flavor name=peppermint cookie"
+      ],
+      "signature_hash": "03e89374c36986f6",
+      "stage": "target_purchased"
+    },
+    {
+      "depth": 2,
+      "label": "flavor name = peppermint cookie",
+      "node_id": "G2_U0",
+      "node_type": "unordered_substep",
+      "parent_subgoal": "G2",
+      "signature": [
+        "stage:option:flavor name",
+        "target_asin:B07F1JDWJP",
+        "required_option:flavor name=peppermint cookie"
+      ],
+      "signature_hash": "e37ad4501685a65a",
+      "stage": "option:flavor name"
+    },
+    {
+      "depth": 3,
+      "label": "C0",
+      "node_id": "C0",
+      "node_type": "case_constraint",
+      "signature": [
+        "stage:attribute_constraint_satisfied",
+        "target_asin:B07F1JDWJP",
+        "required_option:flavor name=peppermint cookie"
+      ],
+      "signature_hash": "4f208e0c6f8b67a8",
+      "stage": "attribute_constraint_satisfied",
+      "status": "satisfied_for_at_least_one_target"
+    }
+  ],
+  "oracle_type": "webshop_hierarchical_target_level",
+  "ordered_subgoals": [
+    {
+      "completion": "target asin appears in search results or current page",
+      "depends_on": [],
+      "name": "target_visible",
+      "order_index": 0,
+      "ordered": true,
+      "spit_units": 1,
+      "subgoal_id": "G0",
+      "unordered_substeps": [
+        {
+          "completion": "any target asin appears in observation text",
+          "kind": "target_coverage",
+          "label": "target asin observed",
+          "substep_id": "target_asin_seen"
+        }
+      ]
+    },
+    {
+      "completion": "current page is one of the target asins",
+      "depends_on": [
+        "G0"
+      ],
+      "name": "target_product_opened",
+      "order_index": 1,
+      "ordered": true,
+      "spit_units": 1,
+      "subgoal_id": "G1",
+      "unordered_substeps": [
+        {
+          "completion": "click[target asin] or current_asin is target",
+          "kind": "navigation",
+          "label": "click target asin",
+          "substep_id": "open_target_asin"
+        }
+      ]
+    },
+    {
+      "completion": "all required option substeps are covered, order-insensitive",
+      "depends_on": [
+        "G1"
+      ],
+      "name": "required_options_configured",
+      "order_index": 2,
+      "ordered": true,
+      "spit_units": 1,
+      "subgoal_id": "G2",
+      "unordered_substeps": [
+        {
+          "completion": "selected option value appears in current selected-options set",
+          "kind": "required_option",
+          "label": "flavor name = peppermint cookie",
+          "option_key": "flavor name",
+          "option_value": "peppermint cookie",
+          "order": "unordered_within_subgoal",
+          "substep_id": "option:flavor name"
+        }
+      ]
+    },
+    {
+      "completion": "click[buy now] purchases a target asin with required options covered",
+      "depends_on": [
+        "C0"
+      ],
+      "name": "target_purchased",
+      "order_index": 3,
+      "ordered": true,
+      "spit_units": 1,
+      "subgoal_id": "G3",
+      "unordered_substeps": [
+        {
+          "completion": "purchased asin is target and purchased options cover all required options",
+          "kind": "terminal_action",
+          "label": "buy target",
+          "substep_id": "buy_target"
+        }
+      ]
+    }
+  ],
+  "price_upper": null,
+  "products": {
+    "B07F1JDWJP": {
+      "asin": "B07F1JDWJP",
+      "attributes": [
+        "non gmo",
+        "keto friendly"
+      ],
+      "category": "grocery",
+      "name": "NOW Foods, Better Stevia, Liquid, Maple, Zero-Calorie Liquid Sweetener, Low Glycemic Impact, Certified Non-GMO, 2-Ounce",
+      "price": 10.04,
+      "product_category": "Grocery & Gourmet Food › Pantry Staples › Cooking & Baking › Syrups, Sugars & Sweeteners › Sugar Substitutes › Stevia",
+      "query": "Milks & Creams"
+    }
+  },
+  "required_option_values": [
+    "peppermint cookie"
+  ],
+  "required_options": {
+    "flavor name": "peppermint cookie"
+  },
+  "source_traj_uids": [
+    "synthetic:B07F1JDWJP:3"
+  ],
+  "spit_rubric": {
+    "formula": "SPIT = completed_ordered_units_plus_completed_unordered_option_bits / total_units",
+    "total_units": 4,
+    "type": "hierarchical_ordered_subgoals_with_unordered_option_bits",
+    "units": [
+      {
+        "ordered": true,
+        "unit": "target_visible",
+        "weight": 1
+      },
+      {
+        "ordered": true,
+        "unit": "target_product_opened",
+        "weight": 1
+      },
+      {
+        "internal_order": "unordered",
+        "ordered": true,
+        "substeps": [
+          "option:flavor name"
+        ],
+        "unit": "required_options_configured",
+        "weight": 1
+      },
+      {
+        "ordered": true,
+        "unit": "target_purchased",
+        "weight": 1
+      }
+    ]
+  },
+  "target_asins": [
+    "B07F1JDWJP"
+  ],
+  "task_desc": "Find me non gmo, keto friendly milks & creams with flavor name: peppermint cookie",
+  "task_key": "ea265bfebe84394b"
+}

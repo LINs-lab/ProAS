@@ -1,0 +1,796 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "shelf 3"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[shelf 3]",
+      "admissible_before": [
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at shelf 3. On the shelf 3, you see a cellphone 1, a pen 1, and a pencil 1.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.\n\nYour task is to: find two pen and put them in dresser.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[shelf 3]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[shelf 3]"
+      ],
+      "walkthrough_action": "go to shelf 3",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "pen 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[pen 1]",
+      "admissible_before": [
+        "examine shelf 3",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look",
+        "take cellphone 1 from shelf 3",
+        "take pen 1 from shelf 3",
+        "take pencil 1 from shelf 3"
+      ],
+      "done": false,
+      "dst": "O2",
+      "from_signature": [
+        "at:OBJECT_SOURCE[shelf 3]"
+      ],
+      "observation_after": "You pick up the pen 1 from the shelf 3.",
+      "observation_before": "You arrive at shelf 3. On the shelf 3, you see a cellphone 1, a pen 1, and a pencil 1.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_OBJ[pen 1]",
+      "src": "O1",
+      "to_signature": [
+        "at:OBJECT_SOURCE[shelf 3]",
+        "holding:TARGET_OBJ[pen 1]"
+      ],
+      "walkthrough_action": "take pen 1 from shelf 3",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "drawer 7"
+      ],
+      "abstract_roles": [
+        "GOAL_RECEP"
+      ],
+      "action_key": "GotoLocation::GOAL_RECEP[drawer 7]",
+      "admissible_before": [
+        "examine pen 1",
+        "examine shelf 3",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look",
+        "move pen 1 to shelf 3"
+      ],
+      "done": false,
+      "dst": "O3",
+      "from_signature": [
+        "at:OBJECT_SOURCE[shelf 3]",
+        "holding:TARGET_OBJ[pen 1]"
+      ],
+      "observation_after": "You arrive at drawer 7. On the drawer 7, you see a creditcard 2, a keychain 3, and a keychain 2.",
+      "observation_before": "You pick up the pen 1 from the shelf 3.",
+      "oracle_step_idx": 2,
+      "role_text": "GOAL_RECEP[drawer 7]",
+      "src": "O2",
+      "to_signature": [
+        "at:GOAL_RECEP[drawer 7]",
+        "holding:TARGET_OBJ[pen 1]"
+      ],
+      "walkthrough_action": "go to drawer 7",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "pen 1",
+        "dresser 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[pen 1]|TARGET_PARENT[dresser 1]",
+      "admissible_before": [
+        "examine drawer 7",
+        "examine dresser 1",
+        "examine pen 1",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 8",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look",
+        "move pen 1 to drawer 7",
+        "move pen 1 to dresser 1",
+        "use desklamp 1"
+      ],
+      "done": false,
+      "dst": "O4",
+      "from_signature": [
+        "at:GOAL_RECEP[drawer 7]",
+        "holding:TARGET_OBJ[pen 1]"
+      ],
+      "observation_after": "You move the pen 1 to the dresser 1.",
+      "observation_before": "You arrive at drawer 7. On the drawer 7, you see a creditcard 2, a keychain 3, and a keychain 2.",
+      "oracle_step_idx": 3,
+      "role_text": "TARGET_OBJ[pen 1] -> TARGET_PARENT[dresser 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:GOAL_RECEP[drawer 7]",
+        "placed:1@TARGET_PARENT[dresser 1]"
+      ],
+      "walkthrough_action": "move pen 1 to dresser 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "shelf 5"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[shelf 5]",
+      "admissible_before": [
+        "examine drawer 7",
+        "examine dresser 1",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 8",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look",
+        "take alarmclock 2 from dresser 1",
+        "take cd 2 from dresser 1",
+        "take creditcard 1 from dresser 1",
+        "take creditcard 2 from drawer 7",
+        "take keychain 2 from drawer 7",
+        "take keychain 3 from drawer 7",
+        "take pen 1 from dresser 1",
+        "use desklamp 1"
+      ],
+      "done": false,
+      "dst": "O5",
+      "from_signature": [
+        "at:GOAL_RECEP[drawer 7]",
+        "placed:1@TARGET_PARENT[dresser 1]"
+      ],
+      "observation_after": "You arrive at shelf 5. On the shelf 5, you see a alarmclock 1, and a pen 2.",
+      "observation_before": "You move the pen 1 to the dresser 1.",
+      "oracle_step_idx": 4,
+      "role_text": "OBJECT_SOURCE[shelf 5]",
+      "src": "O4",
+      "to_signature": [
+        "at:OBJECT_SOURCE[shelf 5]",
+        "placed:1@TARGET_PARENT[dresser 1]"
+      ],
+      "walkthrough_action": "go to shelf 5",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "pen 2"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[pen 2]",
+      "admissible_before": [
+        "examine shelf 5",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "help",
+        "inventory",
+        "look",
+        "take alarmclock 1 from shelf 5",
+        "take pen 2 from shelf 5"
+      ],
+      "done": false,
+      "dst": "O6",
+      "from_signature": [
+        "at:OBJECT_SOURCE[shelf 5]",
+        "placed:1@TARGET_PARENT[dresser 1]"
+      ],
+      "observation_after": "You pick up the pen 2 from the shelf 5.",
+      "observation_before": "You arrive at shelf 5. On the shelf 5, you see a alarmclock 1, and a pen 2.",
+      "oracle_step_idx": 5,
+      "role_text": "TARGET_OBJ[pen 2]",
+      "src": "O5",
+      "to_signature": [
+        "at:OBJECT_SOURCE[shelf 5]",
+        "holding:TARGET_OBJ[pen 2]",
+        "placed:1@none"
+      ],
+      "walkthrough_action": "take pen 2 from shelf 5",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "drawer 7"
+      ],
+      "abstract_roles": [
+        "GOAL_RECEP"
+      ],
+      "action_key": "GotoLocation::GOAL_RECEP[drawer 7]",
+      "admissible_before": [
+        "examine pen 2",
+        "examine shelf 5",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "help",
+        "inventory",
+        "look",
+        "move pen 2 to shelf 5"
+      ],
+      "done": false,
+      "dst": "O7",
+      "from_signature": [
+        "at:OBJECT_SOURCE[shelf 5]",
+        "holding:TARGET_OBJ[pen 2]",
+        "placed:1@none"
+      ],
+      "observation_after": "You arrive at drawer 7. On the drawer 7, you see a creditcard 2, a keychain 3, and a keychain 2.",
+      "observation_before": "You pick up the pen 2 from the shelf 5.",
+      "oracle_step_idx": 6,
+      "role_text": "GOAL_RECEP[drawer 7]",
+      "src": "O6",
+      "to_signature": [
+        "at:GOAL_RECEP[drawer 7]",
+        "holding:TARGET_OBJ[pen 2]",
+        "placed:1@none"
+      ],
+      "walkthrough_action": "go to drawer 7",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "pen 2",
+        "dresser 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[pen 2]|TARGET_PARENT[dresser 1]",
+      "admissible_before": [
+        "examine drawer 7",
+        "examine dresser 1",
+        "examine pen 2",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 8",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look",
+        "move pen 2 to drawer 7",
+        "move pen 2 to dresser 1",
+        "use desklamp 1"
+      ],
+      "done": true,
+      "dst": "O8",
+      "from_signature": [
+        "at:GOAL_RECEP[drawer 7]",
+        "holding:TARGET_OBJ[pen 2]",
+        "placed:1@none"
+      ],
+      "observation_after": "You move the pen 2 to the dresser 1.",
+      "observation_before": "You arrive at drawer 7. On the drawer 7, you see a creditcard 2, a keychain 3, and a keychain 2.",
+      "oracle_step_idx": 7,
+      "role_text": "TARGET_OBJ[pen 2] -> TARGET_PARENT[dresser 1]",
+      "src": "O7",
+      "to_signature": [
+        "at:GOAL_RECEP[drawer 7]",
+        "placed:2@TARGET_PARENT[dresser 1]",
+        "success"
+      ],
+      "walkthrough_action": "move pen 2 to dresser 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_two_obj_and_place-Pen-None-Dresser-327/trial_T20190907_212826_574375/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[drawer 7]",
+    "placed:2@TARGET_PARENT[dresser 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.\n\nYour task is to: find two pen and put them in dresser.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine shelf 3",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look",
+        "take cellphone 1 from shelf 3",
+        "take pen 1 from shelf 3",
+        "take pencil 1 from shelf 3"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[shelf 3]",
+      "node_id": "O1",
+      "observation": "You arrive at shelf 3. On the shelf 3, you see a cellphone 1, a pen 1, and a pencil 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[shelf 3]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine pen 1",
+        "examine shelf 3",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look",
+        "move pen 1 to shelf 3"
+      ],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[shelf 3] | holding:TARGET_OBJ[pen 1]",
+      "node_id": "O2",
+      "observation": "You pick up the pen 1 from the shelf 3.",
+      "signature": [
+        "at:OBJECT_SOURCE[shelf 3]",
+        "holding:TARGET_OBJ[pen 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine drawer 7",
+        "examine dresser 1",
+        "examine pen 1",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 8",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look",
+        "move pen 1 to drawer 7",
+        "move pen 1 to dresser 1",
+        "use desklamp 1"
+      ],
+      "depth": 3,
+      "label": "at:GOAL_RECEP[drawer 7] | holding:TARGET_OBJ[pen 1]",
+      "node_id": "O3",
+      "observation": "You arrive at drawer 7. On the drawer 7, you see a creditcard 2, a keychain 3, and a keychain 2.",
+      "signature": [
+        "at:GOAL_RECEP[drawer 7]",
+        "holding:TARGET_OBJ[pen 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine drawer 7",
+        "examine dresser 1",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 8",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look",
+        "take alarmclock 2 from dresser 1",
+        "take cd 2 from dresser 1",
+        "take creditcard 1 from dresser 1",
+        "take creditcard 2 from drawer 7",
+        "take keychain 2 from drawer 7",
+        "take keychain 3 from drawer 7",
+        "take pen 1 from dresser 1",
+        "use desklamp 1"
+      ],
+      "depth": 4,
+      "label": "at:GOAL_RECEP[drawer 7] | placed:1@TARGET_PARENT[dresser 1]",
+      "node_id": "O4",
+      "observation": "You move the pen 1 to the dresser 1.",
+      "signature": [
+        "at:GOAL_RECEP[drawer 7]",
+        "placed:1@TARGET_PARENT[dresser 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine shelf 5",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "help",
+        "inventory",
+        "look",
+        "take alarmclock 1 from shelf 5",
+        "take pen 2 from shelf 5"
+      ],
+      "depth": 5,
+      "label": "at:OBJECT_SOURCE[shelf 5] | placed:1@TARGET_PARENT[dresser 1]",
+      "node_id": "O5",
+      "observation": "You arrive at shelf 5. On the shelf 5, you see a alarmclock 1, and a pen 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[shelf 5]",
+        "placed:1@TARGET_PARENT[dresser 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine pen 2",
+        "examine shelf 5",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "help",
+        "inventory",
+        "look",
+        "move pen 2 to shelf 5"
+      ],
+      "depth": 6,
+      "label": "at:OBJECT_SOURCE[shelf 5] | holding:TARGET_OBJ[pen 2] | placed:1@none",
+      "node_id": "O6",
+      "observation": "You pick up the pen 2 from the shelf 5.",
+      "signature": [
+        "at:OBJECT_SOURCE[shelf 5]",
+        "holding:TARGET_OBJ[pen 2]",
+        "placed:1@none"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine drawer 7",
+        "examine dresser 1",
+        "examine pen 2",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 8",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look",
+        "move pen 2 to drawer 7",
+        "move pen 2 to dresser 1",
+        "use desklamp 1"
+      ],
+      "depth": 7,
+      "label": "at:GOAL_RECEP[drawer 7] | holding:TARGET_OBJ[pen 2] | placed:1@none",
+      "node_id": "O7",
+      "observation": "You arrive at drawer 7. On the drawer 7, you see a creditcard 2, a keychain 3, and a keychain 2.",
+      "signature": [
+        "at:GOAL_RECEP[drawer 7]",
+        "holding:TARGET_OBJ[pen 2]",
+        "placed:1@none"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine drawer 7",
+        "examine dresser 1",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 8",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look",
+        "take alarmclock 2 from dresser 1",
+        "take cd 2 from dresser 1",
+        "take creditcard 1 from dresser 1",
+        "take creditcard 2 from drawer 7",
+        "take keychain 2 from drawer 7",
+        "take keychain 3 from drawer 7",
+        "take pen 1 from dresser 1",
+        "take pen 2 from dresser 1",
+        "use desklamp 1"
+      ],
+      "depth": 8,
+      "label": "at:GOAL_RECEP[drawer 7] | placed:2@TARGET_PARENT[dresser 1] | success",
+      "node_id": "O8",
+      "observation": "You move the pen 2 to the dresser 1.",
+      "signature": [
+        "at:GOAL_RECEP[drawer 7]",
+        "placed:2@TARGET_PARENT[dresser 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Pen",
+    "parent_target": "Dresser",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_two_obj_and_place-Pen-None-Dresser-327__trial_T20190907_212826_574375__game",
+  "task_type": "pick_two_obj_and_place",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 8,
+    "num_walkthrough_actions": 8,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_two_obj_and_place-Pen-None-Dresser-327/trial_T20190907_212826_574375",
+  "walkthrough": [
+    "go to shelf 3",
+    "take pen 1 from shelf 3",
+    "go to drawer 7",
+    "move pen 1 to dresser 1",
+    "go to shelf 5",
+    "take pen 2 from shelf 5",
+    "go to drawer 7",
+    "move pen 2 to dresser 1"
+  ]
+}

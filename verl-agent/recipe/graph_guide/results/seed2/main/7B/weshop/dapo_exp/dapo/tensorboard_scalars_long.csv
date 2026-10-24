@@ -1,0 +1,244 @@
+requested_run,actual_run,requested_tag,actual_tag,wall_time,step,value
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780241321.6283255,1,0.5211476683616638
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780241603.4682827,2,0.5265966057777405
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780241873.7512505,3,0.5342440009117126
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780242149.8758595,4,0.5099884271621704
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780242575.124758,5,0.5233882665634155
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780242846.0181212,6,0.5507790446281433
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780243122.5707083,7,0.55254727602005
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780243377.6792614,8,0.5692437887191772
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780243637.5335124,9,0.5512166619300842
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780244046.0094185,10,0.5711840987205505
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780244302.6578448,11,0.5785793662071228
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780244569.7144613,12,0.5816052556037903
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780244839.911437,13,0.5683723092079163
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780245104.3325996,14,0.5528055429458618
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780245523.7567554,15,0.5506040453910828
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780245793.0605862,16,0.5682418942451477
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780246060.5413315,17,0.572998046875
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780246302.290228,18,0.5744994878768921
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780246554.3232508,19,0.5394291281700134
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780246946.1106346,20,0.5687561631202698
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780247205.163031,21,0.5534366965293884
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780247458.525695,22,0.5613559484481812
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780247715.6835532,23,0.575101912021637
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780247959.5453823,24,0.5530519485473633
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780248337.7154102,25,0.5635671615600586
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780248580.1548283,26,0.5831184983253479
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780248793.6779385,27,0.5447917580604553
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780249005.2214472,28,0.5447179675102234
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780249210.83409,29,0.5654666423797607
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780249543.145116,30,0.5492368936538696
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780249751.5005682,31,0.5449668169021606
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780249958.8529558,32,0.5233089923858643
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780250160.9221797,33,0.5255369544029236
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780250354.108945,34,0.48930248618125916
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780250703.9796033,35,0.5256968140602112
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780250922.646167,36,0.5624732375144958
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780251146.8776622,37,0.563946008682251
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780251354.856515,38,0.5405415892601013
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780251546.2515767,39,0.5264310240745544
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780251880.5058448,40,0.5716668963432312
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780252083.437423,41,0.5820938944816589
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780252270.20927,42,0.5260350704193115
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780252464.2806776,43,0.5661038756370544
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780252673.7342472,44,0.5700722932815552
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780252989.7425344,45,0.5678684115409851
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780253181.3342094,46,0.5953599810600281
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780253365.3869758,47,0.5659592151641846
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780253568.0674756,48,0.5806823968887329
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780253759.1485596,49,0.5904118418693542
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780254152.545762,50,0.5652497410774231
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780254360.4297209,51,0.5254471898078918
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780254546.870018,52,0.5567984580993652
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780254738.8611228,53,0.5834781527519226
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780254936.3182786,54,0.5882899165153503
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780255267.4126909,55,0.5879664421081543
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780255480.228253,56,0.6053550243377686
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780255668.8082798,57,0.5838289260864258
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780255869.3922153,58,0.5614532232284546
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780256076.264917,59,0.561723530292511
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780256418.2726812,60,0.5623799562454224
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780256621.8689783,61,0.5792073607444763
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780256813.5787659,62,0.5444677472114563
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780256997.8939178,63,0.5577157735824585
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780257191.7682335,64,0.5566419959068298
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780257528.836183,65,0.5503782033920288
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780257720.411366,66,0.5275573134422302
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780257923.7520146,67,0.5642532110214233
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780258126.2511706,68,0.5754931569099426
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780258315.4299567,69,0.5804213881492615
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780258655.2208912,70,0.5765708088874817
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780258854.6922112,71,0.5703768134117126
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780259043.8455222,72,0.5626266002655029
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780259234.2499454,73,0.5921915173530579
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780259408.281121,74,0.5643656253814697
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780259718.9723492,75,0.5555164217948914
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780259899.9377673,76,0.5669154524803162
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780260088.2032673,77,0.5191009044647217
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780260271.1626353,78,0.5316049456596375
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780260470.3742702,79,0.5421684384346008
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780260808.4783661,80,0.5504956841468811
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780260999.8546522,81,0.5254531502723694
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780261186.773466,82,0.4943961501121521
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780261377.2821412,83,0.48058220744132996
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780261554.3208916,84,0.4886234402656555
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780261861.6175067,85,0.4743804633617401
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780262038.0910208,86,0.4726049304008484
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780262220.577159,87,0.4653627872467041
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780262361.2495923,88,0.46969297528266907
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780262543.4671376,89,0.49404284358024597
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780262855.818873,90,0.47584405541419983
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780263025.0305617,91,0.5188652276992798
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780263204.785573,92,0.4796265661716461
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780263382.3765037,93,0.4710410535335541
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780263567.9393015,94,0.4679163992404938
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780263840.0469446,95,0.4287695288658142
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780264016.917277,96,0.48394787311553955
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780264186.7266128,97,0.49938663840293884
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780264360.855594,98,0.5095592141151428
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780264552.2396264,99,0.5319328308105469
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780264919.0354645,100,0.5012044310569763
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780265050.773389,101,0.4788847863674164
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780265232.4675052,102,0.4617402255535126
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780265414.8271768,103,0.48016732931137085
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780265601.2765133,104,0.4597795307636261
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780265937.1586847,105,0.5055726170539856
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780266128.8762982,106,0.46375903487205505
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780266318.7383947,107,0.48300427198410034
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780266509.6245985,108,0.45135849714279175
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780266683.8379016,109,0.4591796100139618
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780266997.3578691,110,0.4998677372932434
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780267174.1467116,111,0.4561324715614319
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780267346.7141523,112,0.4289899170398712
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780267514.5083253,113,0.4073593020439148
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780267679.4390738,114,0.4016435742378235
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780267970.0226302,115,0.4381139874458313
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780268146.408815,116,0.42328426241874695
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780268325.4413223,117,0.4134342074394226
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780268500.161864,118,0.4371583163738251
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780268689.965981,119,0.4524856209754944
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780269033.3062892,120,0.44846856594085693
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780269215.1872766,121,0.48426055908203125
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780269406.543691,122,0.46521568298339844
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780269590.1349092,123,0.4609694480895996
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780269768.1061454,124,0.44253602623939514
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780270096.8638625,125,0.4467397630214691
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780270275.255389,126,0.4184763729572296
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780270454.6688812,127,0.41766858100891113
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780270642.5231178,128,0.43315786123275757
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780270840.788203,129,0.4121752381324768
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780271180.2546139,130,0.4558367431163788
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780271367.8402665,131,0.44235318899154663
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780271555.9536238,132,0.44897136092185974
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780271749.97018,133,0.44470277428627014
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780271957.0331655,134,0.467327356338501
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780272294.8609326,135,0.47264939546585083
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780272478.9779606,136,0.4598028063774109
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780272678.435012,137,0.45675307512283325
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780272860.3636124,138,0.421357125043869
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780273050.7384021,139,0.43247300386428833
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780273362.1583133,140,0.4019496440887451
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780273537.5903063,141,0.4662766754627228
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780273717.6236386,142,0.459603488445282
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780273890.4545295,143,0.44134923815727234
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780274072.0232704,144,0.44899508357048035
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780274375.8258402,145,0.47414132952690125
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780274546.0592701,146,0.47082385420799255
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780274725.7297835,147,0.4350416958332062
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780274909.4430423,148,0.4161697328090668
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780275088.3319561,149,0.38830310106277466
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,actor/entropy_loss,actor/entropy_loss,1780275470.7740428,150,0.4842830002307892
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780241039.8461432,0,0.0078125
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780242575.160719,5,0.015625
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780244046.0398052,10,0.0234375
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780245523.7835302,15,0.0859375
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780246946.1433759,20,0.046875
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780248337.7507563,25,0.21875
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780249543.1733608,30,0.2421875
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780250704.008141,35,0.4375
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780251880.5345066,40,0.4609375
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780252989.7728705,45,0.59375
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780254152.5744607,50,0.5546875
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780255267.442554,55,0.515625
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780256418.3039443,60,0.6015625
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780257528.8658526,65,0.5234375
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780258655.2488801,70,0.6796875
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780259719.0482001,75,0.53125
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780260808.5107102,80,0.6796875
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780261861.6662488,85,0.6796875
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780262855.849549,90,0.5390625
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780263840.0773485,95,0.7265625
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780264919.065536,100,0.6953125
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780265937.188811,105,0.7421875
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780266997.387507,110,0.6796875
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780267970.0535269,115,0.7109375
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780269033.3428047,120,0.7265625
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780270096.8993385,125,0.71875
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780271180.2810974,130,0.71875
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780272294.8931165,135,0.6953125
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780273362.186432,140,0.7265625
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780274375.855273,145,0.765625
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/success_rate,val/success_rate,1780275470.8093603,150,0.6953125
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780241039.8460486,0,0.0791139230132103
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780242575.1549737,5,0.08273579925298691
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780244046.0337417,10,0.1542857140302658
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780245523.777963,15,0.6312848925590515
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780246946.1377008,20,0.2621951103210449
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780248337.7406723,25,1.6718995571136475
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780249543.1681416,30,2.3251028060913086
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780250704.0028884,35,3.5367231369018555
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780251880.528715,40,3.245931386947632
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780252989.7670503,45,5.150501728057861
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780254152.568854,50,4.948688507080078
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780255267.4369266,55,4.760793685913086
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780256418.29834,60,5.798969268798828
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780257528.8602767,65,4.5248870849609375
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780258655.2437196,70,6.323529243469238
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780259719.0422614,75,4.8930816650390625
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780260808.5042045,80,6.5155439376831055
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780261861.6606166,85,6.460674285888672
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780262855.843329,90,4.0811967849731445
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780263840.071578,95,6.537966728210449
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780264919.0597386,100,6.545893669128418
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780265937.182868,105,7.374830722808838
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780266997.381626,110,5.735981464385986
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780267970.0475647,115,6.253101825714111
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780269033.3370252,120,6.888888835906982
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780270096.893446,125,6.436498165130615
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780271180.275829,130,6.881720542907715
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780272294.8868525,135,5.904872417449951
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780273362.1808593,140,6.609547138214111
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780274375.8500137,145,6.301369667053223
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/text/test_score,val/text/test_score,1780275470.8036408,150,5.666327476501465
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780241039.8461533,0,0.03203124925494194
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780242575.162622,5,0.0736607164144516
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780244046.0417132,10,0.13567212224006653
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780245523.7852793,15,0.13623511791229248
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780246946.145116,20,0.19875681400299072
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780248337.7527752,25,0.4846881330013275
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780249543.1751225,30,0.6135730147361755
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780250704.009999,35,0.7120682001113892
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780251880.5363023,40,0.6103289723396301
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780252989.7749033,45,0.7717833518981934
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780254152.5762575,50,0.7343264818191528
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780255267.444608,55,0.7398572564125061
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780256418.3059242,60,0.8203733563423157
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780257528.8677526,65,0.7035916447639465
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780258655.2505786,70,0.8359536528587341
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780259719.050158,75,0.7537084221839905
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780260808.5127795,80,0.8613258600234985
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780261861.6682172,85,0.8610659241676331
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780262855.8514106,90,0.7026544213294983
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780263840.0791898,95,0.8242601156234741
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780264919.067559,100,0.8241643309593201
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780265937.1908052,105,0.8973259329795837
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780266997.3894463,110,0.8120225667953491
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780267970.0554793,115,0.8459876179695129
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780269033.344836,120,0.8627217411994934
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780270096.9011772,125,0.8375828862190247
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780271180.2829142,130,0.8334308862686157
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780272294.8948748,135,0.7854065299034119
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780273362.1883614,140,0.8349034786224365
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780274375.8570015,145,0.8564279079437256
+weshop/dapo_weshop_seed2,weshop/dapo_weshop_seed2,val/webshop_task_score,val/webshop_task_score (not success_rate),1780275470.8114872,150,0.8124061822891235

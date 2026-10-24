@@ -1,0 +1,352 @@
+{
+  "distillation_input": "official_outputs/7B/alfworld/GRPO_7B_infer/validation_data/0.jsonl",
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::OBJECT_SOURCE[desk 1]",
+      "admissible_before": [
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "success_f2079745_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at desk 1. On the desk 1, you see a alarmclock 2, a book 2, a cd 4, a cd 3, a cd 2, a keychain 2, and a pencil 3.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a laundryhamper 1, a shelf 2, a shelf 1, and a sidetable 1.\n\nYour task is to: examine the cd with the desklamp.",
+      "oracle_step_idx": 0,
+      "path_source": "success_trajectory",
+      "role_text": "OBJECT_SOURCE[desk 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[desk 1]"
+      ],
+      "walkthrough_action": "go to desk 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PickupObject::TARGET_OBJ[cd 4]|LITERAL::desk[desk 1]",
+      "admissible_before": [
+        "examine desk 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "take alarmclock 2 from desk 1",
+        "take book 2 from desk 1",
+        "take cd 2 from desk 1",
+        "take cd 3 from desk 1",
+        "take cd 4 from desk 1",
+        "take keychain 2 from desk 1",
+        "take pencil 3 from desk 1"
+      ],
+      "done": false,
+      "dst": "O2",
+      "edge_id": "success_f2079745_e1",
+      "from_signature": [
+        "at:OBJECT_SOURCE[desk 1]"
+      ],
+      "observation_after": "You pick up the cd 4 from the desk 1.",
+      "observation_before": "You arrive at desk 1. On the desk 1, you see a alarmclock 2, a book 2, a cd 4, a cd 3, a cd 2, a keychain 2, and a pencil 3.",
+      "oracle_step_idx": 1,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[cd 4] -> LITERAL::desk[desk 1]",
+      "src": "O1",
+      "to_signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "holding:TARGET_OBJ[cd 4]"
+      ],
+      "walkthrough_action": "take cd 4 from desk 1",
+      "won": false
+    },
+    {
+      "abstract_action": "ExamineObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "ExamineObject::TARGET_OBJ[cd 4]",
+      "admissible_before": [
+        "examine cd 4",
+        "examine desk 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "move cd 4 to desk 1"
+      ],
+      "done": false,
+      "dst": "O2",
+      "edge_id": "success_f2079745_e2",
+      "from_signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "holding:TARGET_OBJ[cd 4]"
+      ],
+      "observation_after": "There's nothing special about cd 4.",
+      "observation_before": "You pick up the cd 4 from the desk 1.",
+      "oracle_step_idx": 2,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[cd 4]",
+      "src": "O2",
+      "to_signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "holding:TARGET_OBJ[cd 4]"
+      ],
+      "walkthrough_action": "examine cd 4",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::TOGGLE_SOURCE[desklamp 1]",
+      "admissible_before": [
+        "examine cd 4",
+        "examine desk 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "move cd 4 to desk 1"
+      ],
+      "done": false,
+      "dst": "O3",
+      "edge_id": "success_f2079745_e3",
+      "from_signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "holding:TARGET_OBJ[cd 4]"
+      ],
+      "observation_after": "You arrive at sidetable 1. On the sidetable 1, you see a alarmclock 3, a bowl 1, a cellphone 2, a desklamp 1, and a keychain 1.",
+      "observation_before": "There's nothing special about cd 4.",
+      "oracle_step_idx": 3,
+      "path_source": "success_trajectory",
+      "role_text": "TOGGLE_SOURCE[desklamp 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:TOGGLE_SOURCE[desklamp 1]",
+        "holding:TARGET_OBJ[cd 4]"
+      ],
+      "walkthrough_action": "go to sidetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "ToggleObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "ToggleObject::TARGET_TOGGLE[desklamp 1]",
+      "admissible_before": [
+        "examine cd 4",
+        "examine sidetable 1",
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "help",
+        "inventory",
+        "look",
+        "move cd 4 to sidetable 1",
+        "use desklamp 1"
+      ],
+      "done": true,
+      "dst": "O4",
+      "edge_id": "success_f2079745_e4",
+      "from_signature": [
+        "at:TOGGLE_SOURCE[desklamp 1]",
+        "holding:TARGET_OBJ[cd 4]"
+      ],
+      "observation_after": "You turn on the desklamp 1.",
+      "observation_before": "You arrive at sidetable 1. On the sidetable 1, you see a alarmclock 3, a bowl 1, a cellphone 2, a desklamp 1, and a keychain 1.",
+      "oracle_step_idx": 4,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_TOGGLE[desklamp 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:TOGGLE_SOURCE[desklamp 1]",
+        "holding:TARGET_OBJ[cd 4]",
+        "toggle:on[desklamp 1]",
+        "success"
+      ],
+      "walkthrough_action": "use desklamp 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/look_at_obj_in_light-CD-None-DeskLamp-307/trial_T20190906_200412_559520/game.tw-pddl",
+  "goal_signature": [
+    "at:TOGGLE_SOURCE[desklamp 1]",
+    "holding:TARGET_OBJ[cd 4]",
+    "toggle:on[desklamp 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a laundryhamper 1, a shelf 2, a shelf 1, and a sidetable 1.\n\nYour task is to: examine the cd with the desklamp.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[desk 1]",
+      "node_id": "O1",
+      "observation": "You arrive at desk 1. On the desk 1, you see a alarmclock 2, a book 2, a cd 4, a cd 3, a cd 2, a keychain 2, and a pencil 3.",
+      "signature": [
+        "at:OBJECT_SOURCE[desk 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[desk 1] | holding:TARGET_OBJ[cd 4]",
+      "node_id": "O2",
+      "observation": "You pick up the cd 4 from the desk 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "holding:TARGET_OBJ[cd 4]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 3,
+      "label": "at:TOGGLE_SOURCE[desklamp 1] | holding:TARGET_OBJ[cd 4]",
+      "node_id": "O3",
+      "observation": "You arrive at sidetable 1. On the sidetable 1, you see a alarmclock 3, a bowl 1, a cellphone 2, a desklamp 1, and a keychain 1.",
+      "signature": [
+        "at:TOGGLE_SOURCE[desklamp 1]",
+        "holding:TARGET_OBJ[cd 4]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 4,
+      "label": "at:TOGGLE_SOURCE[desklamp 1] | holding:TARGET_OBJ[cd 4] | toggle:on[desklamp 1] | success",
+      "node_id": "O4",
+      "observation": "You turn on the desklamp 1.",
+      "signature": [
+        "at:TOGGLE_SOURCE[desklamp 1]",
+        "holding:TARGET_OBJ[cd 4]",
+        "toggle:on[desklamp 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_type": "alfworld_teacher_distilled",
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "CD",
+    "parent_target": "",
+    "toggle_target": "DeskLamp"
+  },
+  "reference_paths": [
+    {
+      "edge_ids": [
+        "success_f2079745_e0",
+        "success_f2079745_e1",
+        "success_f2079745_e2",
+        "success_f2079745_e3",
+        "success_f2079745_e4"
+      ],
+      "node_ids": [
+        "O0",
+        "O1",
+        "O2",
+        "O3",
+        "O4"
+      ],
+      "path_id": "success_f2079745",
+      "source": "success_trajectory",
+      "traj_uid": "f2079745-af66-4807-8ba2-330d05416147",
+      "walkthrough": [
+        "go to desk 1",
+        "take cd 4 from desk 1",
+        "examine cd 4",
+        "go to sidetable 1",
+        "use desklamp 1"
+      ]
+    }
+  ],
+  "signature_mode": "entity",
+  "source": "teacher_7b_grpo_success_raw",
+  "state_source": "teacher_7b_grpo_success_raw",
+  "task_key": "train__look_at_obj_in_light-CD-None-DeskLamp-307__trial_T20190906_200412_559520__game",
+  "task_type": "look_at_obj_in_light",
+  "teacher_model": "official_outputs/7B/alfworld/grpo_alfworld/grpo_alfworld/global_step_140/actor",
+  "teacher_traj_uid": "f2079745-af66-4807-8ba2-330d05416147",
+  "trial_dir": "train/look_at_obj_in_light-CD-None-DeskLamp-307/trial_T20190906_200412_559520",
+  "walkthrough": [
+    "go to desk 1",
+    "take cd 4 from desk 1",
+    "examine cd 4",
+    "go to sidetable 1",
+    "use desklamp 1"
+  ]
+}

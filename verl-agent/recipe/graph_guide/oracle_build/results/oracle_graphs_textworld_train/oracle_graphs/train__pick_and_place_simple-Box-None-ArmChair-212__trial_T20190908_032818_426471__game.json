@@ -1,0 +1,376 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "tvstand 2"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[tvstand 2]",
+      "admissible_before": [
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "go to tvstand 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at tvstand 2. On the tvstand 2, you see a box 1, a creditcard 3, a newspaper 3, and a newspaper 2.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a coffeetable 1, a drawer 1, a garbagecan 1, a shelf 4, a shelf 3, a shelf 2, a shelf 1, a sidetable 1, a sofa 1, a tvstand 2, and a tvstand 1.\n\nYour task is to: put some box on armchair.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[tvstand 2]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[tvstand 2]"
+      ],
+      "walkthrough_action": "go to tvstand 2",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "box 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[box 1]",
+      "admissible_before": [
+        "examine tvstand 2",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take box 1 from tvstand 2",
+        "take creditcard 3 from tvstand 2",
+        "take newspaper 2 from tvstand 2",
+        "take newspaper 3 from tvstand 2"
+      ],
+      "done": false,
+      "dst": "O2",
+      "from_signature": [
+        "at:OBJECT_SOURCE[tvstand 2]"
+      ],
+      "observation_after": "You pick up the box 1 from the tvstand 2.",
+      "observation_before": "You arrive at tvstand 2. On the tvstand 2, you see a box 1, a creditcard 3, a newspaper 3, and a newspaper 2.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_OBJ[box 1]",
+      "src": "O1",
+      "to_signature": [
+        "at:OBJECT_SOURCE[tvstand 2]",
+        "holding:TARGET_OBJ[box 1]"
+      ],
+      "walkthrough_action": "take box 1 from tvstand 2",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "armchair 1"
+      ],
+      "abstract_roles": [
+        "GOAL_RECEP"
+      ],
+      "action_key": "GotoLocation::GOAL_RECEP[armchair 1]",
+      "admissible_before": [
+        "examine box 1",
+        "examine tvstand 2",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O3",
+      "from_signature": [
+        "at:OBJECT_SOURCE[tvstand 2]",
+        "holding:TARGET_OBJ[box 1]"
+      ],
+      "observation_after": "You arrive at armchair 1. On the armchair 1, you see nothing.",
+      "observation_before": "You pick up the box 1 from the tvstand 2.",
+      "oracle_step_idx": 2,
+      "role_text": "GOAL_RECEP[armchair 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "holding:TARGET_OBJ[box 1]"
+      ],
+      "walkthrough_action": "go to armchair 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "box 1",
+        "armchair 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[box 1]|TARGET_PARENT[armchair 1]",
+      "admissible_before": [
+        "examine armchair 1",
+        "examine box 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "go to tvstand 2",
+        "help",
+        "inventory",
+        "look",
+        "move box 1 to armchair 1"
+      ],
+      "done": true,
+      "dst": "O4",
+      "from_signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "holding:TARGET_OBJ[box 1]"
+      ],
+      "observation_after": "You move the box 1 to the armchair 1.",
+      "observation_before": "You arrive at armchair 1. On the armchair 1, you see nothing.",
+      "oracle_step_idx": 3,
+      "role_text": "TARGET_OBJ[box 1] -> TARGET_PARENT[armchair 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "placed:1@TARGET_PARENT[armchair 1]",
+        "success"
+      ],
+      "walkthrough_action": "move box 1 to armchair 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_and_place_simple-Box-None-ArmChair-212/trial_T20190908_032818_426471/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[armchair 1]",
+    "placed:1@TARGET_PARENT[armchair 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "go to tvstand 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a coffeetable 1, a drawer 1, a garbagecan 1, a shelf 4, a shelf 3, a shelf 2, a shelf 1, a sidetable 1, a sofa 1, a tvstand 2, and a tvstand 1.\n\nYour task is to: put some box on armchair.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine tvstand 2",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take box 1 from tvstand 2",
+        "take creditcard 3 from tvstand 2",
+        "take newspaper 2 from tvstand 2",
+        "take newspaper 3 from tvstand 2"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[tvstand 2]",
+      "node_id": "O1",
+      "observation": "You arrive at tvstand 2. On the tvstand 2, you see a box 1, a creditcard 3, a newspaper 3, and a newspaper 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[tvstand 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine box 1",
+        "examine tvstand 2",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[tvstand 2] | holding:TARGET_OBJ[box 1]",
+      "node_id": "O2",
+      "observation": "You pick up the box 1 from the tvstand 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[tvstand 2]",
+        "holding:TARGET_OBJ[box 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine armchair 1",
+        "examine box 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "go to tvstand 2",
+        "help",
+        "inventory",
+        "look",
+        "move box 1 to armchair 1"
+      ],
+      "depth": 3,
+      "label": "at:GOAL_RECEP[armchair 1] | holding:TARGET_OBJ[box 1]",
+      "node_id": "O3",
+      "observation": "You arrive at armchair 1. On the armchair 1, you see nothing.",
+      "signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "holding:TARGET_OBJ[box 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "go to tvstand 2",
+        "help",
+        "inventory",
+        "look",
+        "take box 1 from armchair 1"
+      ],
+      "depth": 4,
+      "label": "at:GOAL_RECEP[armchair 1] | placed:1@TARGET_PARENT[armchair 1] | success",
+      "node_id": "O4",
+      "observation": "You move the box 1 to the armchair 1.",
+      "signature": [
+        "at:GOAL_RECEP[armchair 1]",
+        "placed:1@TARGET_PARENT[armchair 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Box",
+    "parent_target": "ArmChair",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_and_place_simple-Box-None-ArmChair-212__trial_T20190908_032818_426471__game",
+  "task_type": "pick_and_place_simple",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 4,
+    "num_walkthrough_actions": 4,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_and_place_simple-Box-None-ArmChair-212/trial_T20190908_032818_426471",
+  "walkthrough": [
+    "go to tvstand 2",
+    "take box 1 from tvstand 2",
+    "go to armchair 1",
+    "move box 1 to armchair 1"
+  ]
+}

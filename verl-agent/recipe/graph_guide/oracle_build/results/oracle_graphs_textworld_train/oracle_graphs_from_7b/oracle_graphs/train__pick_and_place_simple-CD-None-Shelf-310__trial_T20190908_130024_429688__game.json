@@ -1,0 +1,662 @@
+{
+  "distillation_input": "official_outputs/7B/alfworld/GRPO_7B_infer/validation_data/0.jsonl",
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::LOC[drawer 1]",
+      "admissible_before": [
+        "go to bed 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "success_803abb0e_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at drawer 1. The drawer 1 is closed.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a desk 1, a drawer 2, a drawer 1, a garbagecan 1, a shelf 1, and a sidetable 1.\n\nYour task is to: put some cd on shelf.",
+      "oracle_step_idx": 0,
+      "path_source": "success_trajectory",
+      "role_text": "LOC[drawer 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:LOC[drawer 1]"
+      ],
+      "walkthrough_action": "go to drawer 1",
+      "won": false
+    },
+    {
+      "abstract_action": "OpenObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "OpenObject::LITERAL::drawer[drawer 1]",
+      "admissible_before": [
+        "examine drawer 1",
+        "go to bed 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to desk 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "open drawer 1"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "success_803abb0e_e1",
+      "from_signature": [
+        "at:LOC[drawer 1]"
+      ],
+      "observation_after": "You open the drawer 1. The drawer 1 is open. In it, you see nothing.",
+      "observation_before": "You arrive at drawer 1. The drawer 1 is closed.",
+      "oracle_step_idx": 1,
+      "path_source": "success_trajectory",
+      "role_text": "LITERAL::drawer[drawer 1]",
+      "src": "O1",
+      "to_signature": [
+        "at:LOC[drawer 1]"
+      ],
+      "walkthrough_action": "open drawer 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::LOC[drawer 2]",
+      "admissible_before": [
+        "close drawer 1",
+        "examine drawer 1",
+        "go to bed 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to desk 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O2",
+      "edge_id": "success_803abb0e_e2",
+      "from_signature": [
+        "at:LOC[drawer 1]"
+      ],
+      "observation_after": "You arrive at drawer 2. The drawer 2 is closed.",
+      "observation_before": "You open the drawer 1. The drawer 1 is open. In it, you see nothing.",
+      "oracle_step_idx": 2,
+      "path_source": "success_trajectory",
+      "role_text": "LOC[drawer 2]",
+      "src": "O1",
+      "to_signature": [
+        "at:LOC[drawer 2]"
+      ],
+      "walkthrough_action": "go to drawer 2",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::LOC[cabinet 1]",
+      "admissible_before": [
+        "examine drawer 2",
+        "go to bed 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "open drawer 2"
+      ],
+      "done": false,
+      "dst": "O3",
+      "edge_id": "success_803abb0e_e3",
+      "from_signature": [
+        "at:LOC[drawer 2]"
+      ],
+      "observation_after": "You arrive at cabinet 1. The cabinet 1 is closed.",
+      "observation_before": "You arrive at drawer 2. The drawer 2 is closed.",
+      "oracle_step_idx": 3,
+      "path_source": "success_trajectory",
+      "role_text": "LOC[cabinet 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:LOC[cabinet 1]"
+      ],
+      "walkthrough_action": "go to cabinet 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::GOAL_RECEP[shelf 1]",
+      "admissible_before": [
+        "examine cabinet 1",
+        "examine cabinet 2",
+        "go to bed 1",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "open cabinet 1",
+        "open cabinet 2"
+      ],
+      "done": false,
+      "dst": "O4",
+      "edge_id": "success_803abb0e_e4",
+      "from_signature": [
+        "at:LOC[cabinet 1]"
+      ],
+      "observation_after": "You arrive at shelf 1. On the shelf 1, you see a pen 3, and a pen 2.",
+      "observation_before": "You arrive at cabinet 1. The cabinet 1 is closed.",
+      "oracle_step_idx": 4,
+      "path_source": "success_trajectory",
+      "role_text": "GOAL_RECEP[shelf 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:GOAL_RECEP[shelf 1]"
+      ],
+      "walkthrough_action": "go to shelf 1",
+      "won": false
+    },
+    {
+      "abstract_action": "ExamineObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "ExamineObject::LITERAL::cabinet[cabinet 3]",
+      "admissible_before": [
+        "examine cabinet 3",
+        "examine shelf 1",
+        "go to bed 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 4",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "open cabinet 3",
+        "take pen 2 from shelf 1",
+        "take pen 3 from shelf 1"
+      ],
+      "done": false,
+      "dst": "O4",
+      "edge_id": "success_803abb0e_e5",
+      "from_signature": [
+        "at:GOAL_RECEP[shelf 1]"
+      ],
+      "observation_after": "The cabinet 3 is closed.",
+      "observation_before": "You arrive at shelf 1. On the shelf 1, you see a pen 3, and a pen 2.",
+      "oracle_step_idx": 5,
+      "path_source": "success_trajectory",
+      "role_text": "LITERAL::cabinet[cabinet 3]",
+      "src": "O4",
+      "to_signature": [
+        "at:GOAL_RECEP[shelf 1]"
+      ],
+      "walkthrough_action": "examine cabinet 3",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::OBJECT_SOURCE[cabinet 2]",
+      "admissible_before": [
+        "examine cabinet 3",
+        "examine shelf 1",
+        "go to bed 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 4",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "open cabinet 3",
+        "take pen 2 from shelf 1",
+        "take pen 3 from shelf 1"
+      ],
+      "done": false,
+      "dst": "O5",
+      "edge_id": "success_803abb0e_e6",
+      "from_signature": [
+        "at:GOAL_RECEP[shelf 1]"
+      ],
+      "observation_after": "You arrive at cabinet 2. The cabinet 2 is closed.",
+      "observation_before": "The cabinet 3 is closed.",
+      "oracle_step_idx": 6,
+      "path_source": "success_trajectory",
+      "role_text": "OBJECT_SOURCE[cabinet 2]",
+      "src": "O4",
+      "to_signature": [
+        "at:OBJECT_SOURCE[cabinet 2]"
+      ],
+      "walkthrough_action": "go to cabinet 2",
+      "won": false
+    },
+    {
+      "abstract_action": "OpenObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "OpenObject::LITERAL::cabinet[cabinet 1]",
+      "admissible_before": [
+        "examine cabinet 1",
+        "examine cabinet 2",
+        "go to bed 1",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "open cabinet 1",
+        "open cabinet 2"
+      ],
+      "done": false,
+      "dst": "O5",
+      "edge_id": "success_803abb0e_e7",
+      "from_signature": [
+        "at:OBJECT_SOURCE[cabinet 2]"
+      ],
+      "observation_after": "You open the cabinet 1. The cabinet 1 is open. In it, you see a cd 1.",
+      "observation_before": "You arrive at cabinet 2. The cabinet 2 is closed.",
+      "oracle_step_idx": 7,
+      "path_source": "success_trajectory",
+      "role_text": "LITERAL::cabinet[cabinet 1]",
+      "src": "O5",
+      "to_signature": [
+        "at:OBJECT_SOURCE[cabinet 2]"
+      ],
+      "walkthrough_action": "open cabinet 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PickupObject::TARGET_OBJ[cd 1]|LITERAL::cabinet[cabinet 1]",
+      "admissible_before": [
+        "close cabinet 1",
+        "examine cabinet 1",
+        "examine cabinet 2",
+        "go to bed 1",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "open cabinet 2",
+        "take cd 1 from cabinet 1"
+      ],
+      "done": false,
+      "dst": "O6",
+      "edge_id": "success_803abb0e_e8",
+      "from_signature": [
+        "at:OBJECT_SOURCE[cabinet 2]"
+      ],
+      "observation_after": "You pick up the cd 1 from the cabinet 1.",
+      "observation_before": "You open the cabinet 1. The cabinet 1 is open. In it, you see a cd 1.",
+      "oracle_step_idx": 8,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[cd 1] -> LITERAL::cabinet[cabinet 1]",
+      "src": "O5",
+      "to_signature": [
+        "at:OBJECT_SOURCE[cabinet 2]",
+        "holding:TARGET_OBJ[cd 1]"
+      ],
+      "walkthrough_action": "take cd 1 from cabinet 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::GOAL_RECEP[shelf 1]",
+      "admissible_before": [
+        "close cabinet 1",
+        "examine cabinet 1",
+        "examine cabinet 2",
+        "examine cd 1",
+        "go to bed 1",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "move cd 1 to cabinet 1",
+        "open cabinet 2"
+      ],
+      "done": false,
+      "dst": "O7",
+      "edge_id": "success_803abb0e_e9",
+      "from_signature": [
+        "at:OBJECT_SOURCE[cabinet 2]",
+        "holding:TARGET_OBJ[cd 1]"
+      ],
+      "observation_after": "You arrive at shelf 1. On the shelf 1, you see a pen 3, and a pen 2.",
+      "observation_before": "You pick up the cd 1 from the cabinet 1.",
+      "oracle_step_idx": 9,
+      "path_source": "success_trajectory",
+      "role_text": "GOAL_RECEP[shelf 1]",
+      "src": "O6",
+      "to_signature": [
+        "at:GOAL_RECEP[shelf 1]",
+        "holding:TARGET_OBJ[cd 1]"
+      ],
+      "walkthrough_action": "go to shelf 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PutObject::TARGET_OBJ[cd 1]|TARGET_PARENT[shelf 1]",
+      "admissible_before": [
+        "examine cabinet 3",
+        "examine cd 1",
+        "examine shelf 1",
+        "go to bed 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 4",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "move cd 1 to shelf 1",
+        "open cabinet 3"
+      ],
+      "done": true,
+      "dst": "O8",
+      "edge_id": "success_803abb0e_e10",
+      "from_signature": [
+        "at:GOAL_RECEP[shelf 1]",
+        "holding:TARGET_OBJ[cd 1]"
+      ],
+      "observation_after": "You move the cd 1 to the shelf 1.",
+      "observation_before": "You arrive at shelf 1. On the shelf 1, you see a pen 3, and a pen 2.",
+      "oracle_step_idx": 10,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[cd 1] -> TARGET_PARENT[shelf 1]",
+      "src": "O7",
+      "to_signature": [
+        "at:GOAL_RECEP[shelf 1]",
+        "placed:1@TARGET_PARENT[shelf 1]",
+        "success"
+      ],
+      "walkthrough_action": "move cd 1 to shelf 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_and_place_simple-CD-None-Shelf-310/trial_T20190908_130024_429688/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[shelf 1]",
+    "placed:1@TARGET_PARENT[shelf 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bed 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a desk 1, a drawer 2, a drawer 1, a garbagecan 1, a shelf 1, and a sidetable 1.\n\nYour task is to: put some cd on shelf.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 1,
+      "label": "at:LOC[drawer 1]",
+      "node_id": "O1",
+      "observation": "You arrive at drawer 1. The drawer 1 is closed.",
+      "signature": [
+        "at:LOC[drawer 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 2,
+      "label": "at:LOC[drawer 2]",
+      "node_id": "O2",
+      "observation": "You arrive at drawer 2. The drawer 2 is closed.",
+      "signature": [
+        "at:LOC[drawer 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 3,
+      "label": "at:LOC[cabinet 1]",
+      "node_id": "O3",
+      "observation": "You arrive at cabinet 1. The cabinet 1 is closed.",
+      "signature": [
+        "at:LOC[cabinet 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 4,
+      "label": "at:GOAL_RECEP[shelf 1]",
+      "node_id": "O4",
+      "observation": "You arrive at shelf 1. On the shelf 1, you see a pen 3, and a pen 2.",
+      "signature": [
+        "at:GOAL_RECEP[shelf 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 5,
+      "label": "at:OBJECT_SOURCE[cabinet 2]",
+      "node_id": "O5",
+      "observation": "You arrive at cabinet 2. The cabinet 2 is closed.",
+      "signature": [
+        "at:OBJECT_SOURCE[cabinet 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 6,
+      "label": "at:OBJECT_SOURCE[cabinet 2] | holding:TARGET_OBJ[cd 1]",
+      "node_id": "O6",
+      "observation": "You pick up the cd 1 from the cabinet 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[cabinet 2]",
+        "holding:TARGET_OBJ[cd 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 7,
+      "label": "at:GOAL_RECEP[shelf 1] | holding:TARGET_OBJ[cd 1]",
+      "node_id": "O7",
+      "observation": "You arrive at shelf 1. On the shelf 1, you see a pen 3, and a pen 2.",
+      "signature": [
+        "at:GOAL_RECEP[shelf 1]",
+        "holding:TARGET_OBJ[cd 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 8,
+      "label": "at:GOAL_RECEP[shelf 1] | placed:1@TARGET_PARENT[shelf 1] | success",
+      "node_id": "O8",
+      "observation": "You move the cd 1 to the shelf 1.",
+      "signature": [
+        "at:GOAL_RECEP[shelf 1]",
+        "placed:1@TARGET_PARENT[shelf 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_type": "alfworld_teacher_distilled",
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "CD",
+    "parent_target": "Shelf",
+    "toggle_target": ""
+  },
+  "reference_paths": [
+    {
+      "edge_ids": [
+        "success_803abb0e_e0",
+        "success_803abb0e_e1",
+        "success_803abb0e_e2",
+        "success_803abb0e_e3",
+        "success_803abb0e_e4",
+        "success_803abb0e_e5",
+        "success_803abb0e_e6",
+        "success_803abb0e_e7",
+        "success_803abb0e_e8",
+        "success_803abb0e_e9",
+        "success_803abb0e_e10"
+      ],
+      "node_ids": [
+        "O0",
+        "O1",
+        "O2",
+        "O3",
+        "O4",
+        "O5",
+        "O6",
+        "O7",
+        "O8"
+      ],
+      "path_id": "success_803abb0e",
+      "source": "success_trajectory",
+      "traj_uid": "803abb0e-995a-4fe4-b90c-5fe89ea684ae",
+      "walkthrough": [
+        "go to drawer 1",
+        "open drawer 1",
+        "go to drawer 2",
+        "go to cabinet 1",
+        "go to shelf 1",
+        "examine cabinet 3",
+        "go to cabinet 2",
+        "open cabinet 1",
+        "take cd 1 from cabinet 1",
+        "go to shelf 1",
+        "move cd 1 to shelf 1"
+      ]
+    }
+  ],
+  "signature_mode": "entity",
+  "source": "teacher_7b_grpo_success_raw",
+  "state_source": "teacher_7b_grpo_success_raw",
+  "task_key": "train__pick_and_place_simple-CD-None-Shelf-310__trial_T20190908_130024_429688__game",
+  "task_type": "pick_and_place_simple",
+  "teacher_model": "official_outputs/7B/alfworld/grpo_alfworld/grpo_alfworld/global_step_140/actor",
+  "teacher_traj_uid": "803abb0e-995a-4fe4-b90c-5fe89ea684ae",
+  "trial_dir": "train/pick_and_place_simple-CD-None-Shelf-310/trial_T20190908_130024_429688",
+  "walkthrough": [
+    "go to drawer 1",
+    "open drawer 1",
+    "go to drawer 2",
+    "go to cabinet 1",
+    "go to shelf 1",
+    "examine cabinet 3",
+    "go to cabinet 2",
+    "open cabinet 1",
+    "take cd 1 from cabinet 1",
+    "go to shelf 1",
+    "move cd 1 to shelf 1"
+  ]
+}

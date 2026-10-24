@@ -1,0 +1,264 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "sidetable 1"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[sidetable 1]",
+      "admissible_before": [
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at sidetable 1. On the sidetable 1, you see a box 1, a keychain 1, a remotecontrol 1, a watch 2, and a watch 1.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a coffeetable 1, a garbagecan 1, a sidetable 1, a sofa 1, and a tvstand 1.\n\nYour task is to: put two remotecontrol in coffeetable.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[sidetable 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[sidetable 1]"
+      ],
+      "walkthrough_action": "go to sidetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "remotecontrol 2",
+        "coffeetable 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[remotecontrol 2]|TARGET_PARENT[coffeetable 1]",
+      "admissible_before": [
+        "examine coffeetable 1",
+        "examine remotecontrol 2",
+        "go to armchair 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "move remotecontrol 2 to coffeetable 1"
+      ],
+      "done": true,
+      "dst": "O8",
+      "edge_id": "expert_e1",
+      "from_signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "holding:TARGET_OBJ[remotecontrol 2]",
+        "placed:1@none"
+      ],
+      "observation_after": "You move the remotecontrol 2 to the coffeetable 1.",
+      "observation_before": "You arrive at coffeetable 1. On the coffeetable 1, you see a book 2, a houseplant 1, a remotecontrol 1, and a statue 1.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_OBJ[remotecontrol 2] -> TARGET_PARENT[coffeetable 1]",
+      "src": "O7",
+      "to_signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "placed:2@TARGET_PARENT[coffeetable 1]",
+        "success"
+      ],
+      "walkthrough_action": "move remotecontrol 2 to coffeetable 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_two_obj_and_place-RemoteControl-None-CoffeeTable-202/trial_T20190907_075335_280493/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[coffeetable 1]",
+    "placed:2@TARGET_PARENT[coffeetable 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a coffeetable 1, a garbagecan 1, a sidetable 1, a sofa 1, and a tvstand 1.\n\nYour task is to: put two remotecontrol in coffeetable.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine sidetable 1",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to garbagecan 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take box 1 from sidetable 1",
+        "take keychain 1 from sidetable 1",
+        "take remotecontrol 1 from sidetable 1",
+        "take watch 1 from sidetable 1",
+        "take watch 2 from sidetable 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[sidetable 1]",
+      "node_id": "O1",
+      "observation": "You arrive at sidetable 1. On the sidetable 1, you see a box 1, a keychain 1, a remotecontrol 1, a watch 2, and a watch 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[sidetable 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine coffeetable 1",
+        "go to armchair 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take book 2 from coffeetable 1",
+        "take remotecontrol 1 from coffeetable 1",
+        "take statue 1 from coffeetable 1"
+      ],
+      "depth": 2,
+      "label": "at:GOAL_RECEP[coffeetable 1] | placed:1@TARGET_PARENT[coffeetable 1]",
+      "node_id": "O4",
+      "observation": "You move the remotecontrol 1 to the coffeetable 1.",
+      "signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "placed:1@TARGET_PARENT[coffeetable 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine coffeetable 1",
+        "examine remotecontrol 2",
+        "go to armchair 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "move remotecontrol 2 to coffeetable 1"
+      ],
+      "depth": 3,
+      "label": "at:GOAL_RECEP[coffeetable 1] | holding:TARGET_OBJ[remotecontrol 2] | placed:1@none",
+      "node_id": "O7",
+      "observation": "You arrive at coffeetable 1. On the coffeetable 1, you see a book 2, a houseplant 1, a remotecontrol 1, and a statue 1.",
+      "signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "holding:TARGET_OBJ[remotecontrol 2]",
+        "placed:1@none"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine coffeetable 1",
+        "go to armchair 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take book 2 from coffeetable 1",
+        "take remotecontrol 1 from coffeetable 1",
+        "take remotecontrol 2 from coffeetable 1",
+        "take statue 1 from coffeetable 1"
+      ],
+      "depth": 4,
+      "label": "at:GOAL_RECEP[coffeetable 1] | placed:2@TARGET_PARENT[coffeetable 1] | success",
+      "node_id": "O8",
+      "observation": "You move the remotecontrol 2 to the coffeetable 1.",
+      "signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "placed:2@TARGET_PARENT[coffeetable 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O2",
+      "O3",
+      "O5",
+      "O6"
+    ],
+    "dropped_units": 4,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 8,
+    "original_nodes": 9,
+    "remaining_edges": 2,
+    "remaining_nodes": 5,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "RemoteControl",
+    "parent_target": "CoffeeTable",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_two_obj_and_place-RemoteControl-None-CoffeeTable-202__trial_T20190907_075335_280493__game",
+  "task_type": "pick_two_obj_and_place",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 8,
+    "num_walkthrough_actions": 8,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_two_obj_and_place-RemoteControl-None-CoffeeTable-202/trial_T20190907_075335_280493",
+  "walkthrough": [
+    "go to sidetable 1",
+    "take remotecontrol 1 from sidetable 1",
+    "go to coffeetable 1",
+    "move remotecontrol 1 to coffeetable 1",
+    "go to armchair 1",
+    "take remotecontrol 2 from armchair 1",
+    "go to coffeetable 1",
+    "move remotecontrol 2 to coffeetable 1"
+  ]
+}

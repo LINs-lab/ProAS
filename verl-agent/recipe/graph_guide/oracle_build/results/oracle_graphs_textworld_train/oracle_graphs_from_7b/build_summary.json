@@ -1,0 +1,9 @@
+{
+  "failed_trajectories": 987,
+  "input_path": "official_outputs/7B/alfworld/GRPO_7B_infer/validation_data/0.jsonl",
+  "oracles_built": 2566,
+  "oracles_failed": 0,
+  "successful_trajectories": 2566,
+  "teacher_model": "official_outputs/7B/alfworld/grpo_alfworld/grpo_alfworld/global_step_140/actor",
+  "total_trajectories": 3553
+}

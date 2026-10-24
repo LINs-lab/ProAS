@@ -1,0 +1,154 @@
+{
+  "edges": [],
+  "gamefile": "train/pick_clean_then_place_in_recep-Cloth-None-Cart-430/trial_T20190906_194305_501996/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[cart 1]",
+    "object:clean[TARGET_OBJ]",
+    "placed:1@TARGET_PARENT[cart 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bathtubbasin 1",
+        "go to cart 1",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bathtubbasin 1, a cart 1, a countertop 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a handtowelholder 1, a shelf 1, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.\n\nYour task is to: put a clean cloth in cart.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine cloth 3",
+        "examine countertop 1",
+        "go to bathtubbasin 1",
+        "go to cart 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move cloth 3 to countertop 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[countertop 1] | holding:TARGET_OBJ[cloth 3]",
+      "node_id": "O2",
+      "observation": "You pick up the cloth 3 from the countertop 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[countertop 1]",
+        "holding:TARGET_OBJ[cloth 3]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine cart 1",
+        "go to bathtubbasin 1",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "take cloth 1 from cart 1",
+        "take cloth 3 from cart 1",
+        "take soapbottle 3 from cart 1",
+        "take tissuebox 2 from cart 1",
+        "take tissuebox 3 from cart 1"
+      ],
+      "depth": 2,
+      "label": "at:GOAL_RECEP[cart 1] | object:clean[TARGET_OBJ] | placed:1@TARGET_PARENT[cart 1] | success",
+      "node_id": "O6",
+      "observation": "You move the cloth 3 to the cart 1.",
+      "signature": [
+        "at:GOAL_RECEP[cart 1]",
+        "object:clean[TARGET_OBJ]",
+        "placed:1@TARGET_PARENT[cart 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O1",
+      "O3",
+      "O4",
+      "O5"
+    ],
+    "dropped_units": 4,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 6,
+    "original_nodes": 7,
+    "remaining_edges": 0,
+    "remaining_nodes": 3,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Cloth",
+    "parent_target": "Cart",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_clean_then_place_in_recep-Cloth-None-Cart-430__trial_T20190906_194305_501996__game",
+  "task_type": "pick_clean_then_place_in_recep",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 6,
+    "num_walkthrough_actions": 6,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_clean_then_place_in_recep-Cloth-None-Cart-430/trial_T20190906_194305_501996",
+  "walkthrough": [
+    "go to countertop 1",
+    "take cloth 3 from countertop 1",
+    "go to sinkbasin 1",
+    "clean cloth 3 with sinkbasin 1",
+    "go to cart 1",
+    "move cloth 3 to cart 1"
+  ]
+}

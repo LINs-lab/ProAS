@@ -1,0 +1,136 @@
+{
+  "edges": [],
+  "gamefile": "train/pick_and_place_simple-Candle-None-Toilet-419/trial_T20190907_194421_014813/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[toilet 1]",
+    "placed:1@TARGET_PARENT[toilet 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bathtubbasin 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bathtubbasin 1, a drawer 2, a drawer 1, a garbagecan 1, a handtowelholder 1, a sidetable 1, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.\n\nYour task is to: put a candle in toilet.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine candle 1",
+        "examine drawer 1",
+        "examine drawer 2",
+        "go to bathtubbasin 1",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move candle 1 to drawer 1",
+        "move candle 1 to drawer 2"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[drawer 2] | holding:TARGET_OBJ[candle 1]",
+      "node_id": "O2",
+      "observation": "You pick up the candle 1 from the drawer 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[drawer 2]",
+        "holding:TARGET_OBJ[candle 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine toilet 1",
+        "go to bathtubbasin 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "take candle 1 from toilet 1",
+        "take soapbottle 2 from toilet 1",
+        "take spraybottle 2 from toilet 1",
+        "take tissuebox 1 from toilet 1"
+      ],
+      "depth": 2,
+      "label": "at:GOAL_RECEP[toilet 1] | placed:1@TARGET_PARENT[toilet 1] | success",
+      "node_id": "O4",
+      "observation": "You move the candle 1 to the toilet 1.",
+      "signature": [
+        "at:GOAL_RECEP[toilet 1]",
+        "placed:1@TARGET_PARENT[toilet 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O1",
+      "O3"
+    ],
+    "dropped_units": 2,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 4,
+    "original_nodes": 5,
+    "remaining_edges": 0,
+    "remaining_nodes": 3,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Candle",
+    "parent_target": "Toilet",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_and_place_simple-Candle-None-Toilet-419__trial_T20190907_194421_014813__game",
+  "task_type": "pick_and_place_simple",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 4,
+    "num_walkthrough_actions": 4,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_and_place_simple-Candle-None-Toilet-419/trial_T20190907_194421_014813",
+  "walkthrough": [
+    "go to drawer 2",
+    "take candle 1 from drawer 1",
+    "go to toilet 1",
+    "move candle 1 to toilet 1"
+  ]
+}

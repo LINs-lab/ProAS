@@ -1,0 +1,385 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "shelf 1"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[shelf 1]",
+      "admissible_before": [
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at shelf 1. On the shelf 1, you see a tissuebox 3, a vase 3, and a vase 2.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a diningtable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a shelf 1, a sidetable 3, a sidetable 2, a sidetable 1, and a sofa 1.\n\nYour task is to: put two tissuebox in drawer.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[shelf 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[shelf 1]"
+      ],
+      "walkthrough_action": "go to shelf 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "drawer 4"
+      ],
+      "abstract_roles": [
+        "GOAL_RECEP"
+      ],
+      "action_key": "GotoLocation::GOAL_RECEP[drawer 4]",
+      "admissible_before": [
+        "examine sidetable 2",
+        "examine tissuebox 1",
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move tissuebox 1 to sidetable 2"
+      ],
+      "done": false,
+      "dst": "O8",
+      "edge_id": "expert_e1",
+      "from_signature": [
+        "at:OBJECT_SOURCE[sidetable 2]",
+        "holding:TARGET_OBJ[tissuebox 1]",
+        "placed:1@none"
+      ],
+      "observation_after": "You arrive at drawer 4. The drawer 4 is open. In it, you see a tissuebox 3.",
+      "observation_before": "You pick up the tissuebox 1 from the sidetable 2.",
+      "oracle_step_idx": 1,
+      "role_text": "GOAL_RECEP[drawer 4]",
+      "src": "O7",
+      "to_signature": [
+        "at:GOAL_RECEP[drawer 4]",
+        "holding:TARGET_OBJ[tissuebox 1]",
+        "placed:1@none"
+      ],
+      "walkthrough_action": "go to drawer 4",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "tissuebox 1",
+        "drawer 4"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[tissuebox 1]|TARGET_PARENT[drawer 4]",
+      "admissible_before": [
+        "close drawer 4",
+        "examine drawer 4",
+        "examine tissuebox 1",
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move tissuebox 1 to drawer 4"
+      ],
+      "done": true,
+      "dst": "O9",
+      "edge_id": "expert_e2",
+      "from_signature": [
+        "at:GOAL_RECEP[drawer 4]",
+        "holding:TARGET_OBJ[tissuebox 1]",
+        "placed:1@none"
+      ],
+      "observation_after": "You move the tissuebox 1 to the drawer 4.",
+      "observation_before": "You arrive at drawer 4. The drawer 4 is open. In it, you see a tissuebox 3.",
+      "oracle_step_idx": 2,
+      "role_text": "TARGET_OBJ[tissuebox 1] -> TARGET_PARENT[drawer 4]",
+      "src": "O8",
+      "to_signature": [
+        "at:GOAL_RECEP[drawer 4]",
+        "placed:2@TARGET_PARENT[drawer 4]",
+        "success"
+      ],
+      "walkthrough_action": "move tissuebox 1 to drawer 4",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_two_obj_and_place-TissueBox-None-Drawer-216/trial_T20190908_150513_129789/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[drawer 4]",
+    "placed:2@TARGET_PARENT[drawer 4]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a diningtable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a shelf 1, a sidetable 3, a sidetable 2, a sidetable 1, and a sofa 1.\n\nYour task is to: put two tissuebox in drawer.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine shelf 1",
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take tissuebox 3 from shelf 1",
+        "take vase 2 from shelf 1",
+        "take vase 3 from shelf 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[shelf 1]",
+      "node_id": "O1",
+      "observation": "You arrive at shelf 1. On the shelf 1, you see a tissuebox 3, a vase 3, and a vase 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[shelf 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine drawer 4",
+        "examine tissuebox 3",
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "open drawer 4"
+      ],
+      "depth": 2,
+      "label": "at:TARGET_PARENT[drawer] | holding:TARGET_OBJ[tissuebox 3]",
+      "node_id": "O3",
+      "observation": "You arrive at drawer 4. The drawer 4 is closed.",
+      "signature": [
+        "at:TARGET_PARENT[drawer]",
+        "holding:TARGET_OBJ[tissuebox 3]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine sidetable 2",
+        "examine tissuebox 1",
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move tissuebox 1 to sidetable 2"
+      ],
+      "depth": 3,
+      "label": "at:OBJECT_SOURCE[sidetable 2] | holding:TARGET_OBJ[tissuebox 1] | placed:1@none",
+      "node_id": "O7",
+      "observation": "You pick up the tissuebox 1 from the sidetable 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[sidetable 2]",
+        "holding:TARGET_OBJ[tissuebox 1]",
+        "placed:1@none"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "close drawer 4",
+        "examine drawer 4",
+        "examine tissuebox 1",
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move tissuebox 1 to drawer 4"
+      ],
+      "depth": 4,
+      "label": "at:GOAL_RECEP[drawer 4] | holding:TARGET_OBJ[tissuebox 1] | placed:1@none",
+      "node_id": "O8",
+      "observation": "You arrive at drawer 4. The drawer 4 is open. In it, you see a tissuebox 3.",
+      "signature": [
+        "at:GOAL_RECEP[drawer 4]",
+        "holding:TARGET_OBJ[tissuebox 1]",
+        "placed:1@none"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "close drawer 4",
+        "examine drawer 4",
+        "go to armchair 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take tissuebox 1 from drawer 4",
+        "take tissuebox 3 from drawer 4"
+      ],
+      "depth": 5,
+      "label": "at:GOAL_RECEP[drawer 4] | placed:2@TARGET_PARENT[drawer 4] | success",
+      "node_id": "O9",
+      "observation": "You move the tissuebox 1 to the drawer 4.",
+      "signature": [
+        "at:GOAL_RECEP[drawer 4]",
+        "placed:2@TARGET_PARENT[drawer 4]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O2",
+      "O4",
+      "O5",
+      "O6"
+    ],
+    "dropped_units": 4,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 9,
+    "original_nodes": 10,
+    "remaining_edges": 3,
+    "remaining_nodes": 6,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "TissueBox",
+    "parent_target": "Drawer",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_two_obj_and_place-TissueBox-None-Drawer-216__trial_T20190908_150513_129789__game",
+  "task_type": "pick_two_obj_and_place",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 9,
+    "num_walkthrough_actions": 9,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_two_obj_and_place-TissueBox-None-Drawer-216/trial_T20190908_150513_129789",
+  "walkthrough": [
+    "go to shelf 1",
+    "take tissuebox 3 from shelf 1",
+    "go to drawer 4",
+    "open drawer 4",
+    "move tissuebox 3 to drawer 4",
+    "go to sidetable 2",
+    "take tissuebox 1 from sidetable 2",
+    "go to drawer 4",
+    "move tissuebox 1 to drawer 4"
+  ]
+}

@@ -1,0 +1,397 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "safe 1"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[safe 1]",
+      "admissible_before": [
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to armchair 3",
+        "go to bed 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to safe 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at safe 1. On the safe 1, you see a keychain 1.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 3, a armchair 2, a armchair 1, a bed 1, a cabinet 2, a cabinet 1, a desk 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a laundryhamper 1, a safe 1, and a sidetable 1.\n\nYour task is to: put a keychain in sidetable.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[safe 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[safe 1]"
+      ],
+      "walkthrough_action": "go to safe 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "keychain 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[keychain 1]",
+      "admissible_before": [
+        "examine safe 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to armchair 3",
+        "go to bed 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "take keychain 1 from safe 1"
+      ],
+      "done": false,
+      "dst": "O2",
+      "from_signature": [
+        "at:OBJECT_SOURCE[safe 1]"
+      ],
+      "observation_after": "You pick up the keychain 1 from the safe 1.",
+      "observation_before": "You arrive at safe 1. On the safe 1, you see a keychain 1.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_OBJ[keychain 1]",
+      "src": "O1",
+      "to_signature": [
+        "at:OBJECT_SOURCE[safe 1]",
+        "holding:TARGET_OBJ[keychain 1]"
+      ],
+      "walkthrough_action": "take keychain 1 from safe 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "sidetable 1"
+      ],
+      "abstract_roles": [
+        "GOAL_RECEP"
+      ],
+      "action_key": "GotoLocation::GOAL_RECEP[sidetable 1]",
+      "admissible_before": [
+        "examine keychain 1",
+        "examine safe 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to armchair 3",
+        "go to bed 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "move keychain 1 to safe 1"
+      ],
+      "done": false,
+      "dst": "O3",
+      "from_signature": [
+        "at:OBJECT_SOURCE[safe 1]",
+        "holding:TARGET_OBJ[keychain 1]"
+      ],
+      "observation_after": "You arrive at sidetable 1. On the sidetable 1, you see a creditcard 1, a desklamp 1, a pen 1, a pencil 1, and a remotecontrol 1.",
+      "observation_before": "You pick up the keychain 1 from the safe 1.",
+      "oracle_step_idx": 2,
+      "role_text": "GOAL_RECEP[sidetable 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:GOAL_RECEP[sidetable 1]",
+        "holding:TARGET_OBJ[keychain 1]"
+      ],
+      "walkthrough_action": "go to sidetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "keychain 1",
+        "sidetable 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[keychain 1]|TARGET_PARENT[sidetable 1]",
+      "admissible_before": [
+        "examine keychain 1",
+        "examine sidetable 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to armchair 3",
+        "go to bed 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to safe 1",
+        "help",
+        "inventory",
+        "look",
+        "move keychain 1 to sidetable 1",
+        "use desklamp 1"
+      ],
+      "done": true,
+      "dst": "O4",
+      "from_signature": [
+        "at:GOAL_RECEP[sidetable 1]",
+        "holding:TARGET_OBJ[keychain 1]"
+      ],
+      "observation_after": "You move the keychain 1 to the sidetable 1.",
+      "observation_before": "You arrive at sidetable 1. On the sidetable 1, you see a creditcard 1, a desklamp 1, a pen 1, a pencil 1, and a remotecontrol 1.",
+      "oracle_step_idx": 3,
+      "role_text": "TARGET_OBJ[keychain 1] -> TARGET_PARENT[sidetable 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:GOAL_RECEP[sidetable 1]",
+        "placed:1@TARGET_PARENT[sidetable 1]",
+        "success"
+      ],
+      "walkthrough_action": "move keychain 1 to sidetable 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_and_place_simple-KeyChain-None-SideTable-309/trial_T20190908_214938_408925/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[sidetable 1]",
+    "placed:1@TARGET_PARENT[sidetable 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to armchair 3",
+        "go to bed 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to safe 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 3, a armchair 2, a armchair 1, a bed 1, a cabinet 2, a cabinet 1, a desk 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a laundryhamper 1, a safe 1, and a sidetable 1.\n\nYour task is to: put a keychain in sidetable.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine safe 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to armchair 3",
+        "go to bed 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "take keychain 1 from safe 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[safe 1]",
+      "node_id": "O1",
+      "observation": "You arrive at safe 1. On the safe 1, you see a keychain 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[safe 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine keychain 1",
+        "examine safe 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to armchair 3",
+        "go to bed 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "move keychain 1 to safe 1"
+      ],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[safe 1] | holding:TARGET_OBJ[keychain 1]",
+      "node_id": "O2",
+      "observation": "You pick up the keychain 1 from the safe 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[safe 1]",
+        "holding:TARGET_OBJ[keychain 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine keychain 1",
+        "examine sidetable 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to armchair 3",
+        "go to bed 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to safe 1",
+        "help",
+        "inventory",
+        "look",
+        "move keychain 1 to sidetable 1",
+        "use desklamp 1"
+      ],
+      "depth": 3,
+      "label": "at:GOAL_RECEP[sidetable 1] | holding:TARGET_OBJ[keychain 1]",
+      "node_id": "O3",
+      "observation": "You arrive at sidetable 1. On the sidetable 1, you see a creditcard 1, a desklamp 1, a pen 1, a pencil 1, and a remotecontrol 1.",
+      "signature": [
+        "at:GOAL_RECEP[sidetable 1]",
+        "holding:TARGET_OBJ[keychain 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine sidetable 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to armchair 3",
+        "go to bed 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to safe 1",
+        "help",
+        "inventory",
+        "look",
+        "take creditcard 1 from sidetable 1",
+        "take keychain 1 from sidetable 1",
+        "take pen 1 from sidetable 1",
+        "take pencil 1 from sidetable 1",
+        "take remotecontrol 1 from sidetable 1",
+        "use desklamp 1"
+      ],
+      "depth": 4,
+      "label": "at:GOAL_RECEP[sidetable 1] | placed:1@TARGET_PARENT[sidetable 1] | success",
+      "node_id": "O4",
+      "observation": "You move the keychain 1 to the sidetable 1.",
+      "signature": [
+        "at:GOAL_RECEP[sidetable 1]",
+        "placed:1@TARGET_PARENT[sidetable 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "KeyChain",
+    "parent_target": "SideTable",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_and_place_simple-KeyChain-None-SideTable-309__trial_T20190908_214938_408925__game",
+  "task_type": "pick_and_place_simple",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 4,
+    "num_walkthrough_actions": 4,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_and_place_simple-KeyChain-None-SideTable-309/trial_T20190908_214938_408925",
+  "walkthrough": [
+    "go to safe 1",
+    "take keychain 1 from safe 1",
+    "go to sidetable 1",
+    "move keychain 1 to sidetable 1"
+  ]
+}

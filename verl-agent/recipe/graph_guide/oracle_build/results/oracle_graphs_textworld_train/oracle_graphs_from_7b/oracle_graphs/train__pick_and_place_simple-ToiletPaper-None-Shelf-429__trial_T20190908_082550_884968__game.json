@@ -1,0 +1,297 @@
+{
+  "distillation_input": "official_outputs/7B/alfworld/GRPO_7B_infer/validation_data/0.jsonl",
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::OBJECT_SOURCE[toiletpaperhanger 1]",
+      "admissible_before": [
+        "go to bathtubbasin 1",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "success_b9fd18ef_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at toiletpaperhanger 1. On the toiletpaperhanger 1, you see a toiletpaper 1.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bathtubbasin 1, a garbagecan 1, a handtowelholder 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.\n\nYour task is to: put some toiletpaper on shelf.",
+      "oracle_step_idx": 0,
+      "path_source": "success_trajectory",
+      "role_text": "OBJECT_SOURCE[toiletpaperhanger 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[toiletpaperhanger 1]"
+      ],
+      "walkthrough_action": "go to toiletpaperhanger 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PickupObject::TARGET_OBJ[toiletpaper 1]|LITERAL::toiletpaperhanger[toiletpaperhanger 1]",
+      "admissible_before": [
+        "examine toiletpaperhanger 1",
+        "go to bathtubbasin 1",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "take toiletpaper 1 from toiletpaperhanger 1"
+      ],
+      "done": false,
+      "dst": "O2",
+      "edge_id": "success_b9fd18ef_e1",
+      "from_signature": [
+        "at:OBJECT_SOURCE[toiletpaperhanger 1]"
+      ],
+      "observation_after": "You pick up the toiletpaper 1 from the toiletpaperhanger 1.",
+      "observation_before": "You arrive at toiletpaperhanger 1. On the toiletpaperhanger 1, you see a toiletpaper 1.",
+      "oracle_step_idx": 1,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[toiletpaper 1] -> LITERAL::toiletpaperhanger[toiletpaperhanger 1]",
+      "src": "O1",
+      "to_signature": [
+        "at:OBJECT_SOURCE[toiletpaperhanger 1]",
+        "holding:TARGET_OBJ[toiletpaper 1]"
+      ],
+      "walkthrough_action": "take toiletpaper 1 from toiletpaperhanger 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::GOAL_RECEP[shelf 1]",
+      "admissible_before": [
+        "examine toiletpaper 1",
+        "examine toiletpaperhanger 1",
+        "go to bathtubbasin 1",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move toiletpaper 1 to toiletpaperhanger 1"
+      ],
+      "done": false,
+      "dst": "O3",
+      "edge_id": "success_b9fd18ef_e2",
+      "from_signature": [
+        "at:OBJECT_SOURCE[toiletpaperhanger 1]",
+        "holding:TARGET_OBJ[toiletpaper 1]"
+      ],
+      "observation_after": "You arrive at shelf 1. On the shelf 1, you see nothing.",
+      "observation_before": "You pick up the toiletpaper 1 from the toiletpaperhanger 1.",
+      "oracle_step_idx": 2,
+      "path_source": "success_trajectory",
+      "role_text": "GOAL_RECEP[shelf 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:GOAL_RECEP[shelf 1]",
+        "holding:TARGET_OBJ[toiletpaper 1]"
+      ],
+      "walkthrough_action": "go to shelf 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PutObject::TARGET_OBJ[toiletpaper 1]|TARGET_PARENT[shelf 1]",
+      "admissible_before": [
+        "examine shelf 1",
+        "examine toiletpaper 1",
+        "go to bathtubbasin 1",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move toiletpaper 1 to shelf 1"
+      ],
+      "done": true,
+      "dst": "O4",
+      "edge_id": "success_b9fd18ef_e3",
+      "from_signature": [
+        "at:GOAL_RECEP[shelf 1]",
+        "holding:TARGET_OBJ[toiletpaper 1]"
+      ],
+      "observation_after": "You move the toiletpaper 1 to the shelf 1.",
+      "observation_before": "You arrive at shelf 1. On the shelf 1, you see nothing.",
+      "oracle_step_idx": 3,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[toiletpaper 1] -> TARGET_PARENT[shelf 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:GOAL_RECEP[shelf 1]",
+        "placed:1@TARGET_PARENT[shelf 1]",
+        "success"
+      ],
+      "walkthrough_action": "move toiletpaper 1 to shelf 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_and_place_simple-ToiletPaper-None-Shelf-429/trial_T20190908_082550_884968/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[shelf 1]",
+    "placed:1@TARGET_PARENT[shelf 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bathtubbasin 1",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bathtubbasin 1, a garbagecan 1, a handtowelholder 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.\n\nYour task is to: put some toiletpaper on shelf.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[toiletpaperhanger 1]",
+      "node_id": "O1",
+      "observation": "You arrive at toiletpaperhanger 1. On the toiletpaperhanger 1, you see a toiletpaper 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[toiletpaperhanger 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[toiletpaperhanger 1] | holding:TARGET_OBJ[toiletpaper 1]",
+      "node_id": "O2",
+      "observation": "You pick up the toiletpaper 1 from the toiletpaperhanger 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[toiletpaperhanger 1]",
+        "holding:TARGET_OBJ[toiletpaper 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 3,
+      "label": "at:GOAL_RECEP[shelf 1] | holding:TARGET_OBJ[toiletpaper 1]",
+      "node_id": "O3",
+      "observation": "You arrive at shelf 1. On the shelf 1, you see nothing.",
+      "signature": [
+        "at:GOAL_RECEP[shelf 1]",
+        "holding:TARGET_OBJ[toiletpaper 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 4,
+      "label": "at:GOAL_RECEP[shelf 1] | placed:1@TARGET_PARENT[shelf 1] | success",
+      "node_id": "O4",
+      "observation": "You move the toiletpaper 1 to the shelf 1.",
+      "signature": [
+        "at:GOAL_RECEP[shelf 1]",
+        "placed:1@TARGET_PARENT[shelf 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_type": "alfworld_teacher_distilled",
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "ToiletPaper",
+    "parent_target": "Shelf",
+    "toggle_target": ""
+  },
+  "reference_paths": [
+    {
+      "edge_ids": [
+        "success_b9fd18ef_e0",
+        "success_b9fd18ef_e1",
+        "success_b9fd18ef_e2",
+        "success_b9fd18ef_e3"
+      ],
+      "node_ids": [
+        "O0",
+        "O1",
+        "O2",
+        "O3",
+        "O4"
+      ],
+      "path_id": "success_b9fd18ef",
+      "source": "success_trajectory",
+      "traj_uid": "b9fd18ef-5be5-4bc5-b021-8f6715f18993",
+      "walkthrough": [
+        "go to toiletpaperhanger 1",
+        "take toiletpaper 1 from toiletpaperhanger 1",
+        "go to shelf 1",
+        "move toiletpaper 1 to shelf 1"
+      ]
+    }
+  ],
+  "signature_mode": "entity",
+  "source": "teacher_7b_grpo_success_raw",
+  "state_source": "teacher_7b_grpo_success_raw",
+  "task_key": "train__pick_and_place_simple-ToiletPaper-None-Shelf-429__trial_T20190908_082550_884968__game",
+  "task_type": "pick_and_place_simple",
+  "teacher_model": "official_outputs/7B/alfworld/grpo_alfworld/grpo_alfworld/global_step_140/actor",
+  "teacher_traj_uid": "b9fd18ef-5be5-4bc5-b021-8f6715f18993",
+  "trial_dir": "train/pick_and_place_simple-ToiletPaper-None-Shelf-429/trial_T20190908_082550_884968",
+  "walkthrough": [
+    "go to toiletpaperhanger 1",
+    "take toiletpaper 1 from toiletpaperhanger 1",
+    "go to shelf 1",
+    "move toiletpaper 1 to shelf 1"
+  ]
+}

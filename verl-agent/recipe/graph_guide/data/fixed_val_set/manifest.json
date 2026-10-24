@@ -1,0 +1,16 @@
+{
+  "audits": {
+    "webshop": {
+      "canonical_seed": 42
+    }
+  },
+  "counts": {
+    "alfworld": 128,
+    "webshop": 128
+  },
+  "schema_version": 2,
+  "sources": {
+    "webshop_attributes_sha256": "f88a36314a397b53b3d9c3fa5878e5f7b26d35019a51ec83fbedeca61a948f6f",
+    "webshop_items_sha256": "30a4765c3a327af72d9a9a95a6b2486d516f0fa1d3ecd83681901ce82a21b269"
+  }
+}

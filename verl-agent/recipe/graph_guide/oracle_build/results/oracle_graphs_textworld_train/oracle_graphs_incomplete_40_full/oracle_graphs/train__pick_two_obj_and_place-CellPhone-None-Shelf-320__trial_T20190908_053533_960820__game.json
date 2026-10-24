@@ -1,0 +1,167 @@
+{
+  "edges": [],
+  "gamefile": "train/pick_two_obj_and_place-CellPhone-None-Shelf-320/trial_T20190908_053533_960820/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[shelf 1]",
+    "placed:2@TARGET_PARENT[shelf 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bed 1",
+        "go to desk 1",
+        "go to desk 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 2, a desk 1, a garbagecan 1, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.\n\nYour task is to: put two cellphone in shelf.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine cellphone 1",
+        "examine desk 1",
+        "go to bed 1",
+        "go to desk 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look",
+        "move cellphone 1 to desk 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[desk 1] | holding:TARGET_OBJ[cellphone 1]",
+      "node_id": "O2",
+      "observation": "You pick up the cellphone 1 from the desk 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "holding:TARGET_OBJ[cellphone 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine shelf 1",
+        "go to bed 1",
+        "go to desk 1",
+        "go to desk 2",
+        "go to garbagecan 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look",
+        "take cellphone 1 from shelf 1",
+        "take pen 2 from shelf 1",
+        "take pencil 1 from shelf 1"
+      ],
+      "depth": 2,
+      "label": "at:GOAL_RECEP[shelf 1] | placed:1@TARGET_PARENT[shelf 1]",
+      "node_id": "O4",
+      "observation": "You move the cellphone 1 to the shelf 1.",
+      "signature": [
+        "at:GOAL_RECEP[shelf 1]",
+        "placed:1@TARGET_PARENT[shelf 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine shelf 1",
+        "go to bed 1",
+        "go to desk 1",
+        "go to desk 2",
+        "go to garbagecan 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "help",
+        "inventory",
+        "look",
+        "take cellphone 1 from shelf 1",
+        "take cellphone 4 from shelf 1",
+        "take pen 2 from shelf 1",
+        "take pencil 1 from shelf 1"
+      ],
+      "depth": 3,
+      "label": "at:GOAL_RECEP[shelf 1] | placed:2@TARGET_PARENT[shelf 1] | success",
+      "node_id": "O8",
+      "observation": "You move the cellphone 4 to the shelf 1.",
+      "signature": [
+        "at:GOAL_RECEP[shelf 1]",
+        "placed:2@TARGET_PARENT[shelf 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O1",
+      "O3",
+      "O5",
+      "O6",
+      "O7"
+    ],
+    "dropped_units": 5,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 8,
+    "original_nodes": 9,
+    "remaining_edges": 0,
+    "remaining_nodes": 4,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "CellPhone",
+    "parent_target": "Shelf",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_two_obj_and_place-CellPhone-None-Shelf-320__trial_T20190908_053533_960820__game",
+  "task_type": "pick_two_obj_and_place",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 8,
+    "num_walkthrough_actions": 8,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_two_obj_and_place-CellPhone-None-Shelf-320/trial_T20190908_053533_960820",
+  "walkthrough": [
+    "go to desk 1",
+    "take cellphone 1 from desk 1",
+    "go to shelf 1",
+    "move cellphone 1 to shelf 1",
+    "go to bed 1",
+    "take cellphone 4 from bed 1",
+    "go to shelf 1",
+    "move cellphone 4 to shelf 1"
+  ]
+}

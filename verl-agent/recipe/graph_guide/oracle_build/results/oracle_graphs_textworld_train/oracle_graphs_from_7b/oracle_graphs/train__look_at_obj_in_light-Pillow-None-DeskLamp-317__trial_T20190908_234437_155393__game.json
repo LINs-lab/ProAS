@@ -1,0 +1,528 @@
+{
+  "distillation_input": "official_outputs/7B/alfworld/GRPO_7B_infer/validation_data/0.jsonl",
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::OBJECT_SOURCE[bed 1]",
+      "admissible_before": [
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to safe 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "success_81c8fd8a_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at bed 1. On the bed 1, you see a cellphone 1, a laptop 2, a laptop 1, a pillow 2, and a pillow 1.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a laundryhamper 1, a safe 1, and a sidetable 1.\n\nYour task is to: examine the pillow with the desklamp.",
+      "oracle_step_idx": 0,
+      "path_source": "success_trajectory",
+      "role_text": "OBJECT_SOURCE[bed 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[bed 1]"
+      ],
+      "walkthrough_action": "go to bed 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::TOGGLE_SOURCE[desklamp 1]",
+      "admissible_before": [
+        "examine bed 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to safe 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "take cellphone 1 from bed 1",
+        "take laptop 1 from bed 1",
+        "take laptop 2 from bed 1",
+        "take pillow 1 from bed 1",
+        "take pillow 2 from bed 1"
+      ],
+      "done": false,
+      "dst": "O2",
+      "edge_id": "success_81c8fd8a_e1",
+      "from_signature": [
+        "at:OBJECT_SOURCE[bed 1]"
+      ],
+      "observation_after": "You arrive at sidetable 1. On the sidetable 1, you see a alarmclock 1, a desklamp 1, and a pen 1.",
+      "observation_before": "You arrive at bed 1. On the bed 1, you see a cellphone 1, a laptop 2, a laptop 1, a pillow 2, and a pillow 1.",
+      "oracle_step_idx": 1,
+      "path_source": "success_trajectory",
+      "role_text": "TOGGLE_SOURCE[desklamp 1]",
+      "src": "O1",
+      "to_signature": [
+        "at:TOGGLE_SOURCE[desklamp 1]"
+      ],
+      "walkthrough_action": "go to sidetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "ToggleObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "ToggleObject::TARGET_TOGGLE[desklamp 1]",
+      "admissible_before": [
+        "examine sidetable 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to safe 1",
+        "help",
+        "inventory",
+        "look",
+        "take alarmclock 1 from sidetable 1",
+        "take pen 1 from sidetable 1",
+        "use desklamp 1"
+      ],
+      "done": false,
+      "dst": "O3",
+      "edge_id": "success_81c8fd8a_e2",
+      "from_signature": [
+        "at:TOGGLE_SOURCE[desklamp 1]"
+      ],
+      "observation_after": "You turn on the desklamp 1.",
+      "observation_before": "You arrive at sidetable 1. On the sidetable 1, you see a alarmclock 1, a desklamp 1, and a pen 1.",
+      "oracle_step_idx": 2,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_TOGGLE[desklamp 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:TOGGLE_SOURCE[desklamp 1]",
+        "toggle:on[desklamp 1]"
+      ],
+      "walkthrough_action": "use desklamp 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::OBJECT_SOURCE[bed 1]",
+      "admissible_before": [
+        "examine sidetable 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to safe 1",
+        "help",
+        "inventory",
+        "look",
+        "take alarmclock 1 from sidetable 1",
+        "take pen 1 from sidetable 1",
+        "use desklamp 1"
+      ],
+      "done": false,
+      "dst": "O4",
+      "edge_id": "success_81c8fd8a_e3",
+      "from_signature": [
+        "at:TOGGLE_SOURCE[desklamp 1]",
+        "toggle:on[desklamp 1]"
+      ],
+      "observation_after": "You arrive at bed 1. On the bed 1, you see a cellphone 1, a laptop 2, a laptop 1, a pillow 2, and a pillow 1.",
+      "observation_before": "You turn on the desklamp 1.",
+      "oracle_step_idx": 3,
+      "path_source": "success_trajectory",
+      "role_text": "OBJECT_SOURCE[bed 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:OBJECT_SOURCE[bed 1]",
+        "toggle:on[desklamp 1]"
+      ],
+      "walkthrough_action": "go to bed 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PickupObject::TARGET_OBJ[pillow 1]|LITERAL::bed[bed 1]",
+      "admissible_before": [
+        "examine bed 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to safe 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "take cellphone 1 from bed 1",
+        "take laptop 1 from bed 1",
+        "take laptop 2 from bed 1",
+        "take pillow 1 from bed 1",
+        "take pillow 2 from bed 1"
+      ],
+      "done": false,
+      "dst": "O5",
+      "edge_id": "success_81c8fd8a_e4",
+      "from_signature": [
+        "at:OBJECT_SOURCE[bed 1]",
+        "toggle:on[desklamp 1]"
+      ],
+      "observation_after": "You pick up the pillow 1 from the bed 1.",
+      "observation_before": "You arrive at bed 1. On the bed 1, you see a cellphone 1, a laptop 2, a laptop 1, a pillow 2, and a pillow 1.",
+      "oracle_step_idx": 4,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[pillow 1] -> LITERAL::bed[bed 1]",
+      "src": "O4",
+      "to_signature": [
+        "at:OBJECT_SOURCE[bed 1]",
+        "holding:TARGET_OBJ[pillow 1]",
+        "toggle:on[desklamp 1]"
+      ],
+      "walkthrough_action": "take pillow 1 from bed 1",
+      "won": false
+    },
+    {
+      "abstract_action": "ExamineObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "ExamineObject::TARGET_OBJ[pillow 1]",
+      "admissible_before": [
+        "examine bed 1",
+        "examine pillow 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to safe 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "move pillow 1 to bed 1"
+      ],
+      "done": false,
+      "dst": "O5",
+      "edge_id": "success_81c8fd8a_e5",
+      "from_signature": [
+        "at:OBJECT_SOURCE[bed 1]",
+        "holding:TARGET_OBJ[pillow 1]",
+        "toggle:on[desklamp 1]"
+      ],
+      "observation_after": "There's nothing special about pillow 1.",
+      "observation_before": "You pick up the pillow 1 from the bed 1.",
+      "oracle_step_idx": 5,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[pillow 1]",
+      "src": "O5",
+      "to_signature": [
+        "at:OBJECT_SOURCE[bed 1]",
+        "holding:TARGET_OBJ[pillow 1]",
+        "toggle:on[desklamp 1]"
+      ],
+      "walkthrough_action": "examine pillow 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::TOGGLE_SOURCE[desklamp 1]",
+      "admissible_before": [
+        "examine bed 1",
+        "examine pillow 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to safe 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look",
+        "move pillow 1 to bed 1"
+      ],
+      "done": true,
+      "dst": "O6",
+      "edge_id": "success_81c8fd8a_e6",
+      "from_signature": [
+        "at:OBJECT_SOURCE[bed 1]",
+        "holding:TARGET_OBJ[pillow 1]",
+        "toggle:on[desklamp 1]"
+      ],
+      "observation_after": "You arrive at sidetable 1. On the sidetable 1, you see a alarmclock 1, a desklamp 1, and a pen 1.",
+      "observation_before": "There's nothing special about pillow 1.",
+      "oracle_step_idx": 6,
+      "path_source": "success_trajectory",
+      "role_text": "TOGGLE_SOURCE[desklamp 1]",
+      "src": "O5",
+      "to_signature": [
+        "at:TOGGLE_SOURCE[desklamp 1]",
+        "holding:TARGET_OBJ[pillow 1]",
+        "toggle:on[desklamp 1]",
+        "success"
+      ],
+      "walkthrough_action": "go to sidetable 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/look_at_obj_in_light-Pillow-None-DeskLamp-317/trial_T20190908_234437_155393/game.tw-pddl",
+  "goal_signature": [
+    "at:TOGGLE_SOURCE[desklamp 1]",
+    "holding:TARGET_OBJ[pillow 1]",
+    "toggle:on[desklamp 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to laundryhamper 1",
+        "go to safe 1",
+        "go to sidetable 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a laundryhamper 1, a safe 1, and a sidetable 1.\n\nYour task is to: examine the pillow with the desklamp.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[bed 1]",
+      "node_id": "O1",
+      "observation": "You arrive at bed 1. On the bed 1, you see a cellphone 1, a laptop 2, a laptop 1, a pillow 2, and a pillow 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[bed 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 2,
+      "label": "at:TOGGLE_SOURCE[desklamp 1]",
+      "node_id": "O2",
+      "observation": "You arrive at sidetable 1. On the sidetable 1, you see a alarmclock 1, a desklamp 1, and a pen 1.",
+      "signature": [
+        "at:TOGGLE_SOURCE[desklamp 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 3,
+      "label": "at:TOGGLE_SOURCE[desklamp 1] | toggle:on[desklamp 1]",
+      "node_id": "O3",
+      "observation": "You turn on the desklamp 1.",
+      "signature": [
+        "at:TOGGLE_SOURCE[desklamp 1]",
+        "toggle:on[desklamp 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 4,
+      "label": "at:OBJECT_SOURCE[bed 1] | toggle:on[desklamp 1]",
+      "node_id": "O4",
+      "observation": "You arrive at bed 1. On the bed 1, you see a cellphone 1, a laptop 2, a laptop 1, a pillow 2, and a pillow 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[bed 1]",
+        "toggle:on[desklamp 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 5,
+      "label": "at:OBJECT_SOURCE[bed 1] | holding:TARGET_OBJ[pillow 1] | toggle:on[desklamp 1]",
+      "node_id": "O5",
+      "observation": "You pick up the pillow 1 from the bed 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[bed 1]",
+        "holding:TARGET_OBJ[pillow 1]",
+        "toggle:on[desklamp 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 6,
+      "label": "at:TOGGLE_SOURCE[desklamp 1] | holding:TARGET_OBJ[pillow 1] | toggle:on[desklamp 1] | success",
+      "node_id": "O6",
+      "observation": "You arrive at sidetable 1. On the sidetable 1, you see a alarmclock 1, a desklamp 1, and a pen 1.",
+      "signature": [
+        "at:TOGGLE_SOURCE[desklamp 1]",
+        "holding:TARGET_OBJ[pillow 1]",
+        "toggle:on[desklamp 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_type": "alfworld_teacher_distilled",
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Pillow",
+    "parent_target": "",
+    "toggle_target": "DeskLamp"
+  },
+  "reference_paths": [
+    {
+      "edge_ids": [
+        "success_81c8fd8a_e0",
+        "success_81c8fd8a_e1",
+        "success_81c8fd8a_e2",
+        "success_81c8fd8a_e3",
+        "success_81c8fd8a_e4",
+        "success_81c8fd8a_e5",
+        "success_81c8fd8a_e6"
+      ],
+      "node_ids": [
+        "O0",
+        "O1",
+        "O2",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "path_id": "success_81c8fd8a",
+      "source": "success_trajectory",
+      "traj_uid": "81c8fd8a-68fc-4d4e-b3bb-848b57d84211",
+      "walkthrough": [
+        "go to bed 1",
+        "go to sidetable 1",
+        "use desklamp 1",
+        "go to bed 1",
+        "take pillow 1 from bed 1",
+        "examine pillow 1",
+        "go to sidetable 1"
+      ]
+    }
+  ],
+  "signature_mode": "entity",
+  "source": "teacher_7b_grpo_success_raw",
+  "state_source": "teacher_7b_grpo_success_raw",
+  "task_key": "train__look_at_obj_in_light-Pillow-None-DeskLamp-317__trial_T20190908_234437_155393__game",
+  "task_type": "look_at_obj_in_light",
+  "teacher_model": "official_outputs/7B/alfworld/grpo_alfworld/grpo_alfworld/global_step_140/actor",
+  "teacher_traj_uid": "81c8fd8a-68fc-4d4e-b3bb-848b57d84211",
+  "trial_dir": "train/look_at_obj_in_light-Pillow-None-DeskLamp-317/trial_T20190908_234437_155393",
+  "walkthrough": [
+    "go to bed 1",
+    "go to sidetable 1",
+    "use desklamp 1",
+    "go to bed 1",
+    "take pillow 1 from bed 1",
+    "examine pillow 1",
+    "go to sidetable 1"
+  ]
+}

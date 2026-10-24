@@ -1,0 +1,482 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "diningtable 2"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[diningtable 2]",
+      "admissible_before": [
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at diningtable 2. On the diningtable 2, you see a bowl 1, a box 2, a creditcard 1, a keychain 2, a newspaper 3, a pencil 2, a plate 1, a remotecontrol 1, and a statue 2.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a coffeetable 1, a diningtable 2, a diningtable 1, a drawer 2, a drawer 1, a garbagecan 1, a sidetable 2, a sidetable 1, a sofa 1, and a tvstand 1.\n\nYour task is to: put two plate in coffeetable.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[diningtable 2]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[diningtable 2]"
+      ],
+      "walkthrough_action": "go to diningtable 2",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "plate 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[plate 1]",
+      "admissible_before": [
+        "examine diningtable 2",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take bowl 1 from diningtable 2",
+        "take box 2 from diningtable 2",
+        "take creditcard 1 from diningtable 2",
+        "take keychain 2 from diningtable 2",
+        "take newspaper 3 from diningtable 2",
+        "take pencil 2 from diningtable 2",
+        "take plate 1 from diningtable 2",
+        "take remotecontrol 1 from diningtable 2",
+        "take statue 2 from diningtable 2"
+      ],
+      "done": false,
+      "dst": "O2",
+      "edge_id": "expert_e1",
+      "from_signature": [
+        "at:OBJECT_SOURCE[diningtable 2]"
+      ],
+      "observation_after": "You pick up the plate 1 from the diningtable 2.",
+      "observation_before": "You arrive at diningtable 2. On the diningtable 2, you see a bowl 1, a box 2, a creditcard 1, a keychain 2, a newspaper 3, a pencil 2, a plate 1, a remotecontrol 1, and a statue 2.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_OBJ[plate 1]",
+      "src": "O1",
+      "to_signature": [
+        "at:OBJECT_SOURCE[diningtable 2]",
+        "holding:TARGET_OBJ[plate 1]"
+      ],
+      "walkthrough_action": "take plate 1 from diningtable 2",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "tvstand 1"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[tvstand 1]",
+      "admissible_before": [
+        "examine coffeetable 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take book 1 from coffeetable 1",
+        "take creditcard 2 from coffeetable 1",
+        "take keychain 1 from coffeetable 1",
+        "take newspaper 1 from coffeetable 1",
+        "take plate 1 from coffeetable 1",
+        "take tissuebox 1 from coffeetable 1"
+      ],
+      "done": false,
+      "dst": "O5",
+      "edge_id": "expert_e2",
+      "from_signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "placed:1@TARGET_PARENT[coffeetable 1]"
+      ],
+      "observation_after": "You arrive at tvstand 1. On the tvstand 1, you see a pen 1, a plate 2, a statue 1, a television 1, a tissuebox 2, a watch 2, and a watch 1.",
+      "observation_before": "You move the plate 1 to the coffeetable 1.",
+      "oracle_step_idx": 2,
+      "role_text": "OBJECT_SOURCE[tvstand 1]",
+      "src": "O4",
+      "to_signature": [
+        "at:OBJECT_SOURCE[tvstand 1]",
+        "placed:1@TARGET_PARENT[coffeetable 1]"
+      ],
+      "walkthrough_action": "go to tvstand 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "plate 2",
+        "coffeetable 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[plate 2]|TARGET_PARENT[coffeetable 1]",
+      "admissible_before": [
+        "examine coffeetable 1",
+        "examine plate 2",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "move plate 2 to coffeetable 1"
+      ],
+      "done": true,
+      "dst": "O8",
+      "edge_id": "expert_e3",
+      "from_signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "holding:TARGET_OBJ[plate 2]",
+        "placed:1@none"
+      ],
+      "observation_after": "You move the plate 2 to the coffeetable 1.",
+      "observation_before": "You arrive at coffeetable 1. On the coffeetable 1, you see a book 1, a creditcard 2, a keychain 1, a newspaper 1, a plate 1, and a tissuebox 1.",
+      "oracle_step_idx": 3,
+      "role_text": "TARGET_OBJ[plate 2] -> TARGET_PARENT[coffeetable 1]",
+      "src": "O7",
+      "to_signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "placed:2@TARGET_PARENT[coffeetable 1]",
+        "success"
+      ],
+      "walkthrough_action": "move plate 2 to coffeetable 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_two_obj_and_place-Plate-None-CoffeeTable-201/trial_T20190907_170504_777989/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[coffeetable 1]",
+    "placed:2@TARGET_PARENT[coffeetable 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a coffeetable 1, a diningtable 2, a diningtable 1, a drawer 2, a drawer 1, a garbagecan 1, a sidetable 2, a sidetable 1, a sofa 1, and a tvstand 1.\n\nYour task is to: put two plate in coffeetable.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine diningtable 2",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take bowl 1 from diningtable 2",
+        "take box 2 from diningtable 2",
+        "take creditcard 1 from diningtable 2",
+        "take keychain 2 from diningtable 2",
+        "take newspaper 3 from diningtable 2",
+        "take pencil 2 from diningtable 2",
+        "take plate 1 from diningtable 2",
+        "take remotecontrol 1 from diningtable 2",
+        "take statue 2 from diningtable 2"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[diningtable 2]",
+      "node_id": "O1",
+      "observation": "You arrive at diningtable 2. On the diningtable 2, you see a bowl 1, a box 2, a creditcard 1, a keychain 2, a newspaper 3, a pencil 2, a plate 1, a remotecontrol 1, and a statue 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[diningtable 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine diningtable 2",
+        "examine plate 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "move plate 1 to diningtable 2"
+      ],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[diningtable 2] | holding:TARGET_OBJ[plate 1]",
+      "node_id": "O2",
+      "observation": "You pick up the plate 1 from the diningtable 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[diningtable 2]",
+        "holding:TARGET_OBJ[plate 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine coffeetable 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take book 1 from coffeetable 1",
+        "take creditcard 2 from coffeetable 1",
+        "take keychain 1 from coffeetable 1",
+        "take newspaper 1 from coffeetable 1",
+        "take plate 1 from coffeetable 1",
+        "take tissuebox 1 from coffeetable 1"
+      ],
+      "depth": 3,
+      "label": "at:GOAL_RECEP[coffeetable 1] | placed:1@TARGET_PARENT[coffeetable 1]",
+      "node_id": "O4",
+      "observation": "You move the plate 1 to the coffeetable 1.",
+      "signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "placed:1@TARGET_PARENT[coffeetable 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine tvstand 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take pen 1 from tvstand 1",
+        "take plate 2 from tvstand 1",
+        "take statue 1 from tvstand 1",
+        "take tissuebox 2 from tvstand 1",
+        "take watch 1 from tvstand 1",
+        "take watch 2 from tvstand 1"
+      ],
+      "depth": 4,
+      "label": "at:OBJECT_SOURCE[tvstand 1] | placed:1@TARGET_PARENT[coffeetable 1]",
+      "node_id": "O5",
+      "observation": "You arrive at tvstand 1. On the tvstand 1, you see a pen 1, a plate 2, a statue 1, a television 1, a tissuebox 2, a watch 2, and a watch 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[tvstand 1]",
+        "placed:1@TARGET_PARENT[coffeetable 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine coffeetable 1",
+        "examine plate 2",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "move plate 2 to coffeetable 1"
+      ],
+      "depth": 5,
+      "label": "at:GOAL_RECEP[coffeetable 1] | holding:TARGET_OBJ[plate 2] | placed:1@none",
+      "node_id": "O7",
+      "observation": "You arrive at coffeetable 1. On the coffeetable 1, you see a book 1, a creditcard 2, a keychain 1, a newspaper 1, a plate 1, and a tissuebox 1.",
+      "signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "holding:TARGET_OBJ[plate 2]",
+        "placed:1@none"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine coffeetable 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take book 1 from coffeetable 1",
+        "take creditcard 2 from coffeetable 1",
+        "take keychain 1 from coffeetable 1",
+        "take newspaper 1 from coffeetable 1",
+        "take plate 1 from coffeetable 1",
+        "take plate 2 from coffeetable 1",
+        "take tissuebox 1 from coffeetable 1"
+      ],
+      "depth": 6,
+      "label": "at:GOAL_RECEP[coffeetable 1] | placed:2@TARGET_PARENT[coffeetable 1] | success",
+      "node_id": "O8",
+      "observation": "You move the plate 2 to the coffeetable 1.",
+      "signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "placed:2@TARGET_PARENT[coffeetable 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O3",
+      "O6"
+    ],
+    "dropped_units": 2,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 8,
+    "original_nodes": 9,
+    "remaining_edges": 4,
+    "remaining_nodes": 7,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Plate",
+    "parent_target": "CoffeeTable",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_two_obj_and_place-Plate-None-CoffeeTable-201__trial_T20190907_170504_777989__game",
+  "task_type": "pick_two_obj_and_place",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 8,
+    "num_walkthrough_actions": 8,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_two_obj_and_place-Plate-None-CoffeeTable-201/trial_T20190907_170504_777989",
+  "walkthrough": [
+    "go to diningtable 2",
+    "take plate 1 from diningtable 2",
+    "go to coffeetable 1",
+    "move plate 1 to coffeetable 1",
+    "go to tvstand 1",
+    "take plate 2 from tvstand 1",
+    "go to coffeetable 1",
+    "move plate 2 to coffeetable 1"
+  ]
+}

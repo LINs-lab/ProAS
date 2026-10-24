@@ -1,0 +1,731 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "countertop 1"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[countertop 1]",
+      "admissible_before": [
+        "go to bathtubbasin 1",
+        "go to cart 1",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at countertop 1. On the countertop 1, you see a cloth 1, a soapbar 3, a spraybottle 1, a tissuebox 3, a tissuebox 2, and a toiletpaper 2.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bathtubbasin 1, a cart 1, a countertop 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a handtowelholder 1, a shelf 1, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.\n\nYour task is to: find two soapbar and put them in cart.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[countertop 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[countertop 1]"
+      ],
+      "walkthrough_action": "go to countertop 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "soapbar 3"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[soapbar 3]",
+      "admissible_before": [
+        "examine countertop 1",
+        "go to bathtubbasin 1",
+        "go to cart 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "take cloth 1 from countertop 1",
+        "take soapbar 3 from countertop 1",
+        "take spraybottle 1 from countertop 1",
+        "take tissuebox 2 from countertop 1",
+        "take tissuebox 3 from countertop 1",
+        "take toiletpaper 2 from countertop 1"
+      ],
+      "done": false,
+      "dst": "O2",
+      "from_signature": [
+        "at:OBJECT_SOURCE[countertop 1]"
+      ],
+      "observation_after": "You pick up the soapbar 3 from the countertop 1.",
+      "observation_before": "You arrive at countertop 1. On the countertop 1, you see a cloth 1, a soapbar 3, a spraybottle 1, a tissuebox 3, a tissuebox 2, and a toiletpaper 2.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_OBJ[soapbar 3]",
+      "src": "O1",
+      "to_signature": [
+        "at:OBJECT_SOURCE[countertop 1]",
+        "holding:TARGET_OBJ[soapbar 3]"
+      ],
+      "walkthrough_action": "take soapbar 3 from countertop 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "cart 1"
+      ],
+      "abstract_roles": [
+        "GOAL_RECEP"
+      ],
+      "action_key": "GotoLocation::GOAL_RECEP[cart 1]",
+      "admissible_before": [
+        "examine countertop 1",
+        "examine soapbar 3",
+        "go to bathtubbasin 1",
+        "go to cart 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move soapbar 3 to countertop 1"
+      ],
+      "done": false,
+      "dst": "O3",
+      "from_signature": [
+        "at:OBJECT_SOURCE[countertop 1]",
+        "holding:TARGET_OBJ[soapbar 3]"
+      ],
+      "observation_after": "You arrive at cart 1. On the cart 1, you see a candle 2, a candle 1, and a dishsponge 2.",
+      "observation_before": "You pick up the soapbar 3 from the countertop 1.",
+      "oracle_step_idx": 2,
+      "role_text": "GOAL_RECEP[cart 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:GOAL_RECEP[cart 1]",
+        "holding:TARGET_OBJ[soapbar 3]"
+      ],
+      "walkthrough_action": "go to cart 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "soapbar 3",
+        "cart 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[soapbar 3]|TARGET_PARENT[cart 1]",
+      "admissible_before": [
+        "examine cart 1",
+        "examine soapbar 3",
+        "go to bathtubbasin 1",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move soapbar 3 to cart 1"
+      ],
+      "done": false,
+      "dst": "O4",
+      "from_signature": [
+        "at:GOAL_RECEP[cart 1]",
+        "holding:TARGET_OBJ[soapbar 3]"
+      ],
+      "observation_after": "You move the soapbar 3 to the cart 1.",
+      "observation_before": "You arrive at cart 1. On the cart 1, you see a candle 2, a candle 1, and a dishsponge 2.",
+      "oracle_step_idx": 3,
+      "role_text": "TARGET_OBJ[soapbar 3] -> TARGET_PARENT[cart 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:GOAL_RECEP[cart 1]",
+        "placed:1@TARGET_PARENT[cart 1]"
+      ],
+      "walkthrough_action": "move soapbar 3 to cart 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "sinkbasin 1"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[sinkbasin 1]",
+      "admissible_before": [
+        "examine cart 1",
+        "go to bathtubbasin 1",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "take candle 1 from cart 1",
+        "take candle 2 from cart 1",
+        "take dishsponge 2 from cart 1",
+        "take soapbar 3 from cart 1"
+      ],
+      "done": false,
+      "dst": "O5",
+      "from_signature": [
+        "at:GOAL_RECEP[cart 1]",
+        "placed:1@TARGET_PARENT[cart 1]"
+      ],
+      "observation_after": "You arrive at sinkbasin 1. On the sinkbasin 1, you see a soapbar 1.",
+      "observation_before": "You move the soapbar 3 to the cart 1.",
+      "oracle_step_idx": 4,
+      "role_text": "OBJECT_SOURCE[sinkbasin 1]",
+      "src": "O4",
+      "to_signature": [
+        "at:OBJECT_SOURCE[sinkbasin 1]",
+        "placed:1@TARGET_PARENT[cart 1]"
+      ],
+      "walkthrough_action": "go to sinkbasin 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "soapbar 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[soapbar 1]",
+      "admissible_before": [
+        "examine sinkbasin 1",
+        "go to bathtubbasin 1",
+        "go to cart 1",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "take soapbar 1 from sinkbasin 1"
+      ],
+      "done": false,
+      "dst": "O6",
+      "from_signature": [
+        "at:OBJECT_SOURCE[sinkbasin 1]",
+        "placed:1@TARGET_PARENT[cart 1]"
+      ],
+      "observation_after": "You pick up the soapbar 1 from the sinkbasin 1.",
+      "observation_before": "You arrive at sinkbasin 1. On the sinkbasin 1, you see a soapbar 1.",
+      "oracle_step_idx": 5,
+      "role_text": "TARGET_OBJ[soapbar 1]",
+      "src": "O5",
+      "to_signature": [
+        "at:OBJECT_SOURCE[sinkbasin 1]",
+        "holding:TARGET_OBJ[soapbar 1]",
+        "placed:1@none"
+      ],
+      "walkthrough_action": "take soapbar 1 from sinkbasin 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "cart 1"
+      ],
+      "abstract_roles": [
+        "GOAL_RECEP"
+      ],
+      "action_key": "GotoLocation::GOAL_RECEP[cart 1]",
+      "admissible_before": [
+        "clean soapbar 1 with sinkbasin 1",
+        "examine sinkbasin 1",
+        "examine soapbar 1",
+        "go to bathtubbasin 1",
+        "go to cart 1",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move soapbar 1 to sinkbasin 1"
+      ],
+      "done": false,
+      "dst": "O7",
+      "from_signature": [
+        "at:OBJECT_SOURCE[sinkbasin 1]",
+        "holding:TARGET_OBJ[soapbar 1]",
+        "placed:1@none"
+      ],
+      "observation_after": "You arrive at cart 1. On the cart 1, you see a candle 2, a candle 1, a dishsponge 2, and a soapbar 3.",
+      "observation_before": "You pick up the soapbar 1 from the sinkbasin 1.",
+      "oracle_step_idx": 6,
+      "role_text": "GOAL_RECEP[cart 1]",
+      "src": "O6",
+      "to_signature": [
+        "at:GOAL_RECEP[cart 1]",
+        "holding:TARGET_OBJ[soapbar 1]",
+        "placed:1@none"
+      ],
+      "walkthrough_action": "go to cart 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "soapbar 1",
+        "cart 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[soapbar 1]|TARGET_PARENT[cart 1]",
+      "admissible_before": [
+        "examine cart 1",
+        "examine soapbar 1",
+        "go to bathtubbasin 1",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move soapbar 1 to cart 1"
+      ],
+      "done": true,
+      "dst": "O8",
+      "from_signature": [
+        "at:GOAL_RECEP[cart 1]",
+        "holding:TARGET_OBJ[soapbar 1]",
+        "placed:1@none"
+      ],
+      "observation_after": "You move the soapbar 1 to the cart 1.",
+      "observation_before": "You arrive at cart 1. On the cart 1, you see a candle 2, a candle 1, a dishsponge 2, and a soapbar 3.",
+      "oracle_step_idx": 7,
+      "role_text": "TARGET_OBJ[soapbar 1] -> TARGET_PARENT[cart 1]",
+      "src": "O7",
+      "to_signature": [
+        "at:GOAL_RECEP[cart 1]",
+        "placed:2@TARGET_PARENT[cart 1]",
+        "success"
+      ],
+      "walkthrough_action": "move soapbar 1 to cart 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_two_obj_and_place-SoapBar-None-Cart-430/trial_T20190909_145901_138802/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[cart 1]",
+    "placed:2@TARGET_PARENT[cart 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bathtubbasin 1",
+        "go to cart 1",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bathtubbasin 1, a cart 1, a countertop 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a handtowelholder 1, a shelf 1, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.\n\nYour task is to: find two soapbar and put them in cart.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine countertop 1",
+        "go to bathtubbasin 1",
+        "go to cart 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "take cloth 1 from countertop 1",
+        "take soapbar 3 from countertop 1",
+        "take spraybottle 1 from countertop 1",
+        "take tissuebox 2 from countertop 1",
+        "take tissuebox 3 from countertop 1",
+        "take toiletpaper 2 from countertop 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[countertop 1]",
+      "node_id": "O1",
+      "observation": "You arrive at countertop 1. On the countertop 1, you see a cloth 1, a soapbar 3, a spraybottle 1, a tissuebox 3, a tissuebox 2, and a toiletpaper 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[countertop 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine countertop 1",
+        "examine soapbar 3",
+        "go to bathtubbasin 1",
+        "go to cart 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move soapbar 3 to countertop 1"
+      ],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[countertop 1] | holding:TARGET_OBJ[soapbar 3]",
+      "node_id": "O2",
+      "observation": "You pick up the soapbar 3 from the countertop 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[countertop 1]",
+        "holding:TARGET_OBJ[soapbar 3]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine cart 1",
+        "examine soapbar 3",
+        "go to bathtubbasin 1",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move soapbar 3 to cart 1"
+      ],
+      "depth": 3,
+      "label": "at:GOAL_RECEP[cart 1] | holding:TARGET_OBJ[soapbar 3]",
+      "node_id": "O3",
+      "observation": "You arrive at cart 1. On the cart 1, you see a candle 2, a candle 1, and a dishsponge 2.",
+      "signature": [
+        "at:GOAL_RECEP[cart 1]",
+        "holding:TARGET_OBJ[soapbar 3]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine cart 1",
+        "go to bathtubbasin 1",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "take candle 1 from cart 1",
+        "take candle 2 from cart 1",
+        "take dishsponge 2 from cart 1",
+        "take soapbar 3 from cart 1"
+      ],
+      "depth": 4,
+      "label": "at:GOAL_RECEP[cart 1] | placed:1@TARGET_PARENT[cart 1]",
+      "node_id": "O4",
+      "observation": "You move the soapbar 3 to the cart 1.",
+      "signature": [
+        "at:GOAL_RECEP[cart 1]",
+        "placed:1@TARGET_PARENT[cart 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine sinkbasin 1",
+        "go to bathtubbasin 1",
+        "go to cart 1",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "take soapbar 1 from sinkbasin 1"
+      ],
+      "depth": 5,
+      "label": "at:OBJECT_SOURCE[sinkbasin 1] | placed:1@TARGET_PARENT[cart 1]",
+      "node_id": "O5",
+      "observation": "You arrive at sinkbasin 1. On the sinkbasin 1, you see a soapbar 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[sinkbasin 1]",
+        "placed:1@TARGET_PARENT[cart 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "clean soapbar 1 with sinkbasin 1",
+        "examine sinkbasin 1",
+        "examine soapbar 1",
+        "go to bathtubbasin 1",
+        "go to cart 1",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move soapbar 1 to sinkbasin 1"
+      ],
+      "depth": 6,
+      "label": "at:OBJECT_SOURCE[sinkbasin 1] | holding:TARGET_OBJ[soapbar 1] | placed:1@none",
+      "node_id": "O6",
+      "observation": "You pick up the soapbar 1 from the sinkbasin 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[sinkbasin 1]",
+        "holding:TARGET_OBJ[soapbar 1]",
+        "placed:1@none"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine cart 1",
+        "examine soapbar 1",
+        "go to bathtubbasin 1",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move soapbar 1 to cart 1"
+      ],
+      "depth": 7,
+      "label": "at:GOAL_RECEP[cart 1] | holding:TARGET_OBJ[soapbar 1] | placed:1@none",
+      "node_id": "O7",
+      "observation": "You arrive at cart 1. On the cart 1, you see a candle 2, a candle 1, a dishsponge 2, and a soapbar 3.",
+      "signature": [
+        "at:GOAL_RECEP[cart 1]",
+        "holding:TARGET_OBJ[soapbar 1]",
+        "placed:1@none"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine cart 1",
+        "go to bathtubbasin 1",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "take candle 1 from cart 1",
+        "take candle 2 from cart 1",
+        "take dishsponge 2 from cart 1",
+        "take soapbar 1 from cart 1",
+        "take soapbar 3 from cart 1"
+      ],
+      "depth": 8,
+      "label": "at:GOAL_RECEP[cart 1] | placed:2@TARGET_PARENT[cart 1] | success",
+      "node_id": "O8",
+      "observation": "You move the soapbar 1 to the cart 1.",
+      "signature": [
+        "at:GOAL_RECEP[cart 1]",
+        "placed:2@TARGET_PARENT[cart 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "SoapBar",
+    "parent_target": "Cart",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_two_obj_and_place-SoapBar-None-Cart-430__trial_T20190909_145901_138802__game",
+  "task_type": "pick_two_obj_and_place",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 8,
+    "num_walkthrough_actions": 8,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_two_obj_and_place-SoapBar-None-Cart-430/trial_T20190909_145901_138802",
+  "walkthrough": [
+    "go to countertop 1",
+    "take soapbar 3 from countertop 1",
+    "go to cart 1",
+    "move soapbar 3 to cart 1",
+    "go to sinkbasin 1",
+    "take soapbar 1 from sinkbasin 1",
+    "go to cart 1",
+    "move soapbar 1 to cart 1"
+  ]
+}

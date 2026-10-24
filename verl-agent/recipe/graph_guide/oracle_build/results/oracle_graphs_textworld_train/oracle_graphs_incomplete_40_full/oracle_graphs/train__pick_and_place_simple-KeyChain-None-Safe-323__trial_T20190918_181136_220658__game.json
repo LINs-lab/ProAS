@@ -1,0 +1,313 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "desk 1"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[desk 1]",
+      "admissible_before": [
+        "go to bed 1",
+        "go to bed 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to safe 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at desk 1. On the desk 1, you see a bowl 1, a creditcard 1, a desklamp 1, a keychain 1, a mug 2, a mug 1, and a pen 3.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 2, a bed 1, a desk 1, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a safe 1, a sidetable 2, and a sidetable 1.\n\nYour task is to: put a keychain in safe.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[desk 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[desk 1]"
+      ],
+      "walkthrough_action": "go to desk 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "keychain 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[keychain 1]",
+      "admissible_before": [
+        "examine desk 1",
+        "go to bed 1",
+        "go to bed 2",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to safe 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look",
+        "take bowl 1 from desk 1",
+        "take creditcard 1 from desk 1",
+        "take keychain 1 from desk 1",
+        "take mug 1 from desk 1",
+        "take mug 2 from desk 1",
+        "take pen 3 from desk 1",
+        "use desklamp 1"
+      ],
+      "done": false,
+      "dst": "O2",
+      "edge_id": "expert_e1",
+      "from_signature": [
+        "at:OBJECT_SOURCE[desk 1]"
+      ],
+      "observation_after": "You pick up the keychain 1 from the desk 1.",
+      "observation_before": "You arrive at desk 1. On the desk 1, you see a bowl 1, a creditcard 1, a desklamp 1, a keychain 1, a mug 2, a mug 1, and a pen 3.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_OBJ[keychain 1]",
+      "src": "O1",
+      "to_signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "holding:TARGET_OBJ[keychain 1]"
+      ],
+      "walkthrough_action": "take keychain 1 from desk 1",
+      "won": false
+    }
+  ],
+  "gamefile": "train/pick_and_place_simple-KeyChain-None-Safe-323/trial_T20190918_181136_220658/game.tw-pddl",
+  "goal_signature": [
+    "at:TARGET_PARENT[safe]",
+    "placed:1@TARGET_PARENT[safe 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bed 1",
+        "go to bed 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to safe 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 2, a bed 1, a desk 1, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a safe 1, a sidetable 2, and a sidetable 1.\n\nYour task is to: put a keychain in safe.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine desk 1",
+        "go to bed 1",
+        "go to bed 2",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to safe 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look",
+        "take bowl 1 from desk 1",
+        "take creditcard 1 from desk 1",
+        "take keychain 1 from desk 1",
+        "take mug 1 from desk 1",
+        "take mug 2 from desk 1",
+        "take pen 3 from desk 1",
+        "use desklamp 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[desk 1]",
+      "node_id": "O1",
+      "observation": "You arrive at desk 1. On the desk 1, you see a bowl 1, a creditcard 1, a desklamp 1, a keychain 1, a mug 2, a mug 1, and a pen 3.",
+      "signature": [
+        "at:OBJECT_SOURCE[desk 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine desk 1",
+        "examine keychain 1",
+        "go to bed 1",
+        "go to bed 2",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to safe 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look",
+        "move keychain 1 to desk 1",
+        "use desklamp 1"
+      ],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[desk 1] | holding:TARGET_OBJ[keychain 1]",
+      "node_id": "O2",
+      "observation": "You pick up the keychain 1 from the desk 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "holding:TARGET_OBJ[keychain 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "close safe 1",
+        "examine safe 1",
+        "go to bed 1",
+        "go to bed 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 10",
+        "go to drawer 11",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to drawer 8",
+        "go to drawer 9",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look",
+        "take cd 1 from safe 1",
+        "take keychain 1 from safe 1"
+      ],
+      "depth": 3,
+      "label": "at:TARGET_PARENT[safe] | placed:1@TARGET_PARENT[safe 1] | success",
+      "node_id": "O5",
+      "observation": "You move the keychain 1 to the safe 1.",
+      "signature": [
+        "at:TARGET_PARENT[safe]",
+        "placed:1@TARGET_PARENT[safe 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O3",
+      "O4"
+    ],
+    "dropped_units": 2,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 5,
+    "original_nodes": 6,
+    "remaining_edges": 2,
+    "remaining_nodes": 4,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "KeyChain",
+    "parent_target": "Safe",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_and_place_simple-KeyChain-None-Safe-323__trial_T20190918_181136_220658__game",
+  "task_type": "pick_and_place_simple",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 5,
+    "num_walkthrough_actions": 5,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_and_place_simple-KeyChain-None-Safe-323/trial_T20190918_181136_220658",
+  "walkthrough": [
+    "go to desk 1",
+    "take keychain 1 from desk 1",
+    "go to safe 1",
+    "open safe 1",
+    "move keychain 1 to safe 1"
+  ]
+}

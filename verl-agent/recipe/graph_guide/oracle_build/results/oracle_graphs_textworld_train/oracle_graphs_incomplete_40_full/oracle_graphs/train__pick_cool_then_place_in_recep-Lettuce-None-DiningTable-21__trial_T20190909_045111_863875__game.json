@@ -1,0 +1,173 @@
+{
+  "edges": [],
+  "gamefile": "train/pick_cool_then_place_in_recep-Lettuce-None-DiningTable-21/trial_T20190909_045111_863875/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[diningtable 3]",
+    "object:cool[TARGET_OBJ]",
+    "placed:1@TARGET_PARENT[diningtable 3]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to diningtable 3",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 3, a diningtable 2, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\n\nYour task is to: cool some lettuce and put it in diningtable.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine diningtable 3",
+        "examine lettuce 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "move lettuce 2 to diningtable 3"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[diningtable 3] | holding:TARGET_OBJ[lettuce 2]",
+      "node_id": "O2",
+      "observation": "You pick up the lettuce 2 from the diningtable 3.",
+      "signature": [
+        "at:OBJECT_SOURCE[diningtable 3]",
+        "holding:TARGET_OBJ[lettuce 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine diningtable 3",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "take apple 3 from diningtable 3",
+        "take bread 1 from diningtable 3",
+        "take dishsponge 1 from diningtable 3",
+        "take lettuce 2 from diningtable 3",
+        "take pot 2 from diningtable 3",
+        "take spatula 2 from diningtable 3"
+      ],
+      "depth": 2,
+      "label": "at:GOAL_RECEP[diningtable 3] | object:cool[TARGET_OBJ] | placed:1@TARGET_PARENT[diningtable 3] | success",
+      "node_id": "O6",
+      "observation": "You move the lettuce 2 to the diningtable 3.",
+      "signature": [
+        "at:GOAL_RECEP[diningtable 3]",
+        "object:cool[TARGET_OBJ]",
+        "placed:1@TARGET_PARENT[diningtable 3]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O1",
+      "O3",
+      "O4",
+      "O5"
+    ],
+    "dropped_units": 4,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 6,
+    "original_nodes": 7,
+    "remaining_edges": 0,
+    "remaining_nodes": 3,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Lettuce",
+    "parent_target": "DiningTable",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_cool_then_place_in_recep-Lettuce-None-DiningTable-21__trial_T20190909_045111_863875__game",
+  "task_type": "pick_cool_then_place_in_recep",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 6,
+    "num_walkthrough_actions": 6,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_cool_then_place_in_recep-Lettuce-None-DiningTable-21/trial_T20190909_045111_863875",
+  "walkthrough": [
+    "go to diningtable 3",
+    "take lettuce 2 from diningtable 3",
+    "go to fridge 1",
+    "cool lettuce 2 with fridge 1",
+    "go to diningtable 3",
+    "move lettuce 2 to diningtable 3"
+  ]
+}

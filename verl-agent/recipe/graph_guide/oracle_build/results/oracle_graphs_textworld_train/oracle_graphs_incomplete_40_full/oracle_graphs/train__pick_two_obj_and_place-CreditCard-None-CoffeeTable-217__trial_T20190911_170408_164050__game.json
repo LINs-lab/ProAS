@@ -1,0 +1,190 @@
+{
+  "edges": [],
+  "gamefile": "train/pick_two_obj_and_place-CreditCard-None-CoffeeTable-217/trial_T20190911_170408_164050/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[coffeetable 1]",
+    "placed:2@TARGET_PARENT[coffeetable 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeetable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 1, and a sofa 1.\n\nYour task is to: find two creditcard and put them in coffeetable.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine coffeetable 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take creditcard 4 from coffeetable 1",
+        "take statue 1 from coffeetable 1"
+      ],
+      "depth": 1,
+      "label": "at:GOAL_RECEP[coffeetable 1] | placed:1@TARGET_PARENT[coffeetable 1]",
+      "node_id": "O4",
+      "observation": "You move the creditcard 4 to the coffeetable 1.",
+      "signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "placed:1@TARGET_PARENT[coffeetable 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine armchair 2",
+        "examine creditcard 3",
+        "go to armchair 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move creditcard 3 to armchair 2"
+      ],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[armchair 2] | holding:TARGET_OBJ[creditcard 3] | placed:1@none",
+      "node_id": "O6",
+      "observation": "You pick up the creditcard 3 from the armchair 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[armchair 2]",
+        "holding:TARGET_OBJ[creditcard 3]",
+        "placed:1@none"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine coffeetable 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take creditcard 3 from coffeetable 1",
+        "take creditcard 4 from coffeetable 1",
+        "take statue 1 from coffeetable 1"
+      ],
+      "depth": 3,
+      "label": "at:GOAL_RECEP[coffeetable 1] | placed:2@TARGET_PARENT[coffeetable 1] | success",
+      "node_id": "O8",
+      "observation": "You move the creditcard 3 to the coffeetable 1.",
+      "signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "placed:2@TARGET_PARENT[coffeetable 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O1",
+      "O2",
+      "O3",
+      "O5",
+      "O7"
+    ],
+    "dropped_units": 5,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 8,
+    "original_nodes": 9,
+    "remaining_edges": 0,
+    "remaining_nodes": 4,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "CreditCard",
+    "parent_target": "CoffeeTable",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_two_obj_and_place-CreditCard-None-CoffeeTable-217__trial_T20190911_170408_164050__game",
+  "task_type": "pick_two_obj_and_place",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 8,
+    "num_walkthrough_actions": 8,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_two_obj_and_place-CreditCard-None-CoffeeTable-217/trial_T20190911_170408_164050",
+  "walkthrough": [
+    "go to sidetable 1",
+    "take creditcard 4 from sidetable 1",
+    "go to coffeetable 1",
+    "move creditcard 4 to coffeetable 1",
+    "go to armchair 2",
+    "take creditcard 3 from armchair 2",
+    "go to coffeetable 1",
+    "move creditcard 3 to coffeetable 1"
+  ]
+}

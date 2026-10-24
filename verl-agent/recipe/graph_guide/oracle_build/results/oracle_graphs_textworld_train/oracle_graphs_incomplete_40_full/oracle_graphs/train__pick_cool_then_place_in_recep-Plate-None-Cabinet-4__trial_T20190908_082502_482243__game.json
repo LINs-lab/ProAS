@@ -1,0 +1,246 @@
+{
+  "edges": [
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "plate 2",
+        "cabinet 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[plate 2]|TARGET_PARENT[cabinet 1]",
+      "admissible_before": [
+        "close cabinet 1",
+        "examine cabinet 1",
+        "examine cabinet 2",
+        "examine plate 2",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to countertop 3",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "move plate 2 to cabinet 1",
+        "open cabinet 2"
+      ],
+      "done": true,
+      "dst": "O7",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "at:TARGET_PARENT[cabinet]",
+        "holding:TARGET_OBJ[plate 2]",
+        "object:cool[TARGET_OBJ]"
+      ],
+      "observation_after": "You move the plate 2 to the cabinet 1.",
+      "observation_before": "You open the cabinet 1. The cabinet 1 is open. In it, you see nothing.",
+      "oracle_step_idx": 0,
+      "role_text": "TARGET_OBJ[plate 2] -> TARGET_PARENT[cabinet 1]",
+      "src": "O6",
+      "to_signature": [
+        "at:TARGET_PARENT[cabinet]",
+        "object:cool[TARGET_OBJ]",
+        "placed:1@TARGET_PARENT[cabinet 1]",
+        "success"
+      ],
+      "walkthrough_action": "move plate 2 to cabinet 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_cool_then_place_in_recep-Plate-None-Cabinet-4/trial_T20190908_082502_482243/game.tw-pddl",
+  "goal_signature": [
+    "at:TARGET_PARENT[cabinet]",
+    "object:cool[TARGET_OBJ]",
+    "placed:1@TARGET_PARENT[cabinet 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to countertop 3",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a diningtable 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\n\nYour task is to: cool some plate and put it in cabinet.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "close cabinet 1",
+        "examine cabinet 1",
+        "examine cabinet 2",
+        "examine plate 2",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to countertop 3",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "move plate 2 to cabinet 1",
+        "open cabinet 2"
+      ],
+      "depth": 1,
+      "label": "at:TARGET_PARENT[cabinet] | holding:TARGET_OBJ[plate 2] | object:cool[TARGET_OBJ]",
+      "node_id": "O6",
+      "observation": "You open the cabinet 1. The cabinet 1 is open. In it, you see nothing.",
+      "signature": [
+        "at:TARGET_PARENT[cabinet]",
+        "holding:TARGET_OBJ[plate 2]",
+        "object:cool[TARGET_OBJ]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "close cabinet 1",
+        "examine cabinet 1",
+        "examine cabinet 2",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to countertop 2",
+        "go to countertop 3",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "open cabinet 2",
+        "take plate 2 from cabinet 1"
+      ],
+      "depth": 2,
+      "label": "at:TARGET_PARENT[cabinet] | object:cool[TARGET_OBJ] | placed:1@TARGET_PARENT[cabinet 1] | success",
+      "node_id": "O7",
+      "observation": "You move the plate 2 to the cabinet 1.",
+      "signature": [
+        "at:TARGET_PARENT[cabinet]",
+        "object:cool[TARGET_OBJ]",
+        "placed:1@TARGET_PARENT[cabinet 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O1",
+      "O2",
+      "O3",
+      "O4",
+      "O5"
+    ],
+    "dropped_units": 5,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 7,
+    "original_nodes": 8,
+    "remaining_edges": 1,
+    "remaining_nodes": 3,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Plate",
+    "parent_target": "Cabinet",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_cool_then_place_in_recep-Plate-None-Cabinet-4__trial_T20190908_082502_482243__game",
+  "task_type": "pick_cool_then_place_in_recep",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 7,
+    "num_walkthrough_actions": 7,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_cool_then_place_in_recep-Plate-None-Cabinet-4/trial_T20190908_082502_482243",
+  "walkthrough": [
+    "go to countertop 3",
+    "take plate 2 from countertop 3",
+    "go to fridge 1",
+    "cool plate 2 with fridge 1",
+    "go to cabinet 2",
+    "open cabinet 1",
+    "move plate 2 to cabinet 1"
+  ]
+}

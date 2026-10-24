@@ -1,0 +1,596 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "cabinet 2"
+      ],
+      "abstract_roles": [
+        "LOC"
+      ],
+      "action_key": "GotoLocation::LOC[cabinet 2]",
+      "admissible_before": [
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to diningtable 3",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at cabinet 2. The cabinet 2 is closed.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 3, a diningtable 2, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\n\nYour task is to: put a clean bowl in diningtable.",
+      "oracle_step_idx": 0,
+      "role_text": "LOC[cabinet 2]",
+      "src": "O0",
+      "to_signature": [
+        "at:LOC[cabinet 2]"
+      ],
+      "walkthrough_action": "go to cabinet 2",
+      "won": false
+    },
+    {
+      "abstract_action": "OpenObject",
+      "abstract_entities": [
+        "cabinet 2"
+      ],
+      "abstract_roles": [
+        "LITERAL::cabinet"
+      ],
+      "action_key": "OpenObject::LITERAL::cabinet[cabinet 2]",
+      "admissible_before": [
+        "examine cabinet 2",
+        "go to cabinet 1",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to diningtable 3",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "open cabinet 2"
+      ],
+      "done": false,
+      "dst": "O2",
+      "edge_id": "expert_e1",
+      "from_signature": [
+        "at:LOC[cabinet 2]"
+      ],
+      "observation_after": "You open the cabinet 2. The cabinet 2 is open. In it, you see a bowl 1.",
+      "observation_before": "You arrive at cabinet 2. The cabinet 2 is closed.",
+      "oracle_step_idx": 1,
+      "role_text": "LITERAL::cabinet[cabinet 2]",
+      "src": "O1",
+      "to_signature": [
+        "at:LOC[cabinet 2]"
+      ],
+      "walkthrough_action": "open cabinet 2",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "bowl 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[bowl 1]",
+      "admissible_before": [
+        "close cabinet 2",
+        "examine cabinet 2",
+        "go to cabinet 1",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to diningtable 3",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "take bowl 1 from cabinet 2"
+      ],
+      "done": false,
+      "dst": "O3",
+      "edge_id": "expert_e2",
+      "from_signature": [
+        "at:LOC[cabinet 2]"
+      ],
+      "observation_after": "You pick up the bowl 1 from the cabinet 2.",
+      "observation_before": "You open the cabinet 2. The cabinet 2 is open. In it, you see a bowl 1.",
+      "oracle_step_idx": 2,
+      "role_text": "TARGET_OBJ[bowl 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:LOC[cabinet 2]",
+        "holding:TARGET_OBJ[bowl 1]"
+      ],
+      "walkthrough_action": "take bowl 1 from cabinet 2",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "diningtable 3"
+      ],
+      "abstract_roles": [
+        "GOAL_RECEP"
+      ],
+      "action_key": "GotoLocation::GOAL_RECEP[diningtable 3]",
+      "admissible_before": [
+        "clean bowl 1 with sinkbasin 1",
+        "examine bowl 1",
+        "examine sinkbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to diningtable 3",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sidetable 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "move bowl 1 to sinkbasin 1"
+      ],
+      "done": false,
+      "dst": "O6",
+      "edge_id": "expert_e3",
+      "from_signature": [
+        "at:CLEAN_STATION[sinkbasin 1]",
+        "holding:TARGET_OBJ[bowl 1]",
+        "object:clean[TARGET_OBJ]"
+      ],
+      "observation_after": "You arrive at diningtable 3. On the diningtable 3, you see a bread 1.",
+      "observation_before": "You clean the bowl 1 using the sinkbasin 1.",
+      "oracle_step_idx": 3,
+      "role_text": "GOAL_RECEP[diningtable 3]",
+      "src": "O5",
+      "to_signature": [
+        "at:GOAL_RECEP[diningtable 3]",
+        "holding:TARGET_OBJ[bowl 1]",
+        "object:clean[TARGET_OBJ]"
+      ],
+      "walkthrough_action": "go to diningtable 3",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "bowl 1",
+        "diningtable 3"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[bowl 1]|TARGET_PARENT[diningtable 3]",
+      "admissible_before": [
+        "examine bowl 1",
+        "examine diningtable 3",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "move bowl 1 to diningtable 3"
+      ],
+      "done": true,
+      "dst": "O7",
+      "edge_id": "expert_e4",
+      "from_signature": [
+        "at:GOAL_RECEP[diningtable 3]",
+        "holding:TARGET_OBJ[bowl 1]",
+        "object:clean[TARGET_OBJ]"
+      ],
+      "observation_after": "You move the bowl 1 to the diningtable 3.",
+      "observation_before": "You arrive at diningtable 3. On the diningtable 3, you see a bread 1.",
+      "oracle_step_idx": 4,
+      "role_text": "TARGET_OBJ[bowl 1] -> TARGET_PARENT[diningtable 3]",
+      "src": "O6",
+      "to_signature": [
+        "at:GOAL_RECEP[diningtable 3]",
+        "object:clean[TARGET_OBJ]",
+        "placed:1@TARGET_PARENT[diningtable 3]",
+        "success"
+      ],
+      "walkthrough_action": "move bowl 1 to diningtable 3",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_clean_then_place_in_recep-Bowl-None-DiningTable-21/trial_T20190907_000053_568571/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[diningtable 3]",
+    "object:clean[TARGET_OBJ]",
+    "placed:1@TARGET_PARENT[diningtable 3]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to diningtable 3",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 3, a diningtable 2, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\n\nYour task is to: put a clean bowl in diningtable.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine cabinet 2",
+        "go to cabinet 1",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to diningtable 3",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "open cabinet 2"
+      ],
+      "depth": 1,
+      "label": "at:LOC[cabinet 2]",
+      "node_id": "O1",
+      "observation": "You arrive at cabinet 2. The cabinet 2 is closed.",
+      "signature": [
+        "at:LOC[cabinet 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "close cabinet 2",
+        "examine cabinet 2",
+        "go to cabinet 1",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to diningtable 3",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "take bowl 1 from cabinet 2"
+      ],
+      "depth": 2,
+      "label": "at:LOC[cabinet 2]",
+      "node_id": "O2",
+      "observation": "You open the cabinet 2. The cabinet 2 is open. In it, you see a bowl 1.",
+      "signature": [
+        "at:LOC[cabinet 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "close cabinet 2",
+        "examine bowl 1",
+        "examine cabinet 2",
+        "go to cabinet 1",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to diningtable 3",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "move bowl 1 to cabinet 2"
+      ],
+      "depth": 3,
+      "label": "at:LOC[cabinet 2] | holding:TARGET_OBJ[bowl 1]",
+      "node_id": "O3",
+      "observation": "You pick up the bowl 1 from the cabinet 2.",
+      "signature": [
+        "at:LOC[cabinet 2]",
+        "holding:TARGET_OBJ[bowl 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "clean bowl 1 with sinkbasin 1",
+        "examine bowl 1",
+        "examine sinkbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to diningtable 3",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sidetable 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "move bowl 1 to sinkbasin 1"
+      ],
+      "depth": 4,
+      "label": "at:CLEAN_STATION[sinkbasin 1] | holding:TARGET_OBJ[bowl 1] | object:clean[TARGET_OBJ]",
+      "node_id": "O5",
+      "observation": "You clean the bowl 1 using the sinkbasin 1.",
+      "signature": [
+        "at:CLEAN_STATION[sinkbasin 1]",
+        "holding:TARGET_OBJ[bowl 1]",
+        "object:clean[TARGET_OBJ]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine bowl 1",
+        "examine diningtable 3",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "move bowl 1 to diningtable 3"
+      ],
+      "depth": 5,
+      "label": "at:GOAL_RECEP[diningtable 3] | holding:TARGET_OBJ[bowl 1] | object:clean[TARGET_OBJ]",
+      "node_id": "O6",
+      "observation": "You arrive at diningtable 3. On the diningtable 3, you see a bread 1.",
+      "signature": [
+        "at:GOAL_RECEP[diningtable 3]",
+        "holding:TARGET_OBJ[bowl 1]",
+        "object:clean[TARGET_OBJ]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine diningtable 3",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to coffeemachine 1",
+        "go to countertop 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to drawer 1",
+        "go to fridge 1",
+        "go to garbagecan 1",
+        "go to microwave 1",
+        "go to sidetable 1",
+        "go to sinkbasin 1",
+        "go to stoveburner 1",
+        "go to stoveburner 2",
+        "go to stoveburner 3",
+        "go to stoveburner 4",
+        "go to toaster 1",
+        "help",
+        "inventory",
+        "look",
+        "take bowl 1 from diningtable 3",
+        "take bread 1 from diningtable 3"
+      ],
+      "depth": 6,
+      "label": "at:GOAL_RECEP[diningtable 3] | object:clean[TARGET_OBJ] | placed:1@TARGET_PARENT[diningtable 3] | success",
+      "node_id": "O7",
+      "observation": "You move the bowl 1 to the diningtable 3.",
+      "signature": [
+        "at:GOAL_RECEP[diningtable 3]",
+        "object:clean[TARGET_OBJ]",
+        "placed:1@TARGET_PARENT[diningtable 3]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O4"
+    ],
+    "dropped_units": 1,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 7,
+    "original_nodes": 8,
+    "remaining_edges": 5,
+    "remaining_nodes": 7,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Bowl",
+    "parent_target": "DiningTable",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_clean_then_place_in_recep-Bowl-None-DiningTable-21__trial_T20190907_000053_568571__game",
+  "task_type": "pick_clean_then_place_in_recep",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 7,
+    "num_walkthrough_actions": 7,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_clean_then_place_in_recep-Bowl-None-DiningTable-21/trial_T20190907_000053_568571",
+  "walkthrough": [
+    "go to cabinet 2",
+    "open cabinet 2",
+    "take bowl 1 from cabinet 2",
+    "go to sinkbasin 1",
+    "clean bowl 1 with sinkbasin 1",
+    "go to diningtable 3",
+    "move bowl 1 to diningtable 3"
+  ]
+}

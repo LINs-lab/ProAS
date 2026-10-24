@@ -1,0 +1,193 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "diningtable 2"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[diningtable 2]",
+      "admissible_before": [
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at diningtable 2. On the diningtable 2, you see a book 1, a bowl 1, a laptop 1, a newspaper 2, a newspaper 1, a plate 1, a statue 2, and a statue 1.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a coffeetable 1, a diningtable 2, a diningtable 1, a drawer 2, a drawer 1, a garbagecan 1, a sidetable 2, a sidetable 1, a sofa 1, and a tvstand 1.\n\nYour task is to: put some statue on coffeetable.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[diningtable 2]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[diningtable 2]"
+      ],
+      "walkthrough_action": "go to diningtable 2",
+      "won": false
+    }
+  ],
+  "gamefile": "train/pick_and_place_simple-Statue-None-CoffeeTable-201/trial_T20190908_124709_477856/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[coffeetable 1]",
+    "placed:1@TARGET_PARENT[coffeetable 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a coffeetable 1, a diningtable 2, a diningtable 1, a drawer 2, a drawer 1, a garbagecan 1, a sidetable 2, a sidetable 1, a sofa 1, and a tvstand 1.\n\nYour task is to: put some statue on coffeetable.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine diningtable 2",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take book 1 from diningtable 2",
+        "take bowl 1 from diningtable 2",
+        "take laptop 1 from diningtable 2",
+        "take newspaper 1 from diningtable 2",
+        "take newspaper 2 from diningtable 2",
+        "take plate 1 from diningtable 2",
+        "take statue 1 from diningtable 2",
+        "take statue 2 from diningtable 2"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[diningtable 2]",
+      "node_id": "O1",
+      "observation": "You arrive at diningtable 2. On the diningtable 2, you see a book 1, a bowl 1, a laptop 1, a newspaper 2, a newspaper 1, a plate 1, a statue 2, and a statue 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[diningtable 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine coffeetable 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to diningtable 1",
+        "go to diningtable 2",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take bowl 2 from coffeetable 1",
+        "take plate 2 from coffeetable 1",
+        "take remotecontrol 2 from coffeetable 1",
+        "take remotecontrol 3 from coffeetable 1",
+        "take statue 2 from coffeetable 1",
+        "take tissuebox 1 from coffeetable 1",
+        "take tissuebox 2 from coffeetable 1"
+      ],
+      "depth": 2,
+      "label": "at:GOAL_RECEP[coffeetable 1] | placed:1@TARGET_PARENT[coffeetable 1] | success",
+      "node_id": "O4",
+      "observation": "You move the statue 2 to the coffeetable 1.",
+      "signature": [
+        "at:GOAL_RECEP[coffeetable 1]",
+        "placed:1@TARGET_PARENT[coffeetable 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O2",
+      "O3"
+    ],
+    "dropped_units": 2,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 4,
+    "original_nodes": 5,
+    "remaining_edges": 1,
+    "remaining_nodes": 3,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Statue",
+    "parent_target": "CoffeeTable",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_and_place_simple-Statue-None-CoffeeTable-201__trial_T20190908_124709_477856__game",
+  "task_type": "pick_and_place_simple",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 4,
+    "num_walkthrough_actions": 4,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_and_place_simple-Statue-None-CoffeeTable-201/trial_T20190908_124709_477856",
+  "walkthrough": [
+    "go to diningtable 2",
+    "take statue 2 from diningtable 2",
+    "go to coffeetable 1",
+    "move statue 2 to coffeetable 1"
+  ]
+}

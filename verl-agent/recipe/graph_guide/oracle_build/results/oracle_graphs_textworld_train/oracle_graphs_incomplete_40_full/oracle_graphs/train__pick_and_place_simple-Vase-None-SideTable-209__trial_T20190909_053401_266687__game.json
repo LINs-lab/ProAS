@@ -1,0 +1,135 @@
+{
+  "edges": [],
+  "gamefile": "train/pick_and_place_simple-Vase-None-SideTable-209/trial_T20190909_053401_266687/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[sidetable 2]",
+    "placed:1@TARGET_PARENT[sidetable 2]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a coffeetable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 2, a sidetable 1, and a sofa 1.\n\nYour task is to: put some vase on sidetable.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine dresser 1",
+        "examine vase 3",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move vase 3 to dresser 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[dresser 1] | holding:TARGET_OBJ[vase 3]",
+      "node_id": "O2",
+      "observation": "You pick up the vase 3 from the dresser 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[dresser 1]",
+        "holding:TARGET_OBJ[vase 3]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine sidetable 2",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take vase 3 from sidetable 2"
+      ],
+      "depth": 2,
+      "label": "at:GOAL_RECEP[sidetable 2] | placed:1@TARGET_PARENT[sidetable 2] | success",
+      "node_id": "O4",
+      "observation": "You move the vase 3 to the sidetable 2.",
+      "signature": [
+        "at:GOAL_RECEP[sidetable 2]",
+        "placed:1@TARGET_PARENT[sidetable 2]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [
+      "O1",
+      "O3"
+    ],
+    "dropped_units": 2,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 4,
+    "original_nodes": 5,
+    "remaining_edges": 0,
+    "remaining_nodes": 3,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Vase",
+    "parent_target": "SideTable",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_and_place_simple-Vase-None-SideTable-209__trial_T20190909_053401_266687__game",
+  "task_type": "pick_and_place_simple",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 4,
+    "num_walkthrough_actions": 4,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_and_place_simple-Vase-None-SideTable-209/trial_T20190909_053401_266687",
+  "walkthrough": [
+    "go to dresser 1",
+    "take vase 3 from dresser 1",
+    "go to sidetable 2",
+    "move vase 3 to sidetable 2"
+  ]
+}

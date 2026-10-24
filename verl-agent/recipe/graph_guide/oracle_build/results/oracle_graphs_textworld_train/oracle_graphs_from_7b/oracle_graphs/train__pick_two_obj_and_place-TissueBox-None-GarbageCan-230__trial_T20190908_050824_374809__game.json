@@ -1,0 +1,647 @@
+{
+  "distillation_input": "official_outputs/7B/alfworld/GRPO_7B_infer/validation_data/0.jsonl",
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::LOC[coffeetable 1]",
+      "admissible_before": [
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to coffeetable 2",
+        "go to diningtable 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "success_adfec0b7_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at coffeetable 1. On the coffeetable 1, you see a houseplant 2, a laptop 1, a plate 1, a statue 2, and a statue 1.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a coffeetable 2, a coffeetable 1, a diningtable 1, a garbagecan 1, a sidetable 2, a sidetable 1, and a sofa 1.\n\nYour task is to: find two tissuebox and put them in garbagecan.",
+      "oracle_step_idx": 0,
+      "path_source": "success_trajectory",
+      "role_text": "LOC[coffeetable 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:LOC[coffeetable 1]"
+      ],
+      "walkthrough_action": "go to coffeetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::OBJECT_SOURCE[diningtable 1]",
+      "admissible_before": [
+        "examine coffeetable 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 2",
+        "go to diningtable 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take laptop 1 from coffeetable 1",
+        "take plate 1 from coffeetable 1",
+        "take statue 1 from coffeetable 1",
+        "take statue 2 from coffeetable 1"
+      ],
+      "done": false,
+      "dst": "O2",
+      "edge_id": "success_adfec0b7_e1",
+      "from_signature": [
+        "at:LOC[coffeetable 1]"
+      ],
+      "observation_after": "You arrive at diningtable 1. On the diningtable 1, you see a box 1, a candle 1, a newspaper 2, a newspaper 1, a plate 3, a plate 2, a statue 3, a tissuebox 3, a tissuebox 1, and a watch 2.",
+      "observation_before": "You arrive at coffeetable 1. On the coffeetable 1, you see a houseplant 2, a laptop 1, a plate 1, a statue 2, and a statue 1.",
+      "oracle_step_idx": 1,
+      "path_source": "success_trajectory",
+      "role_text": "OBJECT_SOURCE[diningtable 1]",
+      "src": "O1",
+      "to_signature": [
+        "at:OBJECT_SOURCE[diningtable 1]"
+      ],
+      "walkthrough_action": "go to diningtable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "ExamineObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "ExamineObject::LITERAL::diningtable[diningtable 1]",
+      "admissible_before": [
+        "examine diningtable 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to coffeetable 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take box 1 from diningtable 1",
+        "take candle 1 from diningtable 1",
+        "take newspaper 1 from diningtable 1",
+        "take newspaper 2 from diningtable 1",
+        "take plate 2 from diningtable 1",
+        "take plate 3 from diningtable 1",
+        "take statue 3 from diningtable 1",
+        "take tissuebox 1 from diningtable 1",
+        "take tissuebox 3 from diningtable 1",
+        "take watch 2 from diningtable 1"
+      ],
+      "done": false,
+      "dst": "O2",
+      "edge_id": "success_adfec0b7_e2",
+      "from_signature": [
+        "at:OBJECT_SOURCE[diningtable 1]"
+      ],
+      "observation_after": "On the diningtable 1, you see a box 1, a candle 1, a newspaper 2, a newspaper 1, a plate 3, a plate 2, a statue 3, a tissuebox 3, a tissuebox 1, and a watch 2.",
+      "observation_before": "You arrive at diningtable 1. On the diningtable 1, you see a box 1, a candle 1, a newspaper 2, a newspaper 1, a plate 3, a plate 2, a statue 3, a tissuebox 3, a tissuebox 1, and a watch 2.",
+      "oracle_step_idx": 2,
+      "path_source": "success_trajectory",
+      "role_text": "LITERAL::diningtable[diningtable 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:OBJECT_SOURCE[diningtable 1]"
+      ],
+      "walkthrough_action": "examine diningtable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PickupObject::TARGET_OBJ[tissuebox 1]|LITERAL::diningtable[diningtable 1]",
+      "admissible_before": [
+        "examine diningtable 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to coffeetable 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take box 1 from diningtable 1",
+        "take candle 1 from diningtable 1",
+        "take newspaper 1 from diningtable 1",
+        "take newspaper 2 from diningtable 1",
+        "take plate 2 from diningtable 1",
+        "take plate 3 from diningtable 1",
+        "take statue 3 from diningtable 1",
+        "take tissuebox 1 from diningtable 1",
+        "take tissuebox 3 from diningtable 1",
+        "take watch 2 from diningtable 1"
+      ],
+      "done": false,
+      "dst": "O3",
+      "edge_id": "success_adfec0b7_e3",
+      "from_signature": [
+        "at:OBJECT_SOURCE[diningtable 1]"
+      ],
+      "observation_after": "You pick up the tissuebox 1 from the diningtable 1.",
+      "observation_before": "On the diningtable 1, you see a box 1, a candle 1, a newspaper 2, a newspaper 1, a plate 3, a plate 2, a statue 3, a tissuebox 3, a tissuebox 1, and a watch 2.",
+      "oracle_step_idx": 3,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[tissuebox 1] -> LITERAL::diningtable[diningtable 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:OBJECT_SOURCE[diningtable 1]",
+        "holding:TARGET_OBJ[tissuebox 1]"
+      ],
+      "walkthrough_action": "take tissuebox 1 from diningtable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::GOAL_RECEP[garbagecan 1]",
+      "admissible_before": [
+        "examine diningtable 1",
+        "examine tissuebox 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to coffeetable 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move tissuebox 1 to diningtable 1"
+      ],
+      "done": false,
+      "dst": "O4",
+      "edge_id": "success_adfec0b7_e4",
+      "from_signature": [
+        "at:OBJECT_SOURCE[diningtable 1]",
+        "holding:TARGET_OBJ[tissuebox 1]"
+      ],
+      "observation_after": "You arrive at garbagecan 1. On the garbagecan 1, you see nothing.",
+      "observation_before": "You pick up the tissuebox 1 from the diningtable 1.",
+      "oracle_step_idx": 4,
+      "path_source": "success_trajectory",
+      "role_text": "GOAL_RECEP[garbagecan 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:GOAL_RECEP[garbagecan 1]",
+        "holding:TARGET_OBJ[tissuebox 1]"
+      ],
+      "walkthrough_action": "go to garbagecan 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PutObject::TARGET_OBJ[tissuebox 1]|TARGET_PARENT[garbagecan 1]",
+      "admissible_before": [
+        "examine garbagecan 1",
+        "examine tissuebox 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to coffeetable 2",
+        "go to diningtable 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move tissuebox 1 to garbagecan 1"
+      ],
+      "done": false,
+      "dst": "O5",
+      "edge_id": "success_adfec0b7_e5",
+      "from_signature": [
+        "at:GOAL_RECEP[garbagecan 1]",
+        "holding:TARGET_OBJ[tissuebox 1]"
+      ],
+      "observation_after": "You move the tissuebox 1 to the garbagecan 1.",
+      "observation_before": "You arrive at garbagecan 1. On the garbagecan 1, you see nothing.",
+      "oracle_step_idx": 5,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[tissuebox 1] -> TARGET_PARENT[garbagecan 1]",
+      "src": "O4",
+      "to_signature": [
+        "at:GOAL_RECEP[garbagecan 1]",
+        "placed:1@TARGET_PARENT[garbagecan 1]"
+      ],
+      "walkthrough_action": "move tissuebox 1 to garbagecan 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::OBJECT_SOURCE[diningtable 1]",
+      "admissible_before": [
+        "examine garbagecan 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to coffeetable 2",
+        "go to diningtable 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take tissuebox 1 from garbagecan 1"
+      ],
+      "done": false,
+      "dst": "O6",
+      "edge_id": "success_adfec0b7_e6",
+      "from_signature": [
+        "at:GOAL_RECEP[garbagecan 1]",
+        "placed:1@TARGET_PARENT[garbagecan 1]"
+      ],
+      "observation_after": "You arrive at diningtable 1. On the diningtable 1, you see a box 1, a candle 1, a newspaper 2, a newspaper 1, a plate 3, a plate 2, a statue 3, a tissuebox 3, and a watch 2.",
+      "observation_before": "You move the tissuebox 1 to the garbagecan 1.",
+      "oracle_step_idx": 6,
+      "path_source": "success_trajectory",
+      "role_text": "OBJECT_SOURCE[diningtable 1]",
+      "src": "O5",
+      "to_signature": [
+        "at:OBJECT_SOURCE[diningtable 1]",
+        "placed:1@TARGET_PARENT[garbagecan 1]"
+      ],
+      "walkthrough_action": "go to diningtable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PickupObject::TARGET_OBJ[tissuebox 3]|LITERAL::diningtable[diningtable 1]",
+      "admissible_before": [
+        "examine diningtable 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to coffeetable 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take box 1 from diningtable 1",
+        "take candle 1 from diningtable 1",
+        "take newspaper 1 from diningtable 1",
+        "take newspaper 2 from diningtable 1",
+        "take plate 2 from diningtable 1",
+        "take plate 3 from diningtable 1",
+        "take statue 3 from diningtable 1",
+        "take tissuebox 3 from diningtable 1",
+        "take watch 2 from diningtable 1"
+      ],
+      "done": false,
+      "dst": "O7",
+      "edge_id": "success_adfec0b7_e7",
+      "from_signature": [
+        "at:OBJECT_SOURCE[diningtable 1]",
+        "placed:1@TARGET_PARENT[garbagecan 1]"
+      ],
+      "observation_after": "You pick up the tissuebox 3 from the diningtable 1.",
+      "observation_before": "You arrive at diningtable 1. On the diningtable 1, you see a box 1, a candle 1, a newspaper 2, a newspaper 1, a plate 3, a plate 2, a statue 3, a tissuebox 3, and a watch 2.",
+      "oracle_step_idx": 7,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[tissuebox 3] -> LITERAL::diningtable[diningtable 1]",
+      "src": "O6",
+      "to_signature": [
+        "at:OBJECT_SOURCE[diningtable 1]",
+        "holding:TARGET_OBJ[tissuebox 3]",
+        "placed:1@none"
+      ],
+      "walkthrough_action": "take tissuebox 3 from diningtable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::GOAL_RECEP[garbagecan 1]",
+      "admissible_before": [
+        "examine diningtable 1",
+        "examine tissuebox 3",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to coffeetable 2",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move tissuebox 3 to diningtable 1"
+      ],
+      "done": false,
+      "dst": "O8",
+      "edge_id": "success_adfec0b7_e8",
+      "from_signature": [
+        "at:OBJECT_SOURCE[diningtable 1]",
+        "holding:TARGET_OBJ[tissuebox 3]",
+        "placed:1@none"
+      ],
+      "observation_after": "You arrive at garbagecan 1. On the garbagecan 1, you see a tissuebox 1.",
+      "observation_before": "You pick up the tissuebox 3 from the diningtable 1.",
+      "oracle_step_idx": 8,
+      "path_source": "success_trajectory",
+      "role_text": "GOAL_RECEP[garbagecan 1]",
+      "src": "O7",
+      "to_signature": [
+        "at:GOAL_RECEP[garbagecan 1]",
+        "holding:TARGET_OBJ[tissuebox 3]",
+        "placed:1@none"
+      ],
+      "walkthrough_action": "go to garbagecan 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PutObject::TARGET_OBJ[tissuebox 3]|TARGET_PARENT[garbagecan 1]",
+      "admissible_before": [
+        "examine garbagecan 1",
+        "examine tissuebox 3",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to coffeetable 2",
+        "go to diningtable 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move tissuebox 3 to garbagecan 1"
+      ],
+      "done": true,
+      "dst": "O9",
+      "edge_id": "success_adfec0b7_e9",
+      "from_signature": [
+        "at:GOAL_RECEP[garbagecan 1]",
+        "holding:TARGET_OBJ[tissuebox 3]",
+        "placed:1@none"
+      ],
+      "observation_after": "You move the tissuebox 3 to the garbagecan 1.",
+      "observation_before": "You arrive at garbagecan 1. On the garbagecan 1, you see a tissuebox 1.",
+      "oracle_step_idx": 9,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[tissuebox 3] -> TARGET_PARENT[garbagecan 1]",
+      "src": "O8",
+      "to_signature": [
+        "at:GOAL_RECEP[garbagecan 1]",
+        "placed:2@TARGET_PARENT[garbagecan 1]",
+        "success"
+      ],
+      "walkthrough_action": "move tissuebox 3 to garbagecan 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_two_obj_and_place-TissueBox-None-GarbageCan-230/trial_T20190908_050824_374809/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[garbagecan 1]",
+    "placed:2@TARGET_PARENT[garbagecan 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to coffeetable 2",
+        "go to diningtable 1",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a coffeetable 2, a coffeetable 1, a diningtable 1, a garbagecan 1, a sidetable 2, a sidetable 1, and a sofa 1.\n\nYour task is to: find two tissuebox and put them in garbagecan.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 1,
+      "label": "at:LOC[coffeetable 1]",
+      "node_id": "O1",
+      "observation": "You arrive at coffeetable 1. On the coffeetable 1, you see a houseplant 2, a laptop 1, a plate 1, a statue 2, and a statue 1.",
+      "signature": [
+        "at:LOC[coffeetable 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[diningtable 1]",
+      "node_id": "O2",
+      "observation": "You arrive at diningtable 1. On the diningtable 1, you see a box 1, a candle 1, a newspaper 2, a newspaper 1, a plate 3, a plate 2, a statue 3, a tissuebox 3, a tissuebox 1, and a watch 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[diningtable 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 3,
+      "label": "at:OBJECT_SOURCE[diningtable 1] | holding:TARGET_OBJ[tissuebox 1]",
+      "node_id": "O3",
+      "observation": "You pick up the tissuebox 1 from the diningtable 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[diningtable 1]",
+        "holding:TARGET_OBJ[tissuebox 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 4,
+      "label": "at:GOAL_RECEP[garbagecan 1] | holding:TARGET_OBJ[tissuebox 1]",
+      "node_id": "O4",
+      "observation": "You arrive at garbagecan 1. On the garbagecan 1, you see nothing.",
+      "signature": [
+        "at:GOAL_RECEP[garbagecan 1]",
+        "holding:TARGET_OBJ[tissuebox 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 5,
+      "label": "at:GOAL_RECEP[garbagecan 1] | placed:1@TARGET_PARENT[garbagecan 1]",
+      "node_id": "O5",
+      "observation": "You move the tissuebox 1 to the garbagecan 1.",
+      "signature": [
+        "at:GOAL_RECEP[garbagecan 1]",
+        "placed:1@TARGET_PARENT[garbagecan 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 6,
+      "label": "at:OBJECT_SOURCE[diningtable 1] | placed:1@TARGET_PARENT[garbagecan 1]",
+      "node_id": "O6",
+      "observation": "You arrive at diningtable 1. On the diningtable 1, you see a box 1, a candle 1, a newspaper 2, a newspaper 1, a plate 3, a plate 2, a statue 3, a tissuebox 3, and a watch 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[diningtable 1]",
+        "placed:1@TARGET_PARENT[garbagecan 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 7,
+      "label": "at:OBJECT_SOURCE[diningtable 1] | holding:TARGET_OBJ[tissuebox 3] | placed:1@none",
+      "node_id": "O7",
+      "observation": "You pick up the tissuebox 3 from the diningtable 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[diningtable 1]",
+        "holding:TARGET_OBJ[tissuebox 3]",
+        "placed:1@none"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 8,
+      "label": "at:GOAL_RECEP[garbagecan 1] | holding:TARGET_OBJ[tissuebox 3] | placed:1@none",
+      "node_id": "O8",
+      "observation": "You arrive at garbagecan 1. On the garbagecan 1, you see a tissuebox 1.",
+      "signature": [
+        "at:GOAL_RECEP[garbagecan 1]",
+        "holding:TARGET_OBJ[tissuebox 3]",
+        "placed:1@none"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 9,
+      "label": "at:GOAL_RECEP[garbagecan 1] | placed:2@TARGET_PARENT[garbagecan 1] | success",
+      "node_id": "O9",
+      "observation": "You move the tissuebox 3 to the garbagecan 1.",
+      "signature": [
+        "at:GOAL_RECEP[garbagecan 1]",
+        "placed:2@TARGET_PARENT[garbagecan 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_type": "alfworld_teacher_distilled",
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "TissueBox",
+    "parent_target": "GarbageCan",
+    "toggle_target": ""
+  },
+  "reference_paths": [
+    {
+      "edge_ids": [
+        "success_adfec0b7_e0",
+        "success_adfec0b7_e1",
+        "success_adfec0b7_e2",
+        "success_adfec0b7_e3",
+        "success_adfec0b7_e4",
+        "success_adfec0b7_e5",
+        "success_adfec0b7_e6",
+        "success_adfec0b7_e7",
+        "success_adfec0b7_e8",
+        "success_adfec0b7_e9"
+      ],
+      "node_ids": [
+        "O0",
+        "O1",
+        "O2",
+        "O3",
+        "O4",
+        "O5",
+        "O6",
+        "O7",
+        "O8",
+        "O9"
+      ],
+      "path_id": "success_adfec0b7",
+      "source": "success_trajectory",
+      "traj_uid": "adfec0b7-a2b2-42e4-aff4-29c61f8d9b00",
+      "walkthrough": [
+        "go to coffeetable 1",
+        "go to diningtable 1",
+        "examine diningtable 1",
+        "take tissuebox 1 from diningtable 1",
+        "go to garbagecan 1",
+        "move tissuebox 1 to garbagecan 1",
+        "go to diningtable 1",
+        "take tissuebox 3 from diningtable 1",
+        "go to garbagecan 1",
+        "move tissuebox 3 to garbagecan 1"
+      ]
+    }
+  ],
+  "signature_mode": "entity",
+  "source": "teacher_7b_grpo_success_raw",
+  "state_source": "teacher_7b_grpo_success_raw",
+  "task_key": "train__pick_two_obj_and_place-TissueBox-None-GarbageCan-230__trial_T20190908_050824_374809__game",
+  "task_type": "pick_two_obj_and_place",
+  "teacher_model": "official_outputs/7B/alfworld/grpo_alfworld/grpo_alfworld/global_step_140/actor",
+  "teacher_traj_uid": "adfec0b7-a2b2-42e4-aff4-29c61f8d9b00",
+  "trial_dir": "train/pick_two_obj_and_place-TissueBox-None-GarbageCan-230/trial_T20190908_050824_374809",
+  "walkthrough": [
+    "go to coffeetable 1",
+    "go to diningtable 1",
+    "examine diningtable 1",
+    "take tissuebox 1 from diningtable 1",
+    "go to garbagecan 1",
+    "move tissuebox 1 to garbagecan 1",
+    "go to diningtable 1",
+    "take tissuebox 3 from diningtable 1",
+    "go to garbagecan 1",
+    "move tissuebox 3 to garbagecan 1"
+  ]
+}

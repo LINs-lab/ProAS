@@ -1,0 +1,665 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "desk 1"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[desk 1]",
+      "admissible_before": [
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at desk 1. On the desk 1, you see a alarmclock 1, a cellphone 2, a cellphone 1, a creditcard 3, a creditcard 2, a desklamp 1, a keychain 1, a pen 2, and a pencil 2.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, and a garbagecan 1.\n\nYour task is to: put two cellphone in bed.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[desk 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[desk 1]"
+      ],
+      "walkthrough_action": "go to desk 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "cellphone 2"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[cellphone 2]",
+      "admissible_before": [
+        "examine desk 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "help",
+        "inventory",
+        "look",
+        "take alarmclock 1 from desk 1",
+        "take cellphone 1 from desk 1",
+        "take cellphone 2 from desk 1",
+        "take creditcard 2 from desk 1",
+        "take creditcard 3 from desk 1",
+        "take keychain 1 from desk 1",
+        "take pen 2 from desk 1",
+        "take pencil 2 from desk 1",
+        "use desklamp 1"
+      ],
+      "done": false,
+      "dst": "O2",
+      "from_signature": [
+        "at:OBJECT_SOURCE[desk 1]"
+      ],
+      "observation_after": "You pick up the cellphone 2 from the desk 1.",
+      "observation_before": "You arrive at desk 1. On the desk 1, you see a alarmclock 1, a cellphone 2, a cellphone 1, a creditcard 3, a creditcard 2, a desklamp 1, a keychain 1, a pen 2, and a pencil 2.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_OBJ[cellphone 2]",
+      "src": "O1",
+      "to_signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "holding:TARGET_OBJ[cellphone 2]"
+      ],
+      "walkthrough_action": "take cellphone 2 from desk 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "bed 1"
+      ],
+      "abstract_roles": [
+        "GOAL_RECEP"
+      ],
+      "action_key": "GotoLocation::GOAL_RECEP[bed 1]",
+      "admissible_before": [
+        "examine cellphone 2",
+        "examine desk 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "help",
+        "inventory",
+        "look",
+        "move cellphone 2 to desk 1",
+        "use desklamp 1"
+      ],
+      "done": false,
+      "dst": "O3",
+      "from_signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "holding:TARGET_OBJ[cellphone 2]"
+      ],
+      "observation_after": "You arrive at bed 1. On the bed 1, you see a laptop 1, and a pillow 1.",
+      "observation_before": "You pick up the cellphone 2 from the desk 1.",
+      "oracle_step_idx": 2,
+      "role_text": "GOAL_RECEP[bed 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:GOAL_RECEP[bed 1]",
+        "holding:TARGET_OBJ[cellphone 2]"
+      ],
+      "walkthrough_action": "go to bed 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "cellphone 2",
+        "bed 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[cellphone 2]|TARGET_PARENT[bed 1]",
+      "admissible_before": [
+        "examine bed 1",
+        "examine cellphone 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "help",
+        "inventory",
+        "look",
+        "move cellphone 2 to bed 1"
+      ],
+      "done": false,
+      "dst": "O4",
+      "from_signature": [
+        "at:GOAL_RECEP[bed 1]",
+        "holding:TARGET_OBJ[cellphone 2]"
+      ],
+      "observation_after": "You move the cellphone 2 to the bed 1.",
+      "observation_before": "You arrive at bed 1. On the bed 1, you see a laptop 1, and a pillow 1.",
+      "oracle_step_idx": 3,
+      "role_text": "TARGET_OBJ[cellphone 2] -> TARGET_PARENT[bed 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:GOAL_RECEP[bed 1]",
+        "placed:1@TARGET_PARENT[bed 1]"
+      ],
+      "walkthrough_action": "move cellphone 2 to bed 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "desk 1"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[desk 1]",
+      "admissible_before": [
+        "examine bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "help",
+        "inventory",
+        "look",
+        "take cellphone 2 from bed 1",
+        "take laptop 1 from bed 1",
+        "take pillow 1 from bed 1"
+      ],
+      "done": false,
+      "dst": "O5",
+      "from_signature": [
+        "at:GOAL_RECEP[bed 1]",
+        "placed:1@TARGET_PARENT[bed 1]"
+      ],
+      "observation_after": "You arrive at desk 1. On the desk 1, you see a alarmclock 1, a cellphone 1, a creditcard 3, a creditcard 2, a desklamp 1, a keychain 1, a pen 2, and a pencil 2.",
+      "observation_before": "You move the cellphone 2 to the bed 1.",
+      "oracle_step_idx": 4,
+      "role_text": "OBJECT_SOURCE[desk 1]",
+      "src": "O4",
+      "to_signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "placed:1@TARGET_PARENT[bed 1]"
+      ],
+      "walkthrough_action": "go to desk 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "cellphone 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[cellphone 1]",
+      "admissible_before": [
+        "examine desk 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "help",
+        "inventory",
+        "look",
+        "take alarmclock 1 from desk 1",
+        "take cellphone 1 from desk 1",
+        "take creditcard 2 from desk 1",
+        "take creditcard 3 from desk 1",
+        "take keychain 1 from desk 1",
+        "take pen 2 from desk 1",
+        "take pencil 2 from desk 1",
+        "use desklamp 1"
+      ],
+      "done": false,
+      "dst": "O6",
+      "from_signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "placed:1@TARGET_PARENT[bed 1]"
+      ],
+      "observation_after": "You pick up the cellphone 1 from the desk 1.",
+      "observation_before": "You arrive at desk 1. On the desk 1, you see a alarmclock 1, a cellphone 1, a creditcard 3, a creditcard 2, a desklamp 1, a keychain 1, a pen 2, and a pencil 2.",
+      "oracle_step_idx": 5,
+      "role_text": "TARGET_OBJ[cellphone 1]",
+      "src": "O5",
+      "to_signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "holding:TARGET_OBJ[cellphone 1]",
+        "placed:1@none"
+      ],
+      "walkthrough_action": "take cellphone 1 from desk 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "bed 1"
+      ],
+      "abstract_roles": [
+        "GOAL_RECEP"
+      ],
+      "action_key": "GotoLocation::GOAL_RECEP[bed 1]",
+      "admissible_before": [
+        "examine cellphone 1",
+        "examine desk 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "help",
+        "inventory",
+        "look",
+        "move cellphone 1 to desk 1",
+        "use desklamp 1"
+      ],
+      "done": false,
+      "dst": "O7",
+      "from_signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "holding:TARGET_OBJ[cellphone 1]",
+        "placed:1@none"
+      ],
+      "observation_after": "You arrive at bed 1. On the bed 1, you see a cellphone 2, a laptop 1, and a pillow 1.",
+      "observation_before": "You pick up the cellphone 1 from the desk 1.",
+      "oracle_step_idx": 6,
+      "role_text": "GOAL_RECEP[bed 1]",
+      "src": "O6",
+      "to_signature": [
+        "at:GOAL_RECEP[bed 1]",
+        "holding:TARGET_OBJ[cellphone 1]",
+        "placed:1@none"
+      ],
+      "walkthrough_action": "go to bed 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "cellphone 1",
+        "bed 1"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[cellphone 1]|TARGET_PARENT[bed 1]",
+      "admissible_before": [
+        "examine bed 1",
+        "examine cellphone 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "help",
+        "inventory",
+        "look",
+        "move cellphone 1 to bed 1"
+      ],
+      "done": true,
+      "dst": "O8",
+      "from_signature": [
+        "at:GOAL_RECEP[bed 1]",
+        "holding:TARGET_OBJ[cellphone 1]",
+        "placed:1@none"
+      ],
+      "observation_after": "You move the cellphone 1 to the bed 1.",
+      "observation_before": "You arrive at bed 1. On the bed 1, you see a cellphone 2, a laptop 1, and a pillow 1.",
+      "oracle_step_idx": 7,
+      "role_text": "TARGET_OBJ[cellphone 1] -> TARGET_PARENT[bed 1]",
+      "src": "O7",
+      "to_signature": [
+        "at:GOAL_RECEP[bed 1]",
+        "placed:2@TARGET_PARENT[bed 1]",
+        "success"
+      ],
+      "walkthrough_action": "move cellphone 1 to bed 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_two_obj_and_place-CellPhone-None-Bed-314/trial_T20190909_013349_694646/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[bed 1]",
+    "placed:2@TARGET_PARENT[bed 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, and a garbagecan 1.\n\nYour task is to: put two cellphone in bed.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine desk 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "help",
+        "inventory",
+        "look",
+        "take alarmclock 1 from desk 1",
+        "take cellphone 1 from desk 1",
+        "take cellphone 2 from desk 1",
+        "take creditcard 2 from desk 1",
+        "take creditcard 3 from desk 1",
+        "take keychain 1 from desk 1",
+        "take pen 2 from desk 1",
+        "take pencil 2 from desk 1",
+        "use desklamp 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[desk 1]",
+      "node_id": "O1",
+      "observation": "You arrive at desk 1. On the desk 1, you see a alarmclock 1, a cellphone 2, a cellphone 1, a creditcard 3, a creditcard 2, a desklamp 1, a keychain 1, a pen 2, and a pencil 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[desk 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine cellphone 2",
+        "examine desk 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "help",
+        "inventory",
+        "look",
+        "move cellphone 2 to desk 1",
+        "use desklamp 1"
+      ],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[desk 1] | holding:TARGET_OBJ[cellphone 2]",
+      "node_id": "O2",
+      "observation": "You pick up the cellphone 2 from the desk 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "holding:TARGET_OBJ[cellphone 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine bed 1",
+        "examine cellphone 2",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "help",
+        "inventory",
+        "look",
+        "move cellphone 2 to bed 1"
+      ],
+      "depth": 3,
+      "label": "at:GOAL_RECEP[bed 1] | holding:TARGET_OBJ[cellphone 2]",
+      "node_id": "O3",
+      "observation": "You arrive at bed 1. On the bed 1, you see a laptop 1, and a pillow 1.",
+      "signature": [
+        "at:GOAL_RECEP[bed 1]",
+        "holding:TARGET_OBJ[cellphone 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "help",
+        "inventory",
+        "look",
+        "take cellphone 2 from bed 1",
+        "take laptop 1 from bed 1",
+        "take pillow 1 from bed 1"
+      ],
+      "depth": 4,
+      "label": "at:GOAL_RECEP[bed 1] | placed:1@TARGET_PARENT[bed 1]",
+      "node_id": "O4",
+      "observation": "You move the cellphone 2 to the bed 1.",
+      "signature": [
+        "at:GOAL_RECEP[bed 1]",
+        "placed:1@TARGET_PARENT[bed 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine desk 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "help",
+        "inventory",
+        "look",
+        "take alarmclock 1 from desk 1",
+        "take cellphone 1 from desk 1",
+        "take creditcard 2 from desk 1",
+        "take creditcard 3 from desk 1",
+        "take keychain 1 from desk 1",
+        "take pen 2 from desk 1",
+        "take pencil 2 from desk 1",
+        "use desklamp 1"
+      ],
+      "depth": 5,
+      "label": "at:OBJECT_SOURCE[desk 1] | placed:1@TARGET_PARENT[bed 1]",
+      "node_id": "O5",
+      "observation": "You arrive at desk 1. On the desk 1, you see a alarmclock 1, a cellphone 1, a creditcard 3, a creditcard 2, a desklamp 1, a keychain 1, a pen 2, and a pencil 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "placed:1@TARGET_PARENT[bed 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine cellphone 1",
+        "examine desk 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "help",
+        "inventory",
+        "look",
+        "move cellphone 1 to desk 1",
+        "use desklamp 1"
+      ],
+      "depth": 6,
+      "label": "at:OBJECT_SOURCE[desk 1] | holding:TARGET_OBJ[cellphone 1] | placed:1@none",
+      "node_id": "O6",
+      "observation": "You pick up the cellphone 1 from the desk 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[desk 1]",
+        "holding:TARGET_OBJ[cellphone 1]",
+        "placed:1@none"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine bed 1",
+        "examine cellphone 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "help",
+        "inventory",
+        "look",
+        "move cellphone 1 to bed 1"
+      ],
+      "depth": 7,
+      "label": "at:GOAL_RECEP[bed 1] | holding:TARGET_OBJ[cellphone 1] | placed:1@none",
+      "node_id": "O7",
+      "observation": "You arrive at bed 1. On the bed 1, you see a cellphone 2, a laptop 1, and a pillow 1.",
+      "signature": [
+        "at:GOAL_RECEP[bed 1]",
+        "holding:TARGET_OBJ[cellphone 1]",
+        "placed:1@none"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine bed 1",
+        "go to desk 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to dresser 1",
+        "go to garbagecan 1",
+        "help",
+        "inventory",
+        "look",
+        "take cellphone 1 from bed 1",
+        "take cellphone 2 from bed 1",
+        "take laptop 1 from bed 1",
+        "take pillow 1 from bed 1"
+      ],
+      "depth": 8,
+      "label": "at:GOAL_RECEP[bed 1] | placed:2@TARGET_PARENT[bed 1] | success",
+      "node_id": "O8",
+      "observation": "You move the cellphone 1 to the bed 1.",
+      "signature": [
+        "at:GOAL_RECEP[bed 1]",
+        "placed:2@TARGET_PARENT[bed 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "CellPhone",
+    "parent_target": "Bed",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_two_obj_and_place-CellPhone-None-Bed-314__trial_T20190909_013349_694646__game",
+  "task_type": "pick_two_obj_and_place",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 8,
+    "num_walkthrough_actions": 8,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_two_obj_and_place-CellPhone-None-Bed-314/trial_T20190909_013349_694646",
+  "walkthrough": [
+    "go to desk 1",
+    "take cellphone 2 from desk 1",
+    "go to bed 1",
+    "move cellphone 2 to bed 1",
+    "go to desk 1",
+    "take cellphone 1 from desk 1",
+    "go to bed 1",
+    "move cellphone 1 to bed 1"
+  ]
+}

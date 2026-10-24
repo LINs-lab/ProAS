@@ -1,0 +1,483 @@
+{
+  "distillation_input": "official_outputs/7B/alfworld/GRPO_7B_infer/validation_data/0.jsonl",
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::OBJECT_SOURCE[countertop 1]",
+      "admissible_before": [
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to sinkbasin 2",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "success_e447308f_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at countertop 1. On the countertop 1, you see a cloth 3, a cloth 1, a soapbottle 2, and a toiletpaper 1.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a countertop 1, a drawer 2, a drawer 1, a garbagecan 1, a handtowelholder 2, a handtowelholder 1, a sinkbasin 2, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.\n\nYour task is to: clean some cloth and put it in drawer.",
+      "oracle_step_idx": 0,
+      "path_source": "success_trajectory",
+      "role_text": "OBJECT_SOURCE[countertop 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[countertop 1]"
+      ],
+      "walkthrough_action": "go to countertop 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PickupObject::TARGET_OBJ[cloth 1]|LITERAL::countertop[countertop 1]",
+      "admissible_before": [
+        "examine countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to sinkbasin 2",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "take cloth 1 from countertop 1",
+        "take cloth 3 from countertop 1",
+        "take soapbottle 2 from countertop 1",
+        "take toiletpaper 1 from countertop 1"
+      ],
+      "done": false,
+      "dst": "O2",
+      "edge_id": "success_e447308f_e1",
+      "from_signature": [
+        "at:OBJECT_SOURCE[countertop 1]"
+      ],
+      "observation_after": "You pick up the cloth 1 from the countertop 1.",
+      "observation_before": "You arrive at countertop 1. On the countertop 1, you see a cloth 3, a cloth 1, a soapbottle 2, and a toiletpaper 1.",
+      "oracle_step_idx": 1,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[cloth 1] -> LITERAL::countertop[countertop 1]",
+      "src": "O1",
+      "to_signature": [
+        "at:OBJECT_SOURCE[countertop 1]",
+        "holding:TARGET_OBJ[cloth 1]"
+      ],
+      "walkthrough_action": "take cloth 1 from countertop 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::CLEAN_STATION[sinkbasin 1]",
+      "admissible_before": [
+        "examine cloth 1",
+        "examine countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to sinkbasin 2",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move cloth 1 to countertop 1"
+      ],
+      "done": false,
+      "dst": "O3",
+      "edge_id": "success_e447308f_e2",
+      "from_signature": [
+        "at:OBJECT_SOURCE[countertop 1]",
+        "holding:TARGET_OBJ[cloth 1]"
+      ],
+      "observation_after": "You arrive at sinkbasin 1. On the sinkbasin 1, you see nothing.",
+      "observation_before": "You pick up the cloth 1 from the countertop 1.",
+      "oracle_step_idx": 2,
+      "path_source": "success_trajectory",
+      "role_text": "CLEAN_STATION[sinkbasin 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:CLEAN_STATION[sinkbasin 1]",
+        "holding:TARGET_OBJ[cloth 1]"
+      ],
+      "walkthrough_action": "go to sinkbasin 1",
+      "won": false
+    },
+    {
+      "abstract_action": "CleanObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "CleanObject::TARGET_OBJ[cloth 1]|LITERAL::sinkbasin[sinkbasin 1]",
+      "admissible_before": [
+        "clean cloth 1 with sinkbasin 1",
+        "examine cloth 1",
+        "examine sinkbasin 1",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 2",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move cloth 1 to sinkbasin 1"
+      ],
+      "done": false,
+      "dst": "O4",
+      "edge_id": "success_e447308f_e3",
+      "from_signature": [
+        "at:CLEAN_STATION[sinkbasin 1]",
+        "holding:TARGET_OBJ[cloth 1]"
+      ],
+      "observation_after": "You clean the cloth 1 using the sinkbasin 1.",
+      "observation_before": "You arrive at sinkbasin 1. On the sinkbasin 1, you see nothing.",
+      "oracle_step_idx": 3,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[cloth 1] -> LITERAL::sinkbasin[sinkbasin 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:CLEAN_STATION[sinkbasin 1]",
+        "holding:TARGET_OBJ[cloth 1]",
+        "object:clean[TARGET_OBJ]"
+      ],
+      "walkthrough_action": "clean cloth 1 with sinkbasin 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::GOAL_RECEP[drawer 1]",
+      "admissible_before": [
+        "clean cloth 1 with sinkbasin 1",
+        "examine cloth 1",
+        "examine sinkbasin 1",
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 2",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move cloth 1 to sinkbasin 1"
+      ],
+      "done": false,
+      "dst": "O5",
+      "edge_id": "success_e447308f_e4",
+      "from_signature": [
+        "at:CLEAN_STATION[sinkbasin 1]",
+        "holding:TARGET_OBJ[cloth 1]",
+        "object:clean[TARGET_OBJ]"
+      ],
+      "observation_after": "You arrive at drawer 1. The drawer 1 is closed.",
+      "observation_before": "You clean the cloth 1 using the sinkbasin 1.",
+      "oracle_step_idx": 4,
+      "path_source": "success_trajectory",
+      "role_text": "GOAL_RECEP[drawer 1]",
+      "src": "O4",
+      "to_signature": [
+        "at:GOAL_RECEP[drawer 1]",
+        "holding:TARGET_OBJ[cloth 1]",
+        "object:clean[TARGET_OBJ]"
+      ],
+      "walkthrough_action": "go to drawer 1",
+      "won": false
+    },
+    {
+      "abstract_action": "OpenObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "OpenObject::TARGET_PARENT[drawer 1]",
+      "admissible_before": [
+        "examine cloth 1",
+        "examine drawer 1",
+        "go to countertop 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to sinkbasin 2",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "open drawer 1"
+      ],
+      "done": false,
+      "dst": "O5",
+      "edge_id": "success_e447308f_e5",
+      "from_signature": [
+        "at:GOAL_RECEP[drawer 1]",
+        "holding:TARGET_OBJ[cloth 1]",
+        "object:clean[TARGET_OBJ]"
+      ],
+      "observation_after": "You open the drawer 1. The drawer 1 is open. In it, you see a soapbar 1.",
+      "observation_before": "You arrive at drawer 1. The drawer 1 is closed.",
+      "oracle_step_idx": 5,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_PARENT[drawer 1]",
+      "src": "O5",
+      "to_signature": [
+        "at:GOAL_RECEP[drawer 1]",
+        "holding:TARGET_OBJ[cloth 1]",
+        "object:clean[TARGET_OBJ]"
+      ],
+      "walkthrough_action": "open drawer 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PutObject::TARGET_OBJ[cloth 1]|TARGET_PARENT[drawer 1]",
+      "admissible_before": [
+        "close drawer 1",
+        "examine cloth 1",
+        "examine drawer 1",
+        "go to countertop 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to sinkbasin 2",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look",
+        "move cloth 1 to drawer 1"
+      ],
+      "done": true,
+      "dst": "O6",
+      "edge_id": "success_e447308f_e6",
+      "from_signature": [
+        "at:GOAL_RECEP[drawer 1]",
+        "holding:TARGET_OBJ[cloth 1]",
+        "object:clean[TARGET_OBJ]"
+      ],
+      "observation_after": "You move the cloth 1 to the drawer 1.",
+      "observation_before": "You open the drawer 1. The drawer 1 is open. In it, you see a soapbar 1.",
+      "oracle_step_idx": 6,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[cloth 1] -> TARGET_PARENT[drawer 1]",
+      "src": "O5",
+      "to_signature": [
+        "at:GOAL_RECEP[drawer 1]",
+        "object:clean[TARGET_OBJ]",
+        "placed:1@TARGET_PARENT[drawer 1]",
+        "success"
+      ],
+      "walkthrough_action": "move cloth 1 to drawer 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_clean_then_place_in_recep-Cloth-None-Drawer-416/trial_T20190908_040609_717998/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[drawer 1]",
+    "object:clean[TARGET_OBJ]",
+    "placed:1@TARGET_PARENT[drawer 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to countertop 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to handtowelholder 2",
+        "go to sinkbasin 1",
+        "go to sinkbasin 2",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a countertop 1, a drawer 2, a drawer 1, a garbagecan 1, a handtowelholder 2, a handtowelholder 1, a sinkbasin 2, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.\n\nYour task is to: clean some cloth and put it in drawer.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[countertop 1]",
+      "node_id": "O1",
+      "observation": "You arrive at countertop 1. On the countertop 1, you see a cloth 3, a cloth 1, a soapbottle 2, and a toiletpaper 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[countertop 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[countertop 1] | holding:TARGET_OBJ[cloth 1]",
+      "node_id": "O2",
+      "observation": "You pick up the cloth 1 from the countertop 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[countertop 1]",
+        "holding:TARGET_OBJ[cloth 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 3,
+      "label": "at:CLEAN_STATION[sinkbasin 1] | holding:TARGET_OBJ[cloth 1]",
+      "node_id": "O3",
+      "observation": "You arrive at sinkbasin 1. On the sinkbasin 1, you see nothing.",
+      "signature": [
+        "at:CLEAN_STATION[sinkbasin 1]",
+        "holding:TARGET_OBJ[cloth 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 4,
+      "label": "at:CLEAN_STATION[sinkbasin 1] | holding:TARGET_OBJ[cloth 1] | object:clean[TARGET_OBJ]",
+      "node_id": "O4",
+      "observation": "You clean the cloth 1 using the sinkbasin 1.",
+      "signature": [
+        "at:CLEAN_STATION[sinkbasin 1]",
+        "holding:TARGET_OBJ[cloth 1]",
+        "object:clean[TARGET_OBJ]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 5,
+      "label": "at:GOAL_RECEP[drawer 1] | holding:TARGET_OBJ[cloth 1] | object:clean[TARGET_OBJ]",
+      "node_id": "O5",
+      "observation": "You arrive at drawer 1. The drawer 1 is closed.",
+      "signature": [
+        "at:GOAL_RECEP[drawer 1]",
+        "holding:TARGET_OBJ[cloth 1]",
+        "object:clean[TARGET_OBJ]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 6,
+      "label": "at:GOAL_RECEP[drawer 1] | object:clean[TARGET_OBJ] | placed:1@TARGET_PARENT[drawer 1] | success",
+      "node_id": "O6",
+      "observation": "You move the cloth 1 to the drawer 1.",
+      "signature": [
+        "at:GOAL_RECEP[drawer 1]",
+        "object:clean[TARGET_OBJ]",
+        "placed:1@TARGET_PARENT[drawer 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_type": "alfworld_teacher_distilled",
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Cloth",
+    "parent_target": "Drawer",
+    "toggle_target": ""
+  },
+  "reference_paths": [
+    {
+      "edge_ids": [
+        "success_e447308f_e0",
+        "success_e447308f_e1",
+        "success_e447308f_e2",
+        "success_e447308f_e3",
+        "success_e447308f_e4",
+        "success_e447308f_e5",
+        "success_e447308f_e6"
+      ],
+      "node_ids": [
+        "O0",
+        "O1",
+        "O2",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "path_id": "success_e447308f",
+      "source": "success_trajectory",
+      "traj_uid": "e447308f-8f3c-4d99-bb54-b2797e878f62",
+      "walkthrough": [
+        "go to countertop 1",
+        "take cloth 1 from countertop 1",
+        "go to sinkbasin 1",
+        "clean cloth 1 with sinkbasin 1",
+        "go to drawer 1",
+        "open drawer 1",
+        "move cloth 1 to drawer 1"
+      ]
+    }
+  ],
+  "signature_mode": "entity",
+  "source": "teacher_7b_grpo_success_raw",
+  "state_source": "teacher_7b_grpo_success_raw",
+  "task_key": "train__pick_clean_then_place_in_recep-Cloth-None-Drawer-416__trial_T20190908_040609_717998__game",
+  "task_type": "pick_clean_then_place_in_recep",
+  "teacher_model": "official_outputs/7B/alfworld/grpo_alfworld/grpo_alfworld/global_step_140/actor",
+  "teacher_traj_uid": "e447308f-8f3c-4d99-bb54-b2797e878f62",
+  "trial_dir": "train/pick_clean_then_place_in_recep-Cloth-None-Drawer-416/trial_T20190908_040609_717998",
+  "walkthrough": [
+    "go to countertop 1",
+    "take cloth 1 from countertop 1",
+    "go to sinkbasin 1",
+    "clean cloth 1 with sinkbasin 1",
+    "go to drawer 1",
+    "open drawer 1",
+    "move cloth 1 to drawer 1"
+  ]
+}

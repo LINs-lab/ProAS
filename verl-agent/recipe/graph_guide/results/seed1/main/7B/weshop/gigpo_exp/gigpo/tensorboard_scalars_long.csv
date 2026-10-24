@@ -1,0 +1,244 @@
+requested_run,actual_run,requested_tag,actual_tag,wall_time,step,value
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780058658.4193575,1,0.5364102125167847
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780058963.1788402,2,0.5301578044891357
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780059285.6115232,3,0.5489546656608582
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780059584.9861217,4,0.5364468693733215
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780060038.5700185,5,0.5724764466285706
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780060318.8516946,6,0.7186610698699951
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780060614.191919,7,0.7143797874450684
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780060910.9751165,8,0.7380979657173157
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780061201.4426591,9,0.7397907376289368
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780061637.3447285,10,0.8857936263084412
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780061924.8018694,11,0.8537967205047607
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780062205.579454,12,0.8827319145202637
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780062500.4737632,13,0.9059369564056396
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780062775.202003,14,0.897280752658844
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780063222.9444401,15,0.9825766086578369
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780063524.98559,16,1.0220410823822021
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780063822.0803149,17,0.9695736765861511
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780064098.5825162,18,0.9303757548332214
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780064386.0293384,19,0.8890602588653564
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780064811.135908,20,0.8376544713973999
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780065098.9863036,21,0.8945856094360352
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780065380.214756,22,0.9042565226554871
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780065667.474658,23,0.8695001602172852
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780065925.2330751,24,0.8987046480178833
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780066326.3594108,25,0.880957841873169
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780066594.7294793,26,0.8448290228843689
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780066858.8663938,27,0.8188328742980957
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780067113.3931541,28,0.8313220143318176
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780067374.6307073,29,0.837749719619751
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780067774.5792115,30,0.8219978213310242
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780068011.110542,31,0.7948670387268066
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780068276.6300032,32,0.7856350541114807
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780068542.9933636,33,0.8277018070220947
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780068801.454678,34,0.8217244744300842
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780069205.2292337,35,0.798048734664917
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780069442.6923006,36,0.769248902797699
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780069695.3548949,37,0.7832630276679993
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780069923.3772795,38,0.7189261317253113
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780070154.9461129,39,0.7077078223228455
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780070511.2101693,40,0.7019853591918945
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780070726.7604005,41,0.6883426904678345
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780070951.0086887,42,0.6645564436912537
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780071175.5788658,43,0.6929505467414856
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780071390.642198,44,0.667177677154541
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780071777.990065,45,0.6564062237739563
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780072000.4610832,46,0.7083703279495239
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780072218.3202899,47,0.6699522733688354
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780072464.2861526,48,0.7655214071273804
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780072692.7049546,49,0.7021791338920593
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780073148.1882634,50,0.7032284736633301
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780073388.8915093,51,0.6776307225227356
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780073619.6160731,52,0.65883469581604
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780073847.0177536,53,0.5968391299247742
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780074084.6737833,54,0.6087977290153503
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780074454.9435909,55,0.5736429691314697
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780074675.3797832,56,0.5750032067298889
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780074897.8202589,57,0.5699846148490906
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780075104.050884,58,0.5476125478744507
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780075337.7473714,59,0.5139360427856445
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780075725.894142,60,0.4841875731945038
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780075947.3700287,61,0.5092260837554932
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780076111.536618,62,0.5168710947036743
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780076293.3536155,63,0.5194253921508789
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780076498.5533369,64,0.5118218660354614
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780076900.1742105,65,0.5161139369010925
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780077110.5910451,66,0.5454314351081848
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780077333.197322,67,0.5309459567070007
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780077528.7832317,68,0.5235149264335632
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780077744.6055536,69,0.4887799024581909
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780078147.3232992,70,0.47279876470565796
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780078363.5608478,71,0.47610533237457275
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780078582.8538268,72,0.506138801574707
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780078800.6149704,73,0.5000086426734924
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780079029.2934704,74,0.5081886649131775
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780079416.9079604,75,0.4611676335334778
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780079625.9943585,76,0.488641619682312
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780079849.8457005,77,0.4698759615421295
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780080069.9468133,78,0.5277259945869446
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780080285.7875445,79,0.4645962417125702
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780080665.2082212,80,0.539777934551239
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780080868.822974,81,0.49523690342903137
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780081086.7648404,82,0.5163866281509399
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780081289.4972076,83,0.5165014863014221
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780081478.8856597,84,0.4701882004737854
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780081847.5659587,85,0.4944005012512207
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780082063.492405,86,0.5248211026191711
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780082271.4499424,87,0.4706731140613556
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780082503.7281723,88,0.4587518274784088
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780082721.879681,89,0.4268462657928467
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780083107.8789616,90,0.4584925174713135
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780083288.8905575,91,0.3680107593536377
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780083497.7863693,92,0.39459428191185
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780083731.4790158,93,0.38246285915374756
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780083949.163199,94,0.36232948303222656
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780084329.68235,95,0.3847604990005493
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780084544.061064,96,0.389947772026062
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780084759.034144,97,0.3975442051887512
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780084977.1276114,98,0.3723973035812378
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780085184.9302082,99,0.40024563670158386
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780085593.4285138,100,0.3523719012737274
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780085802.7573884,101,0.33140313625335693
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780085997.0480695,102,0.3295680582523346
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780086196.193854,103,0.29863908886909485
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780086409.164574,104,0.30860716104507446
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780086769.8355024,105,0.31745779514312744
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780086977.3587847,106,0.2898590564727783
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780087116.9446821,107,0.2983652353286743
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780087323.2834888,108,0.4568636417388916
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780087531.4931254,109,0.40838009119033813
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780087904.1712523,110,0.42094385623931885
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780088112.1260223,111,0.506376326084137
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780088327.3389075,112,0.50030118227005
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780088494.039785,113,0.4873359799385071
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780088686.483061,114,0.47108015418052673
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780088980.4739778,115,0.3787866234779358
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780089186.951851,116,0.45783576369285583
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780089385.376002,117,0.47957560420036316
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780089600.8493924,118,0.4575294554233551
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780089736.825877,119,0.45790818333625793
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780090028.838028,120,0.45011356472969055
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780090231.4177125,121,0.47029784321784973
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780090434.7011423,122,0.4914243817329407
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780090629.5810761,123,0.390468031167984
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780090832.4999897,124,0.4315584897994995
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780091129.2240689,125,0.44666460156440735
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780091298.9724815,126,0.46309930086135864
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780091437.3564403,127,0.566919207572937
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780091667.3092625,128,0.41077056527137756
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780091801.4174297,129,0.5237322449684143
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780092108.4222229,130,0.48174992203712463
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780092277.0927474,131,0.5103723406791687
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780092478.793184,132,0.565550684928894
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780092688.4645727,133,0.5803143382072449
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780092907.3943796,134,0.7105441689491272
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780093256.4990168,135,0.5512964725494385
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780093462.4261637,136,0.5626829266548157
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780093639.4786575,137,0.5117038488388062
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780093845.074649,138,0.5082794427871704
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780094038.2896814,139,0.5437164902687073
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780094333.4349391,140,0.48922625184059143
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780094529.2305787,141,0.4966270923614502
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780094725.3090389,142,0.5168094038963318
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780094854.5043564,143,0.5570518374443054
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780094997.870333,144,0.6528305411338806
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780095387.77848,145,0.3674785792827606
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780095583.139349,146,0.6156200170516968
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780095789.9921517,147,0.6005260348320007
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780095982.8824708,148,0.669522225856781
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780096182.8945847,149,0.5991134643554688
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,actor/entropy_loss,actor/entropy_loss,1780096557.0084047,150,0.4936181604862213
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780058347.5774617,0,0.0
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780060038.699556,5,0.0546875
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780061637.4714985,10,0.0703125
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780063223.0748425,15,0.09375
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780064811.2654984,20,0.1484375
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780066326.5231423,25,0.2890625
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780067774.7127938,30,0.359375
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780069205.3737,35,0.3203125
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780070511.3581214,40,0.3984375
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780071778.1261692,45,0.4375
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780073148.2554102,50,0.4609375
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780074455.0801942,55,0.546875
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780075726.029125,60,0.671875
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780076900.3090658,65,0.6015625
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780078147.4595304,70,0.7265625
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780079417.0400856,75,0.6171875
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780080665.350642,80,0.6953125
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780081847.709075,85,0.6328125
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780083108.01115,90,0.75
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780084329.8241606,95,0.7421875
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780085593.5007997,100,0.6875
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780086769.964582,105,0.7265625
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780087904.3093762,110,0.6640625
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780088980.6221528,115,0.703125
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780090028.9788477,120,0.6640625
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780091129.3440428,125,0.671875
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780092108.5676956,130,0.671875
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780093256.6324112,135,0.6796875
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780094333.599223,140,0.6796875
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780095387.92289,145,0.671875
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/success_rate,val/success_rate,1780096557.0831165,150,0.71875
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780058347.5773635,0,0.0
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780060038.6906018,5,0.34811902046203613
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780061637.4622014,10,0.4813477694988251
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780063223.0651605,15,0.5323411822319031
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780064811.254753,20,1.217285394668579
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780066326.5131533,25,2.221311569213867
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780067774.702446,30,3.280318021774292
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780069205.3624368,35,2.3809523582458496
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780070511.3497982,40,3.0046510696411133
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780071778.1156921,45,3.443946123123169
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780073148.2482507,50,4.065306186676025
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780074455.0702991,55,4.876114845275879
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780075726.0168054,60,6.215895652770996
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780076900.2950728,65,5.546786785125732
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780078147.4494975,70,7.052096366882324
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780079417.0300717,75,5.562422752380371
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780080665.3403945,80,6.328963279724121
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780081847.6985748,85,5.725698947906494
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780083108.004282,90,6.738609313964844
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780084329.812459,95,6.558603286743164
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780085593.4936607,100,5.8679704666137695
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780086769.9561062,105,7.0396599769592285
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780087904.2975996,110,6.383561611175537
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780088980.6106286,115,6.895565032958984
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780090028.969885,120,6.1495842933654785
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780091129.3341503,125,6.681351184844971
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780092108.553269,130,6.324110507965088
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780093256.6210577,135,6.415094375610352
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780094333.5867307,140,6.17218542098999
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780095387.913258,145,6.2092390060424805
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/text/test_score,val/text/test_score,1780096557.076423,150,6.648575305938721
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780058347.5774696,0,0.0386284738779068
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780060038.7019575,5,0.11814360320568085
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780061637.473773,10,0.20178571343421936
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780063223.0797524,15,0.15419146418571472
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780064811.2689455,20,0.28443700075149536
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780066326.526185,25,0.592586100101471
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780067774.7162507,30,0.681267261505127
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780069205.3773,35,0.502202570438385
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780070511.3615413,40,0.6700457334518433
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780071778.1295068,45,0.6351470947265625
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780073148.257899,50,0.6437492966651917
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780074455.0836036,55,0.7378386855125427
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780075726.0324368,60,0.8586004972457886
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780076900.3124914,65,0.7908647656440735
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780078147.4622931,70,0.8840734362602234
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780079417.0434794,75,0.8016710877418518
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780080665.3655794,80,0.8328980803489685
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780081847.712489,85,0.782184898853302
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780083108.013818,90,0.8602460026741028
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780084329.8272831,95,0.8506370782852173
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780085593.5045202,100,0.8421584963798523
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780086769.9674897,105,0.8788813352584839
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780087904.3128972,110,0.8568521738052368
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780088980.6253512,115,0.8655675053596497
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780090028.982163,120,0.822906494140625
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780091129.3468134,125,0.8416866064071655
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780092108.5709682,130,0.8198332786560059
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780093256.6357598,135,0.8554072976112366
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780094333.6031563,140,0.8082091212272644
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780095387.9261653,145,0.8187291622161865
+weshop/gigpo_webshop_seed1,weshop/gigpo_webshop_seed1,val/webshop_task_score,val/webshop_task_score (not success_rate),1780096557.0855057,150,0.8401100635528564

@@ -1,0 +1,301 @@
+{
+  "distillation_input": "official_outputs/7B/alfworld/GRPO_7B_infer/validation_data/0.jsonl",
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::OBJECT_SOURCE[diningtable 1]",
+      "admissible_before": [
+        "go to bed 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "success_ab3384d2_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at diningtable 1. On the diningtable 1, you see a alarmclock 1, a cd 1, a cellphone 2, a creditcard 1, a keychain 3, a mug 1, a pen 3, a pen 2, a pen 1, and a pencil 2.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a diningtable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a sidetable 2, and a sidetable 1.\n\nYour task is to: put some mug on sidetable.",
+      "oracle_step_idx": 0,
+      "path_source": "success_trajectory",
+      "role_text": "OBJECT_SOURCE[diningtable 1]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[diningtable 1]"
+      ],
+      "walkthrough_action": "go to diningtable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PickupObject::TARGET_OBJ[mug 1]|LITERAL::diningtable[diningtable 1]",
+      "admissible_before": [
+        "examine diningtable 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look",
+        "take alarmclock 1 from diningtable 1",
+        "take cd 1 from diningtable 1",
+        "take cellphone 2 from diningtable 1",
+        "take creditcard 1 from diningtable 1",
+        "take keychain 3 from diningtable 1",
+        "take mug 1 from diningtable 1",
+        "take pen 1 from diningtable 1",
+        "take pen 2 from diningtable 1",
+        "take pen 3 from diningtable 1",
+        "take pencil 2 from diningtable 1"
+      ],
+      "done": false,
+      "dst": "O2",
+      "edge_id": "success_ab3384d2_e1",
+      "from_signature": [
+        "at:OBJECT_SOURCE[diningtable 1]"
+      ],
+      "observation_after": "You pick up the mug 1 from the diningtable 1.",
+      "observation_before": "You arrive at diningtable 1. On the diningtable 1, you see a alarmclock 1, a cd 1, a cellphone 2, a creditcard 1, a keychain 3, a mug 1, a pen 3, a pen 2, a pen 1, and a pencil 2.",
+      "oracle_step_idx": 1,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[mug 1] -> LITERAL::diningtable[diningtable 1]",
+      "src": "O1",
+      "to_signature": [
+        "at:OBJECT_SOURCE[diningtable 1]",
+        "holding:TARGET_OBJ[mug 1]"
+      ],
+      "walkthrough_action": "take mug 1 from diningtable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "GotoLocation::GOAL_RECEP[sidetable 1]",
+      "admissible_before": [
+        "examine diningtable 1",
+        "examine mug 1",
+        "go to bed 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look",
+        "move mug 1 to diningtable 1"
+      ],
+      "done": false,
+      "dst": "O3",
+      "edge_id": "success_ab3384d2_e2",
+      "from_signature": [
+        "at:OBJECT_SOURCE[diningtable 1]",
+        "holding:TARGET_OBJ[mug 1]"
+      ],
+      "observation_after": "You arrive at sidetable 1. On the sidetable 1, you see a keychain 1.",
+      "observation_before": "You pick up the mug 1 from the diningtable 1.",
+      "oracle_step_idx": 2,
+      "path_source": "success_trajectory",
+      "role_text": "GOAL_RECEP[sidetable 1]",
+      "src": "O2",
+      "to_signature": [
+        "at:GOAL_RECEP[sidetable 1]",
+        "holding:TARGET_OBJ[mug 1]"
+      ],
+      "walkthrough_action": "go to sidetable 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [],
+      "abstract_roles": [],
+      "action_key": "PutObject::TARGET_OBJ[mug 1]|TARGET_PARENT[sidetable 1]",
+      "admissible_before": [
+        "examine mug 1",
+        "examine sidetable 1",
+        "go to bed 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look",
+        "move mug 1 to sidetable 1"
+      ],
+      "done": true,
+      "dst": "O4",
+      "edge_id": "success_ab3384d2_e3",
+      "from_signature": [
+        "at:GOAL_RECEP[sidetable 1]",
+        "holding:TARGET_OBJ[mug 1]"
+      ],
+      "observation_after": "You move the mug 1 to the sidetable 1.",
+      "observation_before": "You arrive at sidetable 1. On the sidetable 1, you see a keychain 1.",
+      "oracle_step_idx": 3,
+      "path_source": "success_trajectory",
+      "role_text": "TARGET_OBJ[mug 1] -> TARGET_PARENT[sidetable 1]",
+      "src": "O3",
+      "to_signature": [
+        "at:GOAL_RECEP[sidetable 1]",
+        "placed:1@TARGET_PARENT[sidetable 1]",
+        "success"
+      ],
+      "walkthrough_action": "move mug 1 to sidetable 1",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_and_place_simple-Mug-None-SideTable-329/trial_T20190909_032329_497305/game.tw-pddl",
+  "goal_signature": [
+    "at:GOAL_RECEP[sidetable 1]",
+    "placed:1@TARGET_PARENT[sidetable 1]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to bed 1",
+        "go to diningtable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a diningtable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a sidetable 2, and a sidetable 1.\n\nYour task is to: put some mug on sidetable.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[diningtable 1]",
+      "node_id": "O1",
+      "observation": "You arrive at diningtable 1. On the diningtable 1, you see a alarmclock 1, a cd 1, a cellphone 2, a creditcard 1, a keychain 3, a mug 1, a pen 3, a pen 2, a pen 1, and a pencil 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[diningtable 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[diningtable 1] | holding:TARGET_OBJ[mug 1]",
+      "node_id": "O2",
+      "observation": "You pick up the mug 1 from the diningtable 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[diningtable 1]",
+        "holding:TARGET_OBJ[mug 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 3,
+      "label": "at:GOAL_RECEP[sidetable 1] | holding:TARGET_OBJ[mug 1]",
+      "node_id": "O3",
+      "observation": "You arrive at sidetable 1. On the sidetable 1, you see a keychain 1.",
+      "signature": [
+        "at:GOAL_RECEP[sidetable 1]",
+        "holding:TARGET_OBJ[mug 1]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [],
+      "depth": 4,
+      "label": "at:GOAL_RECEP[sidetable 1] | placed:1@TARGET_PARENT[sidetable 1] | success",
+      "node_id": "O4",
+      "observation": "You move the mug 1 to the sidetable 1.",
+      "signature": [
+        "at:GOAL_RECEP[sidetable 1]",
+        "placed:1@TARGET_PARENT[sidetable 1]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_type": "alfworld_teacher_distilled",
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Mug",
+    "parent_target": "SideTable",
+    "toggle_target": ""
+  },
+  "reference_paths": [
+    {
+      "edge_ids": [
+        "success_ab3384d2_e0",
+        "success_ab3384d2_e1",
+        "success_ab3384d2_e2",
+        "success_ab3384d2_e3"
+      ],
+      "node_ids": [
+        "O0",
+        "O1",
+        "O2",
+        "O3",
+        "O4"
+      ],
+      "path_id": "success_ab3384d2",
+      "source": "success_trajectory",
+      "traj_uid": "ab3384d2-cf1a-42b9-9bf6-79202afdab73",
+      "walkthrough": [
+        "go to diningtable 1",
+        "take mug 1 from diningtable 1",
+        "go to sidetable 1",
+        "move mug 1 to sidetable 1"
+      ]
+    }
+  ],
+  "signature_mode": "entity",
+  "source": "teacher_7b_grpo_success_raw",
+  "state_source": "teacher_7b_grpo_success_raw",
+  "task_key": "train__pick_and_place_simple-Mug-None-SideTable-329__trial_T20190909_032329_497305__game",
+  "task_type": "pick_and_place_simple",
+  "teacher_model": "official_outputs/7B/alfworld/grpo_alfworld/grpo_alfworld/global_step_140/actor",
+  "teacher_traj_uid": "ab3384d2-cf1a-42b9-9bf6-79202afdab73",
+  "trial_dir": "train/pick_and_place_simple-Mug-None-SideTable-329/trial_T20190909_032329_497305",
+  "walkthrough": [
+    "go to diningtable 1",
+    "take mug 1 from diningtable 1",
+    "go to sidetable 1",
+    "move mug 1 to sidetable 1"
+  ]
+}

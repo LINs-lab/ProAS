@@ -1,0 +1,37 @@
+{
+  "audits": {
+    "fixed_val_overlap": {
+      "fixed_val_case_count": 128,
+      "fixed_val_overlap_count": 0,
+      "train_case_count": 19200,
+      "train_unique_base_tasks": 6339,
+      "unique_base_tasks_per_step": 128
+    },
+    "sampler": {
+      "catalog_size_per_worker": 6910,
+      "duplicate_task_replacements": 197,
+      "fixed_val_replacements": 335,
+      "goal_index_range": [
+        500,
+        6910
+      ],
+      "replacement_rule": "next eligible unused goal index with a new base task identity",
+      "worker_seed_rule": "seed + slot"
+    }
+  },
+  "environment": "webshop",
+  "horizon": 150,
+  "output_sha256": {
+    "schedule.jsonl": "5c60165e9b3a7bd5c54f9d40d4ad762fe65225b54a48089cf4fa4e6e5d6c82bc"
+  },
+  "schema_version": 1,
+  "seed": 1,
+  "sources": {
+    "sampler": "WebshopMultiProcessEnv RandomState(seed) index sampling",
+    "webshop_attributes": "agent_system/environments/env_package/webshop/webshop/data/items_ins_v2_1000.json",
+    "webshop_attributes_sha256": "f88a36314a397b53b3d9c3fa5878e5f7b26d35019a51ec83fbedeca61a948f6f",
+    "webshop_items": "agent_system/environments/env_package/webshop/webshop/data/items_shuffle_1000.json",
+    "webshop_items_sha256": "30a4765c3a327af72d9a9a95a6b2486d516f0fa1d3ecd83681901ce82a21b269"
+  },
+  "train_batch_size": 128
+}

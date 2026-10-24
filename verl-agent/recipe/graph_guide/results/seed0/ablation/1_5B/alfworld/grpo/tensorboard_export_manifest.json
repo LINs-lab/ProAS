@@ -1,0 +1,64 @@
+{
+  "requested_run": "grpo_alfworld",
+  "actual_run": "grpo_alfworld",
+  "tensorboard_url": "http://localhost:6016",
+  "exported_at_unix": 1779728822.3166695,
+  "output_dir": "/mnt/public/dingbowen/project_sft_rl_agenetic_training/verl-agent/recipe/graph_guide/results/ablation/1_5B/alfworld/grpo",
+  "metrics": [
+    {
+      "requested_tag": "val/look_at_obj_in_light_success_rate",
+      "actual_tag": "val/look_at_obj_in_light_success_rate",
+      "points": 118,
+      "csv": "val_look_at_obj_in_light_success_rate.csv"
+    },
+    {
+      "requested_tag": "val/pick_and_place_success_rate",
+      "actual_tag": "val/pick_and_place_success_rate",
+      "points": 118,
+      "csv": "val_pick_and_place_success_rate.csv"
+    },
+    {
+      "requested_tag": "val/pick_clean_then_place_in_recep_success_rate",
+      "actual_tag": "val/pick_clean_then_place_in_recep_success_rate",
+      "points": 118,
+      "csv": "val_pick_clean_then_place_in_recep_success_rate.csv"
+    },
+    {
+      "requested_tag": "val/pick_cool_then_place_in_recep_success_rate",
+      "actual_tag": "val/pick_cool_then_place_in_recep_success_rate",
+      "points": 118,
+      "csv": "val_pick_cool_then_place_in_recep_success_rate.csv"
+    },
+    {
+      "requested_tag": "val/pick_heat_then_place_in_recep_success_rate",
+      "actual_tag": "val/pick_heat_then_place_in_recep_success_rate",
+      "points": 118,
+      "csv": "val_pick_heat_then_place_in_recep_success_rate.csv"
+    },
+    {
+      "requested_tag": "val/pick_two_obj_and_place_success_rate",
+      "actual_tag": "val/pick_two_obj_and_place_success_rate",
+      "points": 118,
+      "csv": "val_pick_two_obj_and_place_success_rate.csv"
+    },
+    {
+      "requested_tag": "val/success_rate",
+      "actual_tag": "val/success_rate",
+      "points": 118,
+      "csv": "val_success_rate.csv"
+    },
+    {
+      "requested_tag": "val/text/test_score",
+      "actual_tag": "val/text/test_score",
+      "points": 118,
+      "csv": "val_text_test_score.csv"
+    },
+    {
+      "requested_tag": "actor/entropy_loss",
+      "actual_tag": "actor/entropy_loss",
+      "points": 589,
+      "csv": "actor_entropy_loss.csv"
+    }
+  ],
+  "missing_tags": []
+}

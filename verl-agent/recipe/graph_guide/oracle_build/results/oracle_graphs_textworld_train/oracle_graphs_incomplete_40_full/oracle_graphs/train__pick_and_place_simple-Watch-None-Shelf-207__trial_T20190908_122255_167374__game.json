@@ -1,0 +1,340 @@
+{
+  "edges": [
+    {
+      "abstract_action": "GotoLocation",
+      "abstract_entities": [
+        "shelf 2"
+      ],
+      "abstract_roles": [
+        "OBJECT_SOURCE"
+      ],
+      "action_key": "GotoLocation::OBJECT_SOURCE[shelf 2]",
+      "admissible_before": [
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to coffeetable 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "done": false,
+      "dst": "O1",
+      "edge_id": "expert_e0",
+      "from_signature": [
+        "start"
+      ],
+      "observation_after": "You arrive at shelf 2. On the shelf 2, you see nothing.",
+      "observation_before": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a coffeetable 2, a coffeetable 1, a garbagecan 1, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, a shelf 1, a sofa 1, and a tvstand 1.\n\nYour task is to: put some watch on shelf.",
+      "oracle_step_idx": 0,
+      "role_text": "OBJECT_SOURCE[shelf 2]",
+      "src": "O0",
+      "to_signature": [
+        "at:OBJECT_SOURCE[shelf 2]"
+      ],
+      "walkthrough_action": "go to shelf 2",
+      "won": false
+    },
+    {
+      "abstract_action": "PickupObject",
+      "abstract_entities": [
+        "watch 2"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ"
+      ],
+      "action_key": "PickupObject::TARGET_OBJ[watch 2]",
+      "admissible_before": [
+        "examine shelf 2",
+        "examine tvstand 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to coffeetable 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take creditcard 1 from tvstand 1",
+        "take creditcard 2 from tvstand 1",
+        "take remotecontrol 1 from tvstand 1",
+        "take statue 1 from tvstand 1",
+        "take vase 2 from tvstand 1",
+        "take watch 1 from tvstand 1",
+        "take watch 2 from tvstand 1"
+      ],
+      "done": false,
+      "dst": "O2",
+      "edge_id": "expert_e1",
+      "from_signature": [
+        "at:OBJECT_SOURCE[shelf 2]"
+      ],
+      "observation_after": "You pick up the watch 2 from the tvstand 1.",
+      "observation_before": "You arrive at shelf 2. On the shelf 2, you see nothing.",
+      "oracle_step_idx": 1,
+      "role_text": "TARGET_OBJ[watch 2]",
+      "src": "O1",
+      "to_signature": [
+        "at:OBJECT_SOURCE[shelf 2]",
+        "holding:TARGET_OBJ[watch 2]"
+      ],
+      "walkthrough_action": "take watch 2 from tvstand 1",
+      "won": false
+    },
+    {
+      "abstract_action": "PutObject",
+      "abstract_entities": [
+        "watch 2",
+        "shelf 2"
+      ],
+      "abstract_roles": [
+        "TARGET_OBJ",
+        "TARGET_PARENT"
+      ],
+      "action_key": "PutObject::TARGET_OBJ[watch 2]|TARGET_PARENT[shelf 2]",
+      "admissible_before": [
+        "examine shelf 2",
+        "examine tvstand 1",
+        "examine watch 2",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to coffeetable 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move watch 2 to shelf 2"
+      ],
+      "done": true,
+      "dst": "O3",
+      "edge_id": "expert_e2",
+      "from_signature": [
+        "at:OBJECT_SOURCE[shelf 2]",
+        "holding:TARGET_OBJ[watch 2]"
+      ],
+      "observation_after": "You move the watch 2 to the shelf 2.",
+      "observation_before": "You pick up the watch 2 from the tvstand 1.",
+      "oracle_step_idx": 2,
+      "role_text": "TARGET_OBJ[watch 2] -> TARGET_PARENT[shelf 2]",
+      "src": "O2",
+      "to_signature": [
+        "at:OBJECT_SOURCE[shelf 2]",
+        "placed:1@TARGET_PARENT[shelf 2]",
+        "success"
+      ],
+      "walkthrough_action": "move watch 2 to shelf 2",
+      "won": true
+    }
+  ],
+  "gamefile": "train/pick_and_place_simple-Watch-None-Shelf-207/trial_T20190908_122255_167374/game.tw-pddl",
+  "goal_signature": [
+    "at:OBJECT_SOURCE[shelf 2]",
+    "placed:1@TARGET_PARENT[shelf 2]",
+    "success"
+  ],
+  "nodes": [
+    {
+      "admissible_commands": [
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to coffeetable 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 2",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "depth": 0,
+      "label": "start",
+      "node_id": "O0",
+      "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a coffeetable 2, a coffeetable 1, a garbagecan 1, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, a shelf 1, a sofa 1, and a tvstand 1.\n\nYour task is to: put some watch on shelf.",
+      "signature": [
+        "start"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine shelf 2",
+        "examine tvstand 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to coffeetable 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take creditcard 1 from tvstand 1",
+        "take creditcard 2 from tvstand 1",
+        "take remotecontrol 1 from tvstand 1",
+        "take statue 1 from tvstand 1",
+        "take vase 2 from tvstand 1",
+        "take watch 1 from tvstand 1",
+        "take watch 2 from tvstand 1"
+      ],
+      "depth": 1,
+      "label": "at:OBJECT_SOURCE[shelf 2]",
+      "node_id": "O1",
+      "observation": "You arrive at shelf 2. On the shelf 2, you see nothing.",
+      "signature": [
+        "at:OBJECT_SOURCE[shelf 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine shelf 2",
+        "examine tvstand 1",
+        "examine watch 2",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to coffeetable 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "move watch 2 to shelf 2"
+      ],
+      "depth": 2,
+      "label": "at:OBJECT_SOURCE[shelf 2] | holding:TARGET_OBJ[watch 2]",
+      "node_id": "O2",
+      "observation": "You pick up the watch 2 from the tvstand 1.",
+      "signature": [
+        "at:OBJECT_SOURCE[shelf 2]",
+        "holding:TARGET_OBJ[watch 2]"
+      ],
+      "won": false
+    },
+    {
+      "admissible_commands": [
+        "examine shelf 2",
+        "examine tvstand 1",
+        "go to armchair 1",
+        "go to armchair 2",
+        "go to coffeetable 1",
+        "go to coffeetable 2",
+        "go to garbagecan 1",
+        "go to shelf 1",
+        "go to shelf 3",
+        "go to shelf 4",
+        "go to shelf 5",
+        "go to shelf 6",
+        "go to shelf 7",
+        "go to shelf 8",
+        "go to sofa 1",
+        "help",
+        "inventory",
+        "look",
+        "take creditcard 1 from tvstand 1",
+        "take creditcard 2 from tvstand 1",
+        "take remotecontrol 1 from tvstand 1",
+        "take statue 1 from tvstand 1",
+        "take vase 2 from tvstand 1",
+        "take watch 1 from tvstand 1",
+        "take watch 2 from shelf 2"
+      ],
+      "depth": 3,
+      "label": "at:OBJECT_SOURCE[shelf 2] | placed:1@TARGET_PARENT[shelf 2] | success",
+      "node_id": "O3",
+      "observation": "You move the watch 2 to the shelf 2.",
+      "signature": [
+        "at:OBJECT_SOURCE[shelf 2]",
+        "placed:1@TARGET_PARENT[shelf 2]",
+        "success"
+      ],
+      "won": true
+    }
+  ],
+  "oracle_perturbation": {
+    "drop_fraction": 0.4,
+    "dropped_node_ids": [],
+    "dropped_units": 0,
+    "environment": "alfworld",
+    "kind": "incomplete",
+    "original_edges": 3,
+    "original_nodes": 4,
+    "remaining_edges": 3,
+    "remaining_nodes": 4,
+    "seed": 0
+  },
+  "pddl_params": {
+    "mrecep_target": "",
+    "object_sliced": false,
+    "object_target": "Watch",
+    "parent_target": "Shelf",
+    "toggle_target": ""
+  },
+  "signature_mode": "entity",
+  "state_source": "textworld_replay",
+  "task_key": "train__pick_and_place_simple-Watch-None-Shelf-207__trial_T20190908_122255_167374__game",
+  "task_type": "pick_and_place_simple",
+  "textworld_replay": {
+    "completed": true,
+    "num_replayed_actions": 3,
+    "num_walkthrough_actions": 3,
+    "ok": true,
+    "won": true
+  },
+  "trial_dir": "train/pick_and_place_simple-Watch-None-Shelf-207/trial_T20190908_122255_167374",
+  "walkthrough": [
+    "go to shelf 2",
+    "take watch 2 from tvstand 1",
+    "move watch 2 to shelf 2"
+  ]
+}
