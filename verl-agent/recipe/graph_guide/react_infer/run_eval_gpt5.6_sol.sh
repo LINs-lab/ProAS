@@ -15,7 +15,7 @@ API_KEY="${OPENAI_API_KEY:?Set OPENAI_API_KEY}"
 OUTPUT_DIR="recipe/graph_guide/react_infer/results"
 
 ALFWORLD_VENV="${ALFWORLD_VENV:-${VERL_VENV_ROOT}/alfworld}"
-WESHOP_VENV="${WESHOP_VENV:-${VERL_VENV_ROOT}/weshop}"
+WEBSHOP_VENV="${WEBSHOP_VENV:-${WEBSHOP_VENV_DIR}}"
 
 mkdir -p "$OUTPUT_DIR"
 
@@ -34,9 +34,9 @@ echo "=== ALFWorld fixed-val-set evaluation (venv: alfworld) ==="
     --retries 3
 
 echo ""
-echo "=== WebShop fixed-val-set evaluation (venv: weshop) ==="
-"$WESHOP_VENV/bin/python" recipe/graph_guide/react_infer/eval_react_fixed_val.py \
-    --env weshop \
+echo "=== WebShop fixed-val-set evaluation (venv: webshop) ==="
+"$WEBSHOP_VENV/bin/python" recipe/graph_guide/react_infer/eval_react_fixed_val.py \
+    --env webshop \
     --model-name "$MODEL_NAME" \
     --openai-url "$API_URL" \
     --api-key "$API_KEY" \

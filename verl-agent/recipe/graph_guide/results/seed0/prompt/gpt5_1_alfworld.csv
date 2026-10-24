@@ -1,2 +1,0 @@
-Method,Model,Env,Val Seed,Val Size,Pick,Pick N,Look,Look N,Clean,Clean N,Heat,Heat N,Cool,Cool N,Pick2,Pick2 N,ALL,TestScore
-Prompt LLM,gpt-5.1,ALFWorld,1000,128,71.4,28,71.4,14,19.0,21,72.2,18,46.2,26,66.7,21,57.0,5.703

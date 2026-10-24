@@ -22,8 +22,8 @@ Usage
 -----
     cd "$(git rev-parse --show-toplevel)/verl-agent"
     python recipe/graph_guide/sft_baseline/collect_webshop_oracle_sft_data.py \
-        --schedule fixed_train_set/seed0/webshop/schedule.jsonl \
-        --output_dir data/sft_webshop/seed0 \
+        --schedule recipe/graph_guide/data/fixed_train_set/seed0/webshop/schedule.jsonl \
+        --output_dir recipe/graph_guide/sft_baseline/data/sft_webshop/seed0 \
         --history_length 2
 """
 
@@ -430,7 +430,7 @@ def trajectory_to_turn_level_rows(
 # ---------------------------------------------------------------------------
 def main():
     parser = argparse.ArgumentParser(description="Collect WebShop oracle SFT data (turn-level)")
-    parser.add_argument("--schedule", required=True, help="Path to fixed_train_set/seedN/webshop/schedule.jsonl")
+    parser.add_argument("--schedule", required=True, help="Path to recipe/graph_guide/data/fixed_train_set/seedN/webshop/schedule.jsonl")
     parser.add_argument("--output_dir", required=True)
     parser.add_argument("--history_length", type=int, default=2)
     parser.add_argument("--max_steps", type=int, default=15)

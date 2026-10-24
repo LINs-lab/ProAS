@@ -62,7 +62,11 @@ setup_verl_7b_env() {
   cd "$WORK_DIR"
   export PYTHONPATH="$WORK_DIR:$WORK_DIR/verl:${PYTHONPATH:-}"
 
-  VENV_DIR="${VIRTUAL_ENV:-${VERL_VENV_ROOT}/${env_name}}"
+  local default_venv="${VERL_VENV_ROOT}/${env_name}"
+  if [[ "$env_name" == "webshop" ]]; then
+    default_venv="${WEBSHOP_VENV_DIR}"
+  fi
+  VENV_DIR="${VIRTUAL_ENV:-${default_venv}}"
   if [[ ! -f "${VENV_DIR}/bin/activate" ]]; then
     echo "ERROR: venv activate script not found: ${VENV_DIR}/bin/activate" >&2
     exit 1
@@ -155,7 +159,7 @@ PY
 
   if [[ "$require_java" == "auto" ]]; then
     case "$env_name" in
-      weshop|webshop)
+      webshop)
         require_java=true
         ;;
       *)

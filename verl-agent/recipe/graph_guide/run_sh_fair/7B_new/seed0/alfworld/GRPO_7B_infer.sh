@@ -25,14 +25,15 @@ export PYTHONPATH="$WORK_DIR:$WORK_DIR/verl:${PYTHONPATH:-}"
 
 env_name=alfworld
 experiment_name=GRPO_7B_infer
-output_dir=${WORK_DIR}/official_outputs/7B/${env_name}/${experiment_name}
-validation_data_dir=${output_dir}/validation_data
-placeholder_root=${output_dir}/placeholder_data
+output_dir=${VERL_OUTPUT_ROOT}/7B_new/seed0/${env_name}/${experiment_name}
+tensorboard_save_dir=${VERL_TENSORBOARD_ROOT}/7B_new/seed0/${env_name}/${experiment_name}
+export TENSORBOARD_DIR="$tensorboard_save_dir"
+validation_data_dir=${output_dir}/val_data
+placeholder_root=${VERL_DATA_ROOT}/teacher_infer/alfworld
 data_dir=${placeholder_root}/text
-mkdir -p "$validation_data_dir" "$data_dir"
+mkdir -p "$validation_data_dir" "$data_dir" "$tensorboard_save_dir"
 
-model_path=${WORK_DIR}/official_outputs/7B/alfworld/grpo_alfworld/grpo_alfworld/global_step_140/actor
-source_data_dir="${VERL_DATA_ROOT}/text"
+model_path="${TEACHER_MODEL:-${VERL_MODEL_ROOT}/GRPO-7B-ALFWorld}"
 
 # The ALFWorld train split contains 3,553 supported and solvable TextWorld games.
 # 187 task slots x 19 validation batches covers every game exactly once.
@@ -41,33 +42,11 @@ val_data_size=3553
 val_batch_size=187
 num_cpus_per_env_worker=0.1
 
-"$PYTHON_BIN" - "$source_data_dir" "$data_dir" "$train_data_size" "$val_data_size" <<'PY'
-import math
-import sys
-from pathlib import Path
-
-import pandas as pd
-
-
-source_dir = Path(sys.argv[1])
-output_dir = Path(sys.argv[2])
-train_size = int(sys.argv[3])
-val_size = int(sys.argv[4])
-
-
-def repeat_to_size(frame: pd.DataFrame, size: int) -> pd.DataFrame:
-    if frame.empty:
-        raise RuntimeError("Cannot build placeholder parquet from an empty source dataframe.")
-    repeats = math.ceil(size / len(frame))
-    return pd.concat([frame] * repeats, ignore_index=True).iloc[:size].copy()
-
-
-output_dir.mkdir(parents=True, exist_ok=True)
-train_source = pd.read_parquet(source_dir / "train.parquet")
-val_source = pd.read_parquet(source_dir / "test.parquet")
-repeat_to_size(train_source, train_size).to_parquet(output_dir / "train.parquet", index=False)
-repeat_to_size(val_source, val_size).to_parquet(output_dir / "test.parquet", index=False)
-PY
+# Tasks come from the fixed schedule; generate placeholders locally, without downloads.
+"$PYTHON_BIN" -m recipe.graph_guide.prepare_ppo_data \
+    --data-dir "$data_dir" \
+    --train-data-size "$train_data_size" \
+    --val-data-size "$val_data_size"
 
 if [[ ! -d "$model_path" ]]; then
   echo "ERROR: 7B GRPO actor checkpoint not found: $model_path" >&2
@@ -76,7 +55,7 @@ fi
 
 state=cnt_from_0
 ENGINE=${ENGINE:-vllm}
-CUDA_VISIBLE_DEVICES=6,7 "$PYTHON_BIN" -m verl.trainer.main_ppo \
+CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-6,7} "$PYTHON_BIN" -m verl.trainer.main_ppo \
     algorithm.adv_estimator=grpo \
     data.train_files=$data_dir/train.parquet \
     data.val_files=$data_dir/test.parquet \
@@ -121,7 +100,7 @@ CUDA_VISIBLE_DEVICES=6,7 "$PYTHON_BIN" -m verl.trainer.main_ppo \
     env.alfworld.eval_dataset=train \
     env.alfworld.deterministic_eval_sharding=True \
     trainer.critic_warmup=0 \
-    trainer.logger=['console'] \
+    trainer.logger=['console','tensorboard'] \
     trainer.project_name='verl_agent_alfworld' \
     trainer.experiment_name=$experiment_name \
     trainer.n_gpus_per_node=2 \
@@ -132,7 +111,7 @@ CUDA_VISIBLE_DEVICES=6,7 "$PYTHON_BIN" -m verl.trainer.main_ppo \
     trainer.val_before_train=True \
     trainer.val_only=True \
     trainer.resume_mode=disable \
-    trainer.default_local_dir=$output_dir/checkpoints \
+    trainer.default_local_dir=$output_dir/ckpts \
     trainer.validation_data_dir=$validation_data_dir \
     trainer.rollout_data_dir=$output_dir/rollout_data \
     >"${output_dir}/${state}.log" 2>"${output_dir}/${state}.progress" &

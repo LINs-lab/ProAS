@@ -13,10 +13,10 @@ WORK_DIR="${VERL_AGENT_ROOT}"
 seed=2
 env_name=alfworld
 fixed_train_env_name=alfworld
-fixed_train_set_path="${WORK_DIR}/fixed_train_set/seed${seed}/${fixed_train_env_name}"
+fixed_train_set_path="${VERL_DATA_ROOT}/fix_train_set_ppo/seed${seed}/${fixed_train_env_name}"
 fixed_train_set_start_step="${FIXED_TRAIN_SET_START_STEP:-null}"
 fixed_train_set_start_index="${FIXED_TRAIN_SET_START_INDEX:-null}"
-fixed_val_set_root="${WORK_DIR}/fixed_val_set"
+fixed_val_set_root="${VERL_DATA_ROOT}/fixed_val_set"
 VENV_DIR="${VIRTUAL_ENV:-${VERL_VENV_ROOT}/${env_name}}"
 if [[ ! -f "${VENV_DIR}/bin/activate" ]]; then
   echo "ERROR: venv activate script not found: ${VENV_DIR}/bin/activate" >&2
@@ -81,49 +81,32 @@ export NCCL_TIMEOUT="${NCCL_TIMEOUT:-7200}"
 export ALFWORLD_DATA
 
 wandb_experiment_name=ppo_alfworld_seed${seed}
-output_dir=${WORK_DIR}/outputs_fair/1_5B/seed${seed}/${env_name}/$wandb_experiment_name
-tensorboard_save_dir=${WORK_DIR}/tensorboard_fair/1_5B/seed${seed}/${env_name}/$wandb_experiment_name
-mkdir -p "$output_dir"
+output_dir=${VERL_OUTPUT_ROOT}/1_5B/seed${seed}/${env_name}/$wandb_experiment_name
+tensorboard_save_dir=${VERL_TENSORBOARD_ROOT}/1_5B/seed${seed}/${env_name}/$wandb_experiment_name
+mkdir -p "$output_dir" "$tensorboard_save_dir"
 
 model_path="${MODEL_PATH_1_5B}"
 
 num_cpus_per_env_worker=0.1
 
-train_data_size=16
+train_data_size=128
 val_data_size=128
 actor_ppo_mini_batch_size=256
 actor_ppo_micro_batch_size_per_gpu=16
 rollout_logprob_micro_batch_size_per_gpu=32
 ref_logprob_micro_batch_size_per_gpu=32
 critic_ppo_micro_batch_size_per_gpu=16
-data_dir="${VERL_DATA_ROOT}/text"
+data_dir="${VERL_DATA_ROOT}/ppo/text"
 cnt_from=0
 state=cnt_from_${cnt_from}
 
 export TENSORBOARD_DIR="$tensorboard_save_dir"
 
-current_data_size=$("$PYTHON_BIN" - <<'PY'
-import os
-import pandas as pd
-
-train_path = os.path.join(os.environ["VERL_DATA_ROOT"], "text", "train.parquet")
-val_path = os.path.join(os.environ["VERL_DATA_ROOT"], "text", "test.parquet")
-
-train_size = len(pd.read_parquet(train_path))
-val_size = len(pd.read_parquet(val_path))
-print(f"{train_size} {val_size}")
-PY
-)
-
-read -r current_train_size current_val_size <<< "$current_data_size"
-
-if [[ "$current_train_size" -lt "$train_data_size" || "$current_val_size" -lt "$val_data_size" ]]; then
-  echo "Refreshing placeholder parquet data: train=${current_train_size}->${train_data_size}, val=${current_val_size}->${val_data_size}"
-  "$PYTHON_BIN" -m examples.data_preprocess.prepare \
-      --mode 'text' \
-      --train_data_size "$train_data_size" \
-      --val_data_size "$val_data_size"
-fi
+# One placeholder batch per epoch matches one fixed PPO schedule step.
+"$PYTHON_BIN" -m recipe.graph_guide.prepare_ppo_data \
+    --data-dir "$data_dir" \
+    --train-data-size "$train_data_size" \
+    --val-data-size "$val_data_size"
 
 ENGINE=${ENGINE:-vllm}
 cuda_visible_devices=${CUDA_VISIBLE_DEVICES:-6,7}
@@ -173,6 +156,7 @@ CUDA_VISIBLE_DEVICES=$cuda_visible_devices "$PYTHON_BIN" -m verl.trainer.main_pp
     +ray_init.runtime_env.env_vars.ALFWORLD_DATA=$ALFWORLD_DATA \
     env.env_name=alfworld/AlfredTWEnv \
     env.seed=$seed \
+    env.rollout.n=1 \
     env.fixed_train_set.path=$fixed_train_set_path \
     env.fixed_train_set.start_step=$fixed_train_set_start_step \
     env.fixed_train_set.start_index=$fixed_train_set_start_index \
@@ -190,8 +174,8 @@ CUDA_VISIBLE_DEVICES=$cuda_visible_devices "$PYTHON_BIN" -m verl.trainer.main_pp
     trainer.test_freq=10 \
     trainer.total_epochs=150 \
     trainer.val_before_train=True \
-    trainer.default_local_dir=$output_dir/checkpoints \
-    trainer.validation_data_dir=$output_dir/validation_data \
+    trainer.default_local_dir=$output_dir/ckpts \
+    trainer.validation_data_dir=$output_dir/val_data \
     trainer.rollout_data_dir=$output_dir/rollout_data \
     >"${output_dir}/$state.log" 2>"${output_dir}/$state.progress" &
 echo "Done. Logs: ${output_dir}/$state.log  ${output_dir}/$state.progress"

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Build seed-aligned WebShop oracle graphs from the 7B GRPO teacher's rollouts
-# on fixed_train_set/seed${SEED}/webshop.
+# on recipe/graph_guide/data/fixed_train_set/seed${SEED}/webshop.
 #
 # Usage:
 #   bash recipe/graph_guide/oracle_build/scripts/build_webshop_oracles_from_7b.sh SEED
@@ -25,14 +25,14 @@ case "$seed" in
 esac
 
 WORK_DIR="${VERL_AGENT_ROOT}"
-VENV_DIR="${WESHOP_VENV_DIR:-${VERL_VENV_ROOT}/weshop}"
+VENV_DIR="${WEBSHOP_VENV_DIR:-${VERL_VENV_ROOT}/webshop}"
 PYTHON_BIN=${VENV_DIR}/bin/python3
-input_root=${TEACHER_ROLLOUT_ROOT:-${WORK_DIR}/official_outputs/7B/weshop/GRPO_7B_infer_fixed_train_seed${seed}}
+input_root=${TEACHER_ROLLOUT_ROOT:-${WORK_DIR}/official_outputs/7B/webshop/GRPO_7B_infer_fixed_train_seed${seed}}
 input_path=${input_root}/validation_data/0.jsonl
 successful_output=${input_root}/successful_trajectories/0.jsonl
-output_root=${GRAPH_GUIDE_ROOT}/oracle_build/results/oracle_graphs_weshop_train/oracle_graphs_from_7b_seed${seed}
-schedule_path=${WORK_DIR}/fixed_train_set/seed${seed}/webshop/schedule.jsonl
-teacher_model=${TEACHER_MODEL:-${WORK_DIR}/official_outputs/7B/weshop/grpo_webshop/grpo_webshop/global_step_140/actor}
+output_root=${GRAPH_GUIDE_ROOT}/oracle_build/results/oracle_graphs_webshop_train/oracle_graphs_from_7b_seed${seed}
+schedule_path=${WORK_DIR}/recipe/graph_guide/data/fixed_train_set/seed${seed}/webshop/schedule.jsonl
+teacher_model=${TEACHER_MODEL:-${WORK_DIR}/official_outputs/7B/webshop/grpo_webshop/grpo_webshop/global_step_140/actor}
 items_path=${WEBSHOP_DATA_DIR}/items_shuffle_1000.json
 
 for required in "$PYTHON_BIN" "$input_path" "$schedule_path" "$items_path"; do

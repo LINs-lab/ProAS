@@ -6,7 +6,7 @@ ALFWorld and WebShop, using the React (reasoning + action) prompting framework.
 This script reuses the core API-calling and action-projection logic from
 ``recipe/graph_guide/run_sh_official/prompt/eval_prompt_llm.py`` but overrides
 the environment construction so that evaluation runs on the exact 128 fixed
-validation tasks defined in ``fixed_val_set/``.
+validation tasks defined in ``recipe/graph_guide/data/fixed_val_set/``.
 
 Usage (ALFWorld):
     python recipe/graph_guide/react_infer/eval_react_fixed_val.py \
@@ -18,7 +18,7 @@ Usage (ALFWorld):
 
 Usage (WebShop):
     python recipe/graph_guide/react_infer/eval_react_fixed_val.py \
-        --env weshop \
+        --env webshop \
         --model-name gpt-5.6-sol \
         --openai-url "$OPENAI_CHAT_COMPLETIONS_URL" \
         --api-key "$OPENAI_API_KEY" \
@@ -101,7 +101,7 @@ def make_config(env_name: str, env_seed: int, val_size: int, history_length: int
             resources_per_worker=DictNamespace(num_cpus=0.1, num_gpus=0),
             alfworld=DictNamespace(eval_dataset="eval_in_distribution"),
             webshop=DictNamespace(use_small=True, human_goals=False),
-            fixed_val_set=DictNamespace(enabled=fixed_val, root=str(REPO_ROOT / "fixed_val_set")),
+            fixed_val_set=DictNamespace(enabled=fixed_val, root=str(REPO_ROOT / "recipe/graph_guide/data/fixed_val_set")),
         ),
     )
 
@@ -138,7 +138,7 @@ def build_eval_env(env_name: str, env_seed: int, val_size: int, history_length: 
         )
         return AlfWorldEnvironmentManager(envs, partial(alfworld_projection), config)
 
-    if env_name == "weshop":
+    if env_name == "webshop":
         from functools import partial
 
         from agent_system.environments.env_manager import WebshopEnvironmentManager
@@ -422,7 +422,7 @@ def run_eval(args: argparse.Namespace) -> dict[str, Any]:
 
         if args.env == "alfworld":
             return summarize_alfworld(args, final_infos, final_rewards)
-        return summarize_weshop(args, final_infos)
+        return summarize_webshop(args, final_infos)
     finally:
         try:
             env.close()
@@ -451,7 +451,7 @@ def summarize_alfworld(args: argparse.Namespace, infos: list[dict[str, Any]], re
     return row
 
 
-def summarize_weshop(args: argparse.Namespace, infos: list[dict[str, Any]]) -> dict[str, Any]:
+def summarize_webshop(args: argparse.Namespace, infos: list[dict[str, Any]]) -> dict[str, Any]:
     success = [float(bool(info.get("won", False))) for info in infos]
     scores = [float(info.get("task_score", 0.0)) for info in infos]
     return {
@@ -507,7 +507,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Evaluate API model on fixed val set via React prompting"
     )
-    parser.add_argument("--env", choices=["alfworld", "weshop"], required=True)
+    parser.add_argument("--env", choices=["alfworld", "webshop"], required=True)
     parser.add_argument("--model-name", required=True)
     parser.add_argument("--openai-url", required=True)
     parser.add_argument("--api-key", required=True)

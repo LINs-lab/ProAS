@@ -4,10 +4,10 @@
 #
 # Trains Qwen2.5-{1.5B,7B}-Instruct via supervised fine-tuning on handcoded-expert
 # (oracle) trajectories collected from the SAME game set that the RL experiments
-# use (fixed_train_set/seedN/alfworld), so the SFT-vs-RL comparison is fair.
+# use (recipe/graph_guide/data/fixed_train_set/seedN/alfworld), so the SFT-vs-RL comparison is fair.
 #
 # Pipeline:
-#   1. (optional) collect oracle data  ->  data/sft_alfworld/seedN/train.parquet
+#   1. (optional) collect oracle data  ->  recipe/graph_guide/sft_baseline/data/sft_alfworld/seedN/train.parquet
 #   2. SFT with verl.trainer.fsdp_sft_trainer (multiturn mode)
 #
 # All outputs go to outputs_fair/{1_5B|7B_new}/seedN/alfworld/sft_oracle_alfworld_seedN,
@@ -123,8 +123,8 @@ export NCCL_TIMEOUT="${NCCL_TIMEOUT:-7200}"
 export ALFWORLD_DATA
 
 # ---- paths (mirror RL outputs_fair layout) ----
-schedule_path="${WORK_DIR}/fixed_train_set/seed${seed}/${env_name}/schedule.jsonl"
-sft_data_dir="${WORK_DIR}/data/sft_${env_name}/seed${seed}"
+schedule_path="${WORK_DIR}/recipe/graph_guide/data/fixed_train_set/seed${seed}/${env_name}/schedule.jsonl"
+sft_data_dir="${WORK_DIR}/recipe/graph_guide/sft_baseline/data/sft_${env_name}/seed${seed}"
 sft_train_file="${sft_data_dir}/train.parquet"
 
 wandb_experiment_name=sft_oracle_alfworld_seed${seed}

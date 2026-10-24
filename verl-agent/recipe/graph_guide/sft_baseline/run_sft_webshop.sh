@@ -4,10 +4,10 @@
 #
 # Trains Qwen2.5-{1.5B,7B}-Instruct via supervised fine-tuning on goal-driven
 # oracle trajectories collected from the SAME task set that the RL experiments
-# use (fixed_train_set/seedN/webshop), so the SFT-vs-RL comparison is fair.
+# use (recipe/graph_guide/data/fixed_train_set/seedN/webshop), so the SFT-vs-RL comparison is fair.
 #
 # Pipeline:
-#   1. (optional) collect oracle data  ->  data/sft_webshop/seedN/train.parquet
+#   1. (optional) collect oracle data  ->  recipe/graph_guide/sft_baseline/data/sft_webshop/seedN/train.parquet
 #   2. SFT with verl.trainer.fsdp_sft_trainer (multiturn mode)
 #
 # Usage:
@@ -64,14 +64,14 @@ echo "WORK_DIR=$WORK_DIR"
 cd "$WORK_DIR"
 export PYTHONPATH="$WORK_DIR:$WORK_DIR/verl:${PYTHONPATH:-}"
 
-# ---- venv (weshop has gym + webshop deps; SFT itself runs in the alfworld venv) ----
-# Step 1 (data collection) uses the weshop venv (gym + web_agent_site).
+# ---- venv (webshop has gym + webshop deps; SFT itself runs in the alfworld venv) ----
+# Step 1 (data collection) uses the webshop venv (gym + web_agent_site).
 # Step 2 (training) uses the alfworld venv (torch + verl + fsdp_sft_trainer).
-WESHOP_VENV_DIR="${WESHOP_VENV_DIR:-${VERL_VENV_ROOT}/weshop}"
+WEBSHOP_VENV_DIR="${WEBSHOP_VENV_DIR:-${VERL_VENV_ROOT}/webshop}"
 SFT_VENV_DIR="${SFT_VENV_DIR:-${VERL_VENV_ROOT}/alfworld}"
 
-if [[ ! -f "${WESHOP_VENV_DIR}/bin/activate" ]]; then
-  echo "ERROR: weshop venv not found: ${WESHOP_VENV_DIR}/bin/activate" >&2
+if [[ ! -f "${WEBSHOP_VENV_DIR}/bin/activate" ]]; then
+  echo "ERROR: webshop venv not found: ${WEBSHOP_VENV_DIR}/bin/activate" >&2
   exit 1
 fi
 if [[ ! -f "${SFT_VENV_DIR}/bin/activate" ]]; then
@@ -87,8 +87,8 @@ export NCCL_ASYNC_ERROR_HANDLING=1
 export NCCL_TIMEOUT="${NCCL_TIMEOUT:-7200}"
 
 # ---- paths ----
-schedule_path="${WORK_DIR}/fixed_train_set/seed${seed}/${env_name}/schedule.jsonl"
-sft_data_dir="${WORK_DIR}/data/sft_${env_name}/seed${seed}"
+schedule_path="${WORK_DIR}/recipe/graph_guide/data/fixed_train_set/seed${seed}/${env_name}/schedule.jsonl"
+sft_data_dir="${WORK_DIR}/recipe/graph_guide/sft_baseline/data/sft_${env_name}/seed${seed}"
 sft_train_file="${sft_data_dir}/train.parquet"
 
 wandb_experiment_name=sft_oracle_webshop_seed${seed}
@@ -99,12 +99,12 @@ mkdir -p "$output_dir" "$sft_data_dir" "$tensorboard_save_dir"
 # model_path set above based on model_size
 
 # ---------------------------------------------------------------------------
-# Step 1: Collect oracle trajectories (uses weshop venv for gym + webshop)
+# Step 1: Collect oracle trajectories (uses webshop venv for gym + webshop)
 # ---------------------------------------------------------------------------
 if [[ "${SKIP_COLLECT:-0}" != "1" || ! -f "$sft_train_file" ]]; then
   echo "=== Collecting oracle SFT data from $schedule_path ==="
-  source "${WESHOP_VENV_DIR}/bin/activate"
-  VENV_SITE_PACKAGES=$(find "${WESHOP_VENV_DIR}/lib" -maxdepth 2 -type d -name site-packages 2>/dev/null | head -n 1)
+  source "${WEBSHOP_VENV_DIR}/bin/activate"
+  VENV_SITE_PACKAGES=$(find "${WEBSHOP_VENV_DIR}/lib" -maxdepth 2 -type d -name site-packages 2>/dev/null | head -n 1)
   if [[ -n "$VENV_SITE_PACKAGES" ]]; then
     export PYTHONPATH="${VENV_SITE_PACKAGES}:${PYTHONPATH:-}"
   fi

@@ -1,0 +1,21 @@
+{
+  "case_id_metadata_available": true,
+  "failed_or_unparsed_trajectories": 858,
+  "inferred_trajectories": 2400,
+  "input_path": "official_outputs/7B/weshop/GRPO_7B_infer_fixed_train_seed0/validation_data/0.jsonl",
+  "missing_entries": 0,
+  "missing_preview": [],
+  "oracles_built": 1301,
+  "output_root": "recipe/graph_guide/oracle_build/results/oracle_graphs_webshop_train/oracle_graphs_from_7b_seed0",
+  "schedule_entries": 2400,
+  "schedule_multiset_match": true,
+  "schedule_path": "recipe/graph_guide/data/fixed_train_set/seed0/webshop/schedule.jsonl",
+  "seed": 0,
+  "successful_purchase_trajectories": 1542,
+  "successful_rows": 9462,
+  "successful_trajectory_path": "official_outputs/7B/weshop/GRPO_7B_infer_fixed_train_seed0/successful_trajectories/0.jsonl",
+  "teacher_model": "official_outputs/7B/weshop/grpo_webshop/grpo_webshop/global_step_140/actor",
+  "total_trajectories": 2400,
+  "unexpected_entries": 0,
+  "unexpected_preview": []
+}

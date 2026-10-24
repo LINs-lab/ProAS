@@ -26,8 +26,8 @@ Usage
     cd "$(git rev-parse --show-toplevel)/verl-agent"
     export ALFWORLD_DATA="$HOME/.cache/alfworld"
     python recipe/graph_guide/sft_baseline/collect_alfworld_oracle_sft_data.py \
-        --schedule fixed_train_set/seed0/alfworld/schedule.jsonl \
-        --output_dir data/sft_alfworld/seed0 \
+        --schedule recipe/graph_guide/data/fixed_train_set/seed0/alfworld/schedule.jsonl \
+        --output_dir recipe/graph_guide/sft_baseline/data/sft_alfworld/seed0 \
         --history_length 2
 
 Outputs:
@@ -288,7 +288,7 @@ def main():
     parser = argparse.ArgumentParser(description="Collect ALFWorld oracle SFT data (turn-level)")
     parser.add_argument(
         "--schedule", required=True,
-        help="Path to fixed_train_set/seedN/alfworld/schedule.jsonl",
+        help="Path to recipe/graph_guide/data/fixed_train_set/seedN/alfworld/schedule.jsonl",
     )
     parser.add_argument(
         "--output_dir", required=True,

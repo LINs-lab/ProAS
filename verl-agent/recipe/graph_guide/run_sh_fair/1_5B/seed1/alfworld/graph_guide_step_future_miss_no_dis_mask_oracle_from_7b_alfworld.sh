@@ -12,10 +12,10 @@ WORK_DIR="${VERL_AGENT_ROOT}"
 seed=1
 env_name=alfworld
 fixed_train_env_name=alfworld
-fixed_train_set_path="${WORK_DIR}/fixed_train_set/seed${seed}/${fixed_train_env_name}"
+fixed_train_set_path="${VERL_DATA_ROOT}/fixed_train_set/seed${seed}/${fixed_train_env_name}"
 fixed_train_set_start_step="${FIXED_TRAIN_SET_START_STEP:-null}"
 fixed_train_set_start_index="${FIXED_TRAIN_SET_START_INDEX:-null}"
-fixed_val_set_root="${WORK_DIR}/fixed_val_set"
+fixed_val_set_root="${VERL_DATA_ROOT}/fixed_val_set"
 VENV_DIR="${VIRTUAL_ENV:-${VERL_VENV_ROOT}/${env_name}}"
 if [[ ! -f "${VENV_DIR}/bin/activate" ]]; then
   echo "ERROR: venv activate script not found: ${VENV_DIR}/bin/activate" >&2
@@ -39,9 +39,9 @@ cd "$WORK_DIR"
 export PYTHONPATH="$WORK_DIR:$WORK_DIR/verl:${PYTHONPATH:-}"
 
 wandb_experiment_name=graph_guide_step_future_miss_no_dis_mask_oracle_from_7b_alfworld
-output_dir=${WORK_DIR}/outputs_fair/1_5B/seed${seed}/${env_name}/$wandb_experiment_name
-tensorboard_save_dir=${WORK_DIR}/tensorboard_fair/1_5B/seed${seed}/${env_name}/$wandb_experiment_name
-mkdir -p "$output_dir"
+output_dir=${VERL_OUTPUT_ROOT}/1_5B/seed${seed}/${env_name}/$wandb_experiment_name
+tensorboard_save_dir=${VERL_TENSORBOARD_ROOT}/1_5B/seed${seed}/${env_name}/$wandb_experiment_name
+mkdir -p "$output_dir" "$tensorboard_save_dir"
 
 model_path="${MODEL_PATH_1_5B}"
 source_oracle_root=${WORK_DIR}/recipe/graph_guide/oracle_build/results/oracle_graphs_textworld_train/oracle_graphs_from_7b
@@ -73,22 +73,12 @@ state=cnt_from_${cnt_from}
 
 export TENSORBOARD_DIR="$tensorboard_save_dir"
 
-current_data_size=$("$PYTHON_BIN" - <<'PY'
-import os
-import pandas as pd
+# Tasks come from the fixed schedule; generate placeholders locally, without downloads.
+"$PYTHON_BIN" -m recipe.graph_guide.prepare_ppo_data \
+    --data-dir "$data_dir" \
+    --train-data-size "$train_data_size" \
+    --val-data-size "$val_data_size"
 
-train_path = os.path.join(os.environ["VERL_DATA_ROOT"], "text", "train.parquet")
-val_path = os.path.join(os.environ["VERL_DATA_ROOT"], "text", "test.parquet")
-print(f"{len(pd.read_parquet(train_path))} {len(pd.read_parquet(val_path))}")
-PY
-)
-read -r current_train_size current_val_size <<< "$current_data_size"
-if [[ "$current_train_size" -lt "$train_data_size" || "$current_val_size" -lt "$val_data_size" ]]; then
-  "$PYTHON_BIN" -m examples.data_preprocess.prepare \
-      --mode text \
-      --train_data_size "$train_data_size" \
-      --val_data_size "$val_data_size"
-fi
 
 ENGINE=${ENGINE:-vllm}
 cuda_visible_devices=${CUDA_VISIBLE_DEVICES:-2,3}
@@ -165,8 +155,8 @@ CUDA_VISIBLE_DEVICES=$cuda_visible_devices "$PYTHON_BIN" -m recipe.graph_guide.m
     trainer.test_freq=10 \
     trainer.total_epochs=150 \
     trainer.val_before_train=True \
-    trainer.default_local_dir=$output_dir/checkpoints \
-    trainer.validation_data_dir=$output_dir/validation_data \
+    trainer.default_local_dir=$output_dir/ckpts \
+    trainer.validation_data_dir=$output_dir/val_data \
     trainer.rollout_data_dir=$output_dir/rollout_data \
     >"${output_dir}/${state}.log" 2>"${output_dir}/${state}.progress" &
 

@@ -1,7 +1,0 @@
-Method,Best Step,Score.,Succ.,Hit Step@60,Speedup@60
-Base Model,0,22.3,4.7,,
-GRPO,145,86.2,70.3,110,1.00
-GRPO+ASFD,135,89.1,75.0,85,1.29
-Random Miss,145,77.0,55.5,,
-No Evolve,145,91.2,78.9,70,1.57
-No Pos Protect,115,85.1,65.6,110,1.00

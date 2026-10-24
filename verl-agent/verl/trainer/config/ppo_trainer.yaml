@@ -301,7 +301,7 @@ env:
   history_length: 2
   fixed_val_set:
     enabled: false
-    root: null  # null resolves to <verl-agent>/fixed_val_set
+    root: null  # null resolves to <verl-agent>/recipe/graph_guide/data/fixed_val_set
   fixed_train_set:
     path: null  # null or empty keeps the original online training sampler
     start_step: null  # 1-based schedule step to start from, e.g. 51 after resuming global_step_50
